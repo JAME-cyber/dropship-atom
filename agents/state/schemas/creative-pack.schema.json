@@ -1,0 +1,100 @@
+{
+  "description": "Contrat pour un pack créatif complet.",
+  "properties": {
+    "product_name": {
+      "default": "",
+      "title": "Product Name",
+      "type": "string"
+    },
+    "product_id": {
+      "default": "",
+      "title": "Product Id",
+      "type": "string"
+    },
+    "tiktok_script": {
+      "default": "",
+      "title": "Tiktok Script",
+      "type": "string"
+    },
+    "tiktok_hook": {
+      "default": "",
+      "title": "Tiktok Hook",
+      "type": "string"
+    },
+    "tiktok_body": {
+      "default": "",
+      "title": "Tiktok Body",
+      "type": "string"
+    },
+    "tiktok_cta": {
+      "default": "",
+      "title": "Tiktok Cta",
+      "type": "string"
+    },
+    "fb_ad_primary": {
+      "default": "",
+      "title": "Fb Ad Primary",
+      "type": "string"
+    },
+    "fb_ad_headline": {
+      "default": "",
+      "title": "Fb Ad Headline",
+      "type": "string"
+    },
+    "fb_ad_description": {
+      "default": "",
+      "title": "Fb Ad Description",
+      "type": "string"
+    },
+    "tiktok_ad_text": {
+      "default": "",
+      "title": "Tiktok Ad Text",
+      "type": "string"
+    },
+    "google_shopping_title": {
+      "default": "",
+      "title": "Google Shopping Title",
+      "type": "string"
+    },
+    "google_shopping_desc": {
+      "default": "",
+      "title": "Google Shopping Desc",
+      "type": "string"
+    },
+    "shopify_title": {
+      "default": "",
+      "title": "Shopify Title",
+      "type": "string"
+    },
+    "shopify_description": {
+      "default": "",
+      "title": "Shopify Description",
+      "type": "string"
+    },
+    "shopify_bullets": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Shopify Bullets",
+      "type": "array"
+    },
+    "shopify_price": {
+      "default": 0.0,
+      "minimum": 0.0,
+      "title": "Shopify Price",
+      "type": "number"
+    },
+    "video_html_path": {
+      "default": "",
+      "title": "Video Html Path",
+      "type": "string"
+    },
+    "created_at": {
+      "default": "",
+      "title": "Created At",
+      "type": "string"
+    }
+  },
+  "title": "CreativePackContract",
+  "type": "object"
+}

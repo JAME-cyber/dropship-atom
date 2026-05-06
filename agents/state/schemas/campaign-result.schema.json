@@ -1,0 +1,73 @@
+{
+  "description": "Contrat pour un résultat de campagne.",
+  "properties": {
+    "product_name": {
+      "default": "",
+      "title": "Product Name",
+      "type": "string"
+    },
+    "platform": {
+      "default": "",
+      "description": "meta, tiktok, google",
+      "title": "Platform",
+      "type": "string"
+    },
+    "ad_spend_eur": {
+      "default": 0.0,
+      "minimum": 0.0,
+      "title": "Ad Spend Eur",
+      "type": "number"
+    },
+    "impressions": {
+      "default": 0,
+      "minimum": 0,
+      "title": "Impressions",
+      "type": "integer"
+    },
+    "clicks": {
+      "default": 0,
+      "minimum": 0,
+      "title": "Clicks",
+      "type": "integer"
+    },
+    "orders": {
+      "default": 0,
+      "minimum": 0,
+      "title": "Orders",
+      "type": "integer"
+    },
+    "revenue_eur": {
+      "default": 0.0,
+      "minimum": 0.0,
+      "title": "Revenue Eur",
+      "type": "number"
+    },
+    "supplier_name": {
+      "default": "",
+      "title": "Supplier Name",
+      "type": "string"
+    },
+    "delivery_days_actual": {
+      "default": 0,
+      "minimum": 0,
+      "title": "Delivery Days Actual",
+      "type": "integer"
+    },
+    "defect_rate": {
+      "default": 0.0,
+      "maximum": 1.0,
+      "minimum": 0.0,
+      "title": "Defect Rate",
+      "type": "number"
+    },
+    "customer_rating": {
+      "default": 0.0,
+      "maximum": 5.0,
+      "minimum": 0.0,
+      "title": "Customer Rating",
+      "type": "number"
+    }
+  },
+  "title": "CampaignResultContract",
+  "type": "object"
+}

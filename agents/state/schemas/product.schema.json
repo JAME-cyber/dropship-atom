@@ -1,0 +1,142 @@
+{
+  "description": "Contrat formel pour un produit dans le pipeline DropAtom.",
+  "properties": {
+    "id": {
+      "default": "",
+      "description": "Hash ID unique",
+      "title": "Id",
+      "type": "string"
+    },
+    "name": {
+      "default": "",
+      "description": "Nom du produit",
+      "minLength": 1,
+      "title": "Name",
+      "type": "string"
+    },
+    "source": {
+      "default": "",
+      "description": "Source: seed_database, amazon, trends, aliexpress",
+      "title": "Source",
+      "type": "string"
+    },
+    "source_url": {
+      "default": "",
+      "title": "Source Url",
+      "type": "string"
+    },
+    "category": {
+      "default": "",
+      "description": "Catégorie: Electronics, Health, etc.",
+      "title": "Category",
+      "type": "string"
+    },
+    "trend_score": {
+      "default": 0.0,
+      "maximum": 100.0,
+      "minimum": 0.0,
+      "title": "Trend Score",
+      "type": "number"
+    },
+    "competition_score": {
+      "default": 0.0,
+      "maximum": 100.0,
+      "minimum": 0.0,
+      "title": "Competition Score",
+      "type": "number"
+    },
+    "demand_score": {
+      "default": 0.0,
+      "maximum": 100.0,
+      "minimum": 0.0,
+      "title": "Demand Score",
+      "type": "number"
+    },
+    "margin_score": {
+      "default": 0.0,
+      "maximum": 100.0,
+      "minimum": 0.0,
+      "title": "Margin Score",
+      "type": "number"
+    },
+    "source_price": {
+      "default": 0.0,
+      "minimum": 0.0,
+      "title": "Source Price",
+      "type": "number"
+    },
+    "suggested_price": {
+      "default": 0.0,
+      "minimum": 0.0,
+      "title": "Suggested Price",
+      "type": "number"
+    },
+    "estimated_margin": {
+      "default": 0.0,
+      "title": "Estimated Margin",
+      "type": "number"
+    },
+    "asin": {
+      "default": "",
+      "title": "Asin",
+      "type": "string"
+    },
+    "aliexpress_id": {
+      "default": "",
+      "title": "Aliexpress Id",
+      "type": "string"
+    },
+    "image_url": {
+      "default": "",
+      "title": "Image Url",
+      "type": "string"
+    },
+    "keywords": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Keywords",
+      "type": "array"
+    },
+    "notes": {
+      "default": "",
+      "title": "Notes",
+      "type": "string"
+    },
+    "llm_verdict": {
+      "default": "",
+      "title": "Llm Verdict",
+      "type": "string"
+    },
+    "llm_analysis": {
+      "default": "",
+      "title": "Llm Analysis",
+      "type": "string"
+    },
+    "hunter_score": {
+      "default": 0.0,
+      "maximum": 100.0,
+      "minimum": 0.0,
+      "title": "Hunter Score",
+      "type": "number"
+    },
+    "hunter_grade": {
+      "default": "",
+      "pattern": "^[ABCD]\\+?$|^$",
+      "title": "Hunter Grade",
+      "type": "string"
+    },
+    "discovered_at": {
+      "default": "",
+      "title": "Discovered At",
+      "type": "string"
+    },
+    "updated_at": {
+      "default": "",
+      "title": "Updated At",
+      "type": "string"
+    }
+  },
+  "title": "ProductContract",
+  "type": "object"
+}

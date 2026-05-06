@@ -1,0 +1,35 @@
+{
+  "hunter_margin_w": 0.3,
+  "hunter_trend_w": 0.25,
+  "hunter_demand_w": 0.25,
+  "hunter_competition_w": 0.2,
+  "scout_price_w": 0.4,
+  "scout_speed_w": 0.25,
+  "scout_reliability_w": 0.25,
+  "scout_eu_w": 0.1,
+  "category_penalties": {
+    "Health": 0,
+    "Electronics": 0,
+    "Fitness": 0,
+    "Outdoor": 0
+  },
+  "supplier_penalties": {
+    "1688 Direct": -10,
+    "Private Agent (Shenzhen)": -15,
+    "ZQ Dropshipping": -10,
+    "CJ Dropshipping": 0
+  },
+  "platform_bonuses": {
+    "google": 10,
+    "meta": 5,
+    "tiktok": 5
+  },
+  "best_price_min": 11.3,
+  "best_price_max": 42.8,
+  "total_campaigns": 15,
+  "total_wins": 9,
+  "total_losses": 6,
+  "win_rate": 60.0,
+  "avg_roas": 1.68,
+  "updated_at": "2026-05-06T12:49:26.519265+00:00"
+}

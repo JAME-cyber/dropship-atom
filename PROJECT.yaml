@@ -1,0 +1,88 @@
+# DROPATOM — Projet Dropshipping Agentic
+# Positionnement divergent et pragmatique en 2026
+
+projet:
+  nom: "DropAtom"
+  philosophie: "Dropshipping agentic — 1 opérateur, 7 agents, 0 employé"
+  separate_de: ["socialpulse", "cortex-leman-v5"]
+  inspire_par:
+    - "Jonathan Ecom (formation 100h dropshipping — le mainstream)"
+    - "Serge Gatari (1-person AI business — le divergent)"
+  
+  principes:
+    - "Les outils SaaS = commodité. On ne paie que l'indispensable."
+    - "Les données propriétaires = le moat."
+    - "L'IA fait le travail répétitif. L'humain décide."
+    - "0 stock, 0 employé, 0 bureau."
+    - "Journal WORM (hérité Cortex Leman v5)."
+
+agents:
+  - hunter:    "Recherche produit automatisée (TikTok, AliExpress, Google Trends, FB Ad Library)"
+  - scout:     "Supplier finder (Alibaba, 1688, agents privés)"
+  - builder:   "Création boutique (Shopify ou Medusa.js)"
+  - creator:   "Créatives IA (scripts, images, vidéos UGC-style)"
+  - media:     "Campagnes ads (Meta, TikTok, Google)"
+  - closer:    "Email marketing + SAV + upsell"
+  - analyst:   "Analytics, P&L, optimisation continue"
+  - feedback:  "Skill #11 — Boucle de retour: les agents apprennent des résultats réels"
+
+phases:
+  phase_1:
+    nom: "VALIDATION"
+    duree: "Mois 1-2"
+    objectif: "Lancer 1 store, prouver le CA, compiler les données"
+    agents_a_build: ["hunter", "scout", "creator"]
+    
+  phase_2:
+    nom: "OPTIMISATION"
+    duree: "Mois 3-4"
+    objectif: "Knowledge vault, agents qui apprennent, CPA diminue"
+    agents_a_build: ["builder", "media", "closer", "analyst"]
+    
+  phase_3:
+    nom: "SCALING"
+    duree: "Mois 5+"
+    objectif: "Multi-stores OU white-label SaaS"
+    options:
+      - "Option A: 10 niches, 10 stores, même pipeline"
+      - "Option B: Vendre le pipeline en SaaS aux dropshippers"
+
+unit_economics:
+  standard:
+    marge: "15%"
+    profit_50_ventes_jour: "6 750€/mois"
+    risque: "CPA élevé, produit éphémère, pas de moat"
+  
+  agentic:
+    marge: "35%"
+    profit_50_ventes_jour: "15 600€/mois"
+    cout_agents: "50€/mois"
+    economie_vs_standard: "~800-1500€/mois"
+    moat: "Données compilées (spy, P&L, ad performance)"
+
+stack:
+  languages: ["Python 3.12", "JavaScript/Node"]
+  scraping: "Scrapling (déjà installé)"
+  llm: "OpenRouter (minimax-m2.5:free primary, gemma-4-31b fallback)"
+  scoring: "JsonLogic (déterministe, déjà installé)"
+  feedback: "feedback.py — Feedback Loop adaptatif (Skill #11)"
+  video: "HyperFrame (déjà installé dans socialpulse)"
+  store: "Shopify (standard) ou Medusa.js (open-source)"
+  ads: "Meta API + TikTok API + Google Ads API"
+  email: "Omnisend ou Listmonk (open-source)"
+  analytics: "Dashboard custom + P&L tracker"
+
+skills_framework:
+  source: "IBM AI Engineer 7 Skills (x.com/Mnilax)"
+  skills_ibm: ["System Design", "Tool Contracts", "RAG", "Reliability", "Security", "Evals", "Product Thinking"]
+  skills_divergents: ["Cost Engineering", "Data Acquisition", "Non-determinism Management", "Distribution Speed", "Feedback Loop Architecture"]
+  total_skills: 12
+  notre_score:
+    reliability: "A-"
+    cost_engineering: "A"
+    non_determinism: "B+"
+    system_design: "B"
+    feedback_loop: "B"  # now implemented!
+    evals: "F"           # next priority
+    rag: "F"             # after evals
+    data_acquisition: "D"

@@ -1,0 +1,90 @@
+{
+  "description": "Contrat pour un supplier/fournisseur.",
+  "properties": {
+    "id": {
+      "default": "",
+      "title": "Id",
+      "type": "string"
+    },
+    "name": {
+      "default": "",
+      "minLength": 1,
+      "title": "Name",
+      "type": "string"
+    },
+    "type": {
+      "default": "",
+      "description": "platform, agent, factory, private",
+      "title": "Type",
+      "type": "string"
+    },
+    "platform": {
+      "default": "",
+      "description": "cj, zq, alibaba, 1688, aliexpress, private",
+      "title": "Platform",
+      "type": "string"
+    },
+    "min_order": {
+      "default": 1,
+      "description": "Minimum Order Quantity",
+      "minimum": 1,
+      "title": "Min Order",
+      "type": "integer"
+    },
+    "shipping_days": {
+      "default": 15,
+      "maximum": 60,
+      "minimum": 1,
+      "title": "Shipping Days",
+      "type": "integer"
+    },
+    "shipping_to_eu": {
+      "default": true,
+      "title": "Shipping To Eu",
+      "type": "boolean"
+    },
+    "eu_warehouse": {
+      "default": false,
+      "title": "Eu Warehouse",
+      "type": "boolean"
+    },
+    "branded_packaging": {
+      "default": false,
+      "title": "Branded Packaging",
+      "type": "boolean"
+    },
+    "quality_score": {
+      "default": 0.0,
+      "maximum": 100.0,
+      "minimum": 0.0,
+      "title": "Quality Score",
+      "type": "number"
+    },
+    "reliability_score": {
+      "default": 0.0,
+      "maximum": 100.0,
+      "minimum": 0.0,
+      "title": "Reliability Score",
+      "type": "number"
+    },
+    "markup_vs_1688": {
+      "default": 1.0,
+      "maximum": 5.0,
+      "minimum": 0.5,
+      "title": "Markup Vs 1688",
+      "type": "number"
+    },
+    "url": {
+      "default": "",
+      "title": "Url",
+      "type": "string"
+    },
+    "notes": {
+      "default": "",
+      "title": "Notes",
+      "type": "string"
+    }
+  },
+  "title": "SupplierContract",
+  "type": "object"
+}

@@ -1,0 +1,13 @@
+{
+  "timestamp": "2026-05-06T12:49:26.525276+00:00",
+  "agent": "FEEDBACK",
+  "action": "result_recorded",
+  "prev_hash": "c1294d5438667bb863fd4e2c95fb93fa5a21e1ae67be819a275093c6478c87ce",
+  "product": "Bamboo Sunglasses",
+  "platform": "tiktok",
+  "roas": 1.0,
+  "verdict": "OK",
+  "total_campaigns": 15,
+  "win_rate": 60.0,
+  "hash": "40d0f7cd4bb3e12cfa6396ab3be2a2bb955c9e1c0e208a3ff918c2fa6e637f46"
+}

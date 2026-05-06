@@ -1,0 +1,121 @@
+{
+  "description": "Contrat pour un devis supplier.",
+  "properties": {
+    "product_name": {
+      "default": "",
+      "title": "Product Name",
+      "type": "string"
+    },
+    "product_id": {
+      "default": "",
+      "title": "Product Id",
+      "type": "string"
+    },
+    "supplier_id": {
+      "default": "",
+      "title": "Supplier Id",
+      "type": "string"
+    },
+    "supplier_name": {
+      "default": "",
+      "title": "Supplier Name",
+      "type": "string"
+    },
+    "supplier_platform": {
+      "default": "",
+      "title": "Supplier Platform",
+      "type": "string"
+    },
+    "unit_price_cny": {
+      "default": 0.0,
+      "minimum": 0.0,
+      "title": "Unit Price Cny",
+      "type": "number"
+    },
+    "unit_price_usd": {
+      "default": 0.0,
+      "minimum": 0.0,
+      "title": "Unit Price Usd",
+      "type": "number"
+    },
+    "suggested_sell_eur": {
+      "default": 0.0,
+      "minimum": 0.0,
+      "title": "Suggested Sell Eur",
+      "type": "number"
+    },
+    "estimated_margin_eur": {
+      "default": 0.0,
+      "title": "Estimated Margin Eur",
+      "type": "number"
+    },
+    "moq": {
+      "default": 1,
+      "minimum": 1,
+      "title": "Moq",
+      "type": "integer"
+    },
+    "shipping_days": {
+      "default": 15,
+      "maximum": 60,
+      "minimum": 1,
+      "title": "Shipping Days",
+      "type": "integer"
+    },
+    "shipping_cost_eur": {
+      "default": 3.0,
+      "minimum": 0.0,
+      "title": "Shipping Cost Eur",
+      "type": "number"
+    },
+    "eu_warehouse": {
+      "default": false,
+      "title": "Eu Warehouse",
+      "type": "boolean"
+    },
+    "price_score": {
+      "default": 0.0,
+      "maximum": 100.0,
+      "minimum": 0.0,
+      "title": "Price Score",
+      "type": "number"
+    },
+    "speed_score": {
+      "default": 0.0,
+      "maximum": 100.0,
+      "minimum": 0.0,
+      "title": "Speed Score",
+      "type": "number"
+    },
+    "reliability_score": {
+      "default": 0.0,
+      "maximum": 100.0,
+      "minimum": 0.0,
+      "title": "Reliability Score",
+      "type": "number"
+    },
+    "overall_score": {
+      "default": 0.0,
+      "maximum": 100.0,
+      "title": "Overall Score",
+      "type": "number"
+    },
+    "recommendation": {
+      "default": "",
+      "title": "Recommendation",
+      "type": "string"
+    },
+    "notes": {
+      "default": "",
+      "title": "Notes",
+      "type": "string"
+    },
+    "quoted_at": {
+      "default": "",
+      "title": "Quoted At",
+      "type": "string"
+    }
+  },
+  "title": "SupplierQuoteContract",
+  "type": "object"
+}
