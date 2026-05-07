@@ -75,7 +75,7 @@ class ProductContract(BaseModel):
     def validate_source(cls, v: str) -> str:
         valid = {"seed_database", "google_trends", "google_trends_us", "google_trends_fr",
                  "google_trends_global", "amazon", "amazon_movers", "amazon_bestsellers",
-                 "aliexpress", "tiktok", "ebay", "manual", ""}
+                 "aliexpress", "tiktok", "instagram_shop", "ebay", "manual", ""}
         if v and v not in valid:
             raise ValueError(f"Unknown source '{v}'. Must be one of {valid}")
         return v
@@ -243,7 +243,7 @@ class CampaignResultContract(BaseModel):
     @field_validator("platform")
     @classmethod
     def validate_platform(cls, v: str) -> str:
-        valid = {"meta", "tiktok", "google", ""}
+        valid = {"meta", "tiktok", "google", "instagram_shop", ""}
         if v and v not in valid:
             raise ValueError(f"Unknown platform: '{v}'")
         return v

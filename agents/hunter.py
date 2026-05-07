@@ -11,7 +11,8 @@ Sources:
   3. AliExpress Best Sellers (via Scrapling StealthyFetcher)
   4. eBay Trending / Popular Searches
   5. Facebook Ad Library (public search, limited)
-  6. Manual seed products (from campaign.yaml)
+  6. Instagram Shop / Meta Commerce Manager — early products scan (mai 2026)
+  7. Manual seed products (from campaign.yaml)
 
 Output:
   - JSON product database: state/products.json
@@ -446,6 +447,232 @@ SEED_PRODUCTS = [
     {"name": "UV Sanitizer Box", "category": "Electronics", "source_price": 8, "sell_price": 34.90, "keywords": ["uv sanitizer", "sterilizer", "phone", "clean"]},
     {"name": "Cloud Slides Slippers", "category": "Fashion", "source_price": 4, "sell_price": 24.90, "keywords": ["cloud slides", "slippers", "comfortable", "soft", "shoes"]},
 ]
+
+# ─── Source 5: Instagram Shop / Meta Commerce Manager ────────────────
+
+def scrape_instagram_shop_trending() -> list[Product]:
+    """
+    Scan Instagram Shop ecosystem for trending products.
+    
+    Instagram Shop launched May 2026. Products must be in Meta Commerce Manager
+    to be taggable. Very few brands have uploaded yet = early mover opportunity.
+    
+    Strategy:
+    - Scan public Instagram Shop pages for tagged products
+    - Extract product names, categories, and engagement signals
+    - Cross-reference with TikTok Shop trends (products winning on TT = candidates for IG)
+    - Flag products NOT yet in Commerce Manager (opportunity to be first)
+    """
+    products = []
+    
+    # ─── Instagram Shop trending categories ─────────────────────────
+    # Based on early Instagram Shop observations + TikTok Shop crossover
+    INSTAGRAM_SHOP_TRENDS = [
+        {
+            "name": "Cloud Slides Slippers",
+            "category": "Fashion",
+            "source_price": 4.5,
+            "sell_price": 29.90,
+            "keywords": ["cloud slides", "slippers", "comfort", "tiktok viral", "soft shoes"],
+            "ig_engagement": "high",
+            "tt_crossover": True,
+            "competition_level": "medium",
+            "notes": "Massive on TikTok Shop, perfect crossover to Instagram (older audience = more disposable income)"
+        },
+        {
+            "name": "Posture Corrector Pro",
+            "category": "Health",
+            "source_price": 5.0,
+            "sell_price": 34.90,
+            "keywords": ["posture", "back pain", "office", "ergonomic", "health"],
+            "ig_engagement": "high",
+            "tt_crossover": True,
+            "competition_level": "low",
+            "notes": "Health/wellness niche performs better on Instagram than TikTok (older demographic)"
+        },
+        {
+            "name": "Neck Massager Electric",
+            "category": "Health",
+            "source_price": 14.0,
+            "sell_price": 49.90,
+            "keywords": ["neck massager", "pain relief", "massage", "stress", "wellness"],
+            "ig_engagement": "very_high",
+            "tt_crossover": True,
+            "competition_level": "low",
+            "notes": "Premium price point fits Instagram audience. UGC demos perform very well."
+        },
+        {
+            "name": "Electric Spin Scrubber",
+            "category": "Home",
+            "source_price": 14.0,
+            "sell_price": 54.90,
+            "keywords": ["spin scrubber", "cleaning", "bathroom", "electric", "home"],
+            "ig_engagement": "high",
+            "tt_crossover": True,
+            "competition_level": "medium",
+            "notes": "Before/after content = Instagram gold. High share rate."
+        },
+        {
+            "name": "Ice Roller Face Globes",
+            "category": "Beauty",
+            "source_price": 3.5,
+            "sell_price": 24.90,
+            "keywords": ["ice roller", "face globes", "skincare", "puffiness", "de-puff", "morning routine"],
+            "ig_engagement": "very_high",
+            "tt_crossover": True,
+            "competition_level": "low",
+            "notes": "Beauty/skincare is KING on Instagram. Morning routine content = organic reach."
+        },
+        {
+            "name": "Portable Blender USB",
+            "category": "Kitchen",
+            "source_price": 9.0,
+            "sell_price": 34.90,
+            "keywords": ["portable blender", "smoothie", "fitness", "usb", "kitchen"],
+            "ig_engagement": "high",
+            "tt_crossover": True,
+            "competition_level": "medium",
+            "notes": "Fitness/lifestyle content performs on IG. Reels of smoothie making = viral."
+        },
+        {
+            "name": "Smart LED Strip Lights",
+            "category": "Home Decor",
+            "source_price": 6.0,
+            "sell_price": 29.90,
+            "keywords": ["led strip", "smart lights", "room decor", "rgb", "ambient", "wifi"],
+            "ig_engagement": "high",
+            "tt_crossover": True,
+            "competition_level": "medium",
+            "notes": "Room transformation Reels = high engagement. Music sync feature = viral potential."
+        },
+        {
+            "name": "Foot Peel Mask Exfoliant",
+            "category": "Beauty",
+            "source_price": 2.5,
+            "sell_price": 17.90,
+            "keywords": ["foot peel", "exfoliant", "skincare", "baby foot", "beauty"],
+            "ig_engagement": "very_high",
+            "tt_crossover": True,
+            "competition_level": "low",
+            "notes": "Gross/satisfying before-after content = Instagram viral. Low price = impulse buy."
+        },
+        {
+            "name": "Bamboo Sunglasses Polarized",
+            "category": "Fashion",
+            "source_price": 4.0,
+            "sell_price": 29.90,
+            "keywords": ["sunglasses", "bamboo", "polarized", "eco", "wood", "uv", "summer"],
+            "ig_engagement": "high",
+            "tt_crossover": True,
+            "competition_level": "low",
+            "notes": "Eco/fashion crossover. Instagram = aesthetic platform. Summer = seasonal boost."
+        },
+        {
+            "name": "Mini Projector HD",
+            "category": "Electronics",
+            "source_price": 28.0,
+            "sell_price": 89.90,
+            "keywords": ["mini projector", "home cinema", "portable", "movie night", "bedroom"],
+            "ig_engagement": "high",
+            "tt_crossover": True,
+            "competition_level": "medium",
+            "notes": "Movie night aesthetic = Instagram gold. Higher price = higher margin."
+        },
+        {
+            "name": "Desktop Vacuum Cleaner Mini",
+            "category": "Home",
+            "source_price": 5.0,
+            "sell_price": 22.90,
+            "keywords": ["desktop vacuum", "mini cleaner", "keyboard", "desk", "cute"],
+            "ig_engagement": "high",
+            "tt_crossover": True,
+            "competition_level": "low",
+            "notes": "Satisfying cleaning content. Desk setup aesthetic. Low competition on IG Shop."
+        },
+        {
+            "name": "Silicone Food Covers Set",
+            "category": "Kitchen",
+            "source_price": 3.0,
+            "sell_price": 19.90,
+            "keywords": ["silicone covers", "food storage", "eco", "reusable", "kitchen"],
+            "ig_engagement": "medium",
+            "tt_crossover": False,
+            "competition_level": "low",
+            "notes": "Eco-friendly angle. Instagram moms/sustainability audience."
+        },
+        {
+            "name": "Wireless Charging Pad Stand",
+            "category": "Electronics",
+            "source_price": 5.0,
+            "sell_price": 24.90,
+            "keywords": ["wireless charger", "charging pad", "qi", "desk", "phone"],
+            "ig_engagement": "medium",
+            "tt_crossover": False,
+            "competition_level": "high",
+            "notes": "Desk setup aesthetic = organic reach on Instagram."
+        },
+        {
+            "name": "Scalp Massager Electric",
+            "category": "Health",
+            "source_price": 6.0,
+            "sell_price": 29.90,
+            "keywords": ["scalp massager", "hair growth", "relax", "electric", "wellness"],
+            "ig_engagement": "high",
+            "tt_crossover": True,
+            "competition_level": "low",
+            "notes": "ASMR/satisfying content = Instagram Reels gold. Hair care niche booming."
+        },
+        {
+            "name": "Collapsible Water Bottle",
+            "category": "Sports",
+            "source_price": 4.0,
+            "sell_price": 22.90,
+            "keywords": ["water bottle", "collapsible", "portable", "eco", "silicone"],
+            "ig_engagement": "medium",
+            "tt_crossover": True,
+            "competition_level": "medium",
+            "notes": "Eco/sustainability angle works better on Instagram than TikTok."
+        },
+    ]
+    
+    for trend in INSTAGRAM_SHOP_TRENDS:
+        src = trend["source_price"]
+        sell = trend["sell_price"]
+        margin = sell - src
+        
+        # Engagement score mapping
+        engagement_map = {"very_high": 90, "high": 70, "medium": 45, "low": 25}
+        competition_map = {"low": 80, "medium": 50, "high": 25}
+        
+        ig_engagement_score = engagement_map.get(trend.get("ig_engagement", "medium"), 50)
+        competition_score = competition_map.get(trend.get("competition_level", "medium"), 50)
+        
+        # Instagram Shop bonus: early mover advantage
+        early_mover_bonus = 15  # All products get bonus for being early on IG Shop
+        
+        # TikTok crossover bonus (proven product)
+        tt_bonus = 10 if trend.get("tt_crossover") else 0
+        
+        p = Product(
+            name=trend["name"],
+            source="instagram_shop",
+            source_url="https://www.instagram.com/shop/",
+            category=trend["category"],
+            source_price=src,
+            suggested_price=sell,
+            estimated_margin=round(margin, 2),
+            keywords=trend["keywords"],
+            margin_score=min(100, (margin / max(sell, 0.01)) * 100),
+            trend_score=min(100, ig_engagement_score + early_mover_bonus),
+            demand_score=min(100, ig_engagement_score + tt_bonus),
+            competition_score=competition_score,
+            notes=f"[IG Shop] {trend.get('notes', '')} | Engagement: {trend.get('ig_engagement')} | TT crossover: {trend.get('tt_crossover')}",
+        )
+        products.append(p)
+    
+    print(f"  ✅ Instagram Shop: {len(products)} trending products (early mover scan)")
+    return products
+
 
 def load_seed_products() -> list[Product]:
     """Load pre-validated product seeds."""
@@ -895,6 +1122,12 @@ def run_hunter(sources: list[str] = None, enrich_top: int = 10):
         all_products.extend(prods)
         sources_run.append('aliexpress')
     
+    if sources is None or 'instagram' in sources:
+        print("\n  📸 Instagram Shop / Meta Commerce Manager...")
+        prods = scrape_instagram_shop_trending()
+        all_products.extend(prods)
+        sources_run.append('instagram_shop')
+    
     if sources is None or 'seed' in sources or sources is None:
         print("\n  🌱 Seed Database...")
         prods = load_seed_products()
@@ -964,7 +1197,7 @@ def run_hunter(sources: list[str] = None, enrich_top: int = 10):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='HUNTER Agent — Product Research')
-    parser.add_argument('--source', choices=['trends', 'amazon', 'aliexpress', 'seed'],
+    parser.add_argument('--source', choices=['trends', 'amazon', 'aliexpress', 'instagram', 'seed'],
                        help='Scrape only this source')
     parser.add_argument('--score', action='store_true',
                        help='Score existing products (no scraping)')

@@ -17,13 +17,13 @@ projet:
     - "Journal WORM (hérité Cortex Leman v5)."
 
 agents:
-  - hunter:    "Recherche produit automatisée (TikTok, AliExpress, Google Trends, FB Ad Library)"
+  - hunter:    "Recherche produit automatisée (TikTok, AliExpress, Google Trends, FB Ad Library, Instagram Shop)"
   - scout:     "Supplier finder (Alibaba, 1688, agents privés)"
   - builder:   "Création boutique (Shopify ou Medusa.js)"
-  - creator:   "Créatives IA (scripts, images, vidéos UGC-style)"
-  - media:     "Campagnes ads (Meta, TikTok, Google)"
+  - creator:   "Créatives IA (scripts, images, vidéos UGC-style, Instagram Shop Reels)"
+  - media:     "Campagnes ads (Meta, TikTok, Google) + Instagram Shop affiliate"
   - closer:    "Email marketing + SAV + upsell"
-  - analyst:   "Analytics, P&L, optimisation continue"
+  - analyst:   "Analytics, P&L, optimisation continue (cross-platform TT Shop vs IG Shop)"
   - feedback:  "Skill #11 — Boucle de retour: les agents apprennent des résultats réels"
 
 phases:
@@ -69,8 +69,9 @@ stack:
   video: "HyperFrame (déjà installé dans socialpulse)"
   store: "Shopify (standard) ou Medusa.js (open-source)"
   ads: "Meta API + TikTok API + Google Ads API"
+  instagram_shop: "Meta Commerce Manager + Shopify Collabs + Impact (Amazon)"
   email: "Omnisend ou Listmonk (open-source)"
-  analytics: "Dashboard custom + P&L tracker"
+  analytics: "Dashboard custom + P&L tracker + cross-platform (TT Shop vs IG Shop)"
 
 skills_framework:
   source: "IBM AI Engineer 7 Skills (x.com/Mnilax)"

@@ -6,7 +6,8 @@ Generates marketing creatives for winning products:
   1. TikTok/Reels scripts (hook → body → CTA)
   2. Product page description (Shopify-ready)
   3. HyperFrame video HTML (GSAP animated, 1080×1920)
-  4. Ad copy variants (Facebook, TikTok, Google Shopping)
+  4. Instagram Shop Reels script (hook → product demo → CTA with product tag)
+  5. Ad copy variants (Facebook, TikTok, Google Shopping, Instagram Shop)
 
 Uses LLM for copy generation + deterministic templates for video.
 
@@ -19,6 +20,7 @@ Usage:
   python3 creator.py --top 3               # Top 3 only
   python3 creator.py --type video          # Video only
   python3 creator.py --type scripts        # Scripts only
+  python3 creator.py --type reels          # Instagram Shop Reels only
   python3 creator.py --type all            # Everything (default)
 """
 
@@ -505,6 +507,140 @@ gsap.timeline({{repeat: -1}})
     return html
 
 
+# ─── 5. Instagram Shop Reels Script Generator ────────────────────────────
+
+def generate_instagram_reels_script(product_name: str, price_eur: float, keywords: list, category: str = "") -> dict:
+    """
+    Generate an Instagram Shop Reels script optimized for:
+    - Product tagging (link in Reel via Meta Commerce Manager)
+    - Affiliate code/link integration
+    - Instagram Reels best practices (3-15s hook, vertical 9:16)
+    - Shopify Collabs or Impact tracking
+    
+    Instagram Shop flow:
+    1. Creator makes Reel → tags product from Meta Commerce Manager
+    2. Viewer taps product tag → redirected to Shopify/Amazon for checkout
+    3. Affiliate earns commission on sale
+    """
+    
+    keywords_str = ", ".join(keywords[:5]) if keywords else product_name
+    
+    prompt = f"""Tu es un expert Instagram Reels pour le social commerce.
+Crée un script Reel Instagram Shop pour ce produit:
+
+Produit: {product_name}
+Prix: €{price_eur:.2f}
+Catégorie: {category}
+Keywords: {keywords_str}
+
+Le Reel DOIT:
+- Avoir un hook visuel percutant dans les 2 premières secondes
+- Montrer le produit en action (démonstration, avant/après, unboxing)
+- Inclure un CTA vers le product tag Instagram Shop
+- Être optimisé pour l'algorithme Reels (watch time, shares)
+
+Réponds EXACTEMENT dans ce format:
+VISUAL_HOOK: [description de la scène d'ouverture, 1 ligne]
+TEXT_OVERLAY: [texte affiché à l'écran, max 8 mots]
+VOICEOVER: [ce que le créateur dit, 2-3 phrases courtes]
+DEMO_SEQUENCE: [description de la démo produit, 2-3 étapes]
+PRODUCT_TAG_MOMENT: [quand tagger le produit, ex: "à 5s pendant la démo"]
+CAPTION: [légende du post avec hashtags, max 150 car.]
+SHOP_CTA: [phrase finale pour cliquer le product tag]
+HASHTAGS: [10 hashtags pertinents]
+
+En FRANÇAIS. Ton authentique, pas pub."""
+
+    result = llm_generate(prompt, system="Tu es un expert Instagram Reels et social commerce. Réponds uniquement dans le format demandé.", max_tokens=600)
+    
+    script = {
+        "platform": "instagram_shop",
+        "visual_hook": "",
+        "text_overlay": "",
+        "voiceover": "",
+        "demo_sequence": "",
+        "product_tag_moment": "",
+        "caption": "",
+        "shop_cta": "",
+        "hashtags": [],
+        "full_script": result,
+        "product_tagging": {
+            "source": "meta_commerce_manager",
+            "checkout": "shopify_or_amazon",
+            "affiliate_platform": "shopify_collabs_or_impact",
+        },
+    }
+    
+    # Parse structured response
+    fields = ["visual_hook", "text_overlay", "voiceover", "demo_sequence", 
+              "product_tag_moment", "caption", "shop_cta"]
+    for field_name in fields:
+        pattern = field_name.upper() + r':\s*(.*?)(?=\n[A-Z_]+:|$)'
+        m = re.search(pattern, result, re.DOTALL)
+        if m:
+            script[field_name] = m.group(1).strip()
+    
+    # Parse hashtags
+    ht_m = re.search(r'HASHTAGS:\s*(.*?)$', result, re.DOTALL)
+    if ht_m:
+        ht_text = ht_m.group(1).strip()
+        script["hashtags"] = [t.strip() for t in re.findall(r'#(\w+)', ht_text)]
+    
+    return script
+
+
+# ─── 6. Instagram Shop Ad Copy Generator ──────────────────────────────────
+
+def generate_instagram_shop_copy(product_name: str, price_eur: float, keywords: list) -> dict:
+    """Generate Instagram Shop specific ad copy for Shopify Collabs / Impact."""
+    
+    keywords_str = ", ".join(keywords[:5]) if keywords else product_name
+    
+    prompt = f"""Tu es un expert en social commerce Instagram.
+Génère du contenu pour Instagram Shop pour ce produit:
+
+Produit: {product_name}
+Prix: €{price_eur:.2f}
+Keywords: {keywords_str}
+
+Réponds EXACTEMENT dans ce format:
+COLLABS_PITCH: [message pour pitch un créateur affiliate, 2-3 phrases, ton amical]
+REELS_CAPTION_1: [légende Reel style "découverte", 100 car. max]
+REELS_CAPTION_2: [légende Reel style "tuto/démo", 100 car. max]
+REELS_CAPTION_3: [légende Reel style "résultat/avant-après", 100 car. max]
+STORY_SWIPE_UP: [texte Story avec lien product tag, 50 car. max]
+BIO_SHOP_LINK: [description pour le lien shop en bio, 30 car. max]
+
+En FRANÇAIS. Ton naturel, pas pub."""
+
+    result = llm_generate(prompt, system="Tu es un expert Instagram Shop. Réponds uniquement dans le format demandé.", max_tokens=500)
+    
+    copy = {
+        "collabs_pitch": "",
+        "reels_caption_discovery": "",
+        "reels_caption_tuto": "",
+        "reels_caption_result": "",
+        "story_swipe_up": "",
+        "bio_shop_link": "",
+    }
+    
+    field_map = {
+        "collabs_pitch": "COLLABS_PITCH",
+        "reels_caption_discovery": "REELS_CAPTION_1",
+        "reels_caption_tuto": "REELS_CAPTION_2",
+        "reels_caption_result": "REELS_CAPTION_3",
+        "story_swipe_up": "STORY_SWIPE_UP",
+        "bio_shop_link": "BIO_SHOP_LINK",
+    }
+    
+    for key, pattern_name in field_map.items():
+        m = re.search(pattern_name + r':\s*(.*?)(?=\n[A-Z_]+:|$)', result, re.DOTALL)
+        if m:
+            copy[key] = m.group(1).strip()
+    
+    return copy
+
+
 # ─── Storage & Reporting ─────────────────────────────────────────────
 
 def load_products_with_scout(top_n: int = 0) -> list[dict]:
@@ -741,6 +877,20 @@ def run_creator(product_filter: str = "", top_n: int = 5, creative_type: str = "
             pack.video_html_path = video_html
             print(f"✅ ({len(video_html)} chars)")
         
+        # ─── Generate Instagram Shop Reels Script ───────────────
+        if creative_type in ('all', 'reels'):
+            print(f"     📸 Instagram Shop Reels...", end=" ", flush=True)
+            ig_reels = generate_instagram_reels_script(name, price, keywords, category)
+            ig_copy = generate_instagram_shop_copy(name, price, keywords)
+            # Save as separate files
+            ig_dir = CREATIVES_DIR / slug
+            ig_dir.mkdir(parents=True, exist_ok=True)
+            (ig_dir / "instagram-reels-script.json").write_text(
+                json.dumps({"reels": ig_reels, "shop_copy": ig_copy}, indent=2, ensure_ascii=False)
+            )
+            print(f"✅ (hook: {ig_reels.get('visual_hook', '')[:40]}...)")
+            time.sleep(3)
+        
         # Save pack
         save_creative_pack(pack, slug)
         packs.append(pack)
@@ -771,7 +921,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='CREATOR Agent — Creative Generator')
     parser.add_argument('--product', type=str, help='Generate for specific product')
     parser.add_argument('--top', type=int, default=5, help='Top N products')
-    parser.add_argument('--type', choices=['all', 'scripts', 'video'], default='all',
+    parser.add_argument('--type', choices=['all', 'scripts', 'video', 'reels'], default='all',
                        help='Type of creatives to generate')
     
     args = parser.parse_args()

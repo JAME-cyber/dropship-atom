@@ -1,0 +1,28 @@
+{
+  "timestamp": "2026-05-07T09:34:49.319330+00:00",
+  "agent": "HUNTER",
+  "action": "product_research",
+  "sources": [
+    "instagram_shop"
+  ],
+  "products_found": 100,
+  "top_3": [
+    {
+      "name": "Ice Roller Face Globes",
+      "score": 99.3,
+      "grade": "A+"
+    },
+    {
+      "name": "Foot Peel Mask Exfoliant",
+      "score": 99.3,
+      "grade": "A+"
+    },
+    {
+      "name": "Bamboo Sunglasses Polarized",
+      "score": 90.7,
+      "grade": "A+"
+    }
+  ],
+  "prev_hash": "c1294d5438667bb863fd4e2c95fb93fa5a21e1ae67be819a275093c6478c87ce",
+  "hash": "6b7b28ccea58e4cac7dc4ffb28d8a0cbfff7c61d1453b19803996da407525746"
+}
