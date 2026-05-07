@@ -1,0 +1,111 @@
+{
+  "product": "Foot Peel Mask Exfoliant",
+  "slug": "foot-peel-mask-exfoliant",
+  "sell_price": 17.9,
+  "margin": 13.49,
+  "safe_cpa": 8.09,
+  "break_even_cpa": 13.49,
+  "meta_campaign": {
+    "name": "DA-foot-peel-mask-exfol-TOF",
+    "objective": "CONVERSIONS",
+    "budget_daily": 16,
+    "budget_total_test": 121,
+    "pixel_event": "Purchase",
+    "targeting": {
+      "age_min": 18,
+      "age_max": 55,
+      "geo_locations": [
+        "FR",
+        "BE",
+        "CH"
+      ],
+      "interests": [
+        "foot peel",
+        "exfoliant",
+        "skincare",
+        "baby foot",
+        "beauty"
+      ],
+      "device_platforms": [
+        "mobile"
+      ],
+      "publisher_platforms": [
+        "facebook",
+        "instagram",
+        "audience_network"
+      ],
+      "instagram_positions": [
+        "reels",
+        "stories",
+        "feed"
+      ]
+    },
+    "adsets": [
+      {
+        "name": "DA-foot-peel-mask--broad",
+        "targeting_type": "broad",
+        "budget_daily": 12.13
+      },
+      {
+        "name": "DA-foot-peel-mask--interests",
+        "targeting_type": "interests",
+        "budget_daily": 8.09
+      },
+      {
+        "name": "DA-foot-peel-mask--lookalike",
+        "targeting_type": "lookalike",
+        "budget_daily": 4.04,
+        "note": "Create after 50+ purchases"
+      }
+    ],
+    "creatives": {
+      "tiktok_script": "output/creatives/foot-peel-mask-exfoliant/tiktok-script.txt",
+      "video_html": "output/creatives/foot-peel-mask-exfoliant/video.html",
+      "ad_copy": "output/creatives/foot-peel-mask-exfoliant/ad-copy.json"
+    },
+    "rules": {
+      "kill_if_roas_below": 0.5,
+      "kill_after_days": 5,
+      "scale_if_roas_above": 2.0,
+      "scale_budget_pct": 20,
+      "max_daily_budget": 67.45
+    }
+  },
+  "tiktok_campaign": {
+    "name": "DA-foot-peel-mask-exfol-TT",
+    "objective": "CONVERSIONS",
+    "budget_daily": 15,
+    "budget_total_test": 75,
+    "targeting": {
+      "geo": [
+        "FR"
+      ],
+      "age": "18-45",
+      "interests": [
+        "foot peel",
+        "exfoliant",
+        "skincare",
+        "baby foot",
+        "beauty"
+      ],
+      "placement": "TikTok only"
+    },
+    "creatives": {
+      "video_type": "UGC-style",
+      "script": "output/creatives/foot-peel-mask-exfoliant/tiktok-script.txt"
+    },
+    "rules": {
+      "kill_if_roas_below": 0.5,
+      "kill_after_days": 3,
+      "scale_if_roas_above": 1.5
+    }
+  },
+  "instagram_shop": {
+    "name": "DA-foot-peel-mask-exfol-IG-Shop",
+    "strategy": "organic_reels_with_product_tags",
+    "reels_per_week": 3,
+    "script": "output/creatives/foot-peel-mask-exfoliant/instagram-reels-script.json",
+    "affiliate_setup": "Shopify Collabs",
+    "tags": "#dropshipping #shopsmall #musthave"
+  }
+}

@@ -1,0 +1,112 @@
+{
+  "product": "Ice Roller Face Globes",
+  "slug": "ice-roller-face-globes",
+  "sell_price": 24.9,
+  "margin": 20.11,
+  "safe_cpa": 12.07,
+  "break_even_cpa": 20.11,
+  "meta_campaign": {
+    "name": "DA-ice-roller-face-glob-TOF",
+    "objective": "CONVERSIONS",
+    "budget_daily": 20,
+    "budget_total_test": 181,
+    "pixel_event": "Purchase",
+    "targeting": {
+      "age_min": 18,
+      "age_max": 55,
+      "geo_locations": [
+        "FR",
+        "BE",
+        "CH"
+      ],
+      "interests": [
+        "ice roller",
+        "face globes",
+        "skincare",
+        "puffiness",
+        "de-puff",
+        "morning routine"
+      ],
+      "device_platforms": [
+        "mobile"
+      ],
+      "publisher_platforms": [
+        "facebook",
+        "instagram",
+        "audience_network"
+      ],
+      "instagram_positions": [
+        "reels",
+        "stories",
+        "feed"
+      ]
+    },
+    "adsets": [
+      {
+        "name": "DA-ice-roller-face-broad",
+        "targeting_type": "broad",
+        "budget_daily": 18.11
+      },
+      {
+        "name": "DA-ice-roller-face-interests",
+        "targeting_type": "interests",
+        "budget_daily": 12.07
+      },
+      {
+        "name": "DA-ice-roller-face-lookalike",
+        "targeting_type": "lookalike",
+        "budget_daily": 6.04,
+        "note": "Create after 50+ purchases"
+      }
+    ],
+    "creatives": {
+      "tiktok_script": "output/creatives/ice-roller-face-globes/tiktok-script.txt",
+      "video_html": "output/creatives/ice-roller-face-globes/video.html",
+      "ad_copy": "output/creatives/ice-roller-face-globes/ad-copy.json"
+    },
+    "rules": {
+      "kill_if_roas_below": 0.5,
+      "kill_after_days": 5,
+      "scale_if_roas_above": 2.0,
+      "scale_budget_pct": 20,
+      "max_daily_budget": 100.55
+    }
+  },
+  "tiktok_campaign": {
+    "name": "DA-ice-roller-face-glob-TT",
+    "objective": "CONVERSIONS",
+    "budget_daily": 15,
+    "budget_total_test": 75,
+    "targeting": {
+      "geo": [
+        "FR"
+      ],
+      "age": "18-45",
+      "interests": [
+        "ice roller",
+        "face globes",
+        "skincare",
+        "puffiness",
+        "de-puff"
+      ],
+      "placement": "TikTok only"
+    },
+    "creatives": {
+      "video_type": "UGC-style",
+      "script": "output/creatives/ice-roller-face-globes/tiktok-script.txt"
+    },
+    "rules": {
+      "kill_if_roas_below": 0.5,
+      "kill_after_days": 3,
+      "scale_if_roas_above": 1.5
+    }
+  },
+  "instagram_shop": {
+    "name": "DA-ice-roller-face-glob-IG-Shop",
+    "strategy": "organic_reels_with_product_tags",
+    "reels_per_week": 3,
+    "script": "output/creatives/ice-roller-face-globes/instagram-reels-script.json",
+    "affiliate_setup": "Shopify Collabs",
+    "tags": "#dropshipping #shopsmall #musthave"
+  }
+}

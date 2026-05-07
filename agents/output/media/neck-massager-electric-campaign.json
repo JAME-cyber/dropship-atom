@@ -1,0 +1,111 @@
+{
+  "product": "Neck Massager Electric",
+  "slug": "neck-massager-electric",
+  "sell_price": 49.9,
+  "margin": 33.11,
+  "safe_cpa": 19.87,
+  "break_even_cpa": 33.11,
+  "meta_campaign": {
+    "name": "DA-neck-massager-electr-TOF",
+    "objective": "CONVERSIONS",
+    "budget_daily": 20,
+    "budget_total_test": 298,
+    "pixel_event": "Purchase",
+    "targeting": {
+      "age_min": 18,
+      "age_max": 55,
+      "geo_locations": [
+        "FR",
+        "BE",
+        "CH"
+      ],
+      "interests": [
+        "neck massager",
+        "pain relief",
+        "massage",
+        "stress",
+        "wellness"
+      ],
+      "device_platforms": [
+        "mobile"
+      ],
+      "publisher_platforms": [
+        "facebook",
+        "instagram",
+        "audience_network"
+      ],
+      "instagram_positions": [
+        "reels",
+        "stories",
+        "feed"
+      ]
+    },
+    "adsets": [
+      {
+        "name": "DA-neck-massager-e-broad",
+        "targeting_type": "broad",
+        "budget_daily": 29.8
+      },
+      {
+        "name": "DA-neck-massager-e-interests",
+        "targeting_type": "interests",
+        "budget_daily": 19.87
+      },
+      {
+        "name": "DA-neck-massager-e-lookalike",
+        "targeting_type": "lookalike",
+        "budget_daily": 9.94,
+        "note": "Create after 50+ purchases"
+      }
+    ],
+    "creatives": {
+      "tiktok_script": "output/creatives/neck-massager-electric/tiktok-script.txt",
+      "video_html": "output/creatives/neck-massager-electric/video.html",
+      "ad_copy": "output/creatives/neck-massager-electric/ad-copy.json"
+    },
+    "rules": {
+      "kill_if_roas_below": 0.5,
+      "kill_after_days": 5,
+      "scale_if_roas_above": 2.0,
+      "scale_budget_pct": 20,
+      "max_daily_budget": 165.55
+    }
+  },
+  "tiktok_campaign": {
+    "name": "DA-neck-massager-electr-TT",
+    "objective": "CONVERSIONS",
+    "budget_daily": 15,
+    "budget_total_test": 75,
+    "targeting": {
+      "geo": [
+        "FR"
+      ],
+      "age": "18-45",
+      "interests": [
+        "neck massager",
+        "pain relief",
+        "massage",
+        "stress",
+        "wellness"
+      ],
+      "placement": "TikTok only"
+    },
+    "creatives": {
+      "video_type": "UGC-style",
+      "script": "output/creatives/neck-massager-electric/tiktok-script.txt"
+    },
+    "rules": {
+      "kill_if_roas_below": 0.5,
+      "kill_after_days": 3,
+      "scale_if_roas_above": 1.5
+    }
+  },
+  "instagram_shop": {
+    "name": "DA-neck-massager-electr-IG-Shop",
+    "strategy": "organic_reels_with_product_tags",
+    "reels_per_week": 3,
+    "script": "output/creatives/neck-massager-electric/instagram-reels-script.json",
+    "affiliate_setup": "Shopify Collabs",
+    "tags": "#dropshipping #shopsmall #musthave"
+  }
+}
