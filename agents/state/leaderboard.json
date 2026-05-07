@@ -29,7 +29,7 @@
     "hunter_score": 99.3,
     "hunter_grade": "A+",
     "discovered_at": "2026-05-07T09:34:49.253071+00:00",
-    "updated_at": "2026-05-07T09:34:49.302152+00:00"
+    "updated_at": "2026-05-07T09:38:21.822346+00:00"
   },
   {
     "id": "58927454c502",
@@ -60,7 +60,7 @@
     "hunter_score": 99.3,
     "hunter_grade": "A+",
     "discovered_at": "2026-05-07T09:34:49.253144+00:00",
-    "updated_at": "2026-05-07T09:34:49.303371+00:00"
+    "updated_at": "2026-05-07T09:38:21.822984+00:00"
   },
   {
     "id": "cd1fa9903473",
@@ -93,7 +93,7 @@
     "hunter_score": 90.7,
     "hunter_grade": "A+",
     "discovered_at": "2026-05-07T09:34:49.253167+00:00",
-    "updated_at": "2026-05-07T09:34:49.303756+00:00"
+    "updated_at": "2026-05-07T09:38:21.823539+00:00"
   },
   {
     "id": "5203e29870fe",
@@ -124,7 +124,7 @@
     "hunter_score": 90.5,
     "hunter_grade": "A+",
     "discovered_at": "2026-05-07T09:34:49.252991+00:00",
-    "updated_at": "2026-05-07T09:34:49.300807+00:00"
+    "updated_at": "2026-05-07T09:38:21.824108+00:00"
   },
   {
     "id": "8bcd64f13133",
@@ -155,7 +155,7 @@
     "hunter_score": 90.1,
     "hunter_grade": "A+",
     "discovered_at": "2026-05-07T09:34:49.253019+00:00",
-    "updated_at": "2026-05-07T09:34:49.301266+00:00"
+    "updated_at": "2026-05-07T09:38:21.824553+00:00"
   },
   {
     "id": "9975f651df19",
@@ -186,7 +186,7 @@
     "hunter_score": 88.7,
     "hunter_grade": "A+",
     "discovered_at": "2026-05-07T09:34:49.253295+00:00",
-    "updated_at": "2026-05-07T09:34:49.305699+00:00"
+    "updated_at": "2026-05-07T09:38:21.824986+00:00"
   },
   {
     "id": "a491aac8456f",
@@ -217,7 +217,7 @@
     "hunter_score": 88.2,
     "hunter_grade": "A+",
     "discovered_at": "2026-05-07T09:34:49.253215+00:00",
-    "updated_at": "2026-05-07T09:34:49.304535+00:00"
+    "updated_at": "2026-05-07T09:38:21.825394+00:00"
   },
   {
     "id": "7d2febfcddf1",
@@ -248,7 +248,7 @@
     "hunter_score": 84.2,
     "hunter_grade": "A+",
     "discovered_at": "2026-05-07T09:34:49.252942+00:00",
-    "updated_at": "2026-05-07T09:34:49.300285+00:00"
+    "updated_at": "2026-05-07T09:38:21.825809+00:00"
   },
   {
     "id": "d1ee66d3fcf6",
@@ -280,7 +280,7 @@
     "hunter_score": 82.7,
     "hunter_grade": "A+",
     "discovered_at": "2026-05-07T09:34:49.253120+00:00",
-    "updated_at": "2026-05-07T09:34:49.302963+00:00"
+    "updated_at": "2026-05-07T09:38:21.826252+00:00"
   },
   {
     "id": "ef79f9c7a4af",
@@ -311,7 +311,7 @@
     "hunter_score": 81.0,
     "hunter_grade": "A+",
     "discovered_at": "2026-05-07T09:34:49.253095+00:00",
-    "updated_at": "2026-05-07T09:34:49.302549+00:00"
+    "updated_at": "2026-05-07T09:38:21.826831+00:00"
   },
   {
     "id": "5502cc01b2ec",
@@ -342,7 +342,7 @@
     "hunter_score": 75.2,
     "hunter_grade": "A",
     "discovered_at": "2026-05-07T09:34:49.253247+00:00",
-    "updated_at": "2026-05-07T09:34:49.304934+00:00"
+    "updated_at": "2026-05-07T09:38:21.827231+00:00"
   },
   {
     "id": "db642ad99f89",
@@ -373,7 +373,7 @@
     "hunter_score": 75.1,
     "hunter_grade": "A",
     "discovered_at": "2026-05-07T09:34:49.253044+00:00",
-    "updated_at": "2026-05-07T09:34:49.301690+00:00"
+    "updated_at": "2026-05-07T09:38:21.827615+00:00"
   },
   {
     "id": "6eb2cccf4fea",
@@ -404,7 +404,7 @@
     "hunter_score": 72.4,
     "hunter_grade": "A",
     "discovered_at": "2026-05-07T09:34:49.253191+00:00",
-    "updated_at": "2026-05-07T09:34:49.304152+00:00"
+    "updated_at": "2026-05-07T09:38:21.828018+00:00"
   },
   {
     "id": "fe7a2b2cbc7a",
@@ -435,7 +435,7 @@
     "hunter_score": 71.0,
     "hunter_grade": "A",
     "discovered_at": "2026-05-07T09:34:49.253318+00:00",
-    "updated_at": "2026-05-07T09:34:49.306093+00:00"
+    "updated_at": "2026-05-07T09:38:21.828400+00:00"
   },
   {
     "id": "bb207783e760",
@@ -466,7 +466,7 @@
     "hunter_score": 65.0,
     "hunter_grade": "A",
     "discovered_at": "2026-05-06T10:31:58.925984+00:00",
-    "updated_at": "2026-05-07T09:34:49.256309+00:00"
+    "updated_at": "2026-05-07T09:38:21.828782+00:00"
   },
   {
     "id": "994e006d2be8",
@@ -497,7 +497,7 @@
     "hunter_score": 62.7,
     "hunter_grade": "B",
     "discovered_at": "2026-05-07T09:34:49.253271+00:00",
-    "updated_at": "2026-05-07T09:34:49.305317+00:00"
+    "updated_at": "2026-05-07T09:38:21.829175+00:00"
   },
   {
     "id": "d4651571a8f7",
@@ -528,7 +528,7 @@
     "hunter_score": 62.5,
     "hunter_grade": "B",
     "discovered_at": "2026-05-06T10:31:58.925960+00:00",
-    "updated_at": "2026-05-07T09:34:49.256720+00:00"
+    "updated_at": "2026-05-07T09:38:21.829656+00:00"
   },
   {
     "id": "fa2c88a45571",
@@ -558,7 +558,7 @@
     "hunter_score": 62.5,
     "hunter_grade": "B",
     "discovered_at": "2026-05-06T10:31:58.926145+00:00",
-    "updated_at": "2026-05-07T09:34:49.257142+00:00"
+    "updated_at": "2026-05-07T09:38:21.830214+00:00"
   },
   {
     "id": "e34f4d319e5b",
@@ -589,7 +589,7 @@
     "hunter_score": 61.4,
     "hunter_grade": "B",
     "discovered_at": "2026-05-06T10:31:58.926122+00:00",
-    "updated_at": "2026-05-07T09:34:49.257546+00:00"
+    "updated_at": "2026-05-07T09:38:21.830650+00:00"
   },
   {
     "id": "2d2d2a22828c",
@@ -620,7 +620,7 @@
     "hunter_score": 55.5,
     "hunter_grade": "B",
     "discovered_at": "2026-05-06T10:31:58.926324+00:00",
-    "updated_at": "2026-05-07T09:34:49.257984+00:00"
+    "updated_at": "2026-05-07T09:38:21.831393+00:00"
   },
   {
     "id": "75de812e2c15",
@@ -650,7 +650,7 @@
     "hunter_score": 55.2,
     "hunter_grade": "B",
     "discovered_at": "2026-05-06T10:31:58.926368+00:00",
-    "updated_at": "2026-05-07T09:34:49.258398+00:00"
+    "updated_at": "2026-05-07T09:38:21.831878+00:00"
   },
   {
     "id": "b647dcfb257f",
@@ -682,7 +682,7 @@
     "hunter_score": 55.0,
     "hunter_grade": "B",
     "discovered_at": "2026-05-06T10:31:58.926076+00:00",
-    "updated_at": "2026-05-07T09:34:49.258812+00:00"
+    "updated_at": "2026-05-07T09:38:21.832293+00:00"
   },
   {
     "id": "14ccdc4cff9d",
@@ -713,7 +713,7 @@
     "hunter_score": 55.0,
     "hunter_grade": "B",
     "discovered_at": "2026-05-06T10:31:58.926191+00:00",
-    "updated_at": "2026-05-07T09:34:49.259255+00:00"
+    "updated_at": "2026-05-07T09:38:21.832736+00:00"
   },
   {
     "id": "5b7a5ca374c0",
@@ -744,7 +744,7 @@
     "hunter_score": 55.0,
     "hunter_grade": "B",
     "discovered_at": "2026-05-06T10:31:58.926257+00:00",
-    "updated_at": "2026-05-07T09:34:49.259676+00:00"
+    "updated_at": "2026-05-07T09:38:21.833207+00:00"
   },
   {
     "id": "746d0323b2d3",
@@ -775,7 +775,7 @@
     "hunter_score": 55.0,
     "hunter_grade": "B",
     "discovered_at": "2026-05-06T10:31:58.926302+00:00",
-    "updated_at": "2026-05-07T09:34:49.260131+00:00"
+    "updated_at": "2026-05-07T09:38:21.833726+00:00"
   },
   {
     "id": "67bd7ad96eb6",
@@ -806,7 +806,7 @@
     "hunter_score": 54.0,
     "hunter_grade": "B",
     "discovered_at": "2026-05-06T10:31:58.925936+00:00",
-    "updated_at": "2026-05-07T09:34:49.260554+00:00"
+    "updated_at": "2026-05-07T09:38:21.834284+00:00"
   },
   {
     "id": "a6ed17cbfa3b",
@@ -836,7 +836,7 @@
     "hunter_score": 54.0,
     "hunter_grade": "B",
     "discovered_at": "2026-05-06T10:31:58.926099+00:00",
-    "updated_at": "2026-05-07T09:34:49.261409+00:00"
+    "updated_at": "2026-05-07T09:38:21.834781+00:00"
   },
   {
     "id": "90f0e26b1f0f",
@@ -867,7 +867,7 @@
     "hunter_score": 54.0,
     "hunter_grade": "B",
     "discovered_at": "2026-05-06T10:31:58.926168+00:00",
-    "updated_at": "2026-05-07T09:34:49.264091+00:00"
+    "updated_at": "2026-05-07T09:38:21.835323+00:00"
   },
   {
     "id": "4a9a56b5c1dd",
@@ -898,7 +898,7 @@
     "hunter_score": 53.7,
     "hunter_grade": "B",
     "discovered_at": "2026-05-06T10:31:58.926457+00:00",
-    "updated_at": "2026-05-07T09:34:49.264706+00:00"
+    "updated_at": "2026-05-07T09:38:21.835808+00:00"
   },
   {
     "id": "4d481392ec22",
@@ -928,7 +928,7 @@
     "hunter_score": 53.5,
     "hunter_grade": "B",
     "discovered_at": "2026-05-06T10:31:58.926213+00:00",
-    "updated_at": "2026-05-07T09:34:49.265183+00:00"
+    "updated_at": "2026-05-07T09:38:21.836336+00:00"
   },
   {
     "id": "9331eb348f5e",
@@ -959,7 +959,7 @@
     "hunter_score": 53.1,
     "hunter_grade": "B",
     "discovered_at": "2026-05-06T10:31:58.926030+00:00",
-    "updated_at": "2026-05-07T09:34:49.265872+00:00"
+    "updated_at": "2026-05-07T09:38:21.836869+00:00"
   },
   {
     "id": "4ce39b3352e6",
@@ -989,7 +989,7 @@
     "hunter_score": 53.1,
     "hunter_grade": "B",
     "discovered_at": "2026-05-06T10:31:58.926435+00:00",
-    "updated_at": "2026-05-07T09:34:49.266349+00:00"
+    "updated_at": "2026-05-07T09:38:21.837369+00:00"
   },
   {
     "id": "da5965c54f83",
@@ -1019,7 +1019,7 @@
     "hunter_score": 52.5,
     "hunter_grade": "B",
     "discovered_at": "2026-05-06T10:31:58.926235+00:00",
-    "updated_at": "2026-05-07T09:34:49.268235+00:00"
+    "updated_at": "2026-05-07T09:38:21.837901+00:00"
   },
   {
     "id": "6adc0e235a1c",
@@ -1049,7 +1049,7 @@
     "hunter_score": 52.5,
     "hunter_grade": "B",
     "discovered_at": "2026-05-06T10:31:58.926280+00:00",
-    "updated_at": "2026-05-07T09:34:49.268677+00:00"
+    "updated_at": "2026-05-07T09:38:21.838394+00:00"
   },
   {
     "id": "47a2219c8c45",
@@ -1080,7 +1080,7 @@
     "hunter_score": 52.0,
     "hunter_grade": "B",
     "discovered_at": "2026-05-06T10:31:58.925864+00:00",
-    "updated_at": "2026-05-07T09:34:49.269807+00:00"
+    "updated_at": "2026-05-07T09:38:21.838975+00:00"
   },
   {
     "id": "01282778734a",
@@ -1111,7 +1111,115 @@
     "hunter_score": 52.0,
     "hunter_grade": "B",
     "discovered_at": "2026-05-06T10:31:58.926391+00:00",
-    "updated_at": "2026-05-07T09:34:49.270399+00:00"
+    "updated_at": "2026-05-07T09:38:21.839662+00:00"
+  },
+  {
+    "id": "64027b1588df",
+    "name": "survivor season 50",
+    "source": "google_trends_us",
+    "source_url": "https://trends.google.com/trends/explore?q=survivor%20season%2050&geo=US",
+    "category": "",
+    "trend_score": 100,
+    "competition_score": 0.0,
+    "demand_score": 100,
+    "margin_score": 0.0,
+    "source_price": 0.0,
+    "suggested_price": 0.0,
+    "estimated_margin": 0.0,
+    "asin": "",
+    "aliexpress_id": "",
+    "image_url": "",
+    "keywords": [
+      "survivor season 50"
+    ],
+    "notes": "",
+    "llm_verdict": "",
+    "llm_analysis": "",
+    "hunter_score": 50.5,
+    "hunter_grade": "B",
+    "discovered_at": "2026-05-07T09:37:08.161540+00:00",
+    "updated_at": "2026-05-07T09:38:21.871130+00:00"
+  },
+  {
+    "id": "509fa8681e28",
+    "name": "basketball fouls",
+    "source": "google_trends_us",
+    "source_url": "https://trends.google.com/trends/explore?q=basketball%20fouls&geo=US",
+    "category": "",
+    "trend_score": 100,
+    "competition_score": 0.0,
+    "demand_score": 100,
+    "margin_score": 0.0,
+    "source_price": 0.0,
+    "suggested_price": 0.0,
+    "estimated_margin": 0.0,
+    "asin": "",
+    "aliexpress_id": "",
+    "image_url": "",
+    "keywords": [
+      "basketball fouls"
+    ],
+    "notes": "",
+    "llm_verdict": "",
+    "llm_analysis": "",
+    "hunter_score": 50.5,
+    "hunter_grade": "B",
+    "discovered_at": "2026-05-07T09:37:08.161773+00:00",
+    "updated_at": "2026-05-07T09:38:21.873958+00:00"
+  },
+  {
+    "id": "e4ff6d4aa49e",
+    "name": "arbitrage psg bayern",
+    "source": "google_trends_fr",
+    "source_url": "https://trends.google.com/trends/explore?q=arbitrage%20psg%20bayern&geo=FR",
+    "category": "",
+    "trend_score": 100,
+    "competition_score": 0.0,
+    "demand_score": 100,
+    "margin_score": 0.0,
+    "source_price": 0.0,
+    "suggested_price": 0.0,
+    "estimated_margin": 0.0,
+    "asin": "",
+    "aliexpress_id": "",
+    "image_url": "",
+    "keywords": [
+      "arbitrage psg bayern"
+    ],
+    "notes": "",
+    "llm_verdict": "",
+    "llm_analysis": "",
+    "hunter_score": 50.5,
+    "hunter_grade": "B",
+    "discovered_at": "2026-05-07T09:37:08.492685+00:00",
+    "updated_at": "2026-05-07T09:38:21.879172+00:00"
+  },
+  {
+    "id": "e61db528ccc2",
+    "name": "yann arthus bertrand",
+    "source": "google_trends_fr",
+    "source_url": "https://trends.google.com/trends/explore?q=yann%20arthus%20bertrand&geo=FR",
+    "category": "",
+    "trend_score": 100,
+    "competition_score": 0.0,
+    "demand_score": 100,
+    "margin_score": 0.0,
+    "source_price": 0.0,
+    "suggested_price": 0.0,
+    "estimated_margin": 0.0,
+    "asin": "",
+    "aliexpress_id": "",
+    "image_url": "",
+    "keywords": [
+      "yann arthus bertrand"
+    ],
+    "notes": "",
+    "llm_verdict": "",
+    "llm_analysis": "",
+    "hunter_score": 50.5,
+    "hunter_grade": "B",
+    "discovered_at": "2026-05-07T09:37:08.492744+00:00",
+    "updated_at": "2026-05-07T09:38:21.879951+00:00"
   },
   {
     "id": "84789308b5a7",
@@ -1142,7 +1250,7 @@
     "hunter_score": 47.8,
     "hunter_grade": "C",
     "discovered_at": "2026-05-06T10:31:58.926007+00:00",
-    "updated_at": "2026-05-07T09:34:49.266812+00:00"
+    "updated_at": "2026-05-07T09:38:21.840211+00:00"
   },
   {
     "id": "a468e616b024",
@@ -1172,7 +1280,7 @@
     "hunter_score": 47.8,
     "hunter_grade": "C",
     "discovered_at": "2026-05-06T10:31:58.926346+00:00",
-    "updated_at": "2026-05-07T09:34:49.267658+00:00"
+    "updated_at": "2026-05-07T09:38:21.840699+00:00"
   },
   {
     "id": "73dcf2f9d9a4",
@@ -1202,7 +1310,7 @@
     "hunter_score": 44.7,
     "hunter_grade": "C",
     "discovered_at": "2026-05-06T10:31:58.926053+00:00",
-    "updated_at": "2026-05-07T09:34:49.270925+00:00"
+    "updated_at": "2026-05-07T09:38:21.841233+00:00"
   },
   {
     "id": "71ee79609cb9",
@@ -1229,219 +1337,17 @@
     "hunter_score": 27.2,
     "hunter_grade": "D",
     "discovered_at": "2026-05-06T10:30:48.534281+00:00",
-    "updated_at": "2026-05-07T09:34:49.271417+00:00"
+    "updated_at": "2026-05-07T09:38:21.841691+00:00"
   },
   {
-    "id": "0dc078d9b8d2",
-    "name": "Amazon Mover B0DQSX1W78",
-    "source": "amazon_movers",
-    "source_url": "https://www.amazon.com/dp/B0DQSX1W78",
-    "category": "",
-    "trend_score": 18.05,
-    "competition_score": 60,
-    "demand_score": 22.5625,
-    "margin_score": 0.0,
-    "source_price": 0.0,
-    "suggested_price": 0.0,
-    "estimated_margin": 0.0,
-    "asin": "B0DQSX1W78",
-    "aliexpress_id": "",
-    "image_url": "",
-    "keywords": [],
-    "notes": "",
-    "llm_verdict": "",
-    "llm_analysis": "",
-    "hunter_score": 22.7,
-    "hunter_grade": "D",
-    "discovered_at": "2026-05-06T10:30:56.118493+00:00",
-    "updated_at": "2026-05-07T09:34:49.273438+00:00"
-  },
-  {
-    "id": "38cfc1b88eee",
-    "name": "Amazon Mover B0C7GZ4KGV",
-    "source": "amazon_movers",
-    "source_url": "https://www.amazon.com/dp/B0C7GZ4KGV",
-    "category": "",
-    "trend_score": 18.05,
-    "competition_score": 60,
-    "demand_score": 22.5625,
-    "margin_score": 0.0,
-    "source_price": 0.0,
-    "suggested_price": 0.0,
-    "estimated_margin": 0.0,
-    "asin": "B0C7GZ4KGV",
-    "aliexpress_id": "",
-    "image_url": "",
-    "keywords": [],
-    "notes": "",
-    "llm_verdict": "",
-    "llm_analysis": "",
-    "hunter_score": 22.7,
-    "hunter_grade": "D",
-    "discovered_at": "2026-05-06T10:30:56.118517+00:00",
-    "updated_at": "2026-05-07T09:34:49.274152+00:00"
-  },
-  {
-    "id": "55819dba6d50",
-    "name": "Amazon Mover B0GZKWMC3Y",
-    "source": "amazon_movers",
-    "source_url": "https://www.amazon.com/dp/B0GZKWMC3Y",
-    "category": "",
-    "trend_score": 18.05,
-    "competition_score": 60,
-    "demand_score": 22.5625,
-    "margin_score": 0.0,
-    "source_price": 0.0,
-    "suggested_price": 0.0,
-    "estimated_margin": 0.0,
-    "asin": "B0GZKWMC3Y",
-    "aliexpress_id": "",
-    "image_url": "",
-    "keywords": [],
-    "notes": "",
-    "llm_verdict": "",
-    "llm_analysis": "",
-    "hunter_score": 22.7,
-    "hunter_grade": "D",
-    "discovered_at": "2026-05-06T10:30:56.118542+00:00",
-    "updated_at": "2026-05-07T09:34:49.274596+00:00"
-  },
-  {
-    "id": "4e98fa6e9c16",
-    "name": "Amazon Mover B0GZKQHCQM",
-    "source": "amazon_movers",
-    "source_url": "https://www.amazon.com/dp/B0GZKQHCQM",
-    "category": "",
-    "trend_score": 18.05,
-    "competition_score": 60,
-    "demand_score": 22.5625,
-    "margin_score": 0.0,
-    "source_price": 0.0,
-    "suggested_price": 0.0,
-    "estimated_margin": 0.0,
-    "asin": "B0GZKQHCQM",
-    "aliexpress_id": "",
-    "image_url": "",
-    "keywords": [],
-    "notes": "",
-    "llm_verdict": "",
-    "llm_analysis": "",
-    "hunter_score": 22.7,
-    "hunter_grade": "D",
-    "discovered_at": "2026-05-06T10:30:56.118587+00:00",
-    "updated_at": "2026-05-07T09:34:49.275151+00:00"
-  },
-  {
-    "id": "5af4835bf46e",
-    "name": "Amazon Mover B0GZKZDXS6",
-    "source": "amazon_movers",
-    "source_url": "https://www.amazon.com/dp/B0GZKZDXS6",
-    "category": "",
-    "trend_score": 18.05,
-    "competition_score": 60,
-    "demand_score": 22.5625,
-    "margin_score": 0.0,
-    "source_price": 0.0,
-    "suggested_price": 0.0,
-    "estimated_margin": 0.0,
-    "asin": "B0GZKZDXS6",
-    "aliexpress_id": "",
-    "image_url": "",
-    "keywords": [],
-    "notes": "",
-    "llm_verdict": "",
-    "llm_analysis": "",
-    "hunter_score": 22.7,
-    "hunter_grade": "D",
-    "discovered_at": "2026-05-06T10:30:56.118610+00:00",
-    "updated_at": "2026-05-07T09:34:49.275665+00:00"
-  },
-  {
-    "id": "0718b490f624",
-    "name": "Amazon Mover B0CL1957NL",
-    "source": "amazon_movers",
-    "source_url": "https://www.amazon.com/dp/B0CL1957NL",
-    "category": "",
-    "trend_score": 18.05,
-    "competition_score": 60,
-    "demand_score": 22.5625,
-    "margin_score": 0.0,
-    "source_price": 0.0,
-    "suggested_price": 0.0,
-    "estimated_margin": 0.0,
-    "asin": "B0CL1957NL",
-    "aliexpress_id": "",
-    "image_url": "",
-    "keywords": [],
-    "notes": "",
-    "llm_verdict": "",
-    "llm_analysis": "",
-    "hunter_score": 22.7,
-    "hunter_grade": "D",
-    "discovered_at": "2026-05-06T10:30:56.118632+00:00",
-    "updated_at": "2026-05-07T09:34:49.276255+00:00"
-  },
-  {
-    "id": "456c5467e712",
-    "name": "Amazon Mover B0GZKYMKZ4",
-    "source": "amazon_movers",
-    "source_url": "https://www.amazon.com/dp/B0GZKYMKZ4",
-    "category": "",
-    "trend_score": 10.11,
-    "competition_score": 60,
-    "demand_score": 12.6375,
-    "margin_score": 0.0,
-    "source_price": 0.0,
-    "suggested_price": 0.0,
-    "estimated_margin": 0.0,
-    "asin": "B0GZKYMKZ4",
-    "aliexpress_id": "",
-    "image_url": "",
-    "keywords": [],
-    "notes": "",
-    "llm_verdict": "",
-    "llm_analysis": "",
-    "hunter_score": 18.2,
-    "hunter_grade": "D",
-    "discovered_at": "2026-05-06T10:30:56.118564+00:00",
-    "updated_at": "2026-05-07T09:34:49.276749+00:00"
-  },
-  {
-    "id": "a6724eaa7c56",
-    "name": "personal injury lawyer",
-    "source": "google_trends_us",
-    "source_url": "https://trends.google.com/trends/explore?q=personal%20injury%20lawyer&geo=US",
-    "category": "",
-    "trend_score": 20.0,
-    "competition_score": 0.0,
-    "demand_score": 33.333333333333336,
-    "margin_score": 0.0,
-    "source_price": 0.0,
-    "suggested_price": 0.0,
-    "estimated_margin": 0.0,
-    "asin": "",
-    "aliexpress_id": "",
-    "image_url": "",
-    "keywords": [
-      "personal injury lawyer"
-    ],
-    "notes": "",
-    "llm_verdict": "",
-    "llm_analysis": "",
-    "hunter_score": 13.8,
-    "hunter_grade": "D",
-    "discovered_at": "2026-05-06T10:30:48.534515+00:00",
-    "updated_at": "2026-05-07T09:34:49.277703+00:00"
-  },
-  {
-    "id": "7e76e4f98af2",
-    "name": "embarquement",
+    "id": "882592ec108b",
+    "name": "patrice duhamel",
     "source": "google_trends_fr",
-    "source_url": "https://trends.google.com/trends/explore?q=embarquement&geo=FR",
+    "source_url": "https://trends.google.com/trends/explore?q=patrice%20duhamel&geo=FR",
     "category": "",
-    "trend_score": 20.0,
+    "trend_score": 40.0,
     "competition_score": 0.0,
-    "demand_score": 33.333333333333336,
+    "demand_score": 66.66666666666667,
     "margin_score": 0.0,
     "source_price": 0.0,
     "suggested_price": 0.0,
@@ -1450,41 +1356,139 @@
     "aliexpress_id": "",
     "image_url": "",
     "keywords": [
-      "embarquement"
+      "patrice duhamel"
     ],
     "notes": "",
     "llm_verdict": "",
     "llm_analysis": "",
-    "hunter_score": 13.8,
+    "hunter_score": 27.2,
     "hunter_grade": "D",
-    "discovered_at": "2026-05-06T10:30:48.855902+00:00",
-    "updated_at": "2026-05-07T09:34:49.278150+00:00"
+    "discovered_at": "2026-05-07T09:37:08.492622+00:00",
+    "updated_at": "2026-05-07T09:38:21.877998+00:00"
   },
   {
-    "id": "7539c5342192",
-    "name": "bitcoin",
-    "source": "google_trends_fr",
-    "source_url": "https://trends.google.com/trends/explore?q=bitcoin&geo=FR",
-    "category": "",
-    "trend_score": 20.0,
-    "competition_score": 0.0,
-    "demand_score": 33.333333333333336,
+    "id": "fb76907bd317",
+    "name": "#nav-flyout-fresh{width:269px;padding:0;}#nav-flyout-fresh .nav-flyout-content{padding:0;}\"}}}},\"cartTimeout\":{\"template\":{\"name\":\"flyoutError",
+    "source": "amazon_bestsellers",
+    "source_url": "https://www.amazon.com/dp/B086KSDTQ4",
+    "category": "All",
+    "trend_score": 0.0,
+    "competition_score": 30,
+    "demand_score": 70,
     "margin_score": 0.0,
     "source_price": 0.0,
-    "suggested_price": 0.0,
-    "estimated_margin": 0.0,
-    "asin": "",
+    "suggested_price": 0,
+    "estimated_margin": 0,
+    "asin": "B086KSDTQ4",
     "aliexpress_id": "",
     "image_url": "",
-    "keywords": [
-      "bitcoin"
-    ],
+    "keywords": [],
     "notes": "",
     "llm_verdict": "",
     "llm_analysis": "",
-    "hunter_score": 13.8,
+    "hunter_score": 24.0,
     "hunter_grade": "D",
-    "discovered_at": "2026-05-06T10:30:48.855996+00:00",
-    "updated_at": "2026-05-07T09:34:49.278555+00:00"
+    "discovered_at": "2026-05-07T09:37:09.497026+00:00",
+    "updated_at": "2026-05-07T09:38:21.880391+00:00"
+  },
+  {
+    "id": "154aecbda142",
+    "name": "Oops!",
+    "source": "amazon_bestsellers",
+    "source_url": "https://www.amazon.com/dp/B0FNC6G5VG",
+    "category": "All",
+    "trend_score": 0.0,
+    "competition_score": 30,
+    "demand_score": 70,
+    "margin_score": 0.0,
+    "source_price": 0.0,
+    "suggested_price": 0,
+    "estimated_margin": 0,
+    "asin": "B0FNC6G5VG",
+    "aliexpress_id": "",
+    "image_url": "",
+    "keywords": [],
+    "notes": "",
+    "llm_verdict": "",
+    "llm_analysis": "",
+    "hunter_score": 24.0,
+    "hunter_grade": "D",
+    "discovered_at": "2026-05-07T09:37:09.497080+00:00",
+    "updated_at": "2026-05-07T09:38:21.880773+00:00"
+  },
+  {
+    "id": "c45a2116ccc7",
+    "name": "\"}}}},\"ewcTimeout\":{\"template\":{\"name\":\"flyoutError",
+    "source": "amazon_bestsellers",
+    "source_url": "https://www.amazon.com/dp/B0D8DZN778",
+    "category": "All",
+    "trend_score": 0.0,
+    "competition_score": 30,
+    "demand_score": 70,
+    "margin_score": 0.0,
+    "source_price": 0.0,
+    "suggested_price": 0,
+    "estimated_margin": 0,
+    "asin": "B0D8DZN778",
+    "aliexpress_id": "",
+    "image_url": "",
+    "keywords": [],
+    "notes": "",
+    "llm_verdict": "",
+    "llm_analysis": "",
+    "hunter_score": 24.0,
+    "hunter_grade": "D",
+    "discovered_at": "2026-05-07T09:37:09.497116+00:00",
+    "updated_at": "2026-05-07T09:38:21.881167+00:00"
+  },
+  {
+    "id": "154aecbda142",
+    "name": "Oops!",
+    "source": "amazon_bestsellers",
+    "source_url": "https://www.amazon.com/dp/B0FTSRP2SL",
+    "category": "All",
+    "trend_score": 0.0,
+    "competition_score": 30,
+    "demand_score": 70,
+    "margin_score": 0.0,
+    "source_price": 0.0,
+    "suggested_price": 0,
+    "estimated_margin": 0,
+    "asin": "B0FTSRP2SL",
+    "aliexpress_id": "",
+    "image_url": "",
+    "keywords": [],
+    "notes": "",
+    "llm_verdict": "",
+    "llm_analysis": "",
+    "hunter_score": 24.0,
+    "hunter_grade": "D",
+    "discovered_at": "2026-05-07T09:37:09.497144+00:00",
+    "updated_at": "2026-05-07T09:38:21.881550+00:00"
+  },
+  {
+    "id": "154aecbda142",
+    "name": "Oops!",
+    "source": "amazon_bestsellers",
+    "source_url": "https://www.amazon.com/dp/B0014C0LUC",
+    "category": "All",
+    "trend_score": 0.0,
+    "competition_score": 30,
+    "demand_score": 70,
+    "margin_score": 0.0,
+    "source_price": 0.0,
+    "suggested_price": 0,
+    "estimated_margin": 0,
+    "asin": "B0014C0LUC",
+    "aliexpress_id": "",
+    "image_url": "",
+    "keywords": [],
+    "notes": "",
+    "llm_verdict": "",
+    "llm_analysis": "",
+    "hunter_score": 24.0,
+    "hunter_grade": "D",
+    "discovered_at": "2026-05-07T09:37:09.497171+00:00",
+    "updated_at": "2026-05-07T09:38:21.881973+00:00"
   }
 ]

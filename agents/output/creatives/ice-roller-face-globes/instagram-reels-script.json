@@ -1,0 +1,38 @@
+{
+  "reels": {
+    "platform": "instagram_shop",
+    "visual_hook": "Gros plan sur un visage fatigué avec des yeux gonflés au réveil",
+    "text_overlay": "Mon rituel anti-gonflement",
+    "voiceover": "\"Bon bah voilà ma tête ce matin... Mais attend, j'ai mon ice roller. En 2 minutes, bye bye la bouille de panda.\"",
+    "demo_sequence": "1. Appliquer le roller glacé sur le contour des yeux en mouvements circulaires\n2. Passer sur les joues et le front pour resserrer les pores\n3. Montrer le résultat : peau apaisée, visiblement moins gonflée",
+    "product_tag_moment": "À 8s quand on voit le produit en main pendant la démonstration",
+    "caption": "Le matin, j'ai une tête... Et ce petit outil me sauvé la vie en 2 minutes. Froid qui réveille, décongestionne, resserre les pores. Mon essentiel skincare depuis 3 mois. Le lien dans les tags 💫",
+    "shop_cta": "Tape sur le produit pour le commander, livraison offerte !",
+    "hashtags": [
+      "iceroller",
+      "skincareroutine",
+      "degonflage",
+      "beauté",
+      "matin",
+      "soinsvisage",
+      "puffiness",
+      "faceglobes",
+      "glow",
+      "selfcare"
+    ],
+    "full_script": "VISUAL_HOOK: Gros plan sur un visage fatigué avec des yeux gonflés au réveil\n\nTEXT_OVERLAY: Mon rituel anti-gonflement\n\nVOICEOVER: \"Bon bah voilà ma tête ce matin... Mais attend, j'ai mon ice roller. En 2 minutes, bye bye la bouille de panda.\"\n\nDEMO_SEQUENCE: \n1. Appliquer le roller glacé sur le contour des yeux en mouvements circulaires\n2. Passer sur les joues et le front pour resserrer les pores\n3. Montrer le résultat : peau apaisée, visiblement moins gonflée\n\nPRODUCT_TAG_MOMENT: À 8s quand on voit le produit en main pendant la démonstration\n\nCAPTION: Le matin, j'ai une tête... Et ce petit outil me sauvé la vie en 2 minutes. Froid qui réveille, décongestionne, resserre les pores. Mon essentiel skincare depuis 3 mois. Le lien dans les tags 💫\n\nSHOP_CTA: Tape sur le produit pour le commander, livraison offerte !\n\nHASHTAGS: #iceroller #skincareroutine #degonflage #beauté #matin #soinsvisage #puffiness #faceglobes #glow #selfcare",
+    "product_tagging": {
+      "source": "meta_commerce_manager",
+      "checkout": "shopify_or_amazon",
+      "affiliate_platform": "shopify_collabs_or_impact"
+    }
+  },
+  "shop_copy": {
+    "collabs_pitch": "Hey ! J'ai découvert ce petit miracle pour la peau et je pense que ça cartonnerait super bien dans ton contenu skincare. Tu veux tester le ice roller et en parler à ta communauté ? J'te envoie un sample ? 💆‍♀️\n\nREELS_CAPTION_1: Nouveau rituel du matin ✨ Ice roller + face globes = goodbye puffiness, hello glow instantané. Vous connaissez ?\n\nREELS_CAPTION_2: Tuto rapide : 2 min au frigo, puis massage visage du centre vers l'extérieur. Froid qui réveille, peau qui respire. Testé et approuvé ! 🥶💕\n\nREELS_CAPTION_3: Avant / Après 5 min de ice roller. La différence sur le regard et les joues ? Évidente. Bye bye tête de panda du matin 🐼➡️✨",
+    "reels_caption_discovery": "Nouveau rituel du matin ✨ Ice roller + face globes = goodbye puffiness, hello glow instantané. Vous connaissez ?\n\nREELS_CAPTION_2: Tuto rapide : 2 min au frigo, puis massage visage du centre vers l'extérieur. Froid qui réveille, peau qui respire. Testé et approuvé ! 🥶💕\n\nREELS_CAPTION_3: Avant / Après 5 min de ice roller. La différence sur le regard et les joues ? Évidente. Bye bye tête de panda du matin 🐼➡️✨",
+    "reels_caption_tuto": "Tuto rapide : 2 min au frigo, puis massage visage du centre vers l'extérieur. Froid qui réveille, peau qui respire. Testé et approuvé ! 🥶💕\n\nREELS_CAPTION_3: Avant / Après 5 min de ice roller. La différence sur le regard et les joues ? Évidente. Bye bye tête de panda du matin 🐼➡️✨",
+    "reels_caption_result": "Avant / Après 5 min de ice roller. La différence sur le regard et les joues ? Évidente. Bye bye tête de panda du matin 🐼➡️✨",
+    "story_swipe_up": "Ice roller à 24.90€ → swipe pour dégonfler ton visage ! 👆",
+    "bio_shop_link": "Ice roller - 24.90€ | Bye puffiness 🔗"
+  }
+}

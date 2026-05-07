@@ -1,0 +1,38 @@
+{
+  "reels": {
+    "platform": "instagram_shop",
+    "visual_hook": "Gros plan sur des pieds secs et rugueux avec une voix qui dit \"Wait for it...\"",
+    "text_overlay": "Mes pieds avant vs après ✨",
+    "voiceover": "\"Okay je sais ça a l'air chelou mais trust the process. On applique, on attend 60-90 min et on laisse la magie opérer.\"",
+    "demo_sequence": "1. Application du masque sur pieds propres (verser le liquide dans les chaussettes incluses)\n2. Porter les chaussettes 60-90 min\n3. Rincer, attendre 5-7 jours puis montrer la peau qui pèle et les pieds tout doux",
+    "product_tag_moment": "À 3s quand on montre le produit tenu en main",
+    "caption": "Le masque peeling qui change vos pieds en 7 jours 💫 #footpeel #skincaretiktok",
+    "shop_cta": "Dispo sur mon shop, lien en haut 👆",
+    "hashtags": [
+      "footpeel",
+      "exfoliant",
+      "skincare",
+      "beautytiktok",
+      "babyfoot",
+      "footcare",
+      "selfcare",
+      "glowingskin",
+      "pieds",
+      "masquepeeling"
+    ],
+    "full_script": "VISUAL_HOOK: Gros plan sur des pieds secs et rugueux avec une voix qui dit \"Wait for it...\"\n\nTEXT_OVERLAY: Mes pieds avant vs après ✨\n\nVOICEOVER: \"Okay je sais ça a l'air chelou mais trust the process. On applique, on attend 60-90 min et on laisse la magie opérer.\"\n\nDEMO_SEQUENCE: \n1. Application du masque sur pieds propres (verser le liquide dans les chaussettes incluses)\n2. Porter les chaussettes 60-90 min\n3. Rincer, attendre 5-7 jours puis montrer la peau qui pèle et les pieds tout doux\n\nPRODUCT_TAG_MOMENT: À 3s quand on montre le produit tenu en main\n\nCAPTION: Le masque peeling qui change vos pieds en 7 jours 💫 #footpeel #skincaretiktok\n\nSHOP_CTA: Dispo sur mon shop, lien en haut 👆\n\nHASHTAGS: #footpeel #exfoliant #skincare #beautytiktok #babyfoot #footcare #selfcare #glowingskin #pieds #masquepeeling",
+    "product_tagging": {
+      "source": "meta_commerce_manager",
+      "checkout": "shopify_or_amazon",
+      "affiliate_platform": "shopify_collabs_or_impact"
+    }
+  },
+  "shop_copy": {
+    "collabs_pitch": "Hey! Je cherche des créateurs pour tester notre nouveau Foot Peel Mask à 17.90€ – c'est un exfoliant super efficace qui fait littéralement peler les pieds morts en une semaine. Si tu aimes les contenus beauté authentique et que tu veux joiner l'aventure, DM moi! 🙌\n\nREELS_CAPTION_1: Nouveau dans ma routine pieds: ce mask exfoliant à 17.90€ et clairement c'est un game changer. On dirait vraiment un \"baby foot\" après – vos pieds vont vous remercier! 👶🦶\n\nREELS_CAPTION_2: Tuto rapide: tu mets le mask 60min, tu rinces, et tu attends 3-5 jours. Le résultat? Des pieds tout doux, comme ceux d'un bébé. Le prix est hyper correct pour ce rendu! ✨\n\nREELS_CAPTION_3: Avant: pieds secs et rugueux. Après: des petons de sirène! 🧜‍♀️ Ce mask à 17.90€ fait vraiment son taf – 10/10 je recommande pour avoir des pieds au top cet été.",
+    "reels_caption_discovery": "Nouveau dans ma routine pieds: ce mask exfoliant à 17.90€ et clairement c'est un game changer. On dirait vraiment un \"baby foot\" après – vos pieds vont vous remercier! 👶🦶\n\nREELS_CAPTION_2: Tuto rapide: tu mets le mask 60min, tu rinces, et tu attends 3-5 jours. Le résultat? Des pieds tout doux, comme ceux d'un bébé. Le prix est hyper correct pour ce rendu! ✨\n\nREELS_CAPTION_3: Avant: pieds secs et rugueux. Après: des petons de sirène! 🧜‍♀️ Ce mask à 17.90€ fait vraiment son taf – 10/10 je recommande pour avoir des pieds au top cet été.",
+    "reels_caption_tuto": "Tuto rapide: tu mets le mask 60min, tu rinces, et tu attends 3-5 jours. Le résultat? Des pieds tout doux, comme ceux d'un bébé. Le prix est hyper correct pour ce rendu! ✨\n\nREELS_CAPTION_3: Avant: pieds secs et rugueux. Après: des petons de sirène! 🧜‍♀️ Ce mask à 17.90€ fait vraiment son taf – 10/10 je recommande pour avoir des pieds au top cet été.",
+    "reels_caption_result": "Avant: pieds secs et rugueux. Après: des petons de sirène! 🧜‍♀️ Ce mask à 17.90€ fait vraiment son taf – 10/10 je recommande pour avoir des pieds au top cet été.",
+    "story_swipe_up": "Nouveau mask exfoliant pieds dispo! 👆 17.90€ pour des petons de bébé",
+    "bio_shop_link": "Foot Peel Mask 17.90€ ✨"
+  }
+}
