@@ -291,19 +291,37 @@ def lookup_base_price(product_name: str) -> Optional[dict]:
     """Look up 1688 base price from internal DB."""
     name_lower = product_name.lower()
     
-    # Direct match
-    for key, val in PRICE_DB.items():
-        if key in name_lower or any(word in name_lower for word in key.split()):
+    # Phase 1: Exact substring match (most specific first)
+    # Sort by key length descending so "desktop vacuum" matches before "vacuum"
+    sorted_keys = sorted(PRICE_DB.keys(), key=len, reverse=True)
+    for key in sorted_keys:
+        val = PRICE_DB[key]
+        if key in name_lower:
             return val
     
-    # Partial match
-    words = name_lower.split()
-    for key, val in PRICE_DB.items():
+    # Phase 2: All key words present in product name (strict)
+    for key in sorted_keys:
+        val = PRICE_DB[key]
         key_words = key.split()
-        if any(w in key_words for w in words if len(w) > 3):
+        if all(word in name_lower for word in key_words):
             return val
     
-    return None
+    # Phase 3: Partial match — require at least 2 matching words > 3 chars
+    # to avoid false positives like "mini" matching "mini projector"
+    words = [w for w in name_lower.split() if len(w) > 3]
+    best_match = None
+    best_overlap = 0
+    for key, val in PRICE_DB.items():
+        key_words = [w for w in key.split() if len(w) > 3]
+        overlap = sum(1 for w in words if w in key_words)
+        if overlap >= 2 and overlap > best_overlap:
+            best_overlap = overlap
+            best_match = val
+        elif overlap == 1 and best_match is None and len(key_words) == 1:
+            # Single-word key: only match if no better option (e.g. "blender")
+            best_match = val
+    
+    return best_match
 
 
 def estimate_price_llm(product_name: str, category: str = "") -> dict:
