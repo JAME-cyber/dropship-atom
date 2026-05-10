@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "delay": "1 heure après abandon",
+    "subject": "Tu oublies quelque chose... 😏",
+    "preview": "Ton Timo Curl Pro t'attend encore dans le panier",
+    "body": "Hey!\n\nOn dirait que tu as oublié quelque chose dans ton panier.\n\nLe Timo Curl Pro est toujours là, et il a hâte de rejoindre ta maison.\n\n👉 Complète ta commande: [LIEN PANIER]\n\nÀ très vite,\nL'équipe DropAtom"
+  },
+  {
+    "id": 2,
+    "delay": "24 heures après abandon",
+    "subject": "Pourquoi nos clientes adorent le Timo Curl Pro 💛",
+    "preview": "Découvre ce qu'elles en pensent",
+    "body": "Hey!\n\nTu hésites encore? Voici ce que nos clientes disent du Timo Curl Pro:\n\n⭐⭐⭐⭐⭐ \"Ma routine est passée de 45 min à 10 min\" — Sophie\n⭐⭐⭐⭐⭐ \"Le meilleur achat de l'année\" — Marie\n⭐⭐⭐⭐⭐ \"J'en ai racheté un pour ma soeur\" — Camille\n\nRejoins les +500 clientes satisfaites:\n👉 [LIEN PANIER]\n\nL'équipe DropAtom"
+  },
+  {
+    "id": 3,
+    "delay": "48 heures après abandon",
+    "subject": "Dernière chance — 10% de réduction 🎁",
+    "preview": "Ton code: BIENVENUE10 expire dans 24h",
+    "body": "Hey!\n\nC'est ta dernière chance de profiter du Timo Curl Pro à prix réduit.\n\n🎁 Utilise le code BIENVENUE10 pour -10% sur ta commande.\n\n⚠️ Ce code expire dans 24 heures.\n\n👉 [LIEN PANIER AVEC CODE AUTO-APPLIQUÉ]\n\nProfites-en tant que c'est encore dispo!\nL'équipe DropAtom"
+  }
+]

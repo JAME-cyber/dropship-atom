@@ -15,6 +15,9 @@ projet:
     - "L'IA fait le travail répétitif. L'humain décide."
     - "0 stock, 0 employé, 0 bureau."
     - "Journal WORM (hérité Cortex Leman v5)."
+    - "Niche unique d'abord → expandre ensuite (validé Eprolo)."
+    - "Le branding = le vrai produit, pas l'objet (validé Eprolo)."
+    - "1688 >> Alibaba pour les prix réels factory (validé Eprolo)."
 
 agents:
   - hunter:    "Recherche produit automatisée (TikTok, AliExpress, Google Trends, FB Ad Library, Instagram Shop)"
@@ -63,7 +66,7 @@ unit_economics:
 stack:
   languages: ["Python 3.12", "JavaScript/Node"]
   scraping: "Scrapling (déjà installé)"
-  llm: "OpenRouter (minimax-m2.5:free primary, gemma-4-31b fallback)"
+  llm: "OpenRouter (minimax-m2.5:free primary, gemma-4-31b fallback) + Kimi K2.6 (NVIDIA NIM premium)"
   scoring: "JsonLogic (déterministe, déjà installé)"
   feedback: "feedback.py — Feedback Loop adaptatif (Skill #11)"
   video: "HyperFrame (déjà installé dans socialpulse)"
@@ -86,4 +89,65 @@ skills_framework:
     feedback_loop: "B"  # now implemented!
     evals: "F"           # next priority
     rag: "F"             # after evals
-    data_acquisition: "D"
+    data_acquisition: "B"  # SearXNG integration (Pattern #3)
+
+  agenticseek_patterns:
+    source: "AgenticSeek (github.com/Fosowl/agenticSeek) — 26k stars, GPL-3.0"
+    date_integrated: "2026-05-10"
+    approach: "Pas de fork. 3 patterns extraits et intégrés."
+    patterns:
+      - pattern: "PlannerAgent"
+        file: "agents/planner.py"
+        description: "Décompose un objectif business en plan JSON exécutable"
+        templates: ["full_launch", "product_research", "supply_chain", "creative_sprint", "store_setup", "optimize", "pivot_niche"]
+        status: "implemented"
+      - pattern: "AgentRouter ML"
+        file: "agents/router.py"
+        description: "Route les requêtes en langage naturel vers les bons agents (sklearn TF-IDF + LogisticRegression)"
+        accuracy: "89% (8/9 agents corrects)"
+        status: "implemented"
+      - pattern: "SearXNG meta-search"
+        file: "agents/searxng_integration.py"
+        description: "Meta-search local (Google+Bing+DuckDuckGo) pour l'agent Hunter"
+        port: 8889
+        status: "implemented"
+
+eprolo_analysis:
+  source: "YouTube — Inside a Chinese Dropshipping Fulfillment Center (Kinson Leung / Paul CEO Eprolo)"
+  date: "Mai 2026"
+  key_facts:
+    - "20,000+ unités/jour, 200+ staff, 10 ans (2015)"
+    - "2,000+ marques utilisent leurs services"
+    - "Branding personnalisé SANS MOQ: $20 set complet"
+    - "Machines d'impression internes, 1 pièce minimum"
+    - "Bureau Shenzhen + Yiwu, entrepôts dans les deux"
+    - "Production: 7 jours après sample confirmation"
+    - "1688 comme source primaire (30-50% moins cher qu'Alibaba)"
+    - "Monitoring Shein, Fashion Nova, AliExpress, Amazon pour tendances"
+  
+  insights_divergents:
+    - "Le vrai produit = le BRANDING, pas l'objet. $20 = illusion d'une marque établie."
+    - "Alibaba = trading companies. 1688 = vraies factories. Prix 30-50% plus bas."
+    - "Commencer niche (yoga socks) → expandre (yoga shoes → activewear). General store = mort."
+    - "Eprolo visite physiquement les factories → on ne peut pas, mais on peut scraper."
+    - "Leur base 2,000 marques = goldmine d'intelligence (produits validés, niches rentables)."
+    - "Supplier rating A/B/C = notre knowledge vault scoring."
+    - "Sample → approve → produce = notre prep → call → deck. Même workflow."
+  
+  cross_cutting_excellence:
+    - "Eprolo wrappe produits commodity avec branding → Excellence by Design wrappe outils IA commodity avec consulting"
+    - "MÊME MODÈLE. MARCHÉ DIFFÉRENT."
+    - "Branding personnalisé = landing page personnalisée (déjà dans SocialPulse)"
+    - "Niche focus = pivot immobilier Annemasse (déjà fait)"
+    - "Supplier rating = knowledge vault scoring (déjà fait)"
+    - "Tous les insights Eprolo sont DÉJÀ implémentés dans nos projets actifs"
+  
+  actions_m6_quand_unshelve:
+    - "SCOUT: ajouter 1688 comme source primaire (scrapling)"
+    - "HUNTER: ajouter Shein + Fashion Nova trend monitoring"
+    - "CREATOR: ajouter branding generator (logo, tag, packaging, QR code, print-ready files)"
+    - "NOUVELLE INTÉGRATION: Eprolo API wrapper (samples + branding + fulfillment)"
+    - "NOUVEL AGENT: Sampler (sample → évaluer → approuver → production)"
+    - "SUPPLIER RATING: système A/B/C comme Eprolo"
+  
+  verdict: "Eprolo valide notre architecture et nos principes. Les insights sont déjà implémentés dans SocialPulse/Excellence by Design. DropAtom-specific features attendent M6. Focus = appeler les 5 agences lundi."

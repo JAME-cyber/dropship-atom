@@ -1,0 +1,287 @@
+[
+  {
+    "query": "trouve des produits trending",
+    "primary_agent": "hunter",
+    "confidence": 0.259,
+    "all_scores": {
+      "hunter": 0.259,
+      "feedback": 0.122,
+      "scout": 0.099,
+      "analyst": 0.097,
+      "planner": 0.09,
+      "creator": 0.087,
+      "builder": 0.084,
+      "marketing": 0.083,
+      "media": 0.08
+    },
+    "complexity": "MEDIUM",
+    "suggested_plan": true,
+    "routed_at": "2026-05-10T19:40:40.307357+00:00"
+  },
+  {
+    "query": "génère un script TikTok",
+    "primary_agent": "creator",
+    "confidence": 0.375,
+    "all_scores": {
+      "creator": 0.375,
+      "analyst": 0.087,
+      "hunter": 0.086,
+      "scout": 0.081,
+      "planner": 0.077,
+      "feedback": 0.076,
+      "marketing": 0.076,
+      "media": 0.075,
+      "builder": 0.067
+    },
+    "complexity": "LOW",
+    "suggested_plan": true,
+    "routed_at": "2026-05-10T19:40:40.309032+00:00"
+  },
+  {
+    "query": "crée la boutique Shopify",
+    "primary_agent": "builder",
+    "confidence": 0.398,
+    "all_scores": {
+      "builder": 0.398,
+      "creator": 0.087,
+      "planner": 0.084,
+      "analyst": 0.082,
+      "hunter": 0.081,
+      "media": 0.068,
+      "marketing": 0.067,
+      "scout": 0.067,
+      "feedback": 0.066
+    },
+    "complexity": "MEDIUM",
+    "suggested_plan": true,
+    "routed_at": "2026-05-10T19:40:40.310842+00:00"
+  },
+  {
+    "query": "lance un store complet",
+    "primary_agent": "builder",
+    "confidence": 0.227,
+    "all_scores": {
+      "builder": 0.227,
+      "planner": 0.206,
+      "creator": 0.1,
+      "hunter": 0.096,
+      "media": 0.077,
+      "scout": 0.077,
+      "analyst": 0.074,
+      "marketing": 0.073,
+      "feedback": 0.072
+    },
+    "complexity": "MEDIUM",
+    "suggested_plan": true,
+    "routed_at": "2026-05-10T19:40:40.312669+00:00"
+  },
+  {
+    "query": "trouve un fournisseur",
+    "primary_agent": "scout",
+    "confidence": 0.333,
+    "all_scores": {
+      "scout": 0.333,
+      "hunter": 0.098,
+      "analyst": 0.086,
+      "planner": 0.085,
+      "creator": 0.084,
+      "feedback": 0.084,
+      "marketing": 0.084,
+      "media": 0.074,
+      "builder": 0.073
+    },
+    "complexity": "LOW",
+    "suggested_plan": true,
+    "routed_at": "2026-05-10T19:40:40.314475+00:00"
+  },
+  {
+    "query": "montre le P&L",
+    "primary_agent": "analyst",
+    "confidence": 0.232,
+    "all_scores": {
+      "analyst": 0.232,
+      "planner": 0.142,
+      "hunter": 0.104,
+      "feedback": 0.095,
+      "scout": 0.093,
+      "marketing": 0.091,
+      "builder": 0.089,
+      "creator": 0.079,
+      "media": 0.073
+    },
+    "complexity": "MEDIUM",
+    "suggested_plan": true,
+    "routed_at": "2026-05-10T19:40:40.316279+00:00"
+  },
+  {
+    "query": "optimise le scoring",
+    "primary_agent": "feedback",
+    "confidence": 0.252,
+    "all_scores": {
+      "feedback": 0.252,
+      "planner": 0.113,
+      "analyst": 0.109,
+      "scout": 0.092,
+      "hunter": 0.091,
+      "marketing": 0.088,
+      "media": 0.087,
+      "builder": 0.085,
+      "creator": 0.083
+    },
+    "complexity": "MEDIUM",
+    "suggested_plan": true,
+    "routed_at": "2026-05-10T19:40:40.318228+00:00"
+  },
+  {
+    "query": "lance les campagnes Meta",
+    "primary_agent": "media",
+    "confidence": 0.302,
+    "all_scores": {
+      "media": 0.302,
+      "planner": 0.103,
+      "scout": 0.097,
+      "feedback": 0.096,
+      "analyst": 0.086,
+      "creator": 0.086,
+      "hunter": 0.081,
+      "marketing": 0.075,
+      "builder": 0.073
+    },
+    "complexity": "MEDIUM",
+    "suggested_plan": true,
+    "routed_at": "2026-05-10T19:40:40.320208+00:00"
+  },
+  {
+    "query": "planifie le calendrier social",
+    "primary_agent": "marketing",
+    "confidence": 0.391,
+    "all_scores": {
+      "marketing": 0.391,
+      "planner": 0.09,
+      "analyst": 0.088,
+      "feedback": 0.076,
+      "scout": 0.076,
+      "hunter": 0.075,
+      "builder": 0.07,
+      "creator": 0.069,
+      "media": 0.064
+    },
+    "complexity": "MEDIUM",
+    "suggested_plan": true,
+    "routed_at": "2026-05-10T19:40:40.322207+00:00"
+  },
+  {
+    "query": "cherche des produits anti-douleur qui marchent bien sur TikTok",
+    "primary_agent": "hunter",
+    "confidence": 0.293,
+    "all_scores": {
+      "hunter": 0.293,
+      "scout": 0.106,
+      "feedback": 0.105,
+      "analyst": 0.088,
+      "creator": 0.086,
+      "media": 0.083,
+      "planner": 0.083,
+      "builder": 0.077,
+      "marketing": 0.077
+    },
+    "complexity": "MEDIUM",
+    "suggested_plan": true,
+    "routed_at": "2026-05-10T19:41:17.396336+00:00"
+  },
+  {
+    "query": "cherche des produits trending",
+    "primary_agent": "hunter",
+    "confidence": 0.308,
+    "all_scores": {
+      "hunter": 0.308,
+      "feedback": 0.114,
+      "analyst": 0.091,
+      "scout": 0.089,
+      "planner": 0.085,
+      "creator": 0.082,
+      "builder": 0.079,
+      "marketing": 0.078,
+      "media": 0.075
+    },
+    "complexity": "MEDIUM",
+    "suggested_plan": true,
+    "routed_at": "2026-05-10T19:45:45.272650+00:00"
+  },
+  {
+    "query": "génère un script TikTok",
+    "primary_agent": "creator",
+    "confidence": 0.375,
+    "all_scores": {
+      "creator": 0.375,
+      "analyst": 0.087,
+      "hunter": 0.086,
+      "scout": 0.081,
+      "planner": 0.077,
+      "feedback": 0.076,
+      "marketing": 0.076,
+      "media": 0.075,
+      "builder": 0.067
+    },
+    "complexity": "LOW",
+    "suggested_plan": true,
+    "routed_at": "2026-05-10T19:45:45.275161+00:00"
+  },
+  {
+    "query": "crée la boutique Shopify",
+    "primary_agent": "builder",
+    "confidence": 0.398,
+    "all_scores": {
+      "builder": 0.398,
+      "creator": 0.087,
+      "planner": 0.084,
+      "analyst": 0.082,
+      "hunter": 0.081,
+      "media": 0.068,
+      "marketing": 0.067,
+      "scout": 0.067,
+      "feedback": 0.066
+    },
+    "complexity": "MEDIUM",
+    "suggested_plan": true,
+    "routed_at": "2026-05-10T19:45:45.277378+00:00"
+  },
+  {
+    "query": "trouve un fournisseur",
+    "primary_agent": "scout",
+    "confidence": 0.333,
+    "all_scores": {
+      "scout": 0.333,
+      "hunter": 0.098,
+      "analyst": 0.086,
+      "planner": 0.085,
+      "creator": 0.084,
+      "feedback": 0.084,
+      "marketing": 0.084,
+      "media": 0.074,
+      "builder": 0.073
+    },
+    "complexity": "LOW",
+    "suggested_plan": true,
+    "routed_at": "2026-05-10T19:45:45.279550+00:00"
+  },
+  {
+    "query": "montre le P&L",
+    "primary_agent": "analyst",
+    "confidence": 0.232,
+    "all_scores": {
+      "analyst": 0.232,
+      "planner": 0.142,
+      "hunter": 0.104,
+      "feedback": 0.095,
+      "scout": 0.093,
+      "marketing": 0.091,
+      "builder": 0.089,
+      "creator": 0.079,
+      "media": 0.073
+    },
+    "complexity": "MEDIUM",
+    "suggested_plan": true,
+    "routed_at": "2026-05-10T19:45:45.281755+00:00"
+  }
+]

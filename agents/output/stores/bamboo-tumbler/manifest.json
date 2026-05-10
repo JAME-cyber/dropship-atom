@@ -1,0 +1,30 @@
+{
+  "product": "Bamboo Tumbler",
+  "niche": "eco",
+  "brand": {
+    "store_name": "EcoDrop",
+    "niche": "eco",
+    "primary": "#22c55e",
+    "accent": "#4ade80"
+  },
+  "generated_at": "2026-05-09T19:00:16.581182+00:00",
+  "files": [
+    "index.html",
+    "privacy.html",
+    "terms.html",
+    "returns.html",
+    "video.html",
+    "shopify-import.csv"
+  ],
+  "price": 34.99,
+  "cost": 4.5,
+  "margin_pct": 87,
+  "compliance": {
+    "rgpd": true,
+    "cookie_banner": true,
+    "privacy_policy": true,
+    "terms": true,
+    "returns_policy": true,
+    "right_of_withdrawal": true
+  }
+}

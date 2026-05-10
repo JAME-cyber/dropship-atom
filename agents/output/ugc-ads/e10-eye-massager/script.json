@@ -1,0 +1,44 @@
+{
+  "product": "E10 Eye Massager",
+  "price": "49.90",
+  "niche": "wellness",
+  "persona": "une personne stressée qui cherche à se relaxer",
+  "selected_hook": "J'ai comparé 10 produits. Celui-ci gagne haut la main",
+  "hooks_alternatives": [
+    "Ce produit a sauvé ma peau / mes cheveux / mon dos",
+    "Tu n'as PAS besoin de dépenser une fortune pour règle ton problème de stress / fatigue / insomnie",
+    "J'ai enfin trouvé le produit qui TIENT ses promesses",
+    "SI VOUS AVEZ DES stress / fatigue / insomnie — VOUS DEVEZ VOIR ÇA"
+  ],
+  "scenes": [
+    {
+      "id": 1,
+      "name": "HOOK / PROBLÈME",
+      "duration": 8,
+      "text": "J'ai comparé 10 produits. Celui-ci gagne haut la main.",
+      "camera": "Close-up visage, expression fatiguée/frustrée",
+      "mood": "frustration, empathie",
+      "product_visible": false
+    },
+    {
+      "id": 2,
+      "name": "DÉCOUVERTE / DÉMO",
+      "duration": 10,
+      "text": "Au début j'ai cru que c'était un gadget de plus, mais j'ai quand même testé. Tu prends le E10 Eye Massager, et en quelques secondes, tu vois le résultat. Littéralement sans effort.",
+      "camera": "Plan moyen, produit dans les mains, démonstration",
+      "mood": "surprise, enthousiasme",
+      "product_visible": true
+    },
+    {
+      "id": 3,
+      "name": "RÉSULTAT + CTA",
+      "duration": 8,
+      "text": "Ça fait 3 semaines et je peux vous dire que ça marche vraiment. Ma routine est passée de des nuits blanches à des nuits réparatrices. Le lien est juste en bas. Fonce.",
+      "camera": "Plan large, sourire, résultat visible",
+      "mood": "satisfaction, confiance",
+      "product_visible": true
+    }
+  ],
+  "full_script": "J'ai comparé 10 produits. Celui-ci gagne haut la main. Au début j'ai cru que c'était un gadget de plus, mais j'ai quand même testé. Tu prends le E10 Eye Massager, et en quelques secondes, tu vois le résultat. Littéralement sans effort. Ça fait 3 semaines et je peux vous dire que ça marche vraiment. Ma routine est passée de des nuits blanches à des nuits réparatrices. Le lien est juste en bas. Fonce.",
+  "estimated_duration": 26
+}

@@ -1,0 +1,44 @@
+{
+  "product": "Timo Curl Pro",
+  "price": "39.90",
+  "niche": "beauty",
+  "persona": "une femme qui galère avec sa routine beauté",
+  "selected_hook": "Littéralement la meilleure chose que j'ai achetée cette année",
+  "hooks_alternatives": [
+    "C'est le truc qui a tout changé pour moi",
+    "Si tu as des cheveux/peau/maquillage, arrête tout et regarde ça",
+    "Résultat avant/après en 3 semaines. Pas de filtre",
+    "Ce que j'utilise tous les jours depuis 2 mois"
+  ],
+  "scenes": [
+    {
+      "id": 1,
+      "name": "HOOK / PROBLÈME",
+      "duration": 8,
+      "text": "Littéralement la meilleure chose que j'ai achetée cette année.",
+      "camera": "Close-up visage, expression fatiguée/frustrée",
+      "mood": "frustration, empathie",
+      "product_visible": false
+    },
+    {
+      "id": 2,
+      "name": "DÉCOUVERTE / DÉMO",
+      "duration": 10,
+      "text": "Au début j'ai cru que c'était un gadget de plus, mais j'ai quand même testé. Tu prends le Timo Curl Pro, et en quelques secondes, tu vois le résultat. Littéralement sans effort.",
+      "camera": "Plan moyen, produit dans les mains, démonstration",
+      "mood": "surprise, enthousiasme",
+      "product_visible": true
+    },
+    {
+      "id": 3,
+      "name": "RÉSULTAT + CTA",
+      "duration": 8,
+      "text": "Ça fait 3 semaines et je peux vous dire que ça marche vraiment. Ma routine est passée de 45 minutes à 10 minutes. Le lien est juste en bas. Fonce.",
+      "camera": "Plan large, sourire, résultat visible",
+      "mood": "satisfaction, confiance",
+      "product_visible": true
+    }
+  ],
+  "full_script": "Littéralement la meilleure chose que j'ai achetée cette année. Au début j'ai cru que c'était un gadget de plus, mais j'ai quand même testé. Tu prends le Timo Curl Pro, et en quelques secondes, tu vois le résultat. Littéralement sans effort. Ça fait 3 semaines et je peux vous dire que ça marche vraiment. Ma routine est passée de 45 minutes à 10 minutes. Le lien est juste en bas. Fonce.",
+  "estimated_duration": 26
+}

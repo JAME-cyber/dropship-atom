@@ -1,0 +1,65 @@
+{
+  "po_number": "PO-20260510-TEST-001",
+  "created_at": "2026-05-10T19:06:21.885664",
+  "order": {
+    "id": "TEST-001",
+    "product_name": "H3 Scalp Massage Cap",
+    "quantity": 1,
+    "total_price": "189.00",
+    "customer": {
+      "name": "Jean Dupont",
+      "email": "jean@test.com"
+    },
+    "shipping_address": {
+      "name": "Jean Dupont",
+      "address1": "12 rue de la Paix",
+      "city": "Paris",
+      "zip": "75002",
+      "country": "France",
+      "phone": "+33612345678"
+    }
+  },
+  "supplier": {
+    "id": "carol-wang-kulax",
+    "name": "Carol Wang",
+    "company": "Anhui Aerospace / PMA Health Technology / Kulax",
+    "phone": "+86 551 6563 3848"
+  },
+  "messages": {
+    "en": "Hi Carol Wang,\n\nI'd like to place an order:\n\nPO Number: PO-20260510-TEST-001\nProduct: H3 Scalp Massage Cap\nSKU: N/A\nQuantity: 1\n\nShip to:\n  Jean Dupont\n  12 rue de la Paix\n  Paris 75002\n  France\n  Phone: +33612345678\n\nPlease confirm:\n  - Total cost (including shipping)\n  - Estimated delivery date\n  - Tracking number\n\nPayment: via Alibaba Trade Assurance / PayPal / Bank Transfer\n\nThank you!\nDropAtom — France",
+    "zh": "你好 Carol Wang,\n\n我想下一个订单:\n\n订单号: PO-20260510-TEST-001\n产品: H3 Scalp Massage Cap\n数量: 1\n\n配送地址:\n  Jean Dupont\n  12 rue de la Paix\n  Paris 75002\n  France\n\n请确认:\n  - 总费用(含运费)\n  - 预计送达日期\n  - 快递单号\n\n谢谢!\nDropAtom — 法国"
+  },
+  "whatsapp_link": "https://wa.me/8655165633848?text=Hi%20Carol%20Wang%2C%0A%0AI%27d%20like%20to%20place%20an%20order%3A%0A%0APO%20Number%3A%20PO-20260510-TEST-001%0AProduct%3A%20H3%20Scalp%20Massage%20Cap%0ASKU%3A%20N/A%0AQuantity%3A%201%0A%0AShip%20to%3A%0A%20%20Jean%20Dupont%0A%20%2012%20rue%20de%20la%20Paix%0A%20%20Paris%2075002%0A%20%20France%0A%20%20Phone%3A%20%2B33612345678%0A%0APlease%20confirm%3A%0A%20%20-%20Total%20cost%20%28including%20shipping%29%0A%20%20-%20Estimated%20delivery%20date%0A%20%20-%20Tracking%20number%0A%0APayment%3A%20via%20Alibaba%20Trade%20Assurance%20/%20PayPal%20/%20Bank%20Transfer%0A%0AThank%20you%21%0ADropAtom%20%E2%80%94%20France",
+  "status": "PENDING_SUPPLIER_CONFIRM",
+  "steps": [
+    {
+      "step": 1,
+      "name": "Send PO to supplier",
+      "status": "READY",
+      "channel": "whatsapp"
+    },
+    {
+      "step": 2,
+      "name": "Wait supplier confirmation",
+      "status": "WAITING"
+    },
+    {
+      "step": 3,
+      "name": "Pay supplier",
+      "status": "BLOCKED",
+      "depends_on": 2
+    },
+    {
+      "step": 4,
+      "name": "Get tracking number",
+      "status": "BLOCKED",
+      "depends_on": 3
+    },
+    {
+      "step": 5,
+      "name": "Update customer",
+      "status": "BLOCKED",
+      "depends_on": 4
+    }
+  ]
+}

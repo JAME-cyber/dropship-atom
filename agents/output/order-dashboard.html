@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>DropAtom — Order Dashboard</title>
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:-apple-system,BlinkMacSystemFont,sans-serif; background:#0f0f0f; color:#fff; padding:20px; }
+.container { max-width:1200px; margin:0 auto; }
+h1 { font-size:24px; margin-bottom:20px; }
+.stats { display:grid; grid-template-columns:repeat(5,1fr); gap:12px; margin-bottom:24px; }
+.stat { background:#1a1a1a; border-radius:10px; padding:16px; text-align:center; }
+.stat .value { font-size:28px; font-weight:700; }
+.stat .label { font-size:12px; color:#888; margin-top:4px; }
+table { width:100%; border-collapse:collapse; background:#1a1a1a; border-radius:10px; overflow:hidden; }
+th { background:#252525; padding:12px; text-align:left; font-size:13px; color:#888; }
+td { padding:10px 12px; border-top:1px solid #252525; font-size:14px; }
+.wa-btn { background:#25d366; color:#000; padding:4px 12px; border-radius:6px; text-decoration:none; font-size:12px; font-weight:700; }
+.wa-btn:hover { background:#128c7e; color:#fff; }
+.empty { text-align:center; padding:40px; color:#666; }
+</style>
+</head>
+<body>
+<div class="container">
+    <h1>📦 Order Dashboard — DropAtom</h1>
+    
+    <div class="stats">
+        <div class="stat"><div class="value">1</div><div class="label">Commandes</div></div>
+        <div class="stat"><div class="value" style="color:#f59e0b">1</div><div class="label">En attente</div></div>
+        <div class="stat"><div class="value" style="color:#3b82f6">0</div><div class="label">Confirmées</div></div>
+        <div class="stat"><div class="value" style="color:#06b6d4">0</div><div class="label">Expédiées</div></div>
+        <div class="stat"><div class="value" style="color:#10b981">0.00€</div><div class="label">Revenu total</div></div>
+    </div>
+    
+    <table>
+        <tr>
+            <th>PO #</th><th>Produit</th><th>Qté</th><th>Prix</th>
+            <th>Fournisseur</th><th>Status</th><th>Tracking</th><th>Action</th>
+        </tr>
+        
+        <tr>
+            <td>PO-20260510-TEST-001</td>
+            <td>N/A</td>
+            <td>1</td>
+            <td>0.00€</td>
+            <td>Carol Wang</td>
+            <td><span style="color:#f59e0b;font-weight:700">PENDING_SUPPLIER_CONFIRM</span></td>
+            <td>—</td>
+            <td><a href="https://wa.me/8655165633848?text=Hi%20Carol%20Wang%2C%0A%0AI%27d%20like%20to%20place%20an%20order%3A%0A%0APO%20Number%3A%20PO-20260510-TEST-001%0AProduct%3A%20H3%20Scalp%20Massage%20Cap%0ASKU%3A%20N/A%0AQuantity%3A%201%0A%0AShip%20to%3A%0A%20%20Jean%20Dupont%0A%20%2012%20rue%20de%20la%20Paix%0A%20%20Paris%2075002%0A%20%20France%0A%20%20Phone%3A%20%2B33612345678%0A%0APlease%20confirm%3A%0A%20%20-%20Total%20cost%20%28including%20shipping%29%0A%20%20-%20Estimated%20delivery%20date%0A%20%20-%20Tracking%20number%0A%0APayment%3A%20via%20Alibaba%20Trade%20Assurance%20/%20PayPal%20/%20Bank%20Transfer%0A%0AThank%20you%21%0ADropAtom%20%E2%80%94%20France" target="_blank" class="wa-btn">WhatsApp</a></td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>

@@ -1,0 +1,44 @@
+{
+  "product": "H3 Scalp Massage Cap",
+  "price": "189",
+  "niche": "beauty",
+  "persona": "une femme qui galère avec sa routine beauté",
+  "selected_hook": "J'ai enfin trouvé le produit qui TIENT ses promesses",
+  "hooks_alternatives": [
+    "C'est le truc qui a tout changé pour moi",
+    "Top 3 des achats de ma vie. Sans exagérer",
+    "OK je comprends maintenant pourquoi tout le monde en parle",
+    "SI VOUS AVEZ DES cheveux/peau/maquillage — VOUS DEVEZ VOIR ÇA"
+  ],
+  "scenes": [
+    {
+      "id": 1,
+      "name": "HOOK / PROBLÈME",
+      "duration": 8,
+      "text": "J'ai enfin trouvé le produit qui TIENT ses promesses.",
+      "camera": "Close-up visage, expression fatiguée/frustrée",
+      "mood": "frustration, empathie",
+      "product_visible": false
+    },
+    {
+      "id": 2,
+      "name": "DÉCOUVERTE / DÉMO",
+      "duration": 10,
+      "text": "Au début j'ai cru que c'était un gadget de plus, mais j'ai quand même testé. Tu prends le H3 Scalp Massage Cap, et en quelques secondes, tu vois le résultat. Littéralement sans effort.",
+      "camera": "Plan moyen, produit dans les mains, démonstration",
+      "mood": "surprise, enthousiasme",
+      "product_visible": true
+    },
+    {
+      "id": 3,
+      "name": "RÉSULTAT + CTA",
+      "duration": 8,
+      "text": "Ça fait 3 semaines et je peux vous dire que ça marche vraiment. Ma routine est passée de 45 minutes à 10 minutes. Le lien est juste en bas. Fonce.",
+      "camera": "Plan large, sourire, résultat visible",
+      "mood": "satisfaction, confiance",
+      "product_visible": true
+    }
+  ],
+  "full_script": "J'ai enfin trouvé le produit qui TIENT ses promesses. Au début j'ai cru que c'était un gadget de plus, mais j'ai quand même testé. Tu prends le H3 Scalp Massage Cap, et en quelques secondes, tu vois le résultat. Littéralement sans effort. Ça fait 3 semaines et je peux vous dire que ça marche vraiment. Ma routine est passée de 45 minutes à 10 minutes. Le lien est juste en bas. Fonce.",
+  "estimated_duration": 26
+}

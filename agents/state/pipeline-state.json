@@ -1,0 +1,219 @@
+{
+  "run_id": "9abe656b77fa",
+  "started_at": "2026-05-07T14:07:12.908543+00:00",
+  "completed_at": "",
+  "status": "pending",
+  "phase_hunter": "pending",
+  "phase_scout": "pending",
+  "phase_creator": "pending",
+  "phase_builder": "done",
+  "phase_media": "done",
+  "phase_review": "pending",
+  "products_selected": [
+    {
+      "id": "e37b6fb6a585",
+      "name": "Ice Roller Face Globes",
+      "score": 99.3,
+      "grade": "A+",
+      "source_price": 3.5,
+      "sell_price": 24.9,
+      "margin": 21.4,
+      "category": "Beauty",
+      "source": "instagram_shop",
+      "keywords": [
+        "ice roller",
+        "face globes",
+        "skincare",
+        "puffiness",
+        "de-puff",
+        "morning routine"
+      ],
+      "llm_verdict": "",
+      "best_supplier": "CJ Dropshipping",
+      "buy_price_usd": 2.48,
+      "net_margin": 20.11,
+      "shipping_days": 8
+    },
+    {
+      "id": "58927454c502",
+      "name": "Foot Peel Mask Exfoliant",
+      "score": 99.3,
+      "grade": "A+",
+      "source_price": 2.5,
+      "sell_price": 17.9,
+      "margin": 15.4,
+      "category": "Beauty",
+      "source": "instagram_shop",
+      "keywords": [
+        "foot peel",
+        "exfoliant",
+        "skincare",
+        "baby foot",
+        "beauty"
+      ],
+      "llm_verdict": "",
+      "best_supplier": "CJ Dropshipping",
+      "buy_price_usd": 2.07,
+      "net_margin": 13.49,
+      "shipping_days": 8
+    },
+    {
+      "id": "cd1fa9903473",
+      "name": "Bamboo Sunglasses Polarized",
+      "score": 90.7,
+      "grade": "A+",
+      "source_price": 4.0,
+      "sell_price": 29.9,
+      "margin": 25.9,
+      "category": "Fashion",
+      "source": "instagram_shop",
+      "keywords": [
+        "sunglasses",
+        "bamboo",
+        "polarized",
+        "eco",
+        "wood",
+        "uv",
+        "summer"
+      ],
+      "llm_verdict": "",
+      "best_supplier": "CJ Dropshipping",
+      "buy_price_usd": 3.11,
+      "net_margin": 24.54,
+      "shipping_days": 8
+    },
+    {
+      "id": "5203e29870fe",
+      "name": "Posture Corrector Pro",
+      "score": 90.5,
+      "grade": "A+",
+      "source_price": 5.0,
+      "sell_price": 34.9,
+      "margin": 29.9,
+      "category": "Health",
+      "source": "instagram_shop",
+      "keywords": [
+        "posture",
+        "back pain",
+        "office",
+        "ergonomic",
+        "health"
+      ],
+      "llm_verdict": "",
+      "best_supplier": "CJ Dropshipping",
+      "buy_price_usd": 4.55,
+      "net_margin": 28.21,
+      "shipping_days": 8
+    },
+    {
+      "id": "8bcd64f13133",
+      "name": "Neck Massager Electric",
+      "score": 90.1,
+      "grade": "A+",
+      "source_price": 14.0,
+      "sell_price": 49.9,
+      "margin": 35.9,
+      "category": "Health",
+      "source": "instagram_shop",
+      "keywords": [
+        "neck massager",
+        "pain relief",
+        "massage",
+        "stress",
+        "wellness"
+      ],
+      "llm_verdict": "",
+      "best_supplier": "CJ Dropshipping",
+      "buy_price_usd": 15.53,
+      "net_margin": 33.11,
+      "shipping_days": 8
+    }
+  ],
+  "products_launched": [],
+  "total_budget_eur": 1165,
+  "total_spent_eur": 0.0,
+  "total_revenue_eur": 0.0,
+  "total_orders": 0,
+  "log": [
+    {
+      "timestamp": "2026-05-07T14:07:12.922003+00:00",
+      "agent": "BUILDER",
+      "message": "Generating store setup blueprint..."
+    },
+    {
+      "timestamp": "2026-05-07T14:07:12.932178+00:00",
+      "agent": "BUILDER",
+      "message": "  📦 Shopify CSV: /home/tars/dropship-atom/agents/output/builder/shopify-products-import.csv (5 products)"
+    },
+    {
+      "timestamp": "2026-05-07T14:07:12.932875+00:00",
+      "agent": "BUILDER",
+      "message": "  📋 Store blueprint: /home/tars/dropship-atom/agents/output/builder/store-blueprint.json"
+    },
+    {
+      "timestamp": "2026-05-07T14:07:12.933256+00:00",
+      "agent": "BUILDER",
+      "message": "  ✅ Setup checklist: /home/tars/dropship-atom/agents/output/builder/setup-checklist.md"
+    },
+    {
+      "timestamp": "2026-05-07T14:07:12.933273+00:00",
+      "agent": "BUILDER",
+      "message": "Store blueprint ready (5 products, 3 collections)"
+    },
+    {
+      "timestamp": "2026-05-07T14:07:12.937270+00:00",
+      "agent": "MEDIA",
+      "message": "Generating campaign blueprints..."
+    },
+    {
+      "timestamp": "2026-05-07T14:07:12.938648+00:00",
+      "agent": "MEDIA",
+      "message": "  📊 Ice Roller Face Globes → safe CPA €12.07, test budget €181"
+    },
+    {
+      "timestamp": "2026-05-07T14:07:12.939106+00:00",
+      "agent": "MEDIA",
+      "message": "  📊 Foot Peel Mask Exfoliant → safe CPA €8.09, test budget €121"
+    },
+    {
+      "timestamp": "2026-05-07T14:07:12.939698+00:00",
+      "agent": "MEDIA",
+      "message": "  📊 Bamboo Sunglasses Polarized → safe CPA €14.72, test budget €221"
+    },
+    {
+      "timestamp": "2026-05-07T14:07:12.940210+00:00",
+      "agent": "MEDIA",
+      "message": "  📊 Posture Corrector Pro → safe CPA €16.93, test budget €254"
+    },
+    {
+      "timestamp": "2026-05-07T14:07:12.940673+00:00",
+      "agent": "MEDIA",
+      "message": "  📊 Neck Massager Electric → safe CPA €19.87, test budget €298"
+    },
+    {
+      "timestamp": "2026-05-07T14:07:12.940696+00:00",
+      "agent": "MEDIA",
+      "message": "Campaign blueprints ready for 5 products"
+    },
+    {
+      "timestamp": "2026-05-07T14:07:12.941770+00:00",
+      "agent": "ANALYST",
+      "message": "Generating P&L projections..."
+    },
+    {
+      "timestamp": "2026-05-07T14:07:12.942400+00:00",
+      "agent": "ANALYST",
+      "message": "  📊 P&L dashboard: /home/tars/dropship-atom/agents/output/analyst/pnl-dashboard.md"
+    },
+    {
+      "timestamp": "2026-05-07T14:07:12.942418+00:00",
+      "agent": "ANALYST",
+      "message": "  Total test budget needed: €1075"
+    },
+    {
+      "timestamp": "2026-05-07T14:07:12.942430+00:00",
+      "agent": "ANALYST",
+      "message": "  Fixed costs: €90/mois"
+    }
+  ]
+}

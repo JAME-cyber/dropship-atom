@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bamboo Tumbler — EcoDrop</title>
+<meta name="description" content="The Bamboo Tumbler combines sustainability with premium design.">
+<meta property="og:title" content="Bamboo Tumbler — EcoDrop">
+<meta property="og:description" content="The Bamboo Tumbler combines sustainability with premium design.">
+<meta property="og:image" content="https://placehold.co/600x600/0a1a0e/22c55e?text=Bamboo+Tumbler">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --primary:#22c55e;
+  --primary-dark:color-mix(in srgb, #22c55e 80%, black);
+  --accent:#4ade80;
+  --bg:#0a1a0e;
+  --bg2:color-mix(in srgb, #0a1a0e 90%, white);
+  --bg3:color-mix(in srgb, #0a1a0e 80%, white);
+  --text:#f0f2f5;
+  --text2:#94a3b8;
+  --text3:#64748b;
+  --success:#10b981;
+  --warning:#f59e0b;
+  --danger:#ef4444;
+  --radius:12px;
+  --shadow:0 4px 20px rgba(0,0,0,.3);
+}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden}
+img{max-width:100%;height:auto}
+
+/* ─── ANNOUNCEMENT BAR ─── */
+.announce{background:var(--primary);color:#fff;text-align:center;padding:8px 16px;font-size:12px;font-weight:700;letter-spacing:.5px}
+
+/* ─── NAV ─── */
+.nav{position:sticky;top:0;z-index:100;background:rgba(000000,.95);backdrop-filter:blur(20px);border-bottom:1px solid rgba(255,255,255,.06);padding:0 24px}
+.nav-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:60px}
+.nav-brand{font-size:18px;font-weight:800;letter-spacing:-.5px}
+.nav-brand span{color:var(--primary)}
+.nav-cart{position:relative;cursor:pointer;font-size:20px}
+.nav-cart .badge{position:absolute;top:-6px;right:-8px;background:var(--primary);color:#fff;font-size:10px;font-weight:700;width:18px;height:18px;border-radius:50%;display:flex;align-items:center;justify-content:center}
+
+/* ─── HERO PRODUCT ─── */
+.product{max-width:1100px;margin:0 auto;padding:clamp(24px,4vw,48px) 24px;display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,4vw,48px);align-items:start}
+@media(max-width:768px){.product{grid-template-columns:1fr}}
+
+.gallery{position:sticky;top:80px}
+.gallery-main{border-radius:var(--radius);overflow:hidden;background:var(--bg2);margin-bottom:12px;aspect-ratio:1;display:flex;align-items:center;justify-content:center}
+.gallery-main img{width:100%;height:100%;object-fit:cover}
+.gallery-thumbs{display:flex;gap:8px}
+.gallery-thumb{width:64px;height:64px;border-radius:8px;overflow:hidden;cursor:pointer;border:2px solid transparent;opacity:.6;transition:all .2s}
+.gallery-thumb.active,.gallery-thumb:hover{opacity:1;border-color:var(--primary)}
+.gallery-thumb img{width:100%;height:100%;object-fit:cover}
+
+.info{padding-top:8px}
+.breadcrumbs{font-size:12px;color:var(--text3);margin-bottom:12px}
+.breadcrumbs a{color:var(--text3);text-decoration:none}
+.breadcrumbs a:hover{color:var(--primary)}
+.product-title{font-size:clamp(22px,3vw,32px);font-weight:800;letter-spacing:-.5px;line-height:1.2;margin-bottom:12px}
+.product-rating{display:flex;align-items:center;gap:8px;margin-bottom:16px}
+.stars{color:var(--warning);font-size:14px;letter-spacing:1px}
+.rating-count{font-size:13px;color:var(--text3)}
+.price-row{display:flex;align-items:baseline;gap:12px;margin-bottom:20px}
+.price{font-size:clamp(28px,4vw,40px);font-weight:900;letter-spacing:-1px}
+.price-old{font-size:18px;color:var(--text3);text-decoration:line-through}
+.price-save{background:rgba(16,185,129,.1);color:var(--success);font-size:13px;font-weight:700;padding:4px 10px;border-radius:6px}
+
+/* Urgency */
+.urgency{display:flex;align-items:center;gap:8px;background:rgba(245,158,11,.08);border:1px solid rgba(245,158,11,.15);border-radius:8px;padding:10px 14px;margin-bottom:20px;font-size:13px;font-weight:600;color:var(--warning)}
+.urgency-dot{width:8px;height:8px;border-radius:50%;background:var(--warning);animation:pulse 1.5s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+
+/* Buy box */
+.buy-box{background:var(--bg2);border:1px solid rgba(255,255,255,.06);border-radius:var(--radius);padding:24px}
+.quantity{display:flex;align-items:center;gap:12px;margin-bottom:16px}
+.quantity label{font-size:13px;font-weight:600;color:var(--text2)}
+.quantity-controls{display:flex;align-items:center;border:1px solid rgba(255,255,255,.1);border-radius:8px;overflow:hidden}
+.qty-btn{background:none;border:none;color:var(--text);width:36px;height:36px;font-size:18px;cursor:pointer}
+.qty-btn:hover{background:rgba(255,255,255,.05)}
+.qty-val{width:40px;text-align:center;font-weight:700;border-left:1px solid rgba(255,255,255,.1);border-right:1px solid rgba(255,255,255,.1);height:36px;display:flex;align-items:center;justify-content:center}
+.btn-buy{width:100%;padding:16px;background:var(--primary);color:#fff;border:none;border-radius:var(--radius);font-size:16px;font-weight:800;cursor:pointer;transition:all .2s;font-family:inherit}
+.btn-buy:hover{background:var(--primary-dark);transform:translateY(-1px);box-shadow:0 6px 24px color-mix(in srgb, var(--primary) 30%, transparent)}
+.btn-buy:active{transform:translateY(0)}
+.buy-trust{display:flex;justify-content:center;gap:16px;margin-top:12px;font-size:11px;color:var(--text3)}
+.buy-trust span{display:flex;align-items:center;gap:4px}
+
+/* Features */
+.features{list-style:none;margin-bottom:20px}
+.features li{display:flex;align-items:flex-start;gap:8px;padding:6px 0;font-size:14px;color:var(--text2)}
+.features .check{color:var(--success);font-weight:700}
+
+/* ─── TRUST BAR ─── */
+.trust-bar{max-width:1100px;margin:0 auto;padding:24px;display:flex;justify-content:center;gap:clamp(16px,3vw,40px);flex-wrap:wrap;border-top:1px solid rgba(255,255,255,.04);border-bottom:1px solid rgba(255,255,255,.04)}
+.trust-item{text-align:center}
+.trust-icon{font-size:24px;margin-bottom:4px}
+.trust-label{font-size:11px;color:var(--text3);font-weight:600}
+
+/* ─── REVIEWS ─── */
+.reviews-section{max-width:800px;margin:0 auto;padding:clamp(32px,5vw,64px) 24px}
+.section-title{font-size:clamp(20px,2.5vw,28px);font-weight:800;letter-spacing:-.5px;text-align:center;margin-bottom:32px}
+.review{background:var(--bg2);border:1px solid rgba(255,255,255,.06);border-radius:var(--radius);padding:20px;margin-bottom:12px}
+.review-stars{color:var(--warning);font-size:13px;margin-bottom:8px}
+.review-text{font-size:14px;line-height:1.6;color:var(--text2);margin-bottom:8px}
+.review-author{font-size:12px;color:var(--text3);font-weight:600}
+
+/* ─── FAQ ─── */
+.faq-section{max-width:700px;margin:0 auto;padding:clamp(32px,5vw,64px) 24px}
+.faq-item{border-bottom:1px solid rgba(255,255,255,.06)}
+.faq-q{padding:16px 0;cursor:pointer;font-weight:700;font-size:15px;display:flex;justify-content:space-between;align-items:center;user-select:none}
+.faq-q:hover{color:var(--primary)}
+.faq-q .arrow{transition:transform .2s;font-size:12px}
+.faq-item.open .faq-q .arrow{transform:rotate(180deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .3s ease;font-size:14px;color:var(--text2);line-height:1.7}
+.faq-item.open .faq-a{max-height:200px}
+
+/* ─── LEGAL FOOTER ─── */
+.legal-footer{max-width:800px;margin:0 auto;padding:48px 24px;text-align:center;font-size:12px;color:var(--text3);border-top:1px solid rgba(255,255,255,.04)}
+.legal-footer a{color:var(--text3);text-decoration:none}
+.legal-footer a:hover{color:var(--primary)}
+.legal-links{display:flex;justify-content:center;gap:16px;margin-bottom:12px;flex-wrap:wrap}
+
+/* ─── COOKIE BANNER ─── */
+.cookie-banner{position:fixed;bottom:0;left:0;right:0;z-index:999;background:var(--bg2);border-top:1px solid rgba(255,255,255,.1);padding:16px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.cookie-banner p{font-size:13px;color:var(--text2);flex:1;min-width:200px}
+.cookie-btns{display:flex;gap:8px}
+.cookie-btn{padding:8px 16px;border-radius:8px;font-size:13px;font-weight:700;cursor:pointer;border:none;font-family:inherit}
+.cookie-accept{background:var(--primary);color:#fff}
+.cookie-reject{background:rgba(255,255,255,.06);color:var(--text);border:1px solid rgba(255,255,255,.1)}
+</style>
+</head>
+<body>
+
+<!-- ANNOUNCEMENT -->
+<div class="announce">🔥 FREE SHIPPING — Limited Time Offer</div>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="nav-brand">EcoDrop<span></span></div>
+    <div class="nav-cart">🛒<div class="badge" id="cartCount">0</div></div>
+  </div>
+</nav>
+
+<!-- PRODUCT SECTION -->
+<div class="product">
+  <div class="gallery">
+    <div class="gallery-main"><img id="mainImg" src="https://placehold.co/600x600/0a1a0e/22c55e?text=Bamboo+Tumbler" alt="Bamboo Tumbler"></div>
+    <div class="gallery-thumbs">
+      <div class="gallery-thumb active" onclick="selectImage(this, 'https://placehold.co/600x600/0a1a0e/22c55e?text=Bamboo+Tumbler')"><img src="https://placehold.co/600x600/0a1a0e/22c55e?text=Bamboo+Tumbler" alt="Bamboo Tumbler" loading="lazy"></div>
+<div class="gallery-thumb" onclick="selectImage(this, 'https://placehold.co/600x600/0a1a0e/22c55e?text=Side+View')"><img src="https://placehold.co/600x600/0a1a0e/22c55e?text=Side+View" alt="Bamboo Tumbler" loading="lazy"></div>
+
+    </div>
+  </div>
+
+  <div class="info">
+    <div class="breadcrumbs"><a href="#">Home</a> / <a href="#">Eco</a> / Bamboo Tumbler</div>
+    <h1 class="product-title">Bamboo Tumbler</h1>
+    <div class="product-rating">
+      <span class="stars">★★★★★</span>
+      <span class="rating-count">4.7 (127 reviews)</span>
+    </div>
+    <div class="price-row">
+      <span class="price">$34.99</span>
+      <span class="price-old">$48.99</span>
+      <span class="price-save">SAVE 87%</span>
+    </div>
+    <div class="urgency">
+      <span class="urgency-dot"></span>
+      🔥 High demand — 42 people viewing this right now
+    </div>
+    <ul class="features">
+      <li><span class="check">✓</span> Double-wall vacuum insulation (8h hot, 12h cold)</li>
+<li><span class="check">✓</span> 100% natural bamboo exterior</li>
+<li><span class="check">✓</span> BPA-free, dishwasher safe</li>
+<li><span class="check">✓</span> Fits standard car cup holders</li>
+<li><span class="check">✓</span> Eco-friendly packaging, zero plastic</li>
+
+    </ul>
+    <div class="buy-box">
+      <div class="quantity">
+        <label>Quantity:</label>
+        <div class="quantity-controls">
+          <button class="qty-btn" onclick="changeQty(-1)">−</button>
+          <div class="qty-val" id="qty">1</div>
+          <button class="qty-btn" onclick="changeQty(1)">+</button>
+        </div>
+      </div>
+      <button class="btn-buy" onclick="addToCart()">ADD TO CART — $34.99</button>
+      <div class="buy-trust">
+        <span>🔒 Secure checkout</span>
+        <span>📦 Free shipping</span>
+        <span>↩️ 30-day returns</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="trust-item"><div class="trust-icon">🚚</div><div class="trust-label">Free Shipping</div></div>
+  <div class="trust-item"><div class="trust-icon">↩️</div><div class="trust-label">30-Day Returns</div></div>
+  <div class="trust-item"><div class="trust-icon">🔒</div><div class="trust-label">Secure Payment</div></div>
+  <div class="trust-item"><div class="trust-icon">💬</div><div class="trust-label">24/7 Support</div></div>
+  <div class="trust-item"><div class="trust-icon">⭐</div><div class="trust-label">4.7/5 Rating</div></div>
+</div>
+
+<!-- REVIEWS -->
+<div class="reviews-section">
+  <h2 class="section-title">What customers say</h2>
+  
+        <div class="review">
+            <div class="review-stars">★★★★★</div>
+            <div class="review-text">"Amazing quality, arrived faster than expected!"</div>
+            <div class="review-author">— Sarah M.</div>
+        </div>
+        <div class="review">
+            <div class="review-stars">★★★★★</div>
+            <div class="review-text">"Best purchase I've made this year. Highly recommend."</div>
+            <div class="review-author">— James T.</div>
+        </div>
+        <div class="review">
+            <div class="review-stars">★★★★★</div>
+            <div class="review-text">"Exactly what I needed. Will buy again."</div>
+            <div class="review-author">— Marie L.</div>
+        </div>
+</div>
+
+<!-- FAQ -->
+<div class="faq-section">
+  <h2 class="section-title">Frequently asked questions</h2>
+  <div class="faq-item" onclick="this.classList.toggle('open')">
+    <div class="faq-q">How long does shipping take?<span class="arrow">▼</span></div>
+    <div class="faq-a">We ship worldwide. Standard delivery takes 7-14 business days. Express shipping (3-5 days) available at checkout.</div>
+  </div>
+  <div class="faq-item" onclick="this.classList.toggle('open')">
+    <div class="faq-q">What is your return policy?<span class="arrow">▼</span></div>
+    <div class="faq-a">We offer a 30-day money-back guarantee. If you're not satisfied, return the product for a full refund. No questions asked.</div>
+  </div>
+  <div class="faq-item" onclick="this.classList.toggle('open')">
+    <div class="faq-q">Is my payment secure?<span class="arrow">▼</span></div>
+    <div class="faq-a">Yes. All payments are processed through Stripe with PCI-DSS Level 1 compliance. We never see your card details.</div>
+  </div>
+  <div class="faq-item" onclick="this.classList.toggle('open')">
+    <div class="faq-q">Do you ship to my country?<span class="arrow">▼</span></div>
+    <div class="faq-a">We ship to over 150 countries worldwide. Enter your address at checkout to confirm availability and shipping cost (free for most destinations).</div>
+  </div>
+</div>
+
+<!-- LEGAL FOOTER -->
+<div class="legal-footer">
+  <div class="legal-links">
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="terms.html">Terms of Service</a>
+    <a href="returns.html">Return Policy</a>
+    <a href="mailto:support@ecodrop.myshopify.com">Contact</a>
+  </div>
+  <p>© 2026 EcoDrop. All rights reserved.</p>
+  <p style="margin-top:4px">This store is compliant with RGPD (EU) and consumer protection laws.</p>
+</div>
+
+<!-- COOKIE BANNER (RGPD compliant) -->
+<div class="cookie-banner" id="cookieBanner">
+  <p>We use essential cookies only. No tracking without your consent. <a href="privacy.html">Learn more</a></p>
+  <div class="cookie-btns">
+    <button class="cookie-btn cookie-reject" onclick="document.getElementById('cookieBanner').style.display='none'">Reject</button>
+    <button class="cookie-btn cookie-accept" onclick="document.getElementById('cookieBanner').style.display='none'">Accept</button>
+  </div>
+</div>
+
+<script>
+function selectImage(el,src){document.getElementById('mainImg').src=src;document.querySelectorAll('.gallery-thumb').forEach(t=>t.classList.remove('active'));el.classList.add('active')}
+function changeQty(d){const el=document.getElementById('qty');let v=parseInt(el.textContent)+d;if(v<1)v=1;if(v>10)v=10;el.textContent=v}
+function addToCart(){const q=parseInt(document.getElementById('qty').textContent);const c=document.getElementById('cartCount');c.textContent=parseInt(c.textContent)+q;c.style.animation='none';c.offsetHeight;c.style.animation='pulse .3s'}
+</script>
+</body>
+</html>
