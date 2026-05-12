@@ -24,10 +24,12 @@ agents:
   - scout:     "Supplier finder (Alibaba, 1688, agents privés)"
   - builder:   "Création boutique (Shopify ou Medusa.js)"
   - creator:   "Créatives IA (scripts, images, vidéos UGC-style, Instagram Shop Reels)"
+  - shorts_machine: "YouTube Shorts automation (trend detect → script → voiceover → assemble → post)"
   - media:     "Campagnes ads (Meta, TikTok, Google) + Instagram Shop affiliate"
   - closer:    "Email marketing + SAV + upsell"
   - analyst:   "Analytics, P&L, optimisation continue (cross-platform TT Shop vs IG Shop)"
   - feedback:  "Skill #11 — Boucle de retour: les agents apprennent des résultats réels"
+  - b2b_prospector: "B2B prospecting (salons, boutiques, pharmacies Suisse/France/Belgique)"
 
 phases:
   phase_1:
@@ -67,6 +69,8 @@ stack:
   languages: ["Python 3.12", "JavaScript/Node"]
   scraping: "Scrapling (déjà installé)"
   llm: "OpenRouter (minimax-m2.5:free primary, gemma-4-31b fallback) + Kimi K2.6 (NVIDIA NIM premium)"
+  images: "Kie.ai (Nano Banana 2, Flux-2 Pro, GPT Image 2, 4o Image, Imagen 4)"
+  video: "HyperFrame (déjà installé) + Kie.ai (Kling 3.0, Hailuo 2.3, Sora2 future)"
   scoring: "JsonLogic (déterministe, déjà installé)"
   feedback: "feedback.py — Feedback Loop adaptatif (Skill #11)"
   video: "HyperFrame (déjà installé dans socialpulse)"

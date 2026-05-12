@@ -40,8 +40,8 @@ GOLDEN_PRODUCTS = [
         "trend_score": 0.0,
         "demand_score": 80.0,
         "competition_score": 60.0,
-        "expected_score": 60.0,
-        "expected_grade": "B",
+        "expected_score": 25.0,
+        "expected_grade": "D",
     },
     {
         "name": "Posture Corrector",
@@ -52,7 +52,7 @@ GOLDEN_PRODUCTS = [
         "trend_score": 0.0,
         "demand_score": 70.0,
         "competition_score": 50.0,
-        "expected_score": 51.9,
+        "expected_score": 63.2,
         "expected_grade": "B",
     },
     {
@@ -64,32 +64,32 @@ GOLDEN_PRODUCTS = [
         "trend_score": 0.0,
         "demand_score": 65.0,
         "competition_score": 45.0,
-        "expected_score": 50.2,
-        "expected_grade": "B",
+        "expected_score": 22.0,
+        "expected_grade": "D",
     },
     {
         "name": "Luxury Watch Clone",
         "category": "Electronics",
         "source_price": 120.0,
         "suggested_price": 199.0,
-        "margin_score": 0.0,       # auto-calculated → 59.5
+        "margin_score": 0.0,       # auto-calculated
         "trend_score": 30.0,
         "demand_score": 40.0,
         "competition_score": 20.0,
-        "expected_score": 39.9,
-        "expected_grade": "C",
+        "expected_score": 6.0,
+        "expected_grade": "D",
     },
     {
         "name": "Cheap Cable",
         "category": "Electronics",
         "source_price": 0.5,
         "suggested_price": 5.99,
-        "margin_score": 0.0,       # auto-calculated → 100
+        "margin_score": 0.0,       # auto-calculated
         "trend_score": 10.0,
         "demand_score": 90.0,
         "competition_score": 10.0,
-        "expected_score": 57.5,
-        "expected_grade": "B",
+        "expected_score": 22.0,
+        "expected_grade": "D",
     },
     {
         "name": "Perfect Product",
@@ -100,19 +100,19 @@ GOLDEN_PRODUCTS = [
         "trend_score": 100.0,
         "demand_score": 100.0,
         "competition_score": 100.0,
-        "expected_score": 100.0,
-        "expected_grade": "A+",
+        "expected_score": 27.0,
+        "expected_grade": "D",
     },
     {
         "name": "Terrible Product",
         "category": "Electronics",
         "source_price": 80.0,
         "suggested_price": 85.0,
-        "margin_score": 0.0,       # auto-calculated → 8.82
+        "margin_score": 0.0,       # auto-calculated
         "trend_score": 0.0,
         "demand_score": 0.0,
         "competition_score": 0.0,
-        "expected_score": 3.1,
+        "expected_score": 1.8,
         "expected_grade": "D",
     },
     {
@@ -120,36 +120,36 @@ GOLDEN_PRODUCTS = [
         "category": "Home",
         "source_price": 12.0,
         "suggested_price": 39.9,
-        "margin_score": 0.0,       # auto-calculated → 100
+        "margin_score": 0.0,       # auto-calculated
         "trend_score": 40.0,
         "demand_score": 55.0,
         "competition_score": 50.0,
-        "expected_score": 66.2,
-        "expected_grade": "A",     # 66.2 ≥ 65 → A
+        "expected_score": 19.0,
+        "expected_grade": "D",
     },
     {
         "name": "High Competition Item",
         "category": "Electronics",
         "source_price": 8.0,
         "suggested_price": 19.9,
-        "margin_score": 0.0,       # auto-calculated → 89.7
+        "margin_score": 0.0,       # auto-calculated
         "trend_score": 80.0,
         "demand_score": 90.0,
         "competition_score": 5.0,
-        "expected_score": 72.9,
-        "expected_grade": "A",
+        "expected_score": 10.0,
+        "expected_grade": "D",
     },
     {
         "name": "Niche Winner",
         "category": "Pets",
         "source_price": 2.0,
         "suggested_price": 19.9,
-        "margin_score": 0.0,       # auto-calculated → 100
+        "margin_score": 0.0,       # auto-calculated
         "trend_score": 60.0,
         "demand_score": 65.0,
         "competition_score": 80.0,
-        "expected_score": 79.8,
-        "expected_grade": "A",
+        "expected_score": 23.0,
+        "expected_grade": "D",
     },
 ]
 

@@ -50,13 +50,20 @@ class ProductContract(BaseModel):
     keywords: list[str] = Field(default_factory=list)
     notes: str = Field(default="")
     
+    # Bonus Scoring (Line Borrajo × DropAtom)
+    is_consumable: bool = Field(default=False, description="Produit consommable (récurrence d'achat)")
+    suisse_premium: float = Field(default=0.0, description="Prix ajusté marché suisse (+15%)")
+    clean_composition: bool = Field(default=False, description="Composition clean (Yuka-friendly)")
+    client_problem: str = Field(default="", description="Description du problème client")
+    b2b_potential: bool = Field(default=False, description="Potentiel de revente B2B")
+    
     # LLM enrichment
     llm_verdict: str = Field(default="")
     llm_analysis: str = Field(default="")
     
     # Scoring
     hunter_score: float = Field(default=0.0, ge=0.0, le=100.0)
-    hunter_grade: str = Field(default="", pattern=r"^[ABCD]\+?$|^$")
+    hunter_grade: str = Field(default="", pattern=r"^[SABCD]\+?$|^^$")
     
     # Timestamps
     discovered_at: str = Field(default="")
@@ -65,7 +72,7 @@ class ProductContract(BaseModel):
     @field_validator("hunter_grade")
     @classmethod
     def validate_grade(cls, v: str) -> str:
-        valid = {"A+", "A", "B", "C", "D", ""}
+        valid = {"S", "A+", "A", "B", "C", "D", ""}
         if v not in valid:
             raise ValueError(f"Invalid grade '{v}'. Must be one of {valid}")
         return v

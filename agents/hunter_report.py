@@ -20,6 +20,22 @@ def generate_report(products: list) -> str:
         f"**Dream products (5/5 criteria):** {len(dream)}",
         f"**Criteria:** Problème + WOW + Marge ×3 + Shipping <500g + Tendance ↑",
         "",
+        "## 🎯 Bonus Scoring (Line Borrajo × DropAtom)",
+        "",
+    ]
+    
+    # Count bonus features
+    consumables = [p for p in dream if getattr(p, 'is_consumable', False)]
+    clean = [p for p in dream if getattr(p, 'clean_composition', False)]
+    b2b = [p for p in dream if getattr(p, 'b2b_potential', False)]
+    
+    lines.append(f"| Bonus | Count | Products |")
+    lines.append(f"|-------|-------|----------|")
+    lines.append(f"| ♻️ Consommable (récurrence) | {len(consumables)} | {', '.join(getattr(p, 'name', '?')[:25] for p in consumables[:5])} |")
+    lines.append(f"| 🌿 Clean/Yuka-friendly | {len(clean)} | {', '.join(getattr(p, 'name', '?')[:25] for p in clean[:5])} |")
+    lines.append(f"| 🤝 B2B potentiel | {len(b2b)} | {', '.join(getattr(p, 'name', '?')[:25] for p in b2b[:5])} |")
+    lines.append(f"| 🇨🇭 Prix Suisse (+15%) | {len(dream)} | Top: {getattr(dream[0], 'suisse_premium', 0):.2f} CHF |" if dream else "")
+    lines.append("")
     ]
     
     # DREAM PRODUCTS
@@ -102,6 +118,16 @@ def generate_report(products: list) -> str:
             lines.append(f"- **Score global:** {hs}/100 — Grade {hg}")
             if llm:
                 lines.append(f"- **LLM:** {llm[:200]}")
+            # Bonus fields
+            if getattr(p, 'is_consumable', False):
+                lines.append(f"- ♻️ **CONSOMMABLE** — récurrence d'achat = revenue mensuel récurrent")
+            if getattr(p, 'clean_composition', False):
+                lines.append(f"- 🌿 **CLEAN** — composition naturelle = argument Yuka différenciant")
+            if getattr(p, 'b2b_potential', False):
+                lines.append(f"- 🤝 **B2B** — potentiel de revente en salon/boutique")
+            sp_ch = getattr(p, 'suisse_premium', 0)
+            if sp_ch > 0:
+                lines.append(f"- 🇨🇭 **Suisse:** {sp_ch:.2f} CHF (+15% premium vs EU)")
             lines.append("")
     
     lines.append("---")

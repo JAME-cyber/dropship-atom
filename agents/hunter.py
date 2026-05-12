@@ -95,6 +95,13 @@ class Product:
     5. TENDANCE   → Tendance ascendante (Google Trends, TikTok, Exploding Topics)
     
     HARD FILTER: Un produit qui rate un critère = éliminé. Pas de compensation.
+    
+    BONUS SCORING (Line Borrajo × DropAtom insights):
+    ─────────────────────────────────────────
+    B1. CONSOMMABLE  → Récurrent (cosmétique, consommable = x10-x20 marge, récurrence mensuelle)
+    B2. SUISSE       → Marché suisse prioritaire (prix premium +15%, concurrence faible)
+    B3. YUKA/CLEAN   → Composition clean = argument marketing différenciant
+    B4. CLIENT-FIRST → Le produit est la réponse à un problème client, pas un gadget
     """
     id: str = ""
     name: str = ""
@@ -144,6 +151,13 @@ class Product:
     # LLM enrichment
     llm_verdict: str = ""          # "WINNER", "MAYBE", "SKIP"
     llm_analysis: str = ""
+    
+    # ─── BONUS SCORING (Line Borrajo × DropAtom) ─────────────────
+    is_consumable: bool = False     # Produit consommable (récurrence d'achat)
+    suisse_premium: float = 0.0     # Prix ajusté marché suisse (+15%)
+    clean_composition: bool = False # Composition clean (Yuka-friendly)
+    client_problem: str = ""        # Description du problème client (pas du produit)
+    b2b_potential: bool = False     # Potentiel de revente B2B (salons, boutiques)
     
     # Scoring
     hunter_score: float = 0.0      # Composite 0-100
@@ -1136,6 +1150,60 @@ def score_product(p: Product, use_feedback: bool = True) -> Product:
         p.hunter_grade = 'C'   # Missing 1-2 criteria
     else:
         p.hunter_grade = 'D'   # Skip
+    
+    # ─── BONUS SCORING (Line Borrajo × DropAtom) ────────────────────
+    
+    # B1. CONSOMMABLE — récurrent = goldmine (Line dit x10-x20 marge)
+    CONSUMABLE_SIGNALS = [
+        "masque", "mask", "sérum", "serum", "shampooing", "shampoo",
+        "crème", "cream", "huile", "oil", "lotion", "lait",
+        "traitement", "treatment", "routine", "complément", "supplement",
+        "savon", "soap", "dentifrice", "déodorant", "deodorant",
+        "patch", "recharge", "refill", "filtre", "filter",
+        "capsule", "gélule", "vitamine", "vitamin", "probiotique",
+        "cire", "wax", "gel", "mousse", "baume", "balm",
+        "tonique", "toner", "essence", "élixir", "elixir",
+    ]
+    p.is_consumable = any(s in search_text for s in CONSUMABLE_SIGNALS)
+    consumable_bonus = 8 if p.is_consumable else 0  # +8 points si récurrent
+    
+    # B2. SUISSE — marché premium (Line + Léa: 300K€ en Suisse, prix +15%)
+    p.suisse_premium = round(p.suggested_price * 1.15, 2) if p.suggested_price > 0 else 0
+    
+    # B3. CLEAN COMPOSITION — Yuka-friendly (Léa Herdyshop: 100/100 Yuka = trust signal)
+    CLEAN_SIGNALS = [
+        "naturel", "natural", "organic", "bio", "clean", "sans sulfate",
+        "sans paraben", "paraben-free", "sans silicone", "silicone-free",
+        "ingrédient naturel", "aloe vera", "argan", "camomille", "shea",
+        "karité", "avocado", "ricin", "biotin", "végétal", "vegan",
+        "cruelty-free", "hypoallergénique", "dermatologiquement testé",
+        "sans parfum", "fragrance-free", "sans aluminium",
+    ]
+    p.clean_composition = any(s in search_text for s in CLEAN_SIGNALS)
+    clean_bonus = 5 if p.clean_composition else 0
+    
+    # B4. CLIENT-FIRST — le produit est-il une RÉPONSE à un problème?
+    # (Philosophie Line: "On tombe amoureux de son client, pas de son produit")
+    if p.passes_problem and p.problem_type:
+        # Le produit a un problème identifié = il est une réponse au client
+        p.client_problem = f"{p.problem_type}: {p.problem_type}"
+        client_first_bonus = 5
+    else:
+        client_first_bonus = 0
+    
+    # B5. B2B POTENTIAL — peut-il être revendu en salon/boutique?
+    B2B_FRIENDLY = [
+        "cheveux", "hair", "brosse", "brush", "peigne", "comb",
+        "masque", "mask", "sérum", "serum", "crème", "cream",
+        "massage", "massager", "visage", "face", "peau", "skin",
+        "ongle", "nail", "spa", "wellness", "bien-être",
+        "cosmétique", "cosmetic", "beauté", "beauty",
+    ]
+    p.b2b_potential = any(s in search_text for s in B2B_FRIENDLY) and p.is_consumable
+    b2b_bonus = 3 if p.b2b_potential else 0
+    
+    # Apply bonuses to composite score
+    p.hunter_score = round(min(100, max(0, p.hunter_score + consumable_bonus + clean_bonus + client_first_bonus + b2b_bonus)), 1)
     
     p.updated_at = datetime.now(timezone.utc).isoformat()
     return p
