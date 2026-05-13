@@ -1,0 +1,296 @@
+{
+  "id": "a64f8a4a5829",
+  "brand_name": "FiniTaCourse",
+  "niche": "Hommes et femmes de 25-45 ans, vivant en Haute-Savoie ou région Rhône-Alpes, qui découvrent le trail running après avoir couru sur route ou en salle. Ils ont fait quelques sorties nature par eux-mêmes et maintenant ils s'inscrivent à leur première course (10-25km). Ils sont à la fois excités et terrorisés. Ils n'osent pas poser de questions \"bêtes\" mais en ont plein. Ils suivent des comptes pros sur Instagram mais ne se reconnaissent pas dans leur lifestyle.",
+  "keywords": [],
+  "calendar": [
+    {
+      "week": 1,
+      "theme": "Confronter l'angoisse de l'abandon",
+      "articles": [
+        {
+          "title": "Pourquoi l'angoisse d'abandonner hante les débutants",
+          "keyword": "angoisse abandon course trail",
+          "type": "blog_post",
+          "pillar": "Gérer l'angoisse de l'abandon",
+          "anti_pitch_angle": "Le coureur débutant imagine déjà la honte de s'arrêter devant les autres, alors même qu'il n'a pas encore pris le départ",
+          "priority": "P0",
+          "word_count_target": 1200,
+          "internal_links_to": [
+            "finir sa premiere course trail"
+          ]
+        },
+        {
+          "title": "Comment préparer son premier trail sans craquer",
+          "keyword": "comment préparer son premier trail",
+          "type": "guide",
+          "pillar": "Les galères du premier trail",
+          "anti_pitch_angle": "Le premier trail n'est pas une balade: il peut devenir un calvaire si on ne se prépare pas au réalité du terrain",
+          "priority": "P0",
+          "word_count_target": 1800,
+          "internal_links_to": [
+            "premier trail course conseils",
+            "préparation trail 15km"
+          ]
+        },
+        {
+          "title": "Test: ce sac trail tient-il ses promesses?",
+          "keyword": "équipement trail入门",
+          "type": "video",
+          "pillar": "Le matériel qui ne sert à rien vs l'essentiel",
+          "anti_pitch_angle": "Le débutant achète un sac à 150€ qui lui frotte les épaules pendant 15km",
+          "priority": "P1",
+          "word_count_target": 800,
+          "internal_links_to": [
+            "ampoules course trail"
+          ]
+        }
+      ]
+    },
+    {
+      "week": 2,
+      "theme": "Le matériel: utile ou superflu?",
+      "articles": [
+        {
+          "title": "Équipement trail: l'essentiel à moins de 100€",
+          "keyword": "premier trail course conseils",
+          "type": "comparison",
+          "pillar": "Le matériel qui ne sert à rien vs l'essentiel",
+          "anti_pitch_angle": "Les marques vendent des gadgets à 200€ aux débutants qui n'en ont pas besoin pour un 15km",
+          "priority": "P0",
+          "word_count_target": 1500,
+          "internal_links_to": [
+            "équipement trail入门",
+            "bidon trail qui fuite"
+          ]
+        },
+        {
+          "title": "5 galères du premier trail (et comment les éviter)",
+          "keyword": "premier trail course conseils",
+          "type": "blog_post",
+          "pillar": "Les galères du premier trail",
+          "anti_pitch_angle": "Personne ne warn le débutant que ses ampoules vont saigner, que son bidon va fuir et que le dernier km est un enfer",
+          "priority": "P0",
+          "word_count_target": 1400,
+          "internal_links_to": [
+            "ampoules course trail",
+            "finir sa premiere course trail"
+          ]
+        },
+        {
+          "title": "Avis: ce bidon trail fuit-il vraiment?",
+          "keyword": "bidon trail qui fuite",
+          "type": "video",
+          "pillar": "Le matériel qui ne sert à rien vs l'essentiel",
+          "anti_pitch_angle": "Le bidon qui fuit dans le sac, ça arrive et ça gâche la course",
+          "priority": "P1",
+          "word_count_target": 600,
+          "internal_links_to": [
+            "équipement trail入门"
+          ]
+        }
+      ]
+    },
+    {
+      "week": 3,
+      "theme": "Nutrition: ne plus avoir faim (ou trop manger)",
+      "articles": [
+        {
+          "title": "Ravito trail: ce que mangent les finishers",
+          "keyword": "ravito trail débutant",
+          "type": "guide",
+          "pillar": "Comment préparer son ravito sans être nutritionniste",
+          "anti_pitch_angle": "Le débutant ne sait pas quoi manger, combien, et finit soit en hypoglycémie soit avec des cramps",
+          "priority": "P0",
+          "word_count_target": 1600,
+          "internal_links_to": [
+            "préparation trail 15km",
+            "finir sa premiere course trail"
+          ]
+        },
+        {
+          "title": "Préparer un trail 15km: le minimum vital",
+          "keyword": "préparation trail 15km",
+          "type": "guide",
+          "pillar": "Les galères du premier trail",
+          "anti_pitch_angle": "15km, c'est 'pas grand chose' pour les autres, mais pour un débutant c'est 2h de souffrance potentielle",
+          "priority": "P0",
+          "word_count_target": 1500,
+          "internal_links_to": [
+            "comment préparer son premier trail",
+            "ravito trail débutant"
+          ]
+        },
+        {
+          "title": "Témoignage: j'ai abandonné à cause de la nutrition",
+          "keyword": "angoisse abandon course trail",
+          "type": "video",
+          "pillar": "Histoires de finishers",
+          "anti_pitch_angle": "Un finisher qui raconte comment un mauvais ravito l'a fait abandonner son premier trail",
+          "priority": "P1",
+          "word_count_target": 700,
+          "internal_links_to": [
+            "ravito trail débutant"
+          ]
+        }
+      ]
+    },
+    {
+      "week": 4,
+      "theme": "Crosser la ligne: témoignages et motivation",
+      "articles": [
+        {
+          "title": "J'ai fini mon premier trail et j'ai pleuré",
+          "keyword": "finir sa premiere course trail",
+          "type": "blog_post",
+          "pillar": "Histoires de finishers",
+          "anti_pitch_angle": "Le finisher raconte l'émotion de traverser la ligne, les doutes avant le départ, la peur d'abandonner",
+          "priority": "P0",
+          "word_count_target": 1000,
+          "internal_links_to": [
+            "angoisse abandon course trail",
+            "trail annecy débutant"
+          ]
+        },
+        {
+          "title": "Trail Annecy beginner: mon calvaire en 15km",
+          "keyword": "trail annecy débutant",
+          "type": "blog_post",
+          "pillar": "Les galères du premier trail",
+          "anti_pitch_angle": "Un récit humoristique et honnête d'un premier trail à Annecy où tout a failli basculer",
+          "priority": "P1",
+          "word_count_target": 1300,
+          "internal_links_to": [
+            "premier trail course conseils",
+            "finir sa premiere course trail"
+          ]
+        },
+        {
+          "title": "FAQ: tout ce que vous demandez avant votre premier trail",
+          "keyword": "premier trail course conseils",
+          "type": "faq",
+          "pillar": "Gérer l'angoisse de l'abandon",
+          "anti_pitch_angle": "Recueil des vraies questions que les débutants n'osent pas poser (et leurs réponses honnêtes)",
+          "priority": "P1",
+          "word_count_target": 1200,
+          "internal_links_to": [
+            "comment préparer son premier trail",
+            "ampoules course trail"
+          ]
+        }
+      ]
+    }
+  ],
+  "pillars": [
+    {
+      "name": "Les galères du premier trail (humoristique et pédagogique)"
+    },
+    {
+      "name": "Comment préparer son ravito sans être nutritionniste"
+    },
+    {
+      "name": "Gérer l'angoisse de l'abandon"
+    },
+    {
+      "name": "Le matériel qui ne sert à rien vs l'essentiel"
+    },
+    {
+      "name": "Histoires de finishers (témoignages)"
+    }
+  ],
+  "priority_articles": [
+    {
+      "title": "Pourquoi l'angoisse d'abandonner hante les débutants",
+      "keyword": "angoisse abandon course trail",
+      "type": "blog_post",
+      "pillar": "Gérer l'angoisse de l'abandon",
+      "anti_pitch_angle": "Le coureur débutant imagine déjà la honte de s'arrêter devant les autres, alors même qu'il n'a pas encore pris le départ",
+      "priority": "P0",
+      "word_count_target": 1200,
+      "internal_links_to": [
+        "finir sa premiere course trail"
+      ]
+    },
+    {
+      "title": "Comment préparer son premier trail sans craquer",
+      "keyword": "comment préparer son premier trail",
+      "type": "guide",
+      "pillar": "Les galères du premier trail",
+      "anti_pitch_angle": "Le premier trail n'est pas une balade: il peut devenir un calvaire si on ne se prépare pas au réalité du terrain",
+      "priority": "P0",
+      "word_count_target": 1800,
+      "internal_links_to": [
+        "premier trail course conseils",
+        "préparation trail 15km"
+      ]
+    },
+    {
+      "title": "Équipement trail: l'essentiel à moins de 100€",
+      "keyword": "premier trail course conseils",
+      "type": "comparison",
+      "pillar": "Le matériel qui ne sert à rien vs l'essentiel",
+      "anti_pitch_angle": "Les marques vendent des gadgets à 200€ aux débutants qui n'en ont pas besoin pour un 15km",
+      "priority": "P0",
+      "word_count_target": 1500,
+      "internal_links_to": [
+        "équipement trail入门",
+        "bidon trail qui fuite"
+      ]
+    },
+    {
+      "title": "5 galères du premier trail (et comment les éviter)",
+      "keyword": "premier trail course conseils",
+      "type": "blog_post",
+      "pillar": "Les galères du premier trail",
+      "anti_pitch_angle": "Personne ne warn le débutant que ses ampoules vont saigner, que son bidon va fuir et que le dernier km est un enfer",
+      "priority": "P0",
+      "word_count_target": 1400,
+      "internal_links_to": [
+        "ampoules course trail",
+        "finir sa premiere course trail"
+      ]
+    },
+    {
+      "title": "Ravito trail: ce que mangent les finishers",
+      "keyword": "ravito trail débutant",
+      "type": "guide",
+      "pillar": "Comment préparer son ravito sans être nutritionniste",
+      "anti_pitch_angle": "Le débutant ne sait pas quoi manger, combien, et finit soit en hypoglycémie soit avec des cramps",
+      "priority": "P0",
+      "word_count_target": 1600,
+      "internal_links_to": [
+        "préparation trail 15km",
+        "finir sa premiere course trail"
+      ]
+    },
+    {
+      "title": "Préparer un trail 15km: le minimum vital",
+      "keyword": "préparation trail 15km",
+      "type": "guide",
+      "pillar": "Les galères du premier trail",
+      "anti_pitch_angle": "15km, c'est 'pas grand chose' pour les autres, mais pour un débutant c'est 2h de souffrance potentielle",
+      "priority": "P0",
+      "word_count_target": 1500,
+      "internal_links_to": [
+        "comment préparer son premier trail",
+        "ravito trail débutant"
+      ]
+    },
+    {
+      "title": "J'ai fini mon premier trail et j'ai pleuré",
+      "keyword": "finir sa premiere course trail",
+      "type": "blog_post",
+      "pillar": "Histoires de finishers",
+      "anti_pitch_angle": "Le finisher raconte l'émotion de traverser la ligne, les doutes avant le départ, la peur d'abandonner",
+      "priority": "P0",
+      "word_count_target": 1000,
+      "internal_links_to": [
+        "angoisse abandon course trail",
+        "trail annecy débutant"
+      ]
+    }
+  ],
+  "gaps": [],
+  "created_at": "2026-05-13T12:02:41.790332+00:00",
+  "updated_at": ""
+}

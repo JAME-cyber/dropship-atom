@@ -1,0 +1,77 @@
+{
+  "id": "ef73410664f3",
+  "brand_name": "FiniTaCourse",
+  "manifesto": "Tu n'as pas besoin d'être un athlete pour avoir ta place sur les sentiers. Tu as besoin d'un peu de bon sens, de préparation, et de gens qui comprennent que non, ta première course ne sera pas parfaite. On ne va pas te mentir : tu vas avoir des ampoules. Ton bidon va probablement fuir au moment précis où tu en auras le plus besoin. Tu vas manger un ravito à 6h du mat et regretter cette décision 2 heures plus tard. Mais tu vas finir. C'est ça qui compte. On est là pour que tu arrives au bout, avec le sourire ou la tronche, mais que tu arrives. Le reste, c'est de l'histoire qu'on racontera plus tard.",
+  "purpose": "Aider les débutants du trail à Annecy à finir leur première course sans drame ni abandon",
+  "why_we_exist": "L'angoisse de ne pas finir leur course, de devoir abandonner devant tout le monde, de ne pas être à la hauteur",
+  "target_audience": "Hommes et femmes de 25-45 ans, vivant en Haute-Savoie ou région Rhône-Alpes, qui découvrent le trail running après avoir couru sur route ou en salle. Ils ont fait quelques sorties nature par eux-mêmes et maintenant ils s'inscrivent à leur première course (10-25km). Ils sont à la fois excités et terrorisés. Ils n'osent pas poser de questions \"bêtes\" mais en ont plein. Ils suivent des comptes pros sur Instagram mais ne se reconnaissent pas dans leur lifestyle.",
+  "audience_pain": "L'angoisse de ne pas finir leur course, de devoir abandonner devant tout le monde, de ne pas être à la hauteur",
+  "audience_aspiration": "Devenir un \"vrai\" trailer, intégrer une communauté, avoir une histoire à raconter, se sentir légitime sur les sentiers",
+  "audience_language": [
+    "finir la course",
+    "ça passe ou ça casse",
+    "j'ai pas fini",
+    "premier trail",
+    "j'ai galéré",
+    "c'est mon premier",
+    "j'ai pas le niveau",
+    "bidon qui fuit",
+    "ravito de merde",
+    "je vais abandonner"
+  ],
+  "tone_primary": "Décalé et bienveillant - on rigole de leurs galères mais on ne se moque jamais",
+  "tone_secondary": "Expert accessible - on donne des conseils vrais, pas des tutoriels pro",
+  "tone_forbidden": [
+    "Utiliser le mot 'performance'",
+    "Montrer des athletes en tenue pro",
+    "Promettre qu'ils vont 'crusher leur course'",
+    "Utiliser un ton moralisateur ('il faut','vous devez')",
+    "Faire peur avec des statistiques d'abandon"
+  ],
+  "tone_examples": [
+    "Ton bidon fuit ? C'est normal. Le premier coup de fil à faire à ton arrivée : le fabricant. Le deuxième : ton assureur.",
+    "On ne va pas te mentir : ton premier ravito sera probablement mangé à la mauvaise heure. C'est le droit d'apprentissage.",
+    "Tu vas avoir des ampoules. La question c'est pas si, c'est où. On va t'apprendre à les éviter, et à courir quand même."
+  ],
+  "colors_primary": "#E85D04",
+  "colors_secondary": "#1B4332",
+  "colors_accent": "#FFBA08",
+  "font_primary": "Outfit",
+  "font_style": "geometric",
+  "visual_mood": "nature",
+  "anti_pitch_problem": "L'angoisse des débutants qui découvrent que le trail c'est pas que du paysage et que leur premier 15km peut devenir un calvaire",
+  "anti_pitch_emotion": "Le soulagement de se dire 'ok, c'est normal ce qui m'arrive, et je vais y arriver'",
+  "anti_pitch_reveal": "Le produit apparaît comme la solution évidente à un problème qu'on a d'abord nommé avec humour et compassion",
+  "values": [
+    "Authenticité",
+    "Bienveillance",
+    "Humble",
+    "Résilience",
+    "Communauté"
+  ],
+  "competitors_dont": "Les grandes marques de running s'adressent aux athlètes ou aux runners expérimentés. Les blogs trail parlent de matériel à 400€ et de stratégies de pro. Nous, on parle aux gens qui vont faire leur premier 12km avec des baskets de décathlon et un sac à dos pas adapté.",
+  "content_pillars": [
+    "Les galères du premier trail (humoristique et pédagogique)",
+    "Comment préparer son ravito sans être nutritionniste",
+    "Gérer l'angoisse de l'abandon",
+    "Le matériel qui ne sert à rien vs l'essentiel",
+    "Histoires de finishers (témoignages)"
+  ],
+  "seo_keywords": [
+    "premier trail course conseils",
+    "comment préparer son premier trail",
+    "angoisse abandon course trail",
+    "ravito trail débutant",
+    "équipement trail入门",
+    "finir sa premiere course trail",
+    "trail annecy débutant",
+    "ampoules course trail",
+    "bidon trail qui fuite",
+    "préparation trail 15km"
+  ],
+  "products": [],
+  "evolution_tier": "brand_boost",
+  "orders_total": 0,
+  "created_at": "2026-05-13T11:51:08.084176+00:00",
+  "updated_at": "2026-05-13T11:51:08.084176+00:00"
+}

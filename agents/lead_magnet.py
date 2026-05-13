@@ -145,7 +145,7 @@ def call_llm(system: str, prompt: str, max_tokens: int = 3000) -> str:
     if not OPENROUTER_KEY:
         return "{}"
     body = json.dumps({
-        "model": "google/gemma-3-27b-it:free",
+        "model": "minimax/minimax-m2.5:free",
         "messages": [
             {"role": "system", "content": system},
             {"role": "user", "content": prompt}

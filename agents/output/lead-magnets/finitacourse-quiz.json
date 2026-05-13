@@ -1,0 +1,320 @@
+{
+  "id": "ebdb765c22d5",
+  "brand_name": "FiniTaCourse",
+  "title": "Quel genre de trailer es-tu ?",
+  "subtitle": "8 questions pour decouvrir ton profil et les accessoires qui te sauveront la course",
+  "cta_button": "Decouvrir mon profil ->",
+  "email_capture_title": "Ton profil est pret !",
+  "email_capture_subtitle": "Entre ton email pour decouvrir ton profil personnalise et nos conseils sur-mesure",
+  "email_capture_cta": "Voir mon resultat",
+  "privacy_note": "Tes donnees sont protegees. Zero spam. Desinscription en 1 clic.",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "Tu t'inscris a ton premier trail. Ton premier reflexe ?",
+      "type": "single",
+      "options": [
+        {
+          "text": "Je check la meteo et le denivele 15 fois",
+          "value": "debutant",
+          "emoji": "😰"
+        },
+        {
+          "text": "Je sors mes vieux chaussures de running et on verra bien",
+          "value": "fonceur",
+          "emoji": "🤷"
+        },
+        {
+          "text": "Je fais une liste de tout ce qui pourrait mal se passer",
+          "value": "strategique",
+          "emoji": "📋"
+        },
+        {
+          "text": "Je demande conseil a mes potes qui font deja du trail",
+          "value": "social",
+          "emoji": "📱"
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "question": "Tu es au km 8 d'un 15km. Tes pieds commencent a bruler. Tu...",
+      "type": "single",
+      "options": [
+        {
+          "text": "Serais deja en train de boiter",
+          "value": "debutant",
+          "emoji": "🦶"
+        },
+        {
+          "text": "Continuerais comme si de rien n'etait",
+          "value": "fonceur",
+          "emoji": "💪"
+        },
+        {
+          "text": "Aurais prevu des pansements et de la creme",
+          "value": "strategique",
+          "emoji": "🩹"
+        },
+        {
+          "text": "M'arreterais pour ajuster mes chaussettes",
+          "value": "social",
+          "emoji": "🧦"
+        }
+      ]
+    },
+    {
+      "id": "q3",
+      "question": "Ton bidon trail fuit dans ton sac. C'est...",
+      "type": "single",
+      "options": [
+        {
+          "text": "Le genre de truc qui me fait paniquer",
+          "value": "debutant",
+          "emoji": "😱"
+        },
+        {
+          "text": "Pas grave, je cours avec un t-shirt mouille",
+          "value": "fonceur",
+          "emoji": "💦"
+        },
+        {
+          "text": "Pourquoi j'aurais du prendre une ceinture avec support",
+          "value": "strategique",
+          "emoji": "🤔"
+        },
+        {
+          "text": "L'occasion de partager cette galere sur Insta",
+          "value": "social",
+          "emoji": "📸"
+        }
+      ]
+    },
+    {
+      "id": "q4",
+      "question": "Ton ravito de 6h du mat, c'est plutot...",
+      "type": "single",
+      "options": [
+        {
+          "text": "Je sais meme pas ce qu'est un ravito",
+          "value": "debutant",
+          "emoji": "🤨"
+        },
+        {
+          "text": "Ce que je trouve sur place, je prends",
+          "value": "fonceur",
+          "emoji": "🍌"
+        },
+        {
+          "text": "Un gel + une barre calcules au gramme pres",
+          "value": "strategique",
+          "emoji": "🧪"
+        },
+        {
+          "text": "L'occasion de discuter avec les autres coureurs",
+          "value": "social",
+          "emoji": "☕"
+        }
+      ]
+    },
+    {
+      "id": "q5",
+      "question": "Le mot \"trail\" pour toi, ca veut dire...",
+      "type": "single",
+      "options": [
+        {
+          "text": "Un truc pour les sportifs, pas pour moi",
+          "value": "debutant",
+          "emoji": "🏔️"
+        },
+        {
+          "text": "Courir dans la nature, c'est tout",
+          "value": "fonceur",
+          "emoji": "🌲"
+        },
+        {
+          "text": "Une preparation physique et mentale serieuse",
+          "value": "strategique",
+          "emoji": "🧠"
+        },
+        {
+          "text": "Une communaute et une experience partagee",
+          "value": "social",
+          "emoji": "🤝"
+        }
+      ]
+    },
+    {
+      "id": "q6",
+      "question": "Tu prepares un trail de 20km. Ton investissement materiel ?",
+      "type": "single",
+      "options": [
+        {
+          "text": "Je sais meme pas ce qu'il me faut",
+          "value": "debutant",
+          "emoji": "❓"
+        },
+        {
+          "text": "Le minimum: chaussures et bidon",
+          "value": "fonceur",
+          "emoji": "👟"
+        },
+        {
+          "text": "Chaque piece est choisie et testee",
+          "value": "strategique",
+          "emoji": "🎒"
+        },
+        {
+          "text": "Ce que mes potes me conseillent",
+          "value": "social",
+          "emoji": "👥"
+        }
+      ]
+    },
+    {
+      "id": "q7",
+      "question": "Ton plus grand peur avant une course ?",
+      "type": "single",
+      "options": [
+        {
+          "text": "De ne pas finir, tout simplement",
+          "value": "debutant",
+          "emoji": "😰"
+        },
+        {
+          "text": "De pas etre a la hauteur des autres",
+          "value": "fonceur",
+          "emoji": "😤"
+        },
+        {
+          "text": "D'avoir un probleme technique (matos, blessure)",
+          "value": "strategique",
+          "emoji": "🔧"
+        },
+        {
+          "text": "D'etre tout seul sur le sentier",
+          "value": "social",
+          "emoji": "🥺"
+        }
+      ]
+    },
+    {
+      "id": "q8",
+      "question": "Apres ta premiere course, tu...",
+      "type": "single",
+      "options": [
+        {
+          "text": "Pleure de soulagement en traversant la ligne",
+          "value": "debutant",
+          "emoji": "😭"
+        },
+        {
+          "text": "Veux deja savoir quand est la prochaine",
+          "value": "fonceur",
+          "emoji": "🔥"
+        },
+        {
+          "text": "Analyse ce qui a bien marche et ce qu'il faut ameliorer",
+          "value": "strategique",
+          "emoji": "📊"
+        },
+        {
+          "text": "Partage ta medaille avec tout le monde",
+          "value": "social",
+          "emoji": "🥇"
+        }
+      ]
+    }
+  ],
+  "profiles": {
+    "debutant": {
+      "name": "Le Premiers-Pas",
+      "emoji": "🌱",
+      "description": "Tu es le debutant authentique. Tu n'as pas peur d'avouer que tu ne sais pas tout, et c'est TA plus grande force. Ton trail va etre un mix de moments de doubt et de depassement de soi, et tu vas en sortir transforme.",
+      "pain_points": [
+        "L'angoisse de ne pas finir",
+        "Le materiel que tu n'as pas et dont tu n'as pas conscience"
+      ],
+      "recommended_products": [
+        "Ceinture porte-dossard",
+        "Soft Flask 500ml",
+        "Lacets elastiques"
+      ],
+      "recommended_bundle": "Pack Premier Trail (€35)",
+      "tips": [
+        "Commence par un 10-15km, pas un ultra",
+        "Teste TOUT ton materiel avant la course",
+        "Les ampoules: creme anti-frottement + bonnes chaussettes = 80% du probleme resolu"
+      ],
+      "email_subject": "Ton profil trailer: Le Premiers-Pas 🌱",
+      "email_body": "Pas de panique, chaque trailer pro a ete ou tu es. Voici le guide exact pour que ton premier trail soit une reussite (ou au moins, que tu le finisses)."
+    },
+    "fonceur": {
+      "name": "Le Baroudeur",
+      "emoji": "⚡",
+      "description": "Tu fonce, tu t'en fiches des details, et en general ca marche... jusqu'a ce que ca marche plus. Ton energie est ta plus grande qualite, mais le trail a des surprises que meme la volonté ne peut pas surmonter.",
+      "pain_points": [
+        "Les galeres de derniere minute (bidon qui fuit, lacets defaits)",
+        "Les blessures par manque de preparation"
+      ],
+      "recommended_products": [
+        "Ceinture porte-dossard",
+        "Creme anti-frottement",
+        "Manchons compression"
+      ],
+      "recommended_bundle": "Pack Recuperation Trail (€65)",
+      "tips": [
+        "Le courage ne remplace pas un bon equipement",
+        "La recuperation fait partie de la course",
+        "Un massage gun apres l'effort = 3 jours de moins a boiter"
+      ],
+      "email_subject": "Ton profil trailer: Le Baroudeur ⚡",
+      "email_body": "On respecte ton energie, mais on va te montrer comment le trail est encore plus fun quand tu es bien prepare."
+    },
+    "strategique": {
+      "name": "Le Tacticien",
+      "emoji": "🧠",
+      "description": "Tu prepare TOUT. Tu lis les reviews, tu compares les produits, tu calcules ton ravito au gramme. Tu es le trailer le plus prepare du depart... mais parfois tu oublies de profiter du paysage.",
+      "pain_points": [
+        "Le sur-equipement: acheter trop ou trop cher",
+        "La paralysie par l'analyse"
+      ],
+      "recommended_products": [
+        "Soft Flask 500ml x2",
+        "Getres trail",
+        "Manchons compression"
+      ],
+      "recommended_bundle": "Pack Ultra Kit (€60)",
+      "tips": [
+        "L'essentiel pour 15km: ceinture + bidon + creme. Le reste est optionnel",
+        "Teste sur le terrain, pas juste dans les reviews",
+        "Le meilleur equipement est celui que tu as sur toi, pas dans ta liste"
+      ],
+      "email_subject": "Ton profil trailer: Le Tacticien 🧠",
+      "email_body": "Tu es deja 80% pret. Voici les 20% qui manquent pour que ta preparation soit parfaite."
+    },
+    "social": {
+      "name": "Le Tribu",
+      "emoji": "🤝",
+      "description": "Le trail pour toi, c'est d'abord les gens. Tu cours avec des potes, tu partage tes galeres, et tu es le premier a encourager les autres. La communaute te porte.",
+      "pain_points": [
+        "La peur d'etre seul sur le sentier",
+        "Ne pas avoir le \"bon\" equipement par rapport aux autres"
+      ],
+      "recommended_products": [
+        "Ceinture porte-dossard",
+        "Soft Flask",
+        "Bande resistance (pour les seances groupe)"
+      ],
+      "recommended_bundle": "Pack Premier Trail (€35) + une seance recup a partager",
+      "tips": [
+        "Trouve un groupe d'entrainement local (Annecy Trail Club, etc.)",
+        "Le premier trail en groupe = 10x moins stressant",
+        "Partage tes galeres: tout le monde a les memes"
+      ],
+      "email_subject": "Ton profil trailer: La Tribu 🤝",
+      "email_body": "Le trail est un sport de communaute. Voici comment rejoindre la tribu et trouver tes partenaires de sentier."
+    }
+  },
+  "created_at": "2026-05-13T12:19:42.780975+00:00"
+}

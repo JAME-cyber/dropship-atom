@@ -1,0 +1,164 @@
+{
+  "brand": "FiniTaCourse",
+  "bundles": [
+    {
+      "name": "Pack Premier Trail",
+      "theme": "trail running debutant",
+      "target_customer": "Debutant qui s'inscrit a son premier trail 10-25km",
+      "items": [
+        {
+          "product_name": "Ceinture porte-dossard (Race Belt)",
+          "role": "hero",
+          "source_price": 1.5,
+          "standalone_price": 15.0
+        },
+        {
+          "product_name": "Soft Flask 500ml",
+          "role": "complement",
+          "source_price": 1.5,
+          "standalone_price": 14.0
+        },
+        {
+          "product_name": "Lacets elastiques (Quick Laces)",
+          "role": "complement",
+          "source_price": 0.3,
+          "standalone_price": 6.0
+        },
+        {
+          "product_name": "Creme anti-frottement stick",
+          "role": "filler",
+          "source_price": 1.0,
+          "standalone_price": 10.0
+        }
+      ],
+      "bundle_price": 35.0,
+      "story": "Tout ce qu'il faut pour finir son premier trail sans galere: porte-dossard, bidon, lacets qui ne se defont jamais, et la creme qui sauve les cuisses.",
+      "anti_pitch": "Le debutant qui court avec des lacets normaux, un bidon qui fuit dans le sac, et des cuisses en feu au km 8.",
+      "total_cost_1688": 4.3,
+      "total_standalone_price": 45.0,
+      "shipping_cost": 3.0,
+      "margin_eur": 27.7,
+      "margin_pct": 79.1,
+      "discount_vs_separate": 22.2,
+      "id": "af8f9a51443b"
+    },
+    {
+      "name": "Pack Triathlon Transition",
+      "theme": "triathlon transition",
+      "target_customer": "Triathlete qui prepare sa premiere transition",
+      "items": [
+        {
+          "product_name": "Sac transition triathlon",
+          "role": "hero",
+          "source_price": 8.0,
+          "standalone_price": 45.0
+        },
+        {
+          "product_name": "Ceinture porte-dossard",
+          "role": "complement",
+          "source_price": 2.0,
+          "standalone_price": 15.0
+        },
+        {
+          "product_name": "Soft Flask 500ml x2",
+          "role": "complement",
+          "source_price": 3.0,
+          "standalone_price": 28.0
+        }
+      ],
+      "bundle_price": 75.0,
+      "story": "Le pack transition complet: sac tri, ceinture dossard, et 2 flasques pour la partie course.",
+      "anti_pitch": "Le triathlete qui fouille frénétiquement dans son sac pendant la transition pendant que les autres partent deja.",
+      "total_cost_1688": 13.0,
+      "total_standalone_price": 88.0,
+      "shipping_cost": 0.0,
+      "margin_eur": 62.0,
+      "margin_pct": 82.7,
+      "discount_vs_separate": 14.8,
+      "id": "6d6d29f069ee"
+    },
+    {
+      "name": "Pack Recuperation Trail",
+      "theme": "recuperation apres trail",
+      "target_customer": "Trail runner qui veut recuperer vite apres l'effort",
+      "items": [
+        {
+          "product_name": "Mini massage gun portable",
+          "role": "hero",
+          "source_price": 8.0,
+          "standalone_price": 49.0
+        },
+        {
+          "product_name": "Roller mousse travel",
+          "role": "complement",
+          "source_price": 2.0,
+          "standalone_price": 15.0
+        },
+        {
+          "product_name": "Balle massage lacrosse",
+          "role": "complement",
+          "source_price": 0.8,
+          "standalone_price": 8.0
+        },
+        {
+          "product_name": "Bande resistance",
+          "role": "filler",
+          "source_price": 1.5,
+          "standalone_price": 10.0
+        }
+      ],
+      "bundle_price": 65.0,
+      "story": "Le kit complet pour recuperer apres un trail: massage gun, roller, balle et bandes.",
+      "anti_pitch": "Le coureur qui boite pendant 3 jours apres son trail parce qu'il n'a rien fait pour recuperer.",
+      "total_cost_1688": 12.3,
+      "total_standalone_price": 82.0,
+      "shipping_cost": 0.0,
+      "margin_eur": 52.7,
+      "margin_pct": 81.1,
+      "discount_vs_separate": 20.7,
+      "id": "e08103d6fea4"
+    },
+    {
+      "name": "Pack Ultra Kit",
+      "theme": "ultra trail equipement",
+      "target_customer": "Trail runner qui prepare un ultra 40-80km",
+      "items": [
+        {
+          "product_name": "Soft Flask 500ml x2",
+          "role": "hero",
+          "source_price": 3.0,
+          "standalone_price": 28.0
+        },
+        {
+          "product_name": "Getres trail (Gaiters)",
+          "role": "complement",
+          "source_price": 3.0,
+          "standalone_price": 18.0
+        },
+        {
+          "product_name": "Manchons compression",
+          "role": "complement",
+          "source_price": 1.5,
+          "standalone_price": 22.0
+        },
+        {
+          "product_name": "Creme anti-frottement",
+          "role": "filler",
+          "source_price": 1.0,
+          "standalone_price": 10.0
+        }
+      ],
+      "bundle_price": 60.0,
+      "story": "L'essentiel pour les longues distances: 2 flasques, guetres anti-cailloux, compression et creme.",
+      "anti_pitch": "L'ultra-traileur qui s'arrete au km 30 a cause de cailloux dans les chaussures et de cramps.",
+      "total_cost_1688": 8.5,
+      "total_standalone_price": 78.0,
+      "shipping_cost": 0.0,
+      "margin_eur": 51.5,
+      "margin_pct": 85.8,
+      "discount_vs_separate": 23.1,
+      "id": "ff92cb41f7d8"
+    }
+  ],
+  "created_at": "2026-05-13T12:09:38.951400+00:00"
+}

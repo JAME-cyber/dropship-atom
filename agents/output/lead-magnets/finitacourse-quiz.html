@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quel genre de trailer es-tu ?</title>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:'Inter',-apple-system,sans-serif; background:#0a0e17; color:#e2e8f0; min-height:100vh; display:flex; align-items:center; justify-content:center; }
+  .container { max-width:540px; width:100%; padding:20px; }
+  .header { text-align:center; margin-bottom:32px; }
+  .header h1 { font-size:1.75rem; font-weight:800; background:linear-gradient(135deg,#E85D04,#FFBA08); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
+  .header p { color:#94a3b8; font-size:0.95rem; }
+  .question { display:none; animation:fadeIn 0.3s; }
+  .question.active { display:block; }
+  .question h2 { font-size:1.15rem; margin-bottom:20px; line-height:1.5; }
+  .option { background:#1e293b; border:2px solid #334155; border-radius:12px; padding:14px 18px; margin-bottom:10px; cursor:pointer; transition:all 0.2s; }
+  .option:hover { border-color:#E85D04; transform:translateX(4px); }
+  .option.selected { border-color:#E85D04; background:rgba(232,93,4,0.15); }
+  .progress { height:4px; background:#1e293b; border-radius:2px; margin-bottom:24px; }
+  .progress-bar { height:100%; background:linear-gradient(90deg,#E85D04,#FFBA08); transition:width 0.3s; border-radius:2px; }
+  .email-capture { display:none; text-align:center; animation:fadeIn 0.3s; }
+  .email-capture h2 { font-size:1.4rem; margin-bottom:8px; }
+  .email-capture p { color:#94a3b8; margin-bottom:20px; }
+  input[type=email] { width:100%; padding:14px; border-radius:10px; border:2px solid #334155; background:#1e293b; color:#e2e8f0; font-size:1rem; margin-bottom:12px; }
+  input:focus { border-color:#E85D04; outline:none; }
+  .btn { width:100%; padding:14px; border-radius:10px; border:none; background:linear-gradient(135deg,#E85D04,#FFBA08); color:#0a0e17; font-size:1rem; font-weight:700; cursor:pointer; }
+  .btn:hover { transform:translateY(-2px); }
+  .privacy { color:#64748b; font-size:0.8rem; margin-top:12px; }
+  .result { display:none; animation:fadeIn 0.5s; text-align:center; }
+  .result .emoji { font-size:3.5rem; margin-bottom:12px; }
+  .result h2 { font-size:1.5rem; margin-bottom:8px; color:#FFBA08; }
+  .result .desc { color:#cbd5e1; margin-bottom:20px; line-height:1.6; text-align:left; }
+  .result .pain { background:rgba(239,68,68,0.1); border-left:3px solid #ef4444; padding:12px 16px; border-radius:0 8px 8px 0; margin-bottom:16px; text-align:left; }
+  .result .tips { background:rgba(34,197,94,0.1); border-left:3px solid #22c55e; padding:12px 16px; border-radius:0 8px 8px 0; margin-bottom:16px; text-align:left; }
+  .result .rec { background:rgba(232,93,4,0.1); border:1px solid rgba(232,93,4,0.3); border-radius:12px; padding:16px; margin-bottom:16px; text-align:left; }
+  .result .rec h3 { color:#E85D04; margin-bottom:8px; }
+  @keyframes fadeIn { from{opacity:0;transform:translateY(10px)} to{opacity:1;transform:translateY(0)} }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1>Quel genre de trailer es-tu ?</h1>
+    <p>8 questions pour decouvrir ton profil et les accessoires qui te sauveront la course</p>
+  </div>
+  <div class="progress"><div class="progress-bar" id="pb" style="width:0%"></div></div>
+  <div id="qs"></div>
+  <div class="email-capture" id="ec">
+    <h2>Ton profil est pret !</h2>
+    <p>Entre ton email pour decouvrir ton profil personnalise et nos conseils sur-mesure</p>
+    <input type="email" id="email" placeholder="ton@email.com">
+    <button class="btn" onclick="showResult()">Voir mon resultat</button>
+    <p class="privacy">Tes donnees sont protegees. Zero spam. Desinscription en 1 clic.</p>
+  </div>
+  <div class="result" id="res"></div>
+</div>
+<script>
+const Q=[{"id": "q1", "question": "Tu t'inscris a ton premier trail. Ton premier reflexe ?", "type": "single", "options": [{"text": "Je check la meteo et le denivele 15 fois", "value": "debutant", "emoji": "\ud83d\ude30"}, {"text": "Je sors mes vieux chaussures de running et on verra bien", "value": "fonceur", "emoji": "\ud83e\udd37"}, {"text": "Je fais une liste de tout ce qui pourrait mal se passer", "value": "strategique", "emoji": "\ud83d\udccb"}, {"text": "Je demande conseil a mes potes qui font deja du trail", "value": "social", "emoji": "\ud83d\udcf1"}]}, {"id": "q2", "question": "Tu es au km 8 d'un 15km. Tes pieds commencent a bruler. Tu...", "type": "single", "options": [{"text": "Serais deja en train de boiter", "value": "debutant", "emoji": "\ud83e\uddb6"}, {"text": "Continuerais comme si de rien n'etait", "value": "fonceur", "emoji": "\ud83d\udcaa"}, {"text": "Aurais prevu des pansements et de la creme", "value": "strategique", "emoji": "\ud83e\ude79"}, {"text": "M'arreterais pour ajuster mes chaussettes", "value": "social", "emoji": "\ud83e\udde6"}]}, {"id": "q3", "question": "Ton bidon trail fuit dans ton sac. C'est...", "type": "single", "options": [{"text": "Le genre de truc qui me fait paniquer", "value": "debutant", "emoji": "\ud83d\ude31"}, {"text": "Pas grave, je cours avec un t-shirt mouille", "value": "fonceur", "emoji": "\ud83d\udca6"}, {"text": "Pourquoi j'aurais du prendre une ceinture avec support", "value": "strategique", "emoji": "\ud83e\udd14"}, {"text": "L'occasion de partager cette galere sur Insta", "value": "social", "emoji": "\ud83d\udcf8"}]}, {"id": "q4", "question": "Ton ravito de 6h du mat, c'est plutot...", "type": "single", "options": [{"text": "Je sais meme pas ce qu'est un ravito", "value": "debutant", "emoji": "\ud83e\udd28"}, {"text": "Ce que je trouve sur place, je prends", "value": "fonceur", "emoji": "\ud83c\udf4c"}, {"text": "Un gel + une barre calcules au gramme pres", "value": "strategique", "emoji": "\ud83e\uddea"}, {"text": "L'occasion de discuter avec les autres coureurs", "value": "social", "emoji": "\u2615"}]}, {"id": "q5", "question": "Le mot \"trail\" pour toi, ca veut dire...", "type": "single", "options": [{"text": "Un truc pour les sportifs, pas pour moi", "value": "debutant", "emoji": "\ud83c\udfd4\ufe0f"}, {"text": "Courir dans la nature, c'est tout", "value": "fonceur", "emoji": "\ud83c\udf32"}, {"text": "Une preparation physique et mentale serieuse", "value": "strategique", "emoji": "\ud83e\udde0"}, {"text": "Une communaute et une experience partagee", "value": "social", "emoji": "\ud83e\udd1d"}]}, {"id": "q6", "question": "Tu prepares un trail de 20km. Ton investissement materiel ?", "type": "single", "options": [{"text": "Je sais meme pas ce qu'il me faut", "value": "debutant", "emoji": "\u2753"}, {"text": "Le minimum: chaussures et bidon", "value": "fonceur", "emoji": "\ud83d\udc5f"}, {"text": "Chaque piece est choisie et testee", "value": "strategique", "emoji": "\ud83c\udf92"}, {"text": "Ce que mes potes me conseillent", "value": "social", "emoji": "\ud83d\udc65"}]}, {"id": "q7", "question": "Ton plus grand peur avant une course ?", "type": "single", "options": [{"text": "De ne pas finir, tout simplement", "value": "debutant", "emoji": "\ud83d\ude30"}, {"text": "De pas etre a la hauteur des autres", "value": "fonceur", "emoji": "\ud83d\ude24"}, {"text": "D'avoir un probleme technique (matos, blessure)", "value": "strategique", "emoji": "\ud83d\udd27"}, {"text": "D'etre tout seul sur le sentier", "value": "social", "emoji": "\ud83e\udd7a"}]}, {"id": "q8", "question": "Apres ta premiere course, tu...", "type": "single", "options": [{"text": "Pleure de soulagement en traversant la ligne", "value": "debutant", "emoji": "\ud83d\ude2d"}, {"text": "Veux deja savoir quand est la prochaine", "value": "fonceur", "emoji": "\ud83d\udd25"}, {"text": "Analyse ce qui a bien marche et ce qu'il faut ameliorer", "value": "strategique", "emoji": "\ud83d\udcca"}, {"text": "Partage ta medaille avec tout le monde", "value": "social", "emoji": "\ud83e\udd47"}]}];
+const P={"debutant": {"name": "Le Premiers-Pas", "emoji": "\ud83c\udf31", "description": "Tu es le debutant authentique. Tu n'as pas peur d'avouer que tu ne sais pas tout, et c'est TA plus grande force. Ton trail va etre un mix de moments de doubt et de depassement de soi, et tu vas en sortir transforme.", "pain_points": ["L'angoisse de ne pas finir", "Le materiel que tu n'as pas et dont tu n'as pas conscience"], "recommended_products": ["Ceinture porte-dossard", "Soft Flask 500ml", "Lacets elastiques"], "recommended_bundle": "Pack Premier Trail (\u20ac35)", "tips": ["Commence par un 10-15km, pas un ultra", "Teste TOUT ton materiel avant la course", "Les ampoules: creme anti-frottement + bonnes chaussettes = 80% du probleme resolu"], "email_subject": "Ton profil trailer: Le Premiers-Pas \ud83c\udf31", "email_body": "Pas de panique, chaque trailer pro a ete ou tu es. Voici le guide exact pour que ton premier trail soit une reussite (ou au moins, que tu le finisses)."}, "fonceur": {"name": "Le Baroudeur", "emoji": "\u26a1", "description": "Tu fonce, tu t'en fiches des details, et en general ca marche... jusqu'a ce que ca marche plus. Ton energie est ta plus grande qualite, mais le trail a des surprises que meme la volont\u00e9 ne peut pas surmonter.", "pain_points": ["Les galeres de derniere minute (bidon qui fuit, lacets defaits)", "Les blessures par manque de preparation"], "recommended_products": ["Ceinture porte-dossard", "Creme anti-frottement", "Manchons compression"], "recommended_bundle": "Pack Recuperation Trail (\u20ac65)", "tips": ["Le courage ne remplace pas un bon equipement", "La recuperation fait partie de la course", "Un massage gun apres l'effort = 3 jours de moins a boiter"], "email_subject": "Ton profil trailer: Le Baroudeur \u26a1", "email_body": "On respecte ton energie, mais on va te montrer comment le trail est encore plus fun quand tu es bien prepare."}, "strategique": {"name": "Le Tacticien", "emoji": "\ud83e\udde0", "description": "Tu prepare TOUT. Tu lis les reviews, tu compares les produits, tu calcules ton ravito au gramme. Tu es le trailer le plus prepare du depart... mais parfois tu oublies de profiter du paysage.", "pain_points": ["Le sur-equipement: acheter trop ou trop cher", "La paralysie par l'analyse"], "recommended_products": ["Soft Flask 500ml x2", "Getres trail", "Manchons compression"], "recommended_bundle": "Pack Ultra Kit (\u20ac60)", "tips": ["L'essentiel pour 15km: ceinture + bidon + creme. Le reste est optionnel", "Teste sur le terrain, pas juste dans les reviews", "Le meilleur equipement est celui que tu as sur toi, pas dans ta liste"], "email_subject": "Ton profil trailer: Le Tacticien \ud83e\udde0", "email_body": "Tu es deja 80% pret. Voici les 20% qui manquent pour que ta preparation soit parfaite."}, "social": {"name": "Le Tribu", "emoji": "\ud83e\udd1d", "description": "Le trail pour toi, c'est d'abord les gens. Tu cours avec des potes, tu partage tes galeres, et tu es le premier a encourager les autres. La communaute te porte.", "pain_points": ["La peur d'etre seul sur le sentier", "Ne pas avoir le \"bon\" equipement par rapport aux autres"], "recommended_products": ["Ceinture porte-dossard", "Soft Flask", "Bande resistance (pour les seances groupe)"], "recommended_bundle": "Pack Premier Trail (\u20ac35) + une seance recup a partager", "tips": ["Trouve un groupe d'entrainement local (Annecy Trail Club, etc.)", "Le premier trail en groupe = 10x moins stressant", "Partage tes galeres: tout le monde a les memes"], "email_subject": "Ton profil trailer: La Tribu \ud83e\udd1d", "email_body": "Le trail est un sport de communaute. Voici comment rejoindre la tribu et trouver tes partenaires de sentier."}};
+let A={},c=0;
+function render(){
+  document.getElementById("qs").innerHTML=Q.map((q,i)=>'<div class="question'+(i===0?' active':'')+'" id="q'+i+'"><h2>'+(i+1)+'/'+Q.length+' '+q.question+'</h2>'+q.options.map(o=>'<div class="option" onclick="sel('+i+',''+o.value+'',this)"><span>'+o.emoji+'</span> '+o.text+'</div>').join("")+"</div>").join("");
+}
+function sel(qi,v,el){
+  el.parentElement.querySelectorAll(".option").forEach(o=>o.classList.remove("selected"));
+  el.classList.add("selected");A[qi]=v;
+  setTimeout(()=>{
+    if(qi<Q.length-1){
+      document.getElementById("q"+qi).classList.remove("active");
+      document.getElementById("q"+(qi+1)).classList.add("active");
+      c=qi+1;document.getElementById("pb").style.width=((c+1)/Q.length*100)+"%";
+    } else {
+      document.getElementById("qs").style.display="none";
+      document.getElementById("ec").style.display="block";
+      document.getElementById("pb").style.width="100%";
+    }
+  },300);
+}
+function showResult(){
+  const e=document.getElementById("email").value;
+  if(!e||!e.includes("@")){alert("Entre un email valide!");return;}
+  const cnt={};Object.values(A).forEach(v=>cnt[v]=(cnt[v]||0)+1);
+  const top=Object.entries(cnt).sort((a,b)=>b[1]-a[1])[0][0];
+  const p=P[top];
+  document.getElementById("ec").style.display="none";
+  document.querySelector(".progress").style.display="none";
+  document.querySelector(".header h1").textContent=p.name;
+  document.querySelector(".header p").textContent="";
+  const r=document.getElementById("res");r.style.display="block";
+  r.innerHTML='<div class="emoji">'+p.emoji+'</div><h2>'+p.name+'</h2><div class="desc">'+p.description+'</div>'+(p.pain_points?'<div class="pain"><strong>Tes defis:</strong><br>'+p.pain_points.map(x=>"• "+x).join("<br>")+"</div>":"")+(p.tips?'<div class="tips"><strong>Nos conseils pour toi:</strong><br>'+p.tips.map(x=>"✓ "+x).join("<br>")+"</div>":"")+(p.recommended_bundle?'<div class="rec"><h3>Recommande pour toi: '+p.recommended_bundle+'</h3><p>Produits: '+(p.recommended_products||[]).join(", ")+"</p></div>":"");
+  console.log("Captured:",e,"Profile:",top);
+}
+render();
+</script>
+</body>
+</html>
