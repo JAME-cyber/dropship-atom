@@ -31,5 +31,28 @@
   "total_losses": 6,
   "win_rate": 60.0,
   "avg_roas": 1.68,
-  "updated_at": "2026-05-06T12:49:26.519265+00:00"
+  "updated_at": "2026-05-13T10:48:10.161257+00:00",
+  "product_evolution": {
+    "posture corrector pro": {
+      "tier": "private_label",
+      "orders": 50,
+      "upgraded_at": "2026-05-13T10:48:10.160270+00:00"
+    }
+  },
+  "evolution_history": [
+    {
+      "product": "Posture Corrector Pro",
+      "from": "generic",
+      "to": "brand_boost",
+      "at": "2026-05-13T10:48:10.157041+00:00",
+      "orders": 10
+    },
+    {
+      "product": "Posture Corrector Pro",
+      "from": "brand_boost",
+      "to": "private_label",
+      "at": "2026-05-13T10:48:10.160289+00:00",
+      "orders": 50
+    }
+  ]
 }

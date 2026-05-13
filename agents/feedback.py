@@ -110,6 +110,10 @@ class FeedbackWeights:
     win_rate: float = 0.0
     avg_roas: float = 0.0
     updated_at: str = ""
+    
+    # ═══ Pipeline hybride: Evolution tracking ═══
+    product_evolution: dict = field(default_factory=dict)   # {product_id: {"tier": "generic", "orders": 0, "upgraded_at": ""}}
+    evolution_history: list = field(default_factory=list)   # [{"product": "X", "from": "generic", "to": "brand_boost", "at": "...", "orders": 10}]
 
 
 # ─── Core: Load / Save ─────────────────────────────────────────────
@@ -180,15 +184,25 @@ def add_result(result: CampaignResult) -> dict:
     fw = recalculate_weights(results)
     save_feedback(fw)
     
+    # ═══ Pipeline hybride: track orders for evolution ═══
+    if result.orders > 0:
+        evo = track_product_orders(result.product_name, result.orders)
+        tier_changed = evo.get("tier", "generic") != "generic"
+    else:
+        tier_changed = False
+    
     # Journal entry
-    write_journal("FEEDBACK", "result_recorded", {
+    journal_data = {
         "product": result.product_name,
         "platform": result.platform,
         "roas": result.roas,
         "verdict": result.verdict,
         "total_campaigns": fw.total_campaigns,
         "win_rate": fw.win_rate,
-    })
+    }
+    if tier_changed:
+        journal_data["evolution_tier"] = evo.get("tier", "")
+    write_journal("FEEDBACK", "result_recorded", journal_data)
     
     return {
         "id": result.id,
@@ -196,6 +210,7 @@ def add_result(result: CampaignResult) -> dict:
         "roas": result.roas,
         "win_rate": fw.win_rate,
         "feedback_updated": True,
+        "evolution_tier": evo.get("tier", "generic") if result.orders > 0 else None,
     }
 
 
@@ -727,6 +742,192 @@ def cmd_export():
     print(f"✅ Report saved to {path}")
 
 
+# ═══════════════════════════════════════════════════════════════════
+#  PIPELINE HYBRIDE: Evolution Tracking (generic → brand → full)
+# ═══════════════════════════════════════════════════════════════════
+
+EVOLUTION_TIERS = {
+    "generic":       {"level": 0, "min_orders": 0,   "name": "Generic Dropshipping"},
+    "brand_boost":   {"level": 1, "min_orders": 10,  "name": "Brand Boost"},
+    "private_label": {"level": 2, "min_orders": 50,  "name": "Private Label"},
+    "full_brand":    {"level": 3, "min_orders": 100, "name": "Full Brandship"},
+}
+
+
+def track_product_orders(product_name: str, orders_delta: int = 1):
+    """Track orders for a product and check if evolution is needed."""
+    fw = load_feedback()
+    
+    key = product_name.lower().strip()
+    if key not in fw.product_evolution:
+        fw.product_evolution[key] = {
+            "tier": "generic",
+            "orders": 0,
+            "upgraded_at": "",
+        }
+    
+    fw.product_evolution[key]["orders"] += orders_delta
+    
+    # Check if ready for next tier
+    current_tier = fw.product_evolution[key]["tier"]
+    current_level = EVOLUTION_TIERS.get(current_tier, {}).get("level", 0)
+    total_orders = fw.product_evolution[key]["orders"]
+    
+    for tier_key, tier_data in sorted(EVOLUTION_TIERS.items(), key=lambda x: x[1]["level"]):
+        if tier_data["level"] > current_level and total_orders >= tier_data["min_orders"]:
+            old_tier = current_tier
+            fw.product_evolution[key]["tier"] = tier_key
+            fw.product_evolution[key]["upgraded_at"] = datetime.now(timezone.utc).isoformat()
+            fw.evolution_history.append({
+                "product": product_name,
+                "from": old_tier,
+                "to": tier_key,
+                "at": datetime.now(timezone.utc).isoformat(),
+                "orders": total_orders,
+            })
+            write_journal("FEEDBACK", "tier_evolution", {
+                "product": product_name,
+                "from_tier": old_tier,
+                "to_tier": tier_key,
+                "orders": total_orders,
+            })
+            current_tier = tier_key
+    
+    save_feedback(fw)
+    return fw.product_evolution[key]
+
+
+def check_product_evolution(product_name: str = "") -> dict:
+    """Check evolution status for a product (or all products)."""
+    fw = load_feedback()
+    results = load_results()
+    
+    if product_name:
+        key = product_name.lower().strip()
+        evo = fw.product_evolution.get(key, {"tier": "generic", "orders": 0})
+        
+        # Also count from results
+        result_orders = sum(
+            r.get("orders", 0) 
+            for r in results 
+            if product_name.lower() in r.get("product_name", "").lower()
+        )
+        total = max(evo.get("orders", 0), result_orders)
+        
+        tier = evo.get("tier", "generic")
+        tier_info = EVOLUTION_TIERS.get(tier, {})
+        
+        # Find next tier
+        next_tier = None
+        next_req = None
+        for tk, td in sorted(EVOLUTION_TIERS.items(), key=lambda x: x[1]["level"]):
+            if td["level"] > tier_info.get("level", 0):
+                next_tier = tk
+                next_req = td["min_orders"]
+                break
+        
+        return {
+            "product": product_name,
+            "current_tier": tier,
+            "tier_name": tier_info.get("name", tier),
+            "current_level": tier_info.get("level", 0),
+            "orders_total": total,
+            "next_tier": next_tier,
+            "next_tier_requirement": next_req,
+            "ready_for_next": total >= (next_req or float("inf")),
+            "orders_until_next": max(0, (next_req or 0) - total) if next_req else 0,
+        }
+    else:
+        # All products summary
+        all_evos = []
+        for key, evo in fw.product_evolution.items():
+            tier = evo.get("tier", "generic")
+            all_evos.append({
+                "product": key,
+                "tier": tier,
+                "tier_name": EVOLUTION_TIERS.get(tier, {}).get("name", tier),
+                "orders": evo.get("orders", 0),
+            })
+        return {"products": all_evos, "total": len(all_evos)}
+
+
+def get_pending_evolutions() -> list:
+    """Get products ready for next tier but not yet upgraded."""
+    fw = load_feedback()
+    results = load_results()
+    pending = []
+    
+    product_names = set()
+    for r in results:
+        if r.get("product_name"):
+            product_names.add(r["product_name"])
+    for key in fw.product_evolution:
+        product_names.add(key)
+    
+    for name in product_names:
+        status = check_product_evolution(name)
+        if isinstance(status, dict) and status.get("ready_for_next") and status.get("next_tier"):
+            pending.append(status)
+    
+    return pending
+
+
+def apply_evolution(evo_status: dict) -> bool:
+    """Apply an evolution upgrade."""
+    product = evo_status.get("product", "")
+    next_tier = evo_status.get("next_tier", "")
+    if not product or not next_tier:
+        return False
+    
+    fw = load_feedback()
+    key = product.lower().strip()
+    
+    if key not in fw.product_evolution:
+        fw.product_evolution[key] = {"tier": "generic", "orders": 0, "upgraded_at": ""}
+    
+    old_tier = fw.product_evolution[key].get("tier", "generic")
+    fw.product_evolution[key]["tier"] = next_tier
+    fw.product_evolution[key]["upgraded_at"] = datetime.now(timezone.utc).isoformat()
+    fw.evolution_history.append({
+        "product": product,
+        "from": old_tier,
+        "to": next_tier,
+        "at": datetime.now(timezone.utc).isoformat(),
+        "orders": evo_status.get("orders_total", 0),
+    })
+    save_feedback(fw)
+    
+    write_journal("FEEDBACK", "evolution_applied", {
+        "product": product,
+        "from_tier": old_tier,
+        "to_tier": next_tier,
+        "orders": evo_status.get("orders_total", 0),
+    })
+    
+    return True
+
+
+def print_evolution_status(result: dict):
+    """Pretty print evolution status."""
+    tier_emoji = {"generic": "⚪", "brand_boost": "🟡", "private_label": "🟠", "full_brand": "🟢"}
+    
+    if "products" in result:
+        print(f"\n  📊 ÉVOLUTION DE TOUS LES PRODUITS ({result['total']}):")
+        for p in result["products"]:
+            emoji = tier_emoji.get(p["tier"], "⚪")
+            print(f"     {emoji} {p['product'][:40]:<40} | {p['tier_name']:<25} | {p['orders']} orders")
+        print()
+    else:
+        emoji = tier_emoji.get(result.get("current_tier", ""), "⚪")
+        print(f"\n  {emoji} {result['product']}")
+        print(f"     Tier: {result['tier_name']} (niveau {result['current_level']})")
+        print(f"     Commandes: {result['orders_total']}")
+        if result.get('next_tier'):
+            status = "✅ PRÊT" if result['ready_for_next'] else f"⏳ Encore {result['orders_until_next']} commandes"
+            print(f"     Prochain: {result['next_tier']} ({status})")
+        print()
+
+
 # ─── Main CLI ───────────────────────────────────────────────────────
 
 HELP = """
@@ -777,6 +978,21 @@ if __name__ == "__main__":
             print(json.dumps(get_scout_adjustments(), indent=2))
         elif agent == "creator":
             print(json.dumps(get_creator_adjustments(), indent=2))
+    elif cmd == "evolution":
+        if len(sys.argv) > 2:
+            product = sys.argv[2]
+        else:
+            product = ""
+        result = check_product_evolution(product)
+        print_evolution_status(result)
+    elif cmd == "apply-evolution":
+        # Apply pending evolution upgrades
+        pending = get_pending_evolutions()
+        if not pending:
+            print("  ✅ Aucune évolution en attente.")
+        for p in pending:
+            print(f"  ⬆️  {p['product']}: {p['current_tier']} → {p['next_tier']} ({p['orders']} orders)")
+            apply_evolution(p)
     else:
         print(f"Unknown command: {cmd}")
         print(HELP)

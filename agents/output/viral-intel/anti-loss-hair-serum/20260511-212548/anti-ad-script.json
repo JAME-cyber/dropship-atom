@@ -1,0 +1,22 @@
+{
+  "format": "midfunnel",
+  "framework": "UGC Framework v2 — Anti-Objection",
+  "beats": {
+    "hook": "Si t'as déjà dépensé 200€ dans des sérums qui n'ont rien changé à ta chevelure, c'est pas ta faute. Beaucoup de produits promettent monts et merveilles, mais finissent par décevoir.",
+    "reframe": "C’est normal de se sentir perdu après tant d'échecs. La vérité, c'est que beaucoup ne ciblent pas vraiment ton type de cheveux ou utilisent des ingrédients qui ne font que masquer le problème.",
+    "mechanism": "Avec notre Anti-Loss Hair Serum, on mise sur des ingrédients naturels qui nourrissent vraiment ta chevelure. Pense à un bon repas pour tes cheveux, pas juste un simple en-cas.",
+    "payoff": "Imagine tes cheveux, nourris et sains, avec une texture douce et pleine de vie. Plus de brillance artificielle, juste une belle chevelure qui attire les regards.",
+    "cta": "Si ça t’intéresse, pourquoi ne pas jeter un œil à ce qu'on propose ?",
+    "analogy": "C'est comme passer d'un fast-food à un vrai restaurant où chaque ingrédient compte.",
+    "objection_handled": "Ce script neutralise l'objection sur l'inefficacité des produits capillaires en proposant une solution ciblée.",
+    "objection_2": "Une variante pourrait aborder la sécurité et le fait que certaines personnes se demandent si les ingrédients sont vraiment sains pour leurs cheveux.",
+    "objection_3": "Une autre variante pourrait répondre à ceux qui se demandent si le produit est vraiment adapté pour tous les types de cheveux."
+  },
+  "full_voiceover": "Si t'as déjà dépensé 200€ dans des sérums qui n'ont rien changé à ta chevelure, c'est pas ta faute. Beaucoup de produits promettent monts et merveilles, mais finissent par décevoir. C’est normal de se sentir perdu après tant d'échecs. La vérité, c'est que beaucoup ne ciblent pas vraiment ton type de cheveux ou utilisent des ingrédients qui ne font que masquer le problème. Avec notre Anti-Loss Hair Serum, on mise sur des ingrédients naturels qui nourrissent vraiment ta chevelure. Pense à un bon repas pour tes cheveux, pas juste un simple en-cas. Imagine tes cheveux, nourris et sains, avec une texture douce et pleine de vie. Plus de brillance artificielle, juste une belle chevelure qui attire les regards. Si ça t’intéresse, pourquoi ne pas jeter un œil à ce qu'on propose ?",
+  "objections_handled": [
+    "Ce script neutralise l'objection sur l'inefficacité des produits capillaires en proposant une solution ciblée.",
+    "Une variante pourrait aborder la sécurité et le fait que certaines personnes se demandent si les ingrédients sont vraiment sains pour leurs cheveux.",
+    "Une autre variante pourrait répondre à ceux qui se demandent si le produit est vraiment adapté pour tous les types de cheveux."
+  ],
+  "raw_output": "HOOK: Si t'as déjà dépensé 200€ dans des sérums qui n'ont rien changé à ta chevelure, c'est pas ta faute. Beaucoup de produits promettent monts et merveilles, mais finissent par décevoir.\n\nREFRAME: C’est normal de se sentir perdu après tant d'échecs. La vérité, c'est que beaucoup ne ciblent pas vraiment ton type de cheveux ou utilisent des ingrédients qui ne font que masquer le problème.\n\nMECHANISM: Avec notre Anti-Loss Hair Serum, on mise sur des ingrédients naturels qui nourrissent vraiment ta chevelure. Pense à un bon repas pour tes cheveux, pas juste un simple en-cas.\n\nPAYOFF: Imagine tes cheveux, nourris et sains, avec une texture douce et pleine de vie. Plus de brillance artificielle, juste une belle chevelure qui attire les regards.\n\nCTA: Si ça t’intéresse, pourquoi ne pas jeter un œil à ce qu'on propose ?\n\nANALOGY: C'est comme passer d'un fast-food à un vrai restaurant où chaque ingrédient compte.\n\nOBJECTION_HANDLED: Ce script neutralise l'objection sur l'inefficacité des produits capillaires en proposant une solution ciblée.\n\nOBJECTION_2: Une variante pourrait aborder la sécurité et le fait que certaines personnes se demandent si les ingrédients sont vraiment sains pour leurs cheveux.\n\nOBJECTION_3: Une autre variante pourrait répondre à ceux qui se demandent si le produit est vraiment adapté pour tous les types de cheveux."
+}

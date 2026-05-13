@@ -1,0 +1,291 @@
+{
+  "niche": "hair care",
+  "product": "Anti-Loss Hair Serum",
+  "analyzed_at": "2026-05-11T19:27:40.019233+00:00",
+  "sources": {
+    "videos_analyzed": 2,
+    "comments_analyzed": 1374,
+    "total_views": 2568417
+  },
+  "top_videos": [
+    {
+      "title": "Clay, Pomade, Gel or Cream? | Men's Hair Product Guide",
+      "views": 2568417,
+      "url": "https://www.youtube.com/watch?v=zNBDDDIqlMk"
+    },
+    {
+      "title": "",
+      "views": 0,
+      "url": ""
+    }
+  ],
+  "top_objections": [
+    {
+      "text": "This video wouldn't happen to be sponsored by bumble and bumble right? 🤣🤣",
+      "likes": 1
+    },
+    {
+      "text": "2:56 a product is NOT cruelty free if it has lanolin. Its a labeling scam",
+      "likes": 0
+    },
+    {
+      "text": "How long the moister last",
+      "likes": 0
+    },
+    {
+      "text": "sponsored af",
+      "likes": 0
+    },
+    {
+      "text": "R these safe for hair",
+      "likes": 0
+    },
+    {
+      "text": "Depends how long \"quite long\" is. Clays are good for I'd say 6 inches or less, but anything more than that they won't help.",
+      "likes": 0
+    }
+  ],
+  "top_positive_signals": [
+    {
+      "text": "Which one would you recommend for a completely bald man? They all just make my head look shiny.",
+      "likes": 4900
+    },
+    {
+      "text": "Damn that hairstyle using the cream really suits you. I would love it if you make a tutorial for styling that hairstyle",
+      "likes": 747
+    },
+    {
+      "text": "Love how gels give that defined look, though not my go-to. I balance my styling experiments with nordic biolabbs in my routine.",
+      "likes": 333
+    },
+    {
+      "text": "great breakdown, no matter what you use though some level of chemical damage is kind of inevitable. that’s why i started balancing it out with an all-natural shampoo and red light therapy (i’m using the nordic biolabs laser cap, 15 minutes, 3 x a week). it’s made a big difference for keeping my hair healthy underneath all the styling.",
+      "likes": 332
+    },
+    {
+      "text": "Such a great idea! And you matched the products to your backgrounds! I was upset when it ended! You continue to inspire me and my channel! 👏🏻👏🏻👏🏻",
+      "likes": 111
+    },
+    {
+      "text": "I love matte clay, it is super easy to use and it looks very clean and natural without the gloss.",
+      "likes": 103
+    },
+    {
+      "text": "Towel dry, apply hair product, and then comb it and hair dry it into preferred style, and you shd see results! You can always touch it up during the day with a comb or with your hands",
+      "likes": 53
+    },
+    {
+      "text": "Hi Robin I just want to say thank you, you have helped me greatly in the hair department I really do trust what you say, your honesty is refreshing. Your amazing",
+      "likes": 53
+    },
+    {
+      "text": "I've got thin long hair that I wear pulled back. I don't like of using heavy hair gels, and this littlllextra neatfix hair finishing stick makes for a great alternative. It holds all of the stray hairs in place without feeling heaviness. Plus, it’s really easy to use thanks to the wand/brush. Additionally, it held my hair in place for the majority of the day!",
+      "likes": 51
+    },
+    {
+      "text": "As far as your hair goes based on this video I'd say creams should be your go to. The loose \"flowy\" styles work well with you. \nAs for me, I'm a paste and sometimes clay kind of guy for casual days. Lately though I've been loving Crystal Lake from Shear Revival.",
+      "likes": 46
+    }
+  ],
+  "top_questions": [
+    {
+      "text": "are you doctor stange?",
+      "likes": 1400
+    },
+    {
+      "text": "What's your favourite product type? \nGet 20% off products with code: BBROBIN. https://robin.yt/MFHBb",
+      "likes": 215
+    },
+    {
+      "text": "Hey!!! I was wondering if you could ever do a tutorial on a beach hairstyle any time soon?",
+      "likes": 60
+    },
+    {
+      "text": "How about I help you? Sound it out... 😏",
+      "likes": 50
+    },
+    {
+      "text": "Ikr 😂, do you use sea salt spray before applying product?",
+      "likes": 24
+    },
+    {
+      "text": "You didn't mention water-based pomades as an alternative to the classic oil based pomades.  What's going on, Robin?",
+      "likes": 17
+    },
+    {
+      "text": "We're all doing the same thing, Idk what's going on up there at this point or how to style it",
+      "likes": 13
+    },
+    {
+      "text": "I always style my hair like you did on your clay style, but for some reason after a few minutes my hair always goes flat and i'm back to styling it again like every minute. how would i prevent that?",
+      "likes": 13
+    },
+    {
+      "text": " @maxkeane2545  are you crazy?? That will make her head more worst, i think he should  use a permanent marker and draw a 3D hair. That sound more oll korrect",
+      "likes": 12
+    },
+    {
+      "text": "I have a question about clay. Do you need to get hair dampened before you apply it? I normally use volumizing mouse. But it gets my hair so shiny and I want to achieve a matte look. Thank you!",
+      "likes": 8
+    }
+  ],
+  "objection_count": 6,
+  "positive_count": 229,
+  "sentiment_ratio": 38.17,
+  "recurring_phrases": [
+    {
+      "phrase": "hair",
+      "count": 579,
+      "type": "word"
+    },
+    {
+      "phrase": "the",
+      "count": 533,
+      "type": "word"
+    },
+    {
+      "phrase": "you",
+      "count": 416,
+      "type": "word"
+    },
+    {
+      "phrase": "and",
+      "count": 409,
+      "type": "word"
+    },
+    {
+      "phrase": "for",
+      "count": 350,
+      "type": "word"
+    },
+    {
+      "phrase": "what",
+      "count": 203,
+      "type": "word"
+    },
+    {
+      "phrase": "that",
+      "count": 183,
+      "type": "word"
+    },
+    {
+      "phrase": "this",
+      "count": 161,
+      "type": "word"
+    },
+    {
+      "phrase": "but",
+      "count": 155,
+      "type": "word"
+    },
+    {
+      "phrase": "use",
+      "count": 153,
+      "type": "word"
+    },
+    {
+      "phrase": "like",
+      "count": 152,
+      "type": "word"
+    },
+    {
+      "phrase": "clay",
+      "count": 151,
+      "type": "word"
+    },
+    {
+      "phrase": "have",
+      "count": 151,
+      "type": "word"
+    },
+    {
+      "phrase": "your",
+      "count": 132,
+      "type": "word"
+    },
+    {
+      "phrase": "product",
+      "count": 130,
+      "type": "word"
+    },
+    {
+      "phrase": "pomade",
+      "count": 125,
+      "type": "word"
+    },
+    {
+      "phrase": "with",
+      "count": 122,
+      "type": "word"
+    },
+    {
+      "phrase": "gel",
+      "count": 121,
+      "type": "word"
+    },
+    {
+      "phrase": "just",
+      "count": 113,
+      "type": "word"
+    },
+    {
+      "phrase": "video",
+      "count": 101,
+      "type": "word"
+    }
+  ],
+  "language_patterns": [
+    "my hair looking a bit shiny but not too hard",
+    "I have been using too.",
+    "my hair type til now",
+    "My hair is curly Type 2 ( wavy). My favorite cream is for wavy and c",
+    "my hair healthy underneath all the styling.",
+    "my hair sets so well.",
+    "my hair is so thick and full it will stick up on its own but it's al",
+    "My hair is fine. Thus pomade, gel is not  meant for it. As for cream",
+    "my hair last time so this time plz help me..which one us best for me",
+    "My hair usually looks very good and I can slick it back easily and i",
+    "my hair more textured",
+    "my hair and style it more but I want to make sure I'm using good pom",
+    "my hair usually creme or frenzy. I was wondering what should I use f",
+    "Finally going to start cutting it slowly and see what the hell happ",
+    "I have been growing my hair for around 3 months now, it's just at the s",
+    "my hair blows it all to hell.",
+    "my hair to stay puffy? Lol like in the 50s and atuff",
+    "my hair look oily but dry when washed out. Praying for cream to be t",
+    "my hair its comes out so smooth and silky with no frizz or fly aways",
+    "my hair to be soft and fluffy, any recommendations?",
+    "my hair and holding it back for the day.",
+    "my hair to flatten it down, keep it smooth, and tuck in the sides as",
+    "my hair longer in the top, and shorter on the sides, so it hangs dow",
+    "my hair to look gray, I need a product that holds and help you style",
+    "my hair wasn’t the right the length for that product",
+    "My hair looks a lot like yours, so I am gonna try clay.",
+    "my hair always goes flat and i'm back to styling it again like every",
+    "i have been using Kenra Whipped Taffy #20 i use a dime size amount my hair is",
+    "my hair cut. Will let you know how I get on.",
+    "my hair for such occasions. Cheaper things will get the job done on"
+  ],
+  "failure_patterns": [
+    {
+      "quote": " @Daddyzigger  this was posted 2 years ago, only recently have YT implemented these “chapters” so you wasted your time commenting that and I wasted my time fommenting this",
+      "likes": 47,
+      "failure_type": "wasted your time commenting th"
+    },
+    {
+      "quote": " @Nca3001  you wasted more time",
+      "likes": 6,
+      "failure_type": "wasted more time"
+    },
+    {
+      "quote": "I just read all the comments hoping for a \"well you wasted time too\"  argument\n Thanks for wasting my time.\nOh, wait... This comment is a waste of time.\nHold on... So is YouTube!\nI've got work to do, ",
+      "likes": 2,
+      "failure_type": "wasted time too\"  argument"
+    },
+    {
+      "quote": "David Vigneur the joke is that fortnite is a waste of time and your son should be playing better games that will actually improve your child’s senses and reflexes.  Also I think Gel is your go to prod",
+      "likes": 0,
+      "failure_type": "waste of time and your son sho"
+    }
+  ]
+}

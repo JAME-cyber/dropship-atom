@@ -1,69 +1,130 @@
-# DROPATOM — Projet Dropshipping Agentic
+# DROPATOM — BrandShipping Agentic
 # Positionnement divergent et pragmatique en 2026
+# Pivot v2: Dropshipping → BrandShipping (Mai 2026)
 
 projet:
   nom: "DropAtom"
-  philosophie: "Dropshipping agentic — 1 opérateur, 7 agents, 0 employé"
+  philosophie: "Hybride agentic — Drop to Brand pipeline automatisé — 1 opérateur, ~15 agents, 0 employé"
+  tagline: "On commence generic, on prouve, on brand. L'IA décide quand monter. Les données valident chaque palier."
   separate_de: ["socialpulse", "cortex-leman-v5"]
   inspire_par:
     - "Jonathan Ecom (formation 100h dropshipping — le mainstream)"
     - "Serge Gatari (1-person AI business — le divergent)"
+    - "BrandShipping model (private label + IA + premium — le futur)"
   
   principes:
-    - "Les outils SaaS = commodité. On ne paie que l'indispensable."
+    - "Pipeline hybride: generic → validated → branded. L'IA décide quand monter."
+    - "Micro-branding iconique: on incarne une micro-culture, pas une niche. (quand on branche)"
+    - "Inbound > Outbound: contenu de valeur d'abord, ads en amplification. (build en parallèle)"
+    - "Anti-pitch: on documente le problème, le produit est l'évidence."
+    - "Écosystème, pas produit: bundles, cross-sell, LTV optimisation. (sur les winners)"
     - "Les données propriétaires = le moat."
-    - "L'IA fait le travail répétitif. L'humain décide."
+    - "L'IA fait le travail répétitif. L'humain décide la stratégie."
     - "0 stock, 0 employé, 0 bureau."
     - "Journal WORM (hérité Cortex Leman v5)."
-    - "Niche unique d'abord → expandre ensuite (validé Eprolo)."
-    - "Le branding = le vrai produit, pas l'objet (validé Eprolo)."
     - "1688 >> Alibaba pour les prix réels factory (validé Eprolo)."
+    - "La marque se CONSTRUIT dans la durée. C'est une destination, pas un point de départ."
+    - "B2B = canal premium sous-exploité (validé Line Borrajo + Herdyshop)."
+    - "Contenu organique (SEO + Shorts) = le vrai brandshipping. Pas le logo."
 
 agents:
-  - hunter:    "Recherche produit automatisée (TikTok, AliExpress, Google Trends, FB Ad Library, Instagram Shop)"
-  - scout:     "Supplier finder (Alibaba, 1688, agents privés)"
-  - builder:   "Création boutique (Shopify ou Medusa.js)"
-  - creator:   "Créatives IA (scripts, images, vidéos UGC-style, Instagram Shop Reels)"
-  - shorts_machine: "YouTube Shorts automation (trend detect → script → voiceover → assemble → post)"
-  - media:     "Campagnes ads (Meta, TikTok, Google) + Instagram Shop affiliate"
-  - closer:    "Email marketing + SAV + upsell"
-  - analyst:   "Analytics, P&L, optimisation continue (cross-platform TT Shop vs IG Shop)"
-  - feedback:  "Skill #11 — Boucle de retour: les agents apprennent des résultats réels"
-  - b2b_prospector: "B2B prospecting (salons, boutiques, pharmacies Suisse/France/Belgique)"
+  # === NOUVEAUX AGENTS (BrandShipping) ===
+  - brand:        "Identité de marque: manifeste, charte graphique, tone of voice, storytelling"
+  - content:      "Contenu éditorial: blog SEO, guides, vidéos éducatives, inbound marketing"
+  - seo:          "Recherche mots-clés, optimisation on-page, stratégie de contenu SEO"
+  - ecosystem:    "Bundles, cross-sell, parcours client, LTV maximisation, anti-churn"
+  
+  # === AGENTS PIVOTÉS ===
+  - hunter:       "[PIVOTÉ] Micro-culture search: trouve des communautés mal servies, pas des produits"
+  - scout:        "[PIVOTÉ] Partenaire production: private-label, custom packaging, qualité > prix"
+  - creator:      "[PIVOTÉ] Storytelling marque: anti-pitch scripts, identité visuelle, manifeste brand"
+  - builder:      "[PIVOTÉ] Boutique de marque: univers visuel, transparence provenance, storytelling intégré"
+  - shorts_machine: "[PIVOTÉ] Contenu éducatif: documente le problème, le produit = évidence"
+  - media:        "[PIVOTÉ] Inbound first: SEO + partenariats influenceurs long terme, ads = amplification"
+  - b2b_prospector: "[PIVOTÉ] Distribution physique: points de vente marque, partenariats retail"
+  
+  # === AGENTS CONSERVÉS ===
+  - closer:       "Email marketing + SAV + upsell + fidélisation marque"
+  - analyst:      "Analytics, P&L, LTV tracking, brand health metrics"
+  - feedback:     "Skill #11 — Boucle de retour: les agents apprennent des résultats réels"
+  
+  # === INFRASTRUCTURE (inchangée) ===
+  - orchestrator: "Pipeline manager — connecte tous les agents"
+  - router:       "Routeur ML — TF-IDF + LogisticRegression (89% accuracy)"
+  - planner:      "Décompose objectifs business en plans JSON exécutable"
+  - truth_engine: "Vérification et scoring des données"
+  - knowledge_vault: "Vault SQLite avec scoring fournisseurs + données marque"
+  - contracts:    "Validation layer déterministe (JsonLogic)"
 
 phases:
+  phase_0:
+    nom: "TEST — PRODUITS GÉNÉRIQUES"
+    duree: "Semaine 1-2"
+    objectif: "Lancer 3 produits génériques, prouver la demande, 10 ventes"
+    agents_utilisés: ["hunter", "scout", "creator", "shorts_machine", "builder"]
+    budget: "€50-75"
+    deliverables:
+      - "3 produits lancés en dropshipping classique"
+      - "Store Shopify configuré et actif"
+      - "10+ Shorts YouTube générés pour le trafic"
+      - "1er revenu (validation du marché)"
+    
   phase_1:
-    nom: "VALIDATION"
-    duree: "Mois 1-2"
-    objectif: "Lancer 1 store, prouver le CA, compiler les données"
-    agents_a_build: ["hunter", "scout", "creator"]
+    nom: "BRANDING LIGHT — COUCHE BRAND SUR WINNERS"
+    duree: "Semaine 3-6"
+    objectif: "Ajouter identité de marque + contenu SEO sur les produits qui vendent"
+    agents_a_build: ["brand", "seo", "content"]
+    agents_utilisés: ["brand", "content", "seo", "b2b_prospector"]
+    budget: "€50-100"
+    deliverables:
+      - "brand_agent: manifeste + identité pour les winners"
+      - "content_agent: 5 articles SEO + 3 Shorts éducatifs"
+      - "B2B Prospector: 10 prospects identifiés"
+      - "Trafic organique naissant"
     
   phase_2:
-    nom: "OPTIMISATION"
-    duree: "Mois 3-4"
-    objectif: "Knowledge vault, agents qui apprennent, CPA diminue"
-    agents_a_build: ["builder", "media", "closer", "analyst"]
+    nom: "PRIVATE LABEL — PASSAGE PREMIUM"
+    duree: "Mois 2-3"
+    objectif: "Samples private label, custom packaging, packs thématiques"
+    agents_a_build: ["ecosystem"]
+    agents_utilisés: ["scout", "ecosystem", "b2b_prospector"]
+    budget: "€150-300"
+    deliverables:
+      - "Samples reçus et validés qualité"
+      - "Custom packaging commandé (Eprolo $20)"
+      - "Packs thématiques lancés (modèle Annecy Trail)"
+      - "Premiers clients B2B (salons, boutiques)"
+      - "Marges montent de 15% → 30-40%"
     
   phase_3:
-    nom: "SCALING"
-    duree: "Mois 5+"
-    objectif: "Multi-stores OU white-label SaaS"
+    nom: "FULL BRANDSHIP — MARQUE COMPLÈTE"
+    duree: "Mois 4+"
+    objectif: "Marque déposée, B2B scaling, SEO mature, multi-produits"
     options:
-      - "Option A: 10 niches, 10 stores, même pipeline"
-      - "Option B: Vendre le pipeline en SaaS aux dropshippers"
+      - "Marque déposée (INPI €250) + site de marque"
+      - "3-5 micro-influenceurs en partenariat"
+      - "50+ articles SEO, trafic organique significatif"
+      - "Répéter le pipeline pour de nouveaux produits"
+      - "Option: vendre des marques construites (asset flip)"
+      - "Option: SaaS hybride agentic pour solopreneurs"
 
 unit_economics:
-  standard:
+  dropshipping_classique:
     marge: "15%"
     profit_50_ventes_jour: "6 750€/mois"
     risque: "CPA élevé, produit éphémère, pas de moat"
+    ltv: "1 achat"
+    valeur_revente: "~0"
   
-  agentic:
-    marge: "35%"
-    profit_50_ventes_jour: "15 600€/mois"
+  brandshipping_agentic:
+    marge: "40-60%"
+    profit_30_ventes_jour: "16 200€/mois (50€ PV, 45% marge)"
     cout_agents: "50€/mois"
-    economie_vs_standard: "~800-1500€/mois"
-    moat: "Données compilées (spy, P&L, ad performance)"
+    economie_vs_classique: "~2 000-4 000€/mois"
+    moat: "Marque + données propriétaires + audience"
+    ltv: "3-5 achats (repeat buyers)"
+    valeur_revente: "3-10x revenus annuels"
+    valeur_creation: "Chaque marque construite = actif valorisable"
 
 stack:
   languages: ["Python 3.12", "JavaScript/Node"]

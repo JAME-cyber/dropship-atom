@@ -1,0 +1,20 @@
+{
+  "id": "0b368f21",
+  "trend_name": "Premium Hair Brush product demo",
+  "channel": "",
+  "script": "{\"script\": \"This girl tried the $50 brush everyone's obsessed with [holding premium brush]. And while most people thought it was just overpriced [skeptical expression]. The transformation showed exactly how it detangles without pulling [demonstrating on tangled hair]. And the result will shock you - one swipe and her hair is silk! [reveal smooth, shiny hair]\", \"word_count\": 40, \"estimated_seconds\": 22, \"visual_cues\": [\"Close-up of premium brush with elegant packaging\", \"Woman with visibly tangled, frizzy hair\", \"Skeptical facial expression\", \"Slow-motion brush strokes through hair\", \"Side-by-side before/after reveal\", \"Hair transformation to smooth, shiny finish\"], \"hook_text\": \"This girl tried the $50 brush everyone's obsessed with\", \"curiosity_score\": 75, \"title_suggestions\": [\"$50 Brush vs $5 Brush - The Results Are Insane\", \"One Brush Stroke Changed Her Hair Forever\", \"The Viral Brush Hack That Professionals Don't Want You to Know\"]}",
+  "audio_path": "/home/tars/dropship-atom/agents/output/shorts/0b368f21/voiceover.mp3",
+  "video_path": "",
+  "thumbnail_path": "",
+  "duration_sec": 22,
+  "curiosity_score": 75,
+  "template_used": "curiosity_gap",
+  "product_name": "Premium Hair Brush",
+  "product_link": "",
+  "status": "failed",
+  "posted_at": "",
+  "views": 0,
+  "swipe_rate": 0.0,
+  "apv": 0.0,
+  "created_at": "2026-05-12T21:20:42.070010+00:00"
+}

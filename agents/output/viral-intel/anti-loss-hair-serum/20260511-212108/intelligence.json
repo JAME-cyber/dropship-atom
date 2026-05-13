@@ -1,0 +1,288 @@
+{
+  "niche": "hair care",
+  "product": "Anti-Loss Hair Serum",
+  "analyzed_at": "2026-05-11T19:24:54.526459+00:00",
+  "sources": {
+    "videos_analyzed": 5,
+    "comments_analyzed": 393,
+    "total_views": 1316870
+  },
+  "top_videos": [
+    {
+      "title": "hair care routine for guys",
+      "views": 1316870,
+      "url": "https://www.youtube.com/watch?v=lw4SkPn17RY"
+    },
+    {
+      "title": "",
+      "views": 0,
+      "url": ""
+    },
+    {
+      "title": "",
+      "views": 0,
+      "url": ""
+    },
+    {
+      "title": "",
+      "views": 0,
+      "url": ""
+    },
+    {
+      "title": "",
+      "views": 0,
+      "url": ""
+    }
+  ],
+  "top_objections": [
+    {
+      "text": "It is a safe choice because it is gentle for the scalp but you can use better shampoo to clean the product build up if you use products.",
+      "likes": 2
+    },
+    {
+      "text": " @Clortezz  bro i am scratching my head all the time it's irritating.. I used shampoo 2 days in between because of this irritation... And when I scratch my head some sticky kind of substance is filled in my nails.",
+      "likes": 1
+    },
+    {
+      "text": " @cl3o224  It can cause frizzy or dry hair, and possibly weakened hair so it can lead to more breakage. \nThose side effects tend to get worse the more perm you do, so maybe for your 1st one you won't experience any.",
+      "likes": 1
+    },
+    {
+      "text": "In my 30s and I've not used shampoo since I was a small child. Used to get allergic reactions to something in them. So just stopped using them. \n\nAll my male friends and colleagues my age and younger are losing their hair. Mine is exactly the same as it's always been. Very thick, full and long.",
+      "likes": 0
+    }
+  ],
+  "top_positive_signals": [
+    {
+      "text": "I highly recommend to install a shower filter to help not just your hair but your skin. I recently got the aqua bliss shower filter and I immediately noticed a change. My hair is softer and wasnt as dry compared to before. If you live in a city or your water is harsh, GET ONE.",
+      "likes": 1000
+    },
+    {
+      "text": "I love watching your videos even though I'm a girl. I hope you know that all the advice you give is a wonderfully condensed and straightforward version of most \"girl care\" content, yet I am somehow more drawn to your style of videos for their simplicity. Keep up the incredible work!",
+      "likes": 282
+    },
+    {
+      "text": "no shampoo no extra products is also an option (it will look greasy for sometime then hair will produce natural oils making it have texture and no greasiness) it will also make your life much more easy trust me I've done this for 1 month and im seeing results my dandruff has reduced too",
+      "likes": 131
+    },
+    {
+      "text": "I have begun to take care of my hair very much. I have wavy hair and I use sulfate free schampoo, conditioner, leave in conditioner, and also a hair mask. Everything but the conditioner I only do once a week. Conditioner is every other day. It has been amazing result. Do not shower your hair in too warm water, also end every shower with icecold water, to lock the moisture in your hair better. Last but not least, you got to have products designed for your hair!",
+      "likes": 84
+    },
+    {
+      "text": "Love your longer videos. Keep it up man💪🫂",
+      "likes": 59
+    },
+    {
+      "text": "Skipping shampoo days has been a game-changer for me. I actually track the results with nordic biolabs sometimes to see the overall impact on my hair health. Great advice on adjusting washing frequency!",
+      "likes": 26
+    },
+    {
+      "text": "One thing Ive always questioned is should I be shampooing my hair daily if I go to the gym or have a long day of work where my hair is built up with dirt and sweat. Should I shampoo or let it build up?",
+      "likes": 24
+    },
+    {
+      "text": "This helped me alot. Literally until id stared college i had no idea my hair curls when it gets longer. \n\nLove your vids",
+      "likes": 22
+    },
+    {
+      "text": "I love learning how to become Better",
+      "likes": 13
+    },
+    {
+      "text": "I have like 10 different ones, and I will tell you something, it doesn’t matter, just go out there find one you love and rock them with confidence.",
+      "likes": 9
+    }
+  ],
+  "top_questions": [
+    {
+      "text": "Why Are You Writing Like This?",
+      "likes": 21
+    },
+    {
+      "text": "Where should I get One I never Heard of this product before",
+      "likes": 17
+    },
+    {
+      "text": "I had thick curly hair for a couple months and I have no idea how to replicate it but I been trying for two years lol",
+      "likes": 16
+    },
+    {
+      "text": "2:37 u seeing what im seeing ???",
+      "likes": 7
+    },
+    {
+      "text": "Whats happened to your Amazon account? I Can't see any shampoo products",
+      "likes": 3
+    },
+    {
+      "text": "For styling. What is your take on seasalt water spray?",
+      "likes": 3
+    },
+    {
+      "text": "are u korean?",
+      "likes": 3
+    },
+    {
+      "text": "Can someone give advice about oiling... Like how often and when should I be oiling my hair? I have thin hair and my hair density is low as well",
+      "likes": 3
+    },
+    {
+      "text": "Need a how to make money video",
+      "likes": 3
+    },
+    {
+      "text": "You should try natural methods first because getting a perm can damage your hair.\n\"The salon guy\" has some tutorials on how to make straight hair wavy.\nThe most important thing is to ask your hairdresser to create layers next time you go there. \nHope that helps !",
+      "likes": 3
+    }
+  ],
+  "objection_count": 4,
+  "positive_count": 47,
+  "sentiment_ratio": 11.75,
+  "recurring_phrases": [
+    {
+      "phrase": "hair",
+      "count": 222,
+      "type": "word"
+    },
+    {
+      "phrase": "and",
+      "count": 183,
+      "type": "word"
+    },
+    {
+      "phrase": "the",
+      "count": 102,
+      "type": "word"
+    },
+    {
+      "phrase": "you",
+      "count": 97,
+      "type": "word"
+    },
+    {
+      "phrase": "shampoo",
+      "count": 86,
+      "type": "word"
+    },
+    {
+      "phrase": "have",
+      "count": 83,
+      "type": "word"
+    },
+    {
+      "phrase": "for",
+      "count": 75,
+      "type": "word"
+    },
+    {
+      "phrase": "your",
+      "count": 63,
+      "type": "word"
+    },
+    {
+      "phrase": "use",
+      "count": 55,
+      "type": "word"
+    },
+    {
+      "phrase": "can",
+      "count": 52,
+      "type": "word"
+    },
+    {
+      "phrase": "what",
+      "count": 52,
+      "type": "word"
+    },
+    {
+      "phrase": "this",
+      "count": 51,
+      "type": "word"
+    },
+    {
+      "phrase": "that",
+      "count": 51,
+      "type": "word"
+    },
+    {
+      "phrase": "but",
+      "count": 46,
+      "type": "word"
+    },
+    {
+      "phrase": "with",
+      "count": 43,
+      "type": "word"
+    },
+    {
+      "phrase": "oil",
+      "count": 34,
+      "type": "word"
+    },
+    {
+      "phrase": "conditioner",
+      "count": 34,
+      "type": "word"
+    },
+    {
+      "phrase": "just",
+      "count": 33,
+      "type": "word"
+    },
+    {
+      "phrase": "your hair",
+      "count": 30,
+      "type": "bigram"
+    },
+    {
+      "phrase": "not",
+      "count": 28,
+      "type": "word"
+    }
+  ],
+  "language_patterns": [
+    "My hair is softer and wasnt as dry compared to before. If you live i",
+    "my hair everytime I shower cos the water in India is very hard and m",
+    "My hair is dry (cannot set ) , I want it to be moisturized",
+    "my hair less but when i play footbal or go to the gym I often sweat",
+    "my scalp and make my issues much worse, honestly I would say try out",
+    "my hair which makes it just disgusting ;/.",
+    "my hair type is 1c and i want to convert it into 3b naturally withou",
+    "my hair and im alr starting to lose hair please help me 😭",
+    "my hair and then wash with cool water and i just leave it to dry now",
+    "My hair is thick as balls and i hate it when the barber gets the thi",
+    "my hair daily I get crazy dandruff :(",
+    "finally know what products to buy thx",
+    "my hair is 2a and it still dry and frizzy and I still don't know wha",
+    "my hair as a hair mask. Any how what do you suggest for premature wh",
+    "my hair gently on a daily basis by using water only.",
+    "my hair health. Great advice on adjusting washing frequency!",
+    "finally a routine that makes sense",
+    "my hair became frizzy",
+    "my hair curls when it gets longer.",
+    "my scalp worse and has more dandruff and itchiness now th itchiness h",
+    "finally a routine that makes sense for guys",
+    "My hair has got little amount of dandruff and i always scratch my he",
+    "my hair with water?",
+    "i have been using biotin and rosémary and peppermint oil….",
+    "my hair density is low as well",
+    "my hair twice a week",
+    "my hair looks dope. I heavily dislike using hair styling products ca",
+    "My hair type has different stands of hairs. Some are straight and so",
+    "my hair gets rough not greasy idk what is wrong if you or any viewer",
+    "my hair but this helps"
+  ],
+  "failure_patterns": [
+    {
+      "quote": " @Clortezz  bro i am scratching my head all the time it's irritating.. I used shampoo 2 days in between because of this irritation... And when I scratch my head some sticky kind of substance is filled",
+      "likes": 1,
+      "failure_type": "irritating.. i used shampoo 2 "
+    },
+    {
+      "quote": "In my 30s and I've not used shampoo since I was a small child. Used to get allergic reactions to something in them. So just stopped using them. \n\nAll my male friends and colleagues my age and younger ",
+      "likes": 0,
+      "failure_type": "allergic reactions to somethin"
+    }
+  ]
+}

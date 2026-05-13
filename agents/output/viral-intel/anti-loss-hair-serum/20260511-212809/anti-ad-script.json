@@ -1,0 +1,22 @@
+{
+  "format": "midfunnel",
+  "framework": "UGC Framework v2 — Anti-Objection",
+  "beats": {
+    "hook": "Si t'as déjà dépensé des sommes folles dans des sérums qui n'ont rien fait pour ta perte de cheveux, c'est pas ta faute. Beaucoup de gens se retrouvent frustrés, avec des effets secondaires comme des maux de tête ou une irritation du cuir chevelu.",
+    "reframe": "Les autres produits échouent souvent parce qu'ils utilisent des ingrédients agressifs qui ne prennent pas soin de ton cuir chevelu. Tu as le droit d’obtenir des résultats sans les désagréments.",
+    "mechanism": "L'Anti-Loss Hair Serum est formulé avec des ingrédients doux et naturels qui nourrissent ton cuir chevelu, comme une crème hydratante pour ta peau. Imagine appliquer une lotion légère qui répare et hydrate en même temps.",
+    "payoff": "Après quelques semaines, tu pourrais sentir tes cheveux plus forts et plus denses. C’est comme retrouver une texture que tu croyais perdue.",
+    "cta": "Si ça t’intrigue, prends un moment pour en savoir plus et découvre si ça pourrait t'aider, sans pression.",
+    "analogy": "C'est comme mettre une bonne crème hydratante après une journée au soleil, ça fait toute la différence.",
+    "objection_handled": "Neutralise la peur des effets secondaires des produits trop agressifs.",
+    "objection_2": "Couvre l'inquiétude sur l'inefficacité des produits standards.",
+    "objection_3": "Aborde la méfiance sur la véracité des avis clients."
+  },
+  "full_voiceover": "Si t'as déjà dépensé des sommes folles dans des sérums qui n'ont rien fait pour ta perte de cheveux, c'est pas ta faute. Beaucoup de gens se retrouvent frustrés, avec des effets secondaires comme des maux de tête ou une irritation du cuir chevelu. Les autres produits échouent souvent parce qu'ils utilisent des ingrédients agressifs qui ne prennent pas soin de ton cuir chevelu. Tu as le droit d’obtenir des résultats sans les désagréments. L'Anti-Loss Hair Serum est formulé avec des ingrédients doux et naturels qui nourrissent ton cuir chevelu, comme une crème hydratante pour ta peau. Imagine appliquer une lotion légère qui répare et hydrate en même temps. Après quelques semaines, tu pourrais sentir tes cheveux plus forts et plus denses. C’est comme retrouver une texture que tu croyais perdue. Si ça t’intrigue, prends un moment pour en savoir plus et découvre si ça pourrait t'aider, sans pression.",
+  "objections_handled": [
+    "Neutralise la peur des effets secondaires des produits trop agressifs.",
+    "Couvre l'inquiétude sur l'inefficacité des produits standards.",
+    "Aborde la méfiance sur la véracité des avis clients."
+  ],
+  "raw_output": "HOOK: Si t'as déjà dépensé des sommes folles dans des sérums qui n'ont rien fait pour ta perte de cheveux, c'est pas ta faute. Beaucoup de gens se retrouvent frustrés, avec des effets secondaires comme des maux de tête ou une irritation du cuir chevelu.\n\nREFRAME: Les autres produits échouent souvent parce qu'ils utilisent des ingrédients agressifs qui ne prennent pas soin de ton cuir chevelu. Tu as le droit d’obtenir des résultats sans les désagréments.\n\nMECHANISM: L'Anti-Loss Hair Serum est formulé avec des ingrédients doux et naturels qui nourrissent ton cuir chevelu, comme une crème hydratante pour ta peau. Imagine appliquer une lotion légère qui répare et hydrate en même temps.\n\nPAYOFF: Après quelques semaines, tu pourrais sentir tes cheveux plus forts et plus denses. C’est comme retrouver une texture que tu croyais perdue.\n\nCTA: Si ça t’intrigue, prends un moment pour en savoir plus et découvre si ça pourrait t'aider, sans pression.\n\nANALOGY: C'est comme mettre une bonne crème hydratante après une journée au soleil, ça fait toute la différence.\n\nOBJECTION_HANDLED: Neutralise la peur des effets secondaires des produits trop agressifs.  \nOBJECTION_2: Couvre l'inquiétude sur l'inefficacité des produits standards.  \nOBJECTION_3: Aborde la méfiance sur la véracité des avis clients."
+}
