@@ -378,12 +378,21 @@ def generate_tiktok_video(
             "-pix_fmt", "yuv420p", str(bg_path)
         ], capture_output=True, text=True, timeout=60)
 
-    # Étape 2: Combiner fond + audio + sous-titres
+    # Étape 2: Combiner fond + audio + sous-titres + label IA
     print(f"  🎬 Assemblage vidéo finale...")
     
     # ffmpeg subtitles filter needs escaped absolute path
     srt_abs = str(srt_path.resolve())
     srt_escaped = srt_abs.replace(':', '\\:').replace('[', '\\[').replace(']', '\\]')
+
+    # Label IA obligatoire (AI Act Art. 52 — UE 2024/1689)
+    # Watermark persistant en bas à gauche, semi-transparent
+    ai_label_filter = (
+        "drawtext=text='Généré par IA':"
+        "fontcolor=white@0.6:fontsize=22:"
+        "x=20:y=h-50:"
+        "box=1:boxcolor=black@0.4:boxborderw=5"  # visible toute la durée
+    )
 
     final_cmd = [
         "ffmpeg", "-y",
@@ -393,7 +402,8 @@ def generate_tiktok_video(
         f"subtitles={srt_escaped}:"
         f"force_style='FontSize=36,PrimaryColour=&Hffffff&,"
         f"OutlineColour=&H000000&,Outline=3,Alignment=2,"
-        f"MarginV=180,FontName=Arial,Bold=1'",
+        f"MarginV=180,FontName=Arial,Bold=1',"
+        f"{ai_label_filter}",
         "-c:v", "libx264", "-preset", "ultrafast",
         "-c:a", "aac", "-b:a", "128k",
         "-shortest",
@@ -406,13 +416,20 @@ def generate_tiktok_video(
         print(f"  ⚠️ FFmpeg final assembly error:")
         print(f"  {result.stderr[-300:]}")
         
-        # Fallback: juste audio sur le fond, sans sous-titres
-        print(f"  🔄 Tentative sans sous-titres...")
+        # Fallback: audio sur le fond + label IA, sans sous-titres
+        print(f"  🔄 Tentative sans sous-titres (label IA conservé)...")
         final_cmd_simple = [
             "ffmpeg", "-y",
             "-i", str(bg_path),
             "-i", str(audio_path),
-            "-c:v", "copy", "-c:a", "aac", "-b:a", "128k",
+            "-vf",
+            f"drawtext=text='Généré par IA':"
+            f"fontcolor=white@0.6:fontsize=22:"
+            f"x=20:y=h-50:"
+            f"box=1:boxcolor=black@0.4:boxborderw=5",
+            "-c:v", "libx264", "-preset", "ultrafast",
+            "-c:a", "aac", "-b:a", "128k",
+            "-pix_fmt", "yuv420p",
             "-shortest", str(video_path),
         ]
         subprocess.run(final_cmd_simple, capture_output=True, text=True, timeout=60)
@@ -420,6 +437,7 @@ def generate_tiktok_video(
     if video_path.exists():
         size_kb = video_path.stat().st_size / 1024
         print(f"  ✅ Vidéo: {video_path.name} ({size_kb:.0f} KB)")
+        print(f"  🏷️ Label IA: 'Généré par IA' (AI Act Art. 52)")
         return video_path
     else:
         print(f"  ❌ Échec génération vidéo")
@@ -562,7 +580,7 @@ h1 {{ font-size: 28px; margin-bottom: 5px; }}
 <body>
 <div class="container">
     <h1>🎬 UGC Ad Agent <span class="badge">$0.00</span></h1>
-    <p class="subtitle">Généré automatiquement — {product_name} — {script['niche'].upper()}</p>
+    <p class="subtitle">Généré automatiquement — {product_name} — {script['niche'].upper()} | <span style="color:#FF6B9D;">🏷️ Contenu IA — Conforme AI Act Art. 52</span></p>
     
     <div class="stats">
         <div class="stat">
@@ -706,6 +724,14 @@ def main():
     script = generate_script(args.product, args.price, args.niche)
     
     script_path = output_path / "script.json"
+    script["ai_disclosure"] = {
+        "label": "Généré par IA",
+        "regulation": "AI Act UE 2024/1689, Art. 52",
+        "obligation": "Tout contenu deepfake/IA généré doit être identifié comme tel depuis août 2025",
+        "sanction": "Jusqu'à 3% du CA ou 15M EUR",
+        "video_watermark": "'Généré par IA' — bas gauche, semi-transparent, persistant",
+        "platform_labels": "Activer aussi les labels IA natifs Meta/TikTok/Pinterest",
+    }
     script_path.write_text(json.dumps(script, indent=2, ensure_ascii=False), encoding="utf-8")
     print(f"  ✅ Script: {script_path.name}")
     print(f"  📊 Durée estimée: {script['estimated_duration']}s | 3 scènes")
@@ -759,6 +785,9 @@ def main():
     print(f"  └── ugc-ad-report.html        (rapport interactif)")
     print()
     print(f"  💰 Coût total: $0.00")
+    print(f"  🏷️  AI Act Art. 52: Label 'Généré par IA' intégré ✅")
+    print(f"      → Obligatoire en UE depuis août 2025")
+    print(f"      → Utiliser aussi les labels natifs Meta/TikTok")
     print()
 
     # Ouvrir le rapport
