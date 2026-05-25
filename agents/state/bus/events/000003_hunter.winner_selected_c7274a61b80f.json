@@ -1,0 +1,16 @@
+{
+  "id": "c7274a61b80f",
+  "event_type": "hunter.winner_selected",
+  "source_agent": "hunter",
+  "data": {
+    "product_name": "Acupressure Mat",
+    "score": 85
+  },
+  "sequence": 3,
+  "timestamp": "2026-05-25T11:53:26.425320+00:00",
+  "prev_hash": "99bf83f4c44dd2a3cef8e066b5d5caf723c6884d2e71cc257259956991f64074",
+  "entry_hash": "de4dec81a3fe3135c4de68ddfc6fd60e99fba0bf337f79df8fb25265d8e82ab1",
+  "target_agent": "scout",
+  "error": "",
+  "retry_count": 0
+}

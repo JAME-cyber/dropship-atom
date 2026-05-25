@@ -1,0 +1,16 @@
+{
+  "id": "85afb989be73",
+  "event_type": "hunter.winner_selected",
+  "source_agent": "hunter",
+  "data": {
+    "product_name": "LED Face Mask",
+    "score": 83
+  },
+  "sequence": 4,
+  "timestamp": "2026-05-25T11:53:26.425626+00:00",
+  "prev_hash": "de4dec81a3fe3135c4de68ddfc6fd60e99fba0bf337f79df8fb25265d8e82ab1",
+  "entry_hash": "dffa8214d75dc1c5d18abb75891ff1052e8fd119139cb2f6517a005fd809aa5b",
+  "target_agent": "scout",
+  "error": "",
+  "retry_count": 0
+}

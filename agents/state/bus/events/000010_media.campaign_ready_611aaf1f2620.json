@@ -1,0 +1,15 @@
+{
+  "id": "611aaf1f2620",
+  "event_type": "media.campaign_ready",
+  "source_agent": "media",
+  "data": {
+    "campaigns": 3
+  },
+  "sequence": 10,
+  "timestamp": "2026-05-25T11:53:26.431133+00:00",
+  "prev_hash": "cb60776e5c20dc77cf307829584a04217f3e4a1d103ada67e742c7f73a136203",
+  "entry_hash": "5143ded1c2de285eba9b9731abc294c23b33bd31a7ed10f140ccc3ff42d81a7b",
+  "target_agent": "",
+  "error": "",
+  "retry_count": 0
+}

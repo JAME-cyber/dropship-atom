@@ -1,0 +1,16 @@
+{
+  "id": "349269daaf42",
+  "event_type": "hunter.winner_selected",
+  "source_agent": "hunter",
+  "data": {
+    "product_name": "Heated Neck Wrap",
+    "score": 86
+  },
+  "sequence": 2,
+  "timestamp": "2026-05-25T11:53:26.425008+00:00",
+  "prev_hash": "32a136a7a33703cf4805cefb848efcb5cd7dd4ffdb208d448dd56c8c97ae9a2b",
+  "entry_hash": "99bf83f4c44dd2a3cef8e066b5d5caf723c6884d2e71cc257259956991f64074",
+  "target_agent": "scout",
+  "error": "",
+  "retry_count": 0
+}

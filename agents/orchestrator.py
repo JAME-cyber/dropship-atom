@@ -122,6 +122,25 @@ def log(run: PipelineRun, agent: str, message: str):
     print(f"  [{agent}] {message}")
 
 
+# ─── Event Bus Integration ──────────────────────────────────────────
+
+try:
+    from bus import publish, subscribe, DropAtomBus
+    BUS_ENABLED = True
+except ImportError:
+    BUS_ENABLED = False
+
+
+def bus_publish(event_type: str, data: dict, source_agent: str = "",
+                target_agent: str = ""):
+    """Publish event to bus if available."""
+    if BUS_ENABLED:
+        try:
+            publish(event_type, data, source_agent, target_agent)
+        except Exception as e:
+            print(f"  ⚠️  Bus publish failed: {e}", file=sys.stderr)
+
+
 # ─── Phase 1: HUNTER ────────────────────────────────────────────────
 
 def phase_hunter(run: PipelineRun, sources: list = None, enrich_top: int = 5):
@@ -158,6 +177,20 @@ def phase_hunter(run: PipelineRun, sources: list = None, enrich_top: int = 5):
     run.phase_hunter = "done"
     log(run, "HUNTER", f"Found {len(scored)} products, selected top {len(selected)}")
     save_pipeline(run)
+    
+    # Publish events
+    bus_publish("hunter.products_found", {
+        "total_found": len(scored),
+        "selected": len(selected),
+    }, source_agent="hunter")
+    for p in selected:
+        bus_publish("hunter.winner_selected", {
+            "product_id": p["id"],
+            "product_name": p["name"],
+            "score": p["score"],
+            "margin": p["margin"],
+        }, source_agent="hunter", target_agent="scout")
+    
     return selected
 
 
@@ -192,6 +225,22 @@ def phase_scout(run: PipelineRun):
     
     run.phase_scout = "done"
     save_pipeline(run)
+    
+    # Publish events
+    bus_publish("scout.suppliers_found", {
+        "products_quoted": len(results),
+        "suppliers_contacted": len(set(p.get("best_supplier", "") for p in run.products_selected)),
+    }, source_agent="scout")
+    for p in run.products_selected:
+        if p.get("best_supplier"):
+            bus_publish("scout.supplier_found", {
+                "product_id": p["id"],
+                "product_name": p["name"],
+                "supplier": p["best_supplier"],
+                "buy_price": p.get("buy_price_usd", 0),
+                "net_margin": p.get("net_margin", 0),
+            }, source_agent="scout", target_agent="creator")
+    
     return results
 
 
@@ -233,6 +282,9 @@ def phase_spec(run: PipelineRun):
     
     run.phase_spec = "done"
     save_pipeline(run)
+    bus_publish("spec.dossiers_ready", {
+        "dossiers_generated": len(run.products_selected),
+    }, source_agent="spec", target_agent="creator")
 
 
 def phase_veille(run: PipelineRun):
@@ -630,6 +682,10 @@ def phase_builder(run: PipelineRun):
     run.phase_builder = "done"
     log(run, "BUILDER", f"Store blueprint ready ({len(rows)} products, {len(categories)} collections)")
     save_pipeline(run)
+    bus_publish("builder.store_ready", {
+        "products_in_store": len(rows),
+        "store_dir": str(builder_dir),
+    }, source_agent="builder", target_agent="media")
 
 
 # ─── Phase 5: MEDIA (Campaign Blueprint) ────────────────────────────
@@ -755,6 +811,9 @@ def phase_media(run: PipelineRun):
     run.phase_media = "done"
     log(run, "MEDIA", f"Campaign blueprints ready for {len(run.products_selected)} products")
     save_pipeline(run)
+    bus_publish("media.campaign_ready", {
+        "campaigns_generated": len(run.products_selected),
+    }, source_agent="media")
 
 
 # ─── Phase 6: ANALYST (P&L Dashboard) ──────────────────────────────
@@ -928,6 +987,14 @@ def run_full_pipeline(budget: float = 500, sources: list = None, enrich_top: int
     run.completed_at = datetime.now(timezone.utc).isoformat()
     run.status = "waiting_human"  # Needs human for store setup + ad accounts
     save_pipeline(run)
+    
+    # Final bus event
+    bus_publish("pipeline.run_complete", {
+        "run_id": run.run_id,
+        "products": len(run.products_launched),
+        "budget": run.total_budget_eur,
+        "status": "waiting_human",
+    }, source_agent="orchestrator")
     
     print()
     print("═" * 65)

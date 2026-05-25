@@ -1,0 +1,15 @@
+{
+  "id": "fade2cb56a37",
+  "event_type": "spec.dossiers_ready",
+  "source_agent": "spec",
+  "data": {
+    "count": 3
+  },
+  "sequence": 7,
+  "timestamp": "2026-05-25T11:53:26.426633+00:00",
+  "prev_hash": "313457dc545b61de920dc6ec88b73e7a36409abea4684ad7c95de32e902a34af",
+  "entry_hash": "d487e85d29f7a8fb83db92181b4543965b5e6f4531b62d17eb430b37c8471dda",
+  "target_agent": "creator",
+  "error": "",
+  "retry_count": 0
+}

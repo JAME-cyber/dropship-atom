@@ -1,0 +1,15 @@
+{
+  "id": "5d0ac084d29b",
+  "event_type": "creator.assets_ready",
+  "source_agent": "creator",
+  "data": {
+    "count": 3
+  },
+  "sequence": 8,
+  "timestamp": "2026-05-25T11:53:26.426946+00:00",
+  "prev_hash": "d487e85d29f7a8fb83db92181b4543965b5e6f4531b62d17eb430b37c8471dda",
+  "entry_hash": "b37a7fd6b36063bf8ac32f2120e0d7db341b298b082a6a3df0ffcd0dcc3853d6",
+  "target_agent": "builder",
+  "error": "",
+  "retry_count": 0
+}

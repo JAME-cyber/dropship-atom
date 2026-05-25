@@ -1,0 +1,17 @@
+{
+  "id": "e32388bd1409",
+  "event_type": "pipeline.run_complete",
+  "source_agent": "orchestrator",
+  "data": {
+    "run_id": "test001",
+    "products": 3,
+    "budget": 500
+  },
+  "sequence": 11,
+  "timestamp": "2026-05-25T11:53:26.431561+00:00",
+  "prev_hash": "5143ded1c2de285eba9b9731abc294c23b33bd31a7ed10f140ccc3ff42d81a7b",
+  "entry_hash": "1d72440e3cc93603b54996d8229fe502db240ebef40ece163ba565e5a7b2d022",
+  "target_agent": "",
+  "error": "",
+  "retry_count": 0
+}

@@ -1,0 +1,16 @@
+{
+  "id": "f15f546882da",
+  "event_type": "hunter.products_found",
+  "source_agent": "hunter",
+  "data": {
+    "total_found": 51,
+    "selected": 5
+  },
+  "sequence": 1,
+  "timestamp": "2026-05-25T11:53:26.424527+00:00",
+  "prev_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+  "entry_hash": "32a136a7a33703cf4805cefb848efcb5cd7dd4ffdb208d448dd56c8c97ae9a2b",
+  "target_agent": "",
+  "error": "",
+  "retry_count": 0
+}

@@ -1,0 +1,16 @@
+{
+  "id": "43887b3aab0c",
+  "event_type": "builder.store_ready",
+  "source_agent": "builder",
+  "data": {
+    "products": 3,
+    "collections": 5
+  },
+  "sequence": 9,
+  "timestamp": "2026-05-25T11:53:26.427225+00:00",
+  "prev_hash": "b37a7fd6b36063bf8ac32f2120e0d7db341b298b082a6a3df0ffcd0dcc3853d6",
+  "entry_hash": "cb60776e5c20dc77cf307829584a04217f3e4a1d103ada67e742c7f73a136203",
+  "target_agent": "media",
+  "error": "",
+  "retry_count": 0
+}

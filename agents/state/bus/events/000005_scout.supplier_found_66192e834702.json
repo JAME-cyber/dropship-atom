@@ -1,0 +1,17 @@
+{
+  "id": "66192e834702",
+  "event_type": "scout.supplier_found",
+  "source_agent": "scout",
+  "data": {
+    "product_name": "Heated Neck Wrap",
+    "supplier": "CJ Dropshipping",
+    "net_margin": 25.0
+  },
+  "sequence": 5,
+  "timestamp": "2026-05-25T11:53:26.426025+00:00",
+  "prev_hash": "dffa8214d75dc1c5d18abb75891ff1052e8fd119139cb2f6517a005fd809aa5b",
+  "entry_hash": "68ae0d6461a1e82c671e914822432b9737242c8f96fce9183f2693256d2c0ef2",
+  "target_agent": "creator",
+  "error": "",
+  "retry_count": 0
+}
