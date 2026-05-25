@@ -1,0 +1,50 @@
+{
+  "header": {
+    "generated_at": "2026-05-25T12:25:13.527683+00:00",
+    "partner": "batum-sourcing",
+    "partner_name": "Batum Sourcing",
+    "partner_location": "Guangzhou / Shenzhen"
+  },
+  "product": {
+    "name": "Heated Neck Wrap Rechargeable",
+    "url": "https://www.alibaba.com/product-detail/Heated-Neck-Wrap",
+    "moq": 500,
+    "target_price_usd": 5.0
+  },
+  "mission": {
+    "primary": "Sourcing + Negociation + Verification",
+    "objectives": [
+      "Trouver le meilleur prix pour Heated Neck Wrap Rechargeable (cible: <$5.0/unité)",
+      "MOQ: 500 pieces (negocier si possible)",
+      "Visiter l'usine et verifier la qualite",
+      "Confirmer les certifications (CE, FCC, RoHS, REACH)",
+      "Demander des samples (prix + delai)",
+      "Evaluer la fiabilite du fournisseur"
+    ]
+  },
+  "certifications_required": [
+    "CE"
+  ],
+  "communication": {
+    "whatsapp_message": "Bonjour! Nouvelle demande de sourcing.\n\nProduit: Heated Neck Wrap Rechargeable\nQuantité: 500 pcs\nPrix cible: <$5.0/unité\nLien: https://www.alibaba.com/product-detail/Heated-Neck-Wrap\n\nPeux-tu:\n- Trouver le meilleur fournisseur?\n- Negocier le prix?\n- Verifier la qualite (photos)?\n- Confirmer les certificats?\n\nMerci! 🙏",
+    "partner_contact": {
+      "whatsapp": "Contact via Instagram @batumsourcing",
+      "instagram": "https://www.instagram.com/batumsourcing/",
+      "tiktok": "https://www.tiktok.com/@batumsourcingenchine"
+    }
+  },
+  "hunter_context": {
+    "hunter_score": 75.5,
+    "source_price": 5.0,
+    "suggested_price": 34.9,
+    "margin": 29.9,
+    "category": "Health",
+    "keywords": [
+      "heated neck",
+      "rechargeable",
+      "pain relief",
+      "thermal",
+      "massage"
+    ]
+  }
+}

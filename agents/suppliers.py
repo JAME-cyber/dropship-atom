@@ -185,6 +185,60 @@ SUPPLIERS = [
         "ship_from": "Guangzhou, China",
         "quality": "verified",
     },
+    # ─── TERRAIN PARTNERS (agents sourcing sur place en Chine) ──
+    {
+        "id": "batum-sourcing",
+        "name": "Batum (Batoum)",
+        "company": "Batum Sourcing",
+        "type": "terrain_agent",  # Pas un fournisseur — un agent sourcing sur place
+        "phone": "WhatsApp (contact via Instagram)",
+        "instagram": "https://www.instagram.com/batumsourcing/",
+        "tiktok": "https://www.tiktok.com/@batumsourcingenchine",
+        "youtube": "https://www.youtube.com/@batumagentenchine",
+        "categories": ["all"],  # Agent generaliste — peut sourcer tout produit
+        "niche": "all",
+        "notes": (
+            "Agent d'achat professionnel base a Guangzhou/Shenzhen. "
+            "Parle francais + chinois (mandarin/cantonais). "
+            "Services: sourcing, negociation, achat, suivi commandes, "
+            "controle qualite, reception, regroupage, expedition, "
+            "personnalisation (private label), achat 1688, "
+            "verification fournisseurs Alibaba, samples regroupes, "
+            "FBA Amazon, dropshipping, accompagnement Chine. "
+            "Collaboration long terme + petites commandes test acceptees. "
+            "Commission variable selon montant commande. "
+            "MOQ typique: 500 pieces (negociable). "
+            "Contact: WhatsApp."
+        ),
+        "moq": 1,  # Accepte petites commandes pour test
+        "ship_from": "Guangzhou, China",
+        "quality": "verified",
+        "terrain_capabilities": [
+            "sourcing_physique",       # Va dans les usines
+            "negociation_chinois",      # Parle mandarin + cantonais
+            "controle_qualite",          # Inspection avant expedition
+            "regroupage",                # Consolidation multi-fournisseurs
+            "private_label",            # Personnalisation marque
+            "achat_1688",                # Achete sur 1688 pour vous
+            "verification_alibaba",      # Verifie les fournisseurs Alibaba sur place
+            "fba_amazon",                # Expedition directe FBA
+            "dropshipping",              # Fulfillment dropshipping
+            "foire_canton",              # Present a la Foire de Canton
+            "huaqiangbei",               # Connait le marche electronique Shenzhen
+        ],
+        "locations": ["Guangzhou", "Shenzhen", "Yiwu", "Canton"],
+        "source": "YouTube @batumagentenchine (9 videos, 914 abonnes, 2025-2026)",
+        "source_analysis": (
+            "Analyse des 9 videos (mai 2026): "
+            "Video services (693 vues) = presentation complete. "
+            "Video Guangzhou sourcing = verification quantite chez fournisseur Kinbo. "
+            "Video negociation = negocie en chinois, MOQ 500, prix $52, demande FCC cert. "
+            "Video usine = controle qualite sur place. "
+            "Video Huaqiangbei = marche electronique Shenzhen. "
+            "Video Foire Canton 2026 = present aux evenements. "
+            "Confirme: agent credible, actif, bilingue FR/ZH."
+        ),
+    },
 ]
 
 
