@@ -134,6 +134,16 @@ TERRAIN_PARTNERS = {
             "whatsapp": "Contact via Instagram @batumsourcing",
             "instagram": "https://www.instagram.com/batumsourcing/",
             "tiktok": "https://www.tiktok.com/@batumsourcingenchine",
+            "youtube": "https://www.youtube.com/@batumagentenchine",
+        },
+        "tiktok_stats": {
+            "handle": "@batumsourcingenchine",
+            "followers": 148070,
+            "total_views": 516432,
+            "total_videos": 18,
+            "avg_engagement": "3.3%",
+            "follower_engagement": "20.02% (terrific)",
+            "top_video_views": 135278,
         },
         "capabilities": [
             "sourcing_physique",
@@ -147,23 +157,37 @@ TERRAIN_PARTNERS = {
             "dropshipping",
             "foire_canton",
             "huaqiangbei",
+            "taobao",
+            "shopify_fulfillment",
+            "vpn_setup",
+        ],
+        "product_niches": [
+            # From TikTok video content analysis
+            "bebe_enfant",       # porte bebe, poussette, moto electrique (84K+ views)
+            "electronique",      # projecteur, coques tel, robot (50K+ views)
+            "sourcing_general",  # agent d'achat general (135K+ views)
+            "import_export",     # sourcing Chine-France (global)
         ],
         "typical_moq": 500,
         "commission": "Variable selon montant (est. 5-15%)",
         "strengths": [
             "Bilingue FR/ZH — negocie directement en chinois",
             "Base a Guangzhou — coeur du manufacturing",
+            "TikTok 148K followers — preuve sociale massive",
+            "516K vues totales — audience FR e-commerce engagee",
+            "3.3% engagement moyen — excellent pour B2B sourcing",
             "Present a la Foire de Canton",
             "Connait Huaqiangbei (electronique Shenzhen)",
             "Accepte petites commandes pour test",
             "Fait du controle qualite sur place",
             "Regroupage samples multi-fournisseurs",
+            "Specialise bebe/enfant + electronique",
         ],
         "watch_out": [
-            "914 abonnes YouTube — petite structure, pas une grosse agence",
             "Pas de tarif public — negocier en amont",
             "MOQ typique 500 pieces — trop pour Phase 0 drop test",
             "Videos courtes — peu de documentation process",
+            "TikTok viral = beaucoup de demandes, temps de reponse?",
         ],
     },
     "eprolo": {

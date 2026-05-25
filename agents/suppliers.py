@@ -227,16 +227,57 @@ SUPPLIERS = [
             "huaqiangbei",               # Connait le marche electronique Shenzhen
         ],
         "locations": ["Guangzhou", "Shenzhen", "Yiwu", "Canton"],
-        "source": "YouTube @batumagentenchine (9 videos, 914 abonnes, 2025-2026)",
+        "tiktok": {
+            "handle": "@batumsourcingenchine",
+            "handle_alt": "@batumagentenchine",
+            "followers": 148070,
+            "following": 1,
+            "total_videos": 18,
+            "total_views": 516432,
+            "total_likes": 14482,
+            "total_shares": 2078,
+            "avg_engagement": "3.3%",
+            "follower_engagement": "20.02%",
+            "top_video": "Agent d'achat (135K views, 4K likes)",
+            "top_categories": ["sourcing", "chine", "importexport", "dropshipping", "business"],
+            "niche_keywords": [
+                "sourcing physique",
+                "visite usine",
+                "huaqiangbei electronique",
+                "projecteur import",
+                "moto electrique enfants",
+                "porte bebe securite",
+                "poussette enfants",
+                "robot import",
+                "coques telephone",
+                "amazon FBA",
+                "taobao",
+                "alibaba",
+                "shopify",
+                "VPN dropshipping",
+            ],
+        },
+        "source": "YouTube @batumagentenchine (9 videos, 914 abo) + TikTok @batumsourcingenchine (18 videos, 148K followers, 516K views)",
         "source_analysis": (
-            "Analyse des 9 videos (mai 2026): "
+            "YouTube (9 videos, 914 abo): "
             "Video services (693 vues) = presentation complete. "
             "Video Guangzhou sourcing = verification quantite chez fournisseur Kinbo. "
             "Video negociation = negocie en chinois, MOQ 500, prix $52, demande FCC cert. "
             "Video usine = controle qualite sur place. "
             "Video Huaqiangbei = marche electronique Shenzhen. "
             "Video Foire Canton 2026 = present aux evenements. "
-            "Confirme: agent credible, actif, bilingue FR/ZH."
+            ""
+            "TikTok (18 videos, 148K followers, 516K vues totales): "
+            "TOP video = Agent d'achat (135K vues, 4K likes, 3.4% engagement). "
+            "Visite usines: projecteur (21K vues, 5% engagement), porte bebe (29K), poussette (35K). "
+            "Sourcing produits: moto electrique (20K), robot (20K), coques tel Huaqiangbei (9K). "
+            "Rencontres clients: Ayoub Guangzhou (52K vues, 4.6%), Chine (40K). "
+            "Services: agent sur place (60K), dropshipping/shopify/taobao, VPN. "
+            "Avg engagement 3.3% (excellent pour niche B2B sourcing). "
+            "Follower engagement 20.02% (terrific). "
+            "Confirme: agent credible, TRES actif sur TikTok, bilingue FR/ZH, "
+            "specialise sourcing/visite usine/import-export. "
+            "Niche produits bebe/enfants + electronique + vehicules."
         ),
     },
 ]
