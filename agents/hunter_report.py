@@ -36,7 +36,6 @@ def generate_report(products: list) -> str:
     lines.append(f"| 🤝 B2B potentiel | {len(b2b)} | {', '.join(getattr(p, 'name', '?')[:25] for p in b2b[:5])} |")
     lines.append(f"| 🇨🇭 Prix Suisse (+15%) | {len(dream)} | Top: {getattr(dream[0], 'suisse_premium', 0):.2f} CHF |" if dream else "")
     lines.append("")
-    ]
     
     # DREAM PRODUCTS
     if dream:

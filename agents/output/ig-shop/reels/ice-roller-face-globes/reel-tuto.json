@@ -1,0 +1,41 @@
+{
+  "product": "Ice Roller Face Globes",
+  "price": 0.0,
+  "content_type": "tuto",
+  "script": {
+    "content_type": "tuto",
+    "visual_hook": "Gros plan sur peau rouge et irritée, puis transition rapide vers peau apaisée et lumineuse.",
+    "text_overlay": "SOS peau qui chauffe ? J'ai la solution !",
+    "voiceover": "Coucou les amis ! Aujourd'hui, je vous montre comment calmer les rougeurs et les irritations en 2 minutes chrono. C'est mon petit secret pour une peau glowy et apaisée.",
+    "demo_sequence": [
+      "1. Sortir les Ice Roller Face Globes du congélateur (montrer la vapeur froide).",
+      "2. Masser délicatement le visage avec les globes, en partant du centre vers l'extérieur (joues, front, menton).",
+      "3. Insister sur les zones sensibles (poches sous les yeux, rougeurs). Montrer le résultat instantané."
+    ],
+    "product_tag_moment": "Après la 2ème étape, pendant le massage du visage.",
+    "caption": "Ma routine anti-rougeurs express ✨ Les Ice Roller Face Globes, c'est la vie ! Idéal après une journée au soleil ☀️ ou une nuit trop courte 😴 #iceroller #skincare #beauté #routinebeaute #soinvisage #peauparfaite #glowyskin",
+    "shop_cta": "Le lien vers mes Ice Roller Face Globes est juste au-dessus ⬆️ Foncez, vous ne serez pas déçus !",
+    "hashtags": [
+      "iceroller",
+      "skincare",
+      "beauté",
+      "routinebeaute",
+      "soinvisage",
+      "peauparfaite",
+      "glowyskin",
+      "astucebeaute",
+      "ugc",
+      "tiktokmademebuyit",
+      "bonplan"
+    ],
+    "music_vibe": "Musique chill et relaxante, style lo-fi ou downtempo.",
+    "duration_seconds": [
+      30
+    ]
+  },
+  "product_tagging": {
+    "retailer_id": "shopify-ice-roller-face-globes",
+    "source": "meta_commerce_manager"
+  },
+  "generated_at": "2026-05-14T13:29:54.437087+00:00"
+}

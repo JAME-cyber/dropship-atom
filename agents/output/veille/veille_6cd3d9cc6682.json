@@ -1,0 +1,100 @@
+{
+  "product_id": "0b57b1290b33",
+  "product_name": "Heated Neck Wrap Rechargeable",
+  "our_price": 34.9,
+  "our_segment": "",
+  "competitors": [
+    {
+      "name": "Amazon Generic #1",
+      "url": "https://amazon.fr/s?k=Heated%20Neck%20Wrap%20Rechargeable",
+      "price": 20.94,
+      "currency": "EUR",
+      "title": "Heated Neck Wrap Rechargeable - Version basique",
+      "rating": 3.5,
+      "reviews_count": 120,
+      "shipping": "Livraison gratuite Prime",
+      "positioning": "budget",
+      "marketplace": "amazon",
+      "notes": "Générique chinois, reviews moyennes",
+      "found_at": "2026-05-20T18:06:13.666021+00:00"
+    },
+    {
+      "name": "Amazon Mid-Range",
+      "url": "https://amazon.fr/s?k=Heated%20Neck%20Wrap%20Rechargeable",
+      "price": 29.66,
+      "currency": "EUR",
+      "title": "Heated Neck Wrap Rechargeable Pro - Qualité supérieure",
+      "rating": 4.2,
+      "reviews_count": 450,
+      "shipping": "Livraison gratuite Prime",
+      "positioning": "suit spot",
+      "marketplace": "amazon",
+      "notes": "Meilleur rapport qualité-prix sur Amazon",
+      "found_at": "2026-05-20T18:06:13.666064+00:00"
+    },
+    {
+      "name": "Amazon Premium Brand",
+      "url": "https://amazon.fr/s?k=Heated%20Neck%20Wrap%20Rechargeable",
+      "price": 48.86,
+      "currency": "EUR",
+      "title": "Heated Neck Wrap Rechargeable Premium [Brand X]",
+      "rating": 4.5,
+      "reviews_count": 2100,
+      "shipping": "Livraison gratuite Prime",
+      "positioning": "premium",
+      "marketplace": "amazon",
+      "notes": "Marque établie, forte notoriété",
+      "found_at": "2026-05-20T18:06:13.666087+00:00"
+    },
+    {
+      "name": "AliExpress Direct",
+      "url": "https://aliexpress.com/wholesale/Heated%20Neck%20Wrap%20Rechargeable.html",
+      "price": 12.21,
+      "currency": "EUR",
+      "title": "Heated Neck Wrap Rechargeable Free Shipping",
+      "rating": 3.8,
+      "reviews_count": 850,
+      "shipping": "Gratuit 15-25 jours",
+      "positioning": "budget",
+      "marketplace": "aliexpress",
+      "notes": "Prix le plus bas mais délais longs, pas de garantie EU",
+      "found_at": "2026-05-20T18:06:13.666112+00:00"
+    },
+    {
+      "name": "DTC Competitor (Shopify)",
+      "url": "",
+      "price": 38.39,
+      "currency": "EUR",
+      "title": "Heated Neck Wrap Rechargeable — [Marque DTC]",
+      "rating": 4.0,
+      "reviews_count": 85,
+      "shipping": "Livraison 3-5 jours",
+      "positioning": "suit spot",
+      "marketplace": "shopify",
+      "notes": "Boutique DTC, bon branding, audience Instagram",
+      "found_at": "2026-05-20T18:06:13.666128+00:00"
+    }
+  ],
+  "competitors_found": 5,
+  "price_min": 12.21,
+  "price_max": 48.86,
+  "price_avg": 30.01,
+  "price_range": "€12 - €49",
+  "budget_count": 2,
+  "midrange_count": 2,
+  "premium_count": 1,
+  "opportunity_score": 75,
+  "opportunity_verdict": "GREEN",
+  "opportunity_reasons": [
+    "Peu de concurrents en segment 'midrange' (2)",
+    "2 concurrents avec 500+ avis — barrière sociale",
+    "Présent sur Amazon — marché validé",
+    "Concurrents DTC détectés — modèle validé",
+    "Présent sur 3 canaux — forte demande"
+  ],
+  "alerts": [
+    "🔒 Concurrents dominants détectés — investir en preuve sociale"
+  ],
+  "generated_at": "2026-05-20T18:06:13.666162+00:00",
+  "generated_by": "veille_agent_v1"
+}

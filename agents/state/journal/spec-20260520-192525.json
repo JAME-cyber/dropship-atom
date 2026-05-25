@@ -1,0 +1,15 @@
+{
+  "timestamp": "2026-05-20T17:25:25.137925+00:00",
+  "agent": "SPEC",
+  "action": "generate_technical_specs",
+  "specs_generated": 1,
+  "top_products": [
+    {
+      "product": "Heated Neck Wrap Rechargeable",
+      "score": 95.6,
+      "segment": "suit spot"
+    }
+  ],
+  "prev_hash": "62534dd9c46d38d402350eaee2c45cc44d18dbd989245dd7bbf27ce8bce0a651",
+  "hash": "928a9e079e5445e26b9595f2988e195e939a0d399964e04876ea077e097aa74d"
+}

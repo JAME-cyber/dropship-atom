@@ -1,0 +1,158 @@
+{
+  "product_id": "0b57b1290b33",
+  "product_name": "Heated Neck Wrap Rechargeable",
+  "category": "Health",
+  "segment": "suit spot",
+  "target_audience": "Travailleurs, seniors, douleurs chroniques",
+  "one_liner": "Heated Neck Wrap Rechargeable — Health product targeting Travailleurs, seniors, douleurs chroniques",
+  "dimensions_mm": "150 × 100 × 50",
+  "weight_target_g": 250,
+  "color_options": [
+    "Rose poudré",
+    "Blanc",
+    "Lavande"
+  ],
+  "materials": "Silicone médical, ABS, matériaux hypoallergéniques",
+  "components": [
+    {
+      "name": "Élément chauffant",
+      "spec": "Film chauffant PTC, 5V/2A, 40-55°C",
+      "material": "Film PTC + tissu",
+      "quantity": 1,
+      "notes": ""
+    },
+    {
+      "name": "Batterie",
+      "spec": "Li-ion 3.7V, 2000mAh, recharge USB-C",
+      "material": "Lithium-ion",
+      "quantity": 1,
+      "notes": ""
+    },
+    {
+      "name": "Contrôleur température",
+      "spec": "3 modes (40°C/47°C/55°C), arrêt auto 30min",
+      "material": "PCB + MCU",
+      "quantity": 1,
+      "notes": ""
+    },
+    {
+      "name": "Enveloppe extérieure",
+      "spec": "Tissu doux lavable, fermeture velcro",
+      "material": "Velours / microfibre",
+      "quantity": 1,
+      "notes": ""
+    },
+    {
+      "name": "Câble USB-C",
+      "spec": "30cm, charge rapide 5V/2A",
+      "material": "Nylon tressé",
+      "quantity": 1,
+      "notes": ""
+    },
+    {
+      "name": "Indicateur LED",
+      "spec": "3 LEDs (mode température)",
+      "material": "LED RGB + PCB",
+      "quantity": 1,
+      "notes": ""
+    },
+    {
+      "name": "Système de sécurité",
+      "spec": "Protection surchauffe, court-circuit, inversion polarité",
+      "material": "IC protection",
+      "quantity": 1,
+      "notes": ""
+    }
+  ],
+  "certifications": [
+    {
+      "name": "CE",
+      "market": "EU",
+      "mandatory": true,
+      "description": "Conformité européenne — obligatoire pour vente en UE",
+      "status": "required"
+    },
+    {
+      "name": "RoHS",
+      "market": "EU",
+      "mandatory": true,
+      "description": "Restriction substances dangereuses dans équipements électriques",
+      "status": "required"
+    },
+    {
+      "name": "REACH",
+      "market": "EU",
+      "mandatory": true,
+      "description": "Enregistrement substances chimiques EU",
+      "status": "required"
+    },
+    {
+      "name": "ISO 10993",
+      "market": "Global",
+      "mandatory": false,
+      "description": "Biocompatibilité pour contact peau",
+      "status": "required"
+    }
+  ],
+  "packaging": {
+    "box_type": "Boîte mailer",
+    "dimensions_mm": "250 × 150 × 80",
+    "material": "Carton ondulé blanc",
+    "printing": "Offset quadri",
+    "branding": "Logo embossé face avant, QR code face arrière",
+    "insert": "Notice FR/EN, carte remerciement, étiquette care",
+    "weight_g": 330,
+    "notes": ""
+  },
+  "quality_checkpoints": [
+    {
+      "criterion": "Dimensions conformes",
+      "target": "±2mm du spec",
+      "test_method": "Pied à coulisse digital",
+      "acceptance": "PASS si ±3mm"
+    },
+    {
+      "criterion": "Poids conforme",
+      "target": "±5% du spec",
+      "test_method": "Balance précision 0.1g",
+      "acceptance": "PASS si ±10%"
+    },
+    {
+      "criterion": "Aspect visuel",
+      "target": "Aucun défaut visible à 30cm",
+      "test_method": "Inspection visuelle sous lumière standard",
+      "acceptance": "FAIL si rayure, tache, décoloration"
+    },
+    {
+      "criterion": "Fonctionnement",
+      "target": "Fonctionne immédiatement",
+      "test_method": "Test unitaire exhaustif",
+      "acceptance": "PASS si 100% fonctions OK"
+    },
+    {
+      "criterion": "Packaging intact",
+      "target": "Aucun dommage transport",
+      "test_method": "Contrôle après simulation chute 80cm",
+      "acceptance": "FAIL si boîte cabossée ou produit endommagé"
+    },
+    {
+      "criterion": "Hypoallergénicité",
+      "target": "Aucune réaction cutanée 24h",
+      "test_method": "Patch test sur peau sensible",
+      "acceptance": "FAIL si rougeur"
+    }
+  ],
+  "moq_target": 10,
+  "lead_time_days": 14,
+  "shelf_life": "24 mois",
+  "completeness_score": 92.7,
+  "realism_score": 100,
+  "certification_score": 95,
+  "overall_spec_score": 95.6,
+  "md_path": "/home/tars/dropship-atom/agents/output/specs/dossier_technique_0b57b1290b33.md",
+  "json_path": "",
+  "image_paths": [],
+  "generated_at": "2026-05-20T17:28:12.483012+00:00",
+  "generated_by": "spec_agent_v1",
+  "llm_model": "deterministic_fallback"
+}

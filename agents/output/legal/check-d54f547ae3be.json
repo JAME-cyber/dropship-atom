@@ -1,0 +1,100 @@
+{
+  "id": "d54f547ae3be",
+  "product_name": "Neck Massager Electric",
+  "check_type": "product",
+  "status": "blocked",
+  "risk_level": "critical",
+  "checks": [
+    {
+      "name": "Certification CE",
+      "status": "non_compliant",
+      "detail": "Obligatoire pour vente en UE. Fournisseur: CN",
+      "regulation": "CE"
+    },
+    {
+      "name": "Certification MDR (Medical Device Regulation)",
+      "status": "non_compliant",
+      "detail": "Obligatoire pour vente en UE. Fournisseur: CN",
+      "regulation": "MDR (Medical Device Regulation)"
+    },
+    {
+      "name": "Rapport de test independant",
+      "status": "non_compliant",
+      "detail": "Pas de rapport independant. Couts estimes: 1000-5000 EUR",
+      "regulation": "Bonnes pratiques"
+    },
+    {
+      "name": "Norme ISO 13485",
+      "status": "pending",
+      "detail": "A verifier avec le fournisseur et/ou labo independant",
+      "regulation": "ISO 13485"
+    },
+    {
+      "name": "Norme EN 14971 (gestion des risques)",
+      "status": "pending",
+      "detail": "A verifier avec le fournisseur et/ou labo independant",
+      "regulation": "EN 14971 (gestion des risques)"
+    },
+    {
+      "name": "Risque: Blessure",
+      "status": "warning",
+      "detail": "A evaluer selon la norme applicable",
+      "regulation": "Code consommation L221-1 (securite)"
+    },
+    {
+      "name": "Risque: Inefficacite",
+      "status": "warning",
+      "detail": "A evaluer selon la norme applicable",
+      "regulation": "Code consommation L221-1 (securite)"
+    },
+    {
+      "name": "Risque: Effets secondaires",
+      "status": "warning",
+      "detail": "A evaluer selon la norme applicable",
+      "regulation": "Code consommation L221-1 (securite)"
+    },
+    {
+      "name": "Garantie legale 2 ans",
+      "status": "compliant",
+      "detail": "Obligatoire en France (L217-4 Code consommation). A mentionner sur le site.",
+      "regulation": "L217-4 Code consommation"
+    },
+    {
+      "name": "Droit de retour 14 jours",
+      "status": "compliant",
+      "detail": "Obligatoire pour vente a distance (L221-18). Formulaire a fournir.",
+      "regulation": "L221-18 Code consommation + Directive 2011/83/UE"
+    },
+    {
+      "name": "Fournisseur hors UE (Chine)",
+      "status": "warning",
+      "detail": "Responsabilite importateur = vous. Vous etes le responsable mise sur marche.",
+      "regulation": "Reglement CE 765/2008"
+    },
+    {
+      "name": "Assurance RC Produit",
+      "status": "non_compliant",
+      "detail": "Indispensable en pratique. Cout: 200-500 EUR/an.",
+      "regulation": "Bonnes pratiques"
+    }
+  ],
+  "warnings": [
+    "🔴 MARQUAGE CE MANQUANT — Interdit de vente en UE sans CE",
+    "🔴 PAS DE RAPPORT DE TEST — 90% des certificats fournisseurs chinois sont faux ou non conformes",
+    "⚠️  Risque 'Blessure' a documenter dans le dossier produit",
+    "⚠️  Risque 'Inefficacite' a documenter dans le dossier produit",
+    "⚠️  Risque 'Effets secondaires' a documenter dans le dossier produit",
+    "⚠️  IMPORTATEUR = VOUS. Vous etes juridiquement responsable de la conformite."
+  ],
+  "actions": [
+    "Exiger le certificat CE, MDR (Medical Device Regulation) du fournisseur",
+    "Verifier authenticite aupres de SGS / LNE / Bureau Veritas",
+    "Commander un test aupres de SGS / LNE / Bureau Veritas (1000-5000 EUR)",
+    "Mentionner la garantie legale 2 ans sur la page produit + CGV",
+    "Fournir le formulaire de retractation + conditions dans les CGV",
+    "Ajouter vos coordonnees sur le produit/emballage comme 'importateur'",
+    "Souscrire une assurance RC Produit (200-500 EUR/an)"
+  ],
+  "compliance_score": 30,
+  "created_at": "2026-05-25T11:24:25.284499+00:00"
+}

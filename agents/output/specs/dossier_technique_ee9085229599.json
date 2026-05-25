@@ -1,0 +1,123 @@
+{
+  "product_id": "ee9085229599",
+  "product_name": "Ice Roller Face Globes",
+  "category": "Beauty",
+  "segment": "budget",
+  "target_audience": "Femmes 20-50 ans, soucieuses bien-être",
+  "one_liner": "Ice Roller Face Globes — Beauty product targeting Femmes 20-50 ans, soucieuses bien-être",
+  "dimensions_mm": "200 × 120 × 80",
+  "weight_target_g": 300,
+  "color_options": [
+    "Rose poudré",
+    "Blanc",
+    "Lavande"
+  ],
+  "materials": "Silicone médical, ABS, matériaux hypoallergéniques",
+  "components": [
+    {
+      "name": "Corps principal",
+      "spec": "Selon design validé",
+      "material": "ABS / silicone",
+      "quantity": 1,
+      "notes": ""
+    },
+    {
+      "name": "Emballage",
+      "spec": "Boîte rigide + mousse",
+      "material": "Carton 350g",
+      "quantity": 1,
+      "notes": ""
+    }
+  ],
+  "certifications": [
+    {
+      "name": "CE",
+      "market": "EU",
+      "mandatory": true,
+      "description": "Conformité européenne — obligatoire pour vente en UE",
+      "status": "required"
+    },
+    {
+      "name": "RoHS",
+      "market": "EU",
+      "mandatory": true,
+      "description": "Restriction substances dangereuses dans équipements électriques",
+      "status": "required"
+    },
+    {
+      "name": "REACH",
+      "market": "EU",
+      "mandatory": true,
+      "description": "Enregistrement substances chimiques EU",
+      "status": "required"
+    },
+    {
+      "name": "ISO 10993",
+      "market": "Global",
+      "mandatory": false,
+      "description": "Biocompatibilité pour contact peau",
+      "status": "required"
+    }
+  ],
+  "packaging": {
+    "box_type": "Boîte mailer",
+    "dimensions_mm": "250 × 150 × 80",
+    "material": "Carton ondulé blanc",
+    "printing": "Offset quadri",
+    "branding": "Logo embossé face avant, QR code face arrière",
+    "insert": "Notice FR/EN, carte remerciement, étiquette care",
+    "weight_g": 380,
+    "notes": ""
+  },
+  "quality_checkpoints": [
+    {
+      "criterion": "Dimensions conformes",
+      "target": "±2mm du spec",
+      "test_method": "Pied à coulisse digital",
+      "acceptance": "PASS si ±3mm"
+    },
+    {
+      "criterion": "Poids conforme",
+      "target": "±5% du spec",
+      "test_method": "Balance précision 0.1g",
+      "acceptance": "PASS si ±10%"
+    },
+    {
+      "criterion": "Aspect visuel",
+      "target": "Aucun défaut visible à 30cm",
+      "test_method": "Inspection visuelle sous lumière standard",
+      "acceptance": "FAIL si rayure, tache, décoloration"
+    },
+    {
+      "criterion": "Fonctionnement",
+      "target": "Fonctionne immédiatement",
+      "test_method": "Test unitaire exhaustif",
+      "acceptance": "PASS si 100% fonctions OK"
+    },
+    {
+      "criterion": "Packaging intact",
+      "target": "Aucun dommage transport",
+      "test_method": "Contrôle après simulation chute 80cm",
+      "acceptance": "FAIL si boîte cabossée ou produit endommagé"
+    },
+    {
+      "criterion": "Hypoallergénicité",
+      "target": "Aucune réaction cutanée 24h",
+      "test_method": "Patch test sur peau sensible",
+      "acceptance": "FAIL si rougeur"
+    }
+  ],
+  "moq_target": 10,
+  "lead_time_days": 14,
+  "shelf_life": "24 mois",
+  "completeness_score": 73.9,
+  "realism_score": 70,
+  "certification_score": 95,
+  "overall_spec_score": 79.1,
+  "md_path": "/home/tars/dropship-atom/agents/output/specs/dossier_technique_ee9085229599.md",
+  "json_path": "",
+  "image_paths": [],
+  "generated_at": "2026-05-20T18:06:50.678136+00:00",
+  "generated_by": "spec_agent_v1",
+  "llm_model": "deterministic_fallback"
+}

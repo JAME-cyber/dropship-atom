@@ -1,0 +1,41 @@
+{
+  "product": "Ice Roller Face Globes",
+  "price": 0.0,
+  "content_type": "discovery",
+  "script": {
+    "content_type": "discovery",
+    "visual_hook": "Visage rouge et gonflé, effet 'coup de soleil'",
+    "text_overlay": "OMG! Regardez ça avant/après!",
+    "voiceover": "Franchement, j'avais la tête d'une tomate après ma séance de sport. J'ai testé ça et... regardez le résultat! Je suis choquée.",
+    "demo_sequence": [
+      "Application Ice Roller Face Globes sur une moitié du visage, mouvements doux",
+      "Comparaison visuelle des deux côtés du visage (avant/après)",
+      "Zoom sur le visage dégonflé et rafraîchi"
+    ],
+    "product_tag_moment": "Fin de la démo, visage rafraîchi, 7 secondes",
+    "caption": "Adieu le visage bouffi! 👋 J'ai trouvé LA solution après le sport, les nuits courtes... 😴 C'est bluffant! 🤯 #iceroller #skincare #beauté #routinebeaute #gonflement #visage #astucebeaute",
+    "shop_cta": "Le lien est juste là pour shopper les mêmes 😉",
+    "hashtags": [
+      "iceroller",
+      "skincare",
+      "beauté",
+      "routinebeaute",
+      "gonflement",
+      "visage",
+      "astucebeaute",
+      "soinvisage",
+      "tiktokmademebuyit",
+      "tiktokfrance",
+      "suisse"
+    ],
+    "music_vibe": "Musique lo-fi relaxante, tendance actuelle",
+    "duration_seconds": [
+      15
+    ]
+  },
+  "product_tagging": {
+    "retailer_id": "shopify-ice-roller-face-globes",
+    "source": "meta_commerce_manager"
+  },
+  "generated_at": "2026-05-14T13:29:49.551342+00:00"
+}

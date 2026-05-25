@@ -1,0 +1,144 @@
+{
+  "product_id": "63218e18b4e8",
+  "product_name": "Neck Massager Electric",
+  "category": "Health",
+  "segment": "suit spot",
+  "target_audience": "Travailleurs, seniors, douleurs chroniques",
+  "one_liner": "Neck Massager Electric — Health product targeting Travailleurs, seniors, douleurs chroniques",
+  "dimensions_mm": "200 × 120 × 80",
+  "weight_target_g": 300,
+  "color_options": [
+    "Rose poudré",
+    "Blanc",
+    "Lavande"
+  ],
+  "materials": "Silicone médical, ABS, matériaux hypoallergéniques",
+  "components": [
+    {
+      "name": "Moteur massage",
+      "spec": "DC 3V, 2 têtes, 3600 RPM, <40dB",
+      "material": "Métal + ABS",
+      "quantity": 2,
+      "notes": ""
+    },
+    {
+      "name": "Batterie",
+      "spec": "Li-ion 3.7V, 1200mAh, USB-C",
+      "material": "Lithium-ion",
+      "quantity": 1,
+      "notes": ""
+    },
+    {
+      "name": "PCBA",
+      "spec": "Contrôle 3 modes + arrêt auto 15min",
+      "material": "FR-4 PCB",
+      "quantity": 1,
+      "notes": ""
+    },
+    {
+      "name": "Enveloppe",
+      "spec": "Ergonomique, sangle ajustable",
+      "material": "Néoprène + mesh 3D",
+      "quantity": 1,
+      "notes": ""
+    },
+    {
+      "name": "Câble USB-C",
+      "spec": "30cm, charge 5V/1A",
+      "material": "PVC",
+      "quantity": 1,
+      "notes": ""
+    }
+  ],
+  "certifications": [
+    {
+      "name": "CE",
+      "market": "EU",
+      "mandatory": true,
+      "description": "Conformité européenne — obligatoire pour vente en UE",
+      "status": "required"
+    },
+    {
+      "name": "RoHS",
+      "market": "EU",
+      "mandatory": true,
+      "description": "Restriction substances dangereuses dans équipements électriques",
+      "status": "required"
+    },
+    {
+      "name": "REACH",
+      "market": "EU",
+      "mandatory": true,
+      "description": "Enregistrement substances chimiques EU",
+      "status": "required"
+    },
+    {
+      "name": "ISO 10993",
+      "market": "Global",
+      "mandatory": false,
+      "description": "Biocompatibilité pour contact peau",
+      "status": "required"
+    }
+  ],
+  "packaging": {
+    "box_type": "Boîte mailer",
+    "dimensions_mm": "250 × 150 × 80",
+    "material": "Carton ondulé blanc",
+    "printing": "Offset quadri",
+    "branding": "Logo embossé face avant, QR code face arrière",
+    "insert": "Notice FR/EN, carte remerciement, étiquette care",
+    "weight_g": 380,
+    "notes": ""
+  },
+  "quality_checkpoints": [
+    {
+      "criterion": "Dimensions conformes",
+      "target": "±2mm du spec",
+      "test_method": "Pied à coulisse digital",
+      "acceptance": "PASS si ±3mm"
+    },
+    {
+      "criterion": "Poids conforme",
+      "target": "±5% du spec",
+      "test_method": "Balance précision 0.1g",
+      "acceptance": "PASS si ±10%"
+    },
+    {
+      "criterion": "Aspect visuel",
+      "target": "Aucun défaut visible à 30cm",
+      "test_method": "Inspection visuelle sous lumière standard",
+      "acceptance": "FAIL si rayure, tache, décoloration"
+    },
+    {
+      "criterion": "Fonctionnement",
+      "target": "Fonctionne immédiatement",
+      "test_method": "Test unitaire exhaustif",
+      "acceptance": "PASS si 100% fonctions OK"
+    },
+    {
+      "criterion": "Packaging intact",
+      "target": "Aucun dommage transport",
+      "test_method": "Contrôle après simulation chute 80cm",
+      "acceptance": "FAIL si boîte cabossée ou produit endommagé"
+    },
+    {
+      "criterion": "Hypoallergénicité",
+      "target": "Aucune réaction cutanée 24h",
+      "test_method": "Patch test sur peau sensible",
+      "acceptance": "FAIL si rougeur"
+    }
+  ],
+  "moq_target": 10,
+  "lead_time_days": 14,
+  "shelf_life": "24 mois",
+  "completeness_score": 85.2,
+  "realism_score": 100,
+  "certification_score": 95,
+  "overall_spec_score": 92.6,
+  "md_path": "/home/tars/dropship-atom/agents/output/specs/dossier_technique_63218e18b4e8.md",
+  "json_path": "",
+  "image_paths": [],
+  "generated_at": "2026-05-20T18:06:50.697546+00:00",
+  "generated_by": "spec_agent_v1",
+  "llm_model": "deterministic_fallback"
+}

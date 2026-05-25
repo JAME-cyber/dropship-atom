@@ -1,0 +1,38 @@
+{
+  "product": "Posture Corrector Pro",
+  "price": 0.0,
+  "content_type": "tuto",
+  "script": {
+    "content_type": "tuto",
+    "visual_hook": "Avant/Après rapide: dos courbé vs. posture droite.",
+    "text_overlay": "Mal de dos ? Solution express !",
+    "voiceover": "Honnêtement, j'en avais marre d'avoir mal au dos. J'ai testé ce truc, et regardez la différence ! Je vous montre comment ça marche.",
+    "demo_sequence": [
+      "1. Déballage et présentation rapide du Posture Corrector Pro.",
+      "2. Enfilage du correcteur : gros plan sur les sangles et ajustement.",
+      "3. Démo 'Avant/Après' en temps réel : posture initiale puis posture corrigée. Marche quelques pas."
+    ],
+    "product_tag_moment": "Après l'étape 3, quand la posture est corrigée et la personne sourit.",
+    "caption": "Fini le dos courbé ! 🥳 J'ai trouvé LA solution pour améliorer ma posture et dire adieu aux douleurs. C'est super simple à utiliser en plus ! #posture #maldedos #bienetre",
+    "shop_cta": "Le lien du correcteur est juste là ➡️, si vous voulez tester aussi !",
+    "hashtags": [
+      "posturecorrector",
+      "maldedos",
+      "bienetre",
+      "sante",
+      "astuce",
+      "testproduit",
+      "tiktokmademebuyit",
+      "correctorposture"
+    ],
+    "music_vibe": "Pop entraînante et positive, style électro léger.",
+    "duration_seconds": [
+      25
+    ]
+  },
+  "product_tagging": {
+    "retailer_id": "shopify-posture-corrector-pro",
+    "source": "meta_commerce_manager"
+  },
+  "generated_at": "2026-05-14T13:30:42.364236+00:00"
+}

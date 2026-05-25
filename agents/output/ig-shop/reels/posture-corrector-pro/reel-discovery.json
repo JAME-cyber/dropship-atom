@@ -1,0 +1,38 @@
+{
+  "product": "Posture Corrector Pro",
+  "price": 0.0,
+  "content_type": "discovery",
+  "script": {
+    "content_type": "discovery",
+    "visual_hook": "Personne voûtée devant un écran, image exagérée et inconfortable.",
+    "text_overlay": "Tu te reconnais ? 😬",
+    "voiceover": "Ça te dit quelque chose cette posture ? On passe tellement de temps devant les écrans... le dos en prend un coup. J'ai trouvé une solution !",
+    "demo_sequence": [
+      "Montrer le Posture Corrector Pro emballé.",
+      "L'enfiler facilement devant la caméra.",
+      "Montrer une posture instantanément améliorée."
+    ],
+    "product_tag_moment": "Au moment où la posture est améliorée, après avoir enfilé le correcteur.",
+    "caption": "Marre d'avoir mal au dos ? J'ai trouvé ça et ça change tout ! 🤩 Lien en bio pour plus d'infos. #posture #dos #bienetre #sante",
+    "shop_cta": "Si tu veux tester, clique juste sur le produit !",
+    "hashtags": [
+      "posture",
+      "dos",
+      "bienetre",
+      "sante",
+      "produitteste",
+      "tiktokmademebuyit",
+      "correctorposture",
+      "nouveauté"
+    ],
+    "music_vibe": "Pop entraînante mais pas trop forte, style 'lofi beats' ou musique de fond relaxante.",
+    "duration_seconds": [
+      25
+    ]
+  },
+  "product_tagging": {
+    "retailer_id": "shopify-posture-corrector-pro",
+    "source": "meta_commerce_manager"
+  },
+  "generated_at": "2026-05-14T13:30:38.712996+00:00"
+}

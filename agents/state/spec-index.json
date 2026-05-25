@@ -1,0 +1,74 @@
+[
+  {
+    "product_id": "0b57b1290b33",
+    "product_name": "Heated Neck Wrap Rechargeable",
+    "segment": "suit spot",
+    "overall_spec_score": 95.6,
+    "md_path": "/home/tars/dropship-atom/agents/output/specs/dossier_technique_0b57b1290b33.md",
+    "json_path": "/home/tars/dropship-atom/agents/output/specs/dossier_technique_0b57b1290b33.json",
+    "generated_at": "2026-05-20T17:28:12.483012+00:00"
+  },
+  {
+    "product_id": "d6298545e84b",
+    "product_name": "Acupressure Mat and Pillow Set",
+    "segment": "suit spot",
+    "overall_spec_score": 74.7,
+    "md_path": "/home/tars/dropship-atom/agents/output/specs/dossier_technique_d6298545e84b.md",
+    "json_path": "/home/tars/dropship-atom/agents/output/specs/dossier_technique_d6298545e84b.json",
+    "generated_at": "2026-05-20T17:29:19.357849+00:00"
+  },
+  {
+    "product_id": "e20a426bd468",
+    "product_name": "Neck Massager Electric EMS",
+    "segment": "suit spot",
+    "overall_spec_score": 92.6,
+    "md_path": "/home/tars/dropship-atom/agents/output/specs/dossier_technique_e20a426bd468.md",
+    "json_path": "/home/tars/dropship-atom/agents/output/specs/dossier_technique_e20a426bd468.json",
+    "generated_at": "2026-05-20T17:29:56.958624+00:00"
+  },
+  {
+    "product_id": "ee9085229599",
+    "product_name": "Ice Roller Face Globes",
+    "segment": "budget",
+    "overall_spec_score": 79.1,
+    "md_path": "/home/tars/dropship-atom/agents/output/specs/dossier_technique_ee9085229599.md",
+    "json_path": "/home/tars/dropship-atom/agents/output/specs/dossier_technique_ee9085229599.json",
+    "generated_at": "2026-05-20T18:06:50.678136+00:00"
+  },
+  {
+    "product_id": "29e6de6d1647",
+    "product_name": "Foot Peel Mask Exfoliant",
+    "segment": "budget",
+    "overall_spec_score": 79.1,
+    "md_path": "/home/tars/dropship-atom/agents/output/specs/dossier_technique_29e6de6d1647.md",
+    "json_path": "/home/tars/dropship-atom/agents/output/specs/dossier_technique_29e6de6d1647.json",
+    "generated_at": "2026-05-20T18:06:50.684478+00:00"
+  },
+  {
+    "product_id": "5a2d7e34a449",
+    "product_name": "Bamboo Sunglasses Polarized",
+    "segment": "suit spot",
+    "overall_spec_score": 74.7,
+    "md_path": "/home/tars/dropship-atom/agents/output/specs/dossier_technique_5a2d7e34a449.md",
+    "json_path": "/home/tars/dropship-atom/agents/output/specs/dossier_technique_5a2d7e34a449.json",
+    "generated_at": "2026-05-20T18:06:50.689491+00:00"
+  },
+  {
+    "product_id": "0a587f33fb3e",
+    "product_name": "Posture Corrector Pro",
+    "segment": "suit spot",
+    "overall_spec_score": 82.1,
+    "md_path": "/home/tars/dropship-atom/agents/output/specs/dossier_technique_0a587f33fb3e.md",
+    "json_path": "/home/tars/dropship-atom/agents/output/specs/dossier_technique_0a587f33fb3e.json",
+    "generated_at": "2026-05-20T18:06:50.693465+00:00"
+  },
+  {
+    "product_id": "63218e18b4e8",
+    "product_name": "Neck Massager Electric",
+    "segment": "suit spot",
+    "overall_spec_score": 92.6,
+    "md_path": "/home/tars/dropship-atom/agents/output/specs/dossier_technique_63218e18b4e8.md",
+    "json_path": "/home/tars/dropship-atom/agents/output/specs/dossier_technique_63218e18b4e8.json",
+    "generated_at": "2026-05-20T18:06:50.697546+00:00"
+  }
+]

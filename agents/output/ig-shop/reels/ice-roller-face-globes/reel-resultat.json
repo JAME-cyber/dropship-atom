@@ -1,0 +1,40 @@
+{
+  "product": "Ice Roller Face Globes",
+  "price": 0.0,
+  "content_type": "resultat",
+  "script": {
+    "content_type": "resultat",
+    "visual_hook": "Visage gonflé au réveil, regard fatigué.",
+    "text_overlay": "Décongestionne ton visage en 2 minutes!",
+    "voiceover": "Hello les beautés! J'ai testé un truc de dingue pour dégonfler mon visage le matin. Regardez la différence!",
+    "demo_sequence": [
+      "Application Ice Roller sur la moitié du visage (gauche)",
+      "Mouvement de lissage du centre vers l'extérieur",
+      "Comparaison des deux moitiés du visage"
+    ],
+    "product_tag_moment": "Juste après la comparaison des deux moitiés du visage, quand la différence est flagrante.",
+    "caption": "🧊 Bye bye les yeux gonflés! ✨ Ce Ice Roller Face Globes est une pépite! 😍 Lien en bio pour le shopper! #skincare #iceroller #beautytips",
+    "shop_cta": "Clique juste en dessous pour shopper mon secret anti-gonflette! 👇",
+    "hashtags": [
+      "skincare",
+      "iceroller",
+      "beautytips",
+      "soinvisage",
+      "routinebeaute",
+      "avantapres",
+      "decongestionnant",
+      "gonflementvisage",
+      "astucebeaute",
+      "instagramshop"
+    ],
+    "music_vibe": "Pop entraînante et positive, style Doja Cat.",
+    "duration_seconds": [
+      20
+    ]
+  },
+  "product_tagging": {
+    "retailer_id": "shopify-ice-roller-face-globes",
+    "source": "meta_commerce_manager"
+  },
+  "generated_at": "2026-05-14T13:29:58.219208+00:00"
+}

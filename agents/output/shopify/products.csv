@@ -1,4 +1,4 @@
-Handle,Title,Body (HTML),Vendor,Type,Tags,Published,Option1 Name,Option1 Value,Variant Grams,Variant Inventory Qty,Variant Price,Variant Compare At Price,Variant Requires Shipping,Variant Weight Unit,Image Src,Image Alt Text,SEO Title,SEO Description
+Handle,Title,Body (HTML),Vendor,Type,Tags,Published,Option1 Name,Option1 Value,Variant Grams,Variant Inventory Qty,Variant Price,Variant Compare At Price,Variant Requires Shipping,Variant Weight Unit,SEO Title,SEO Description
 pack-premier-trail,Pack Premier Trail — Finis ta première course,"<h2>Tout ce qu'il faut pour finir ton premier trail sans galère</h2>
 <p>Tu viens de t'inscrire à ton premier trail. Tu es excité. Et terrifié. Normal.</p>
 <p>Ce pack contient <strong>exactement</strong> ce qu'un débutant doit avoir pour éviter les 4 galères qui font abandonner au km 8 :</p>
@@ -9,7 +9,7 @@ pack-premier-trail,Pack Premier Trail — Finis ta première course,"<h2>Tout ce
 <li><strong>🎁 Crème anti-frottement (stick)</strong> — Le produit que tu ne sais pas que tu as besoin jusqu'à ce que tes cuisses brûlent au km 6</li>
 </ul>
 <p><strong>Valeur séparée : 45€ → Pack : 35€</strong> (économise 22%)</p>
-<p>📦 <strong>Livraison gratuite</strong> | 🔄 Retour 30 jours</p>",FiniTaCourse,Pack Trail Débutant,"trail,débutant,pack,première course,annecy",TRUE,Taille ceinture,S/M;L/XL,280,50,35.00,45.00,TRUE,kg,,Pack Premier Trail - FiniTaCourse - ceinture dossard flask lacets crème,Pack Premier Trail — Equipement débutant trail running,"Le pack complet pour finir son premier trail: ceinture dossard, bidon 500ml, lacets élastiques, crème anti-frottement. 35€ au lieu de 45€."
+<p>📦 <strong>Livraison gratuite</strong> | 🔄 Retour 30 jours</p>",FiniTaCourse,Pack Trail Débutant,"trail,débutant,pack,première course,annecy",TRUE,Taille ceinture,S/M;L/XL,280,50,35.00,45.00,TRUE,kg,Pack Premier Trail — Equipement débutant trail running,"Le pack complet pour finir son premier trail: ceinture dossard, bidon 500ml, lacets élastiques, crème anti-frottement. 35€ au lieu de 45€."
 ceinture-porte-dossard-race-belt,Ceinture Porte-Dossard (Race Belt) — Le basique indispensable,"<h2>Le premier achat que tout débutant devrait faire</h2>
 <p>Tu sais ce qui est pire qu'un dossard qui bouge ? Un dossard qui s'accroche à une branche au milieu d'un single track.</p>
 <p>La ceinture porte-dossard, c'est le truc que les pros ont et que les débutants ne connaissent pas. Jusqu'à ce qu'ils voient tout le monde avec au départ.</p>
@@ -18,28 +18,28 @@ ceinture-porte-dossard-race-belt,Ceinture Porte-Dossard (Race Belt) — Le basiq
 <strong>✅ Élastique</strong> — Bouge pas, frotte pas, gêne pas<br>
 <strong>✅ 4 attaches dossard</strong> — Tient en place sur 100km</p>
 <p>💡 <em>Conseil FiniTaCourse : mets-la sous ton t-shirt, pas par-dessus. Tu me remercieras au km 12.</em></p>
-<p>📦 Livraison 3-5 jours | 🔄 Retour 30 jours</p>",FiniTaCourse,Accessoire Trail,"trail,dossard,ceinture,race belt,indispensable",TRUE,Taille,S/M;L/XL,80,100,14.90,19.90,TRUE,kg,,Ceinture porte-dossard race belt trail FiniTaCourse,Ceinture Porte-Dossard Trail — Race Belt,"Ceinture porte-dossard légère et ajustable pour trail running. 80g, élastique, 4 attaches. Indispensable pour ta première course."
+<p>📦 Livraison 3-5 jours | 🔄 Retour 30 jours</p>",FiniTaCourse,Accessoire Trail,"trail,dossard,ceinture,race belt,indispensable",TRUE,Taille,S/M;L/XL,80,100,14.90,19.90,TRUE,kg,Ceinture Porte-Dossard Trail — Race Belt,"Ceinture porte-dossard légère et ajustable pour trail running. 80g, élastique, 4 attaches. Indispensable pour ta première course."
 soft-flask-500ml-trail,Soft Flask 500ml — Le bidon qui ne fuit pas,"<h2>Ton bidon fuit ? Pas celui-ci.</h2>
 <p>La galère n°1 du débutant : un bidon qui coule dans le sac. Le Soft Flask 500ml est conçu pour être comprimé (donc zéro bruit de liquide), équipé d'un bouchon anti-fuite, et il se boit d'une main.</p>
 <p><strong>✅ 500ml</strong> — Parfait pour un 15-25km<br>
 <strong>✅ Bouchon bite-valve</strong> — Pas besoin de s'arrêter pour boire<br>
 <strong>✅ Se replie quand vide</strong> — Prend zéro place<br>
 <strong>✅ Compatible ceintures et sacs trail</strong></p>
-<p>💡 <em>Conseil FiniTaCourse : remplit-le à moitié et mets-le au congélateur la veille. De l'eau fraîche au km 10, c'est le bonheur.</em></p>",FiniTaCourse,Hydratation Trail,"trail,bidon,soft flask,hydratation,500ml",TRUE,Couleur,Transparent;Bleu;Orange,90,150,13.90,17.90,TRUE,kg,,Soft Flask 500ml bidon trail running FiniTaCourse,Soft Flask 500ml — Bidon trail anti-fuite,"Soft flask 500ml pour trail running. Bouchon bite-valve anti-fuite, se replie quand vide. Compatible ceintures et sacs trail."
+<p>💡 <em>Conseil FiniTaCourse : remplit-le à moitié et mets-le au congélateur la veille. De l'eau fraîche au km 10, c'est le bonheur.</em></p>",FiniTaCourse,Hydratation Trail,"trail,bidon,soft flask,hydratation,500ml",TRUE,Couleur,Transparent;Bleu;Orange,90,150,13.90,17.90,TRUE,kg,Soft Flask 500ml — Bidon trail anti-fuite,"Soft flask 500ml pour trail running. Bouchon bite-valve anti-fuite, se replie quand vide. Compatible ceintures et sacs trail."
 lacets-elastiques-quick-laces,Lacets Élastiques (Quick Laces) — Ne plus jamais s'arrêter,"<h2>Tu n'imagines pas à quel point c'est utile jusqu'à ce que tu l'aies</h2>
 <p>S'arrêter au milieu d'une montée pour refaire ses lacets. C'est con, mais ça arrive à tout le monde. Les Quick Laces, c'est : chaussures enfilées, lacets serrés, on y va.</p>
 <p><strong>✅ Serrage instantané</strong> — 1 seconde<br>
 <strong>✅ Élastique</strong> — S'adapte au pied qui gonfle pendant l'effort<br>
 <strong>✅ Universel</strong> — Compatible toutes chaussures<br>
 <strong>✅ Lot de 2 paires</strong></p>
-<p>💰 Seul : 5.90€ | <a href=""/products/pack-premier-trail"">Dans le Pack Premier Trail : inclus</a></p>",FiniTaCourse,Accessoire Trail,"trail,lacets,elastiques,quick laces",TRUE,Couleur,Noir;Blanc;Orange,25,200,5.90,8.90,TRUE,kg,,Lacets elastiques quick laces trail FiniTaCourse,Lacets Élastiques Trail — Quick Laces,"Lacets élastiques quick laces pour trail running. Serrage instantané, universel, lot de 2 paires. 5.90€."
+<p>💰 Seul : 5.90€ | <a href=""/products/pack-premier-trail"">Dans le Pack Premier Trail : inclus</a></p>",FiniTaCourse,Accessoire Trail,"trail,lacets,elastiques,quick laces",TRUE,Couleur,Noir;Blanc;Orange,25,200,5.90,8.90,TRUE,kg,Lacets Élastiques Trail — Quick Laces,"Lacets élastiques quick laces pour trail running. Serrage instantané, universel, lot de 2 paires. 5.90€."
 creme-anti-frottement-stick,Crème Anti-Frottement (Stick) — Le sauveur de cuisses,"<h2>Le produit que personne ne recommande et que tout le monde regrette de ne pas avoir</h2>
 <p>Les ampoules, c'est le problème n°1 du débutant. Mais les frottements de cuisses, d'aisselles, de tétons — ça fait aussi abandonner. Ce stick anti-frottement, tu l'appliques en 10 secondes avant la course et tu oublies.</p>
 <p><strong>✅ Stick pratique</strong> — Pas de crème collante sur les mains<br>
 <strong>✅ Résiste à la transpiration</strong> — Tient 4-6h<br>
 <strong>✅ Anti-ampoules + anti-frottements</strong> — Double action<br>
 <strong>✅ Compact</strong> — Tient dans n'importe quel sac</p>
-<p>💡 <em>Conseil FiniTaCourse : applique sur les cuisses, aisselles, et pieds AV de chausser. Pas pendant. Avant.</em></p>",FiniTaCourse,Soin Trail,"trail,creme,anti-frottement,ampoules,soin",TRUE,Taille,30ml;75ml,60,100,9.90,14.90,TRUE,kg,,Crème anti-frottement stick trail FiniTaCourse,Crème Anti-Frottement Trail — Stick,"Stick crème anti-frottement pour trail running. Résiste à la transpiration, anti-ampoules, application rapide. 9.90€."
+<p>💡 <em>Conseil FiniTaCourse : applique sur les cuisses, aisselles, et pieds AV de chausser. Pas pendant. Avant.</em></p>",FiniTaCourse,Soin Trail,"trail,creme,anti-frottement,ampoules,soin",TRUE,Taille,30ml;75ml,60,100,9.90,14.90,TRUE,kg,Crème Anti-Frottement Trail — Stick,"Stick crème anti-frottement pour trail running. Résiste à la transpiration, anti-ampoules, application rapide. 9.90€."
 pack-recuperation-trail,Pack Récupération Trail — Marcher normal le lendemain,"<h2>Le kit pour ne pas boiter 3 jours après ton trail</h2>
 <p>Tu as fini ta course. Bravo. Mais demain matin, descendre les escaliers va être un sport extrême.</p>
 <p>Ce pack récupération contient tout pour traiter les courbatures et les tensions musculaires :</p>
@@ -50,7 +50,7 @@ pack-recuperation-trail,Pack Récupération Trail — Marcher normal le lendemai
 <li><strong>🎁 Bande de résistance</strong> — Étirements post-effort et renforcement</li>
 </ul>
 <p><strong>Valeur séparée : 82€ → Pack : 65€</strong> (économise 21%)</p>
-<p>📦 <strong>Livraison gratuite</strong></p>",FiniTaCourse,Pack Récupération,"trail,récupération,massage,récup,muscle",TRUE,Couleur massage gun,Noir;Blanc,750,30,65.00,82.00,TRUE,kg,,Pack Récupération Trail massage gun roller FiniTaCourse,Pack Récupération Trail — Massage gun + roller + balle,"Pack récupération trail: mini massage gun, roller mousse, balle lacrosse, bande résistance. 65€ au lieu de 82€. Livraison gratuite."
+<p>📦 <strong>Livraison gratuite</strong></p>",FiniTaCourse,Pack Récupération,"trail,récupération,massage,récup,muscle",TRUE,Couleur massage gun,Noir;Blanc,750,30,65.00,82.00,TRUE,kg,Pack Récupération Trail — Massage gun + roller + balle,"Pack récupération trail: mini massage gun, roller mousse, balle lacrosse, bande résistance. 65€ au lieu de 82€. Livraison gratuite."
 pack-ultra-kit,Pack Ultra Kit — L'essentiel pour les longues distances,"<h2>Pour ceux qui visent plus que 25km</h2>
 <p>Tu as fait ton premier trail. Et maintenant, tu veux plus. 40km. 60km. Peut-être un ultra.</p>
 <p>Ce pack contient l'équipement que les trailers expérimentés ne jurent que par :</p>
@@ -61,4 +61,4 @@ pack-ultra-kit,Pack Ultra Kit — L'essentiel pour les longues distances,"<h2>Po
 <li><strong>🎁 Crème anti-frottement</strong> — Parce qu'en ultra, chaque frottement s'aggrave</li>
 </ul>
 <p><strong>Valeur séparée : 78€ → Pack : 60€</strong> (économise 23%)</p>
-<p>📦 <strong>Livraison gratuite</strong></p>",FiniTaCourse,Pack Ultra Trail,"trail,ultra,longue distance,hydration,compression",TRUE,Taille guêtres,S;M;L,450,25,60.00,78.00,TRUE,kg,,Pack Ultra Kit flasques guêtres compression FiniTaCourse,Pack Ultra Kit Trail — Flasques + guêtres + compression,"Pack ultra trail: 2 soft flasks 500ml, guêtres anti-cailloux, manchons compression, crème anti-frottement. 60€ au lieu de 78€."
+<p>📦 <strong>Livraison gratuite</strong></p>",FiniTaCourse,Pack Ultra Trail,"trail,ultra,longue distance,hydration,compression",TRUE,Taille guêtres,S;M;L,450,25,60.00,78.00,TRUE,kg,Pack Ultra Kit Trail — Flasques + guêtres + compression,"Pack ultra trail: 2 soft flasks 500ml, guêtres anti-cailloux, manchons compression, crème anti-frottement. 60€ au lieu de 78€."

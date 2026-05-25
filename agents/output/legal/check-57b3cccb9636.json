@@ -1,0 +1,53 @@
+{
+  "id": "57b3cccb9636",
+  "product_name": "AI content (ugc_video)",
+  "check_type": "ai_content",
+  "status": "non_compliant",
+  "risk_level": "high",
+  "checks": [
+    {
+      "name": "Disclosure IA (AI Act Art. 52)",
+      "status": "non_compliant",
+      "detail": "CONTENU IA NON IDENTIFIE — Obligation legale en UE depuis aout 2025",
+      "regulation": "AI Act UE 2024/1689, Art. 52"
+    },
+    {
+      "name": "Publicite mensongere (L121-1)",
+      "status": "warning",
+      "detail": "UGC IA simulant un temoignage client = risque de publicite mensongere",
+      "regulation": "Code consommation Art. L121-1"
+    },
+    {
+      "name": "Droit a l'image",
+      "status": "compliant",
+      "detail": "Pas de personne reelle identifiee",
+      "regulation": "Code civil Art. 9"
+    },
+    {
+      "name": "Plateforme detection IA",
+      "status": "warning",
+      "detail": "Meta/TikTok/Pinterest detectent et peuvent penaliser le contenu IA non declare",
+      "regulation": "Politiques plateformes"
+    },
+    {
+      "name": "Risque de marque",
+      "status": "warning",
+      "detail": "Si le contenu IA est decouvert comme faux, impact sur la confiance client",
+      "regulation": "Reputation / Brand safety"
+    }
+  ],
+  "warnings": [
+    "🔴 AI Act: tout contenu deepfake/IA genere DOIT etre identifie. Sanction: 3% CA ou 15M EUR",
+    "⚠️  UGC IA comme pub = simuler un faux temoignage client = pratique commerciale trompeuse"
+  ],
+  "actions": [
+    "Ajouter mention 'Genere par IA' ou 'Contenu synthetique' sur la video",
+    "Utiliser les labels IA natifs des plateformes (Meta AI label, TikTok AI label)",
+    "Ne PAS presenter le contenu comme un vrai temoignage client",
+    "Formuler comme 'scenario fictif' ou 'demonstration produit' et non 'temoignage'",
+    "Verifier les politiques IA de chaque plateforme avant publication",
+    "Strategie: transparence partielle — mentionner 'cree avec IA' en sous-titre discret"
+  ],
+  "compliance_score": 20,
+  "created_at": "2026-05-25T11:25:13.720222+00:00"
+}

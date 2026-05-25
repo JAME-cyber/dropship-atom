@@ -1,0 +1,39 @@
+{
+  "product": "Foot Peel Mask Exfoliant",
+  "price": 0.0,
+  "content_type": "resultat",
+  "script": {
+    "content_type": "resultat",
+    "visual_hook": "Zoom extrême sur des pieds avec beaucoup de peau morte qui pèle.",
+    "text_overlay": "Pieds tout NEUFS en 1 semaine?! 🤯",
+    "voiceover": "Ok les gars, j'avais des pieds de hobbit, genre vraiment. J'ai testé ce masque exfoliant et... regardez ça!",
+    "demo_sequence": [
+      "Montrer l'application du masque (accéléré)",
+      "Time-lapse de la peau qui pèle pendant plusieurs jours",
+      "Résultat final: pieds doux et lisses, gros plan"
+    ],
+    "product_tag_moment": "Au moment du résultat final, quand les pieds sont lisses.",
+    "caption": "OMG! Honnêtement, j'étais sceptique 😅 Mais ce masque a fait des miracles sur mes pieds! Plus de peau sèche et rêche! ✨ #footpeel #exfoliation #soin #pieds #avantapres #beauté #tiktokmademebuyit 🦶",
+    "shop_cta": "Clique sur le tag pour shopper le masque et dis adieu aux pieds secs! 😉",
+    "hashtags": [
+      "footpeelmask",
+      "exfoliationpieds",
+      "soinpieds",
+      "avantapres",
+      "beautépieds",
+      "skincare",
+      "tiktokmademebuyit",
+      "astucebeauté"
+    ],
+    "music_vibe": "Pop entraînante, feel good, tendance sur Reels",
+    "duration_seconds": [
+      25,
+      35
+    ]
+  },
+  "product_tagging": {
+    "retailer_id": "shopify-foot-peel-mask-exfoliant",
+    "source": "meta_commerce_manager"
+  },
+  "generated_at": "2026-05-14T13:30:17.191499+00:00"
+}

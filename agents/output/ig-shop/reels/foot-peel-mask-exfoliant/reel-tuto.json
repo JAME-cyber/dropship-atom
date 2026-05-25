@@ -1,0 +1,40 @@
+{
+  "product": "Foot Peel Mask Exfoliant",
+  "price": 0.0,
+  "content_type": "tuto",
+  "script": {
+    "content_type": "tuto",
+    "visual_hook": "Gros plan pieds très secs avant application du produit.",
+    "text_overlay": "Pieds secs ? Voici LA solution !",
+    "voiceover": "Hello la team ! Aujourd'hui, je vous montre comment j'ai sauvé mes pieds de la sécheresse extrême avec ce masque exfoliant. C'est juste incroyable !",
+    "demo_sequence": [
+      "1. Déballage du produit et explication rapide des ingrédients clés.",
+      "2. Application du masque sur les pieds (avec zoom sur la texture).",
+      "3. Timelapse (x4) du processus d'exfoliation après quelques jours."
+    ],
+    "product_tag_moment": "Au moment où je montre le packaging du produit.",
+    "caption": "Adieu pieds secs et bonjour peau de bébé ! 🦶✨ Ce masque exfoliant a changé ma vie. Résultats visibles en quelques jours seulement. Testé et approuvé ! #soindespieds #exfoliation #peaudouce #beauté #astucebeaute",
+    "shop_cta": "Clique juste en dessous pour shopper ce miracle pour tes pieds !",
+    "hashtags": [
+      "footpeel",
+      "soindespieds",
+      "exfoliationpieds",
+      "peauxseches",
+      "beautébio",
+      "astucebeaute",
+      "tiktokmademebuyit",
+      "instagramtips",
+      "routinebeaute",
+      "piedspropres"
+    ],
+    "music_vibe": "Pop légère et entraînante, style indie.",
+    "duration_seconds": [
+      30
+    ]
+  },
+  "product_tagging": {
+    "retailer_id": "shopify-foot-peel-mask-exfoliant",
+    "source": "meta_commerce_manager"
+  },
+  "generated_at": "2026-05-14T13:30:06.623878+00:00"
+}

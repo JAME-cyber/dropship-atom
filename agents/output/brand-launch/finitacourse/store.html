@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FiniTaCourse — Ton premier trail, sans le calvaire</title>
+<meta name="description" content="Le matos de trail pour ceux qui découvrent. Fini les bidons qui fuient, les ampoules et l'angoisse d'abandonner. Packs pour débutants Annecy.">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#faf8f5;--bg2:#f0ece4;--text:#1a1a1a;--t2:#555;--t3:#888;--orange:#E85D04;--orange2:#d4845e;--green:#1B4332;--gold:#FFBA08;--card:#fff;--bdr:#e0dbd3;--f:'Outfit',sans-serif;--f2:'Inter',sans-serif}
+body{font-family:var(--f2);background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased}
+.nav{position:sticky;top:0;background:rgba(250,248,245,0.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--bdr);z-index:100;padding:14px 24px;display:flex;justify-content:space-between;align-items:center}
+.nav-brand{font-family:var(--f);font-size:20px;font-weight:800;letter-spacing:-0.5px}
+.nav-brand span{color:var(--orange)}
+.nav-cta{background:var(--orange);color:#fff;border:none;padding:10px 22px;border-radius:8px;font-size:13px;font-weight:700;cursor:pointer;font-family:inherit}
+
+.hero{max-width:720px;margin:0 auto;padding:80px 24px 60px;text-align:center}
+.hero-hook{font-size:14px;color:var(--orange);font-weight:700;text-transform:uppercase;letter-spacing:3px;margin-bottom:24px}
+.hero h1{font-family:var(--f);font-size:clamp(32px,5vw,52px);font-weight:800;line-height:1.1;margin-bottom:16px;letter-spacing:-1px}
+.hero h1 em{font-style:normal;color:var(--orange)}
+.hero-sub{font-size:17px;color:var(--t2);line-height:1.75;max-width:520px;margin:0 auto 36px}
+.hero-cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.btn-cta{background:var(--orange);color:#fff;border:none;padding:16px 40px;border-radius:12px;font-size:16px;font-weight:700;cursor:pointer;font-family:inherit;transition:transform .2s}
+.btn-cta:hover{transform:translateY(-2px)}
+.btn-ghost{background:none;border:2px solid var(--bdr);color:var(--text);padding:16px 32px;border-radius:12px;font-size:15px;font-weight:600;cursor:pointer;font-family:inherit}
+
+.pain{background:var(--green);color:#fff;padding:48px 24px}
+.pain-inner{max-width:640px;margin:0 auto;text-align:center}
+.pain h2{font-family:var(--f);font-size:28px;font-weight:700;margin-bottom:20px}
+.pain p{font-size:16px;line-height:1.8;opacity:0.9}
+.pain-lang{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:20px}
+.pain-tag{background:rgba(255,255,255,0.12);padding:6px 14px;border-radius:6px;font-size:13px;font-weight:500}
+
+.manifesto{max-width:640px;margin:0 auto;padding:60px 24px}
+.manifesto-label{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:3px;color:var(--orange);margin-bottom:20px}
+.manifesto h2{font-family:var(--f);font-size:28px;font-weight:700;line-height:1.3;margin-bottom:24px}
+.manifesto-text{font-size:16px;line-height:1.85;color:var(--t2)}
+.manifesto-quote{font-size:15px;line-height:1.7;color:var(--text);font-style:italic;padding:12px 16px;border-left:3px solid var(--orange);margin:16px 0;background:var(--bg2);border-radius:0 8px 8px 0}
+
+.packs{background:var(--bg2);padding:60px 24px}
+.packs-inner{max-width:900px;margin:0 auto}
+.packs-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;margin-top:32px}
+.pack-card{background:var(--card);border:1px solid var(--bdr);border-radius:16px;padding:24px;transition:all .2s}
+.pack-card:hover{border-color:var(--orange);transform:translateY(-3px)}
+.pack-name{font-family:var(--f);font-size:18px;font-weight:700;margin-bottom:4px}
+.pack-for{font-size:12px;color:var(--t3);margin-bottom:12px}
+.pack-items{display:flex;flex-direction:column;gap:6px;margin-bottom:16px}
+.pack-item{display:flex;align-items:center;gap:8px;font-size:14px}
+.pack-icon{font-size:14px;flex-shrink:0}
+.pack-pricing{display:flex;align-items:center;gap:10px;margin-bottom:8px}
+.pack-price{font-family:var(--f);font-size:28px;font-weight:800}
+.pack-old{font-size:14px;color:var(--t3);text-decoration:line-through}
+.pack-save{background:#10b98122;color:#10b981;font-size:12px;font-weight:700;padding:3px 8px;border-radius:4px}
+.pack-story{font-size:13px;color:var(--t2);line-height:1.6;font-style:italic;margin-bottom:12px}
+.pack-cta{width:100%;background:var(--orange);color:#fff;border:none;padding:12px;border-radius:8px;font-size:14px;font-weight:700;cursor:pointer;font-family:inherit}
+
+.how{max-width:720px;margin:0 auto;padding:60px 24px;text-align:center}
+.how h2{font-family:var(--f);font-size:26px;margin-bottom:16px}
+.how p{font-size:16px;color:var(--t2);line-height:1.7}
+
+footer{background:var(--green);color:rgba(255,255,255,0.6);padding:32px 24px;text-align:center;font-size:12px}
+footer strong{color:#fff}
+
+@media(max-width:640px){
+  .hero h1{font-size:28px}
+  .packs-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<div class="nav">
+  <div class="nav-brand">FiniTa<span>Course</span></div>
+  <button class="nav-cta" onclick="document.getElementById('packs').scrollIntoView({behavior:'smooth'})">Voir les packs →</button>
+</div>
+
+<div class="hero">
+  <div class="hero-hook">🏔️ Pour les débutants. Pas les pros.</div>
+  <h1>Ton premier trail,<br><em>pas ton premier calvaire</em></h1>
+  <p class="hero-sub">
+    Tu t'es inscrit à ton premier trail. Tu es à la fois excité et terrorisé.
+    Normal. Mais le matos, les ravitos, les ampoules — on est passés par là.
+    Voici exactement ce qu'il te faut pour <strong>arriver au bout</strong>.
+  </p>
+  <div class="hero-cta">
+    <button class="btn-cta">Je veux finir ma course →</button>
+    <button class="btn-ghost" onclick="document.getElementById('manifesto').scrollIntoView({behavior:'smooth'})">Notre manifeste</button>
+  </div>
+</div>
+
+<div class="pain">
+  <div class="pain-inner">
+    <h2>On connaît tes galères.<br>Parce qu'elles étaient les nôtres.</h2>
+    <p>
+      Le bidon qui fuit au km 8. Le dossard qui s'accroche aux branches.
+      Les lacets qui se défont en montée. Les cuisses en feu.
+      L'angoisse de devoir abandonner devant tout le monde.
+    </p>
+    <div class="pain-lang">
+      <span class="pain-tag">"finir la course"</span><span class="pain-tag">"ça passe ou ça casse"</span><span class="pain-tag">"j'ai pas fini"</span><span class="pain-tag">"premier trail"</span><span class="pain-tag">"j'ai galéré"</span><span class="pain-tag">"c'est mon premier"</span><span class="pain-tag">"j'ai pas le niveau"</span><span class="pain-tag">"bidon qui fuit"</span>
+    </div>
+  </div>
+</div>
+
+<div class="manifesto" id="manifesto">
+  <div class="manifesto-label">Notre manifeste</div>
+  <h2>Pas de performance. De la résilience.</h2>
+  <div class="manifesto-text">
+    <p>Tu n'as pas besoin d'être un athlete pour avoir ta place sur les sentiers. Tu as besoin d'un peu de bon sens, de préparation, et de gens qui comprennent que non, ta première course ne sera pas parfaite. On ne va pas te mentir : tu vas avoir des ampoules. Ton bidon va probablement fuir au moment précis où tu en auras le plus besoin. Tu vas manger un ravito à 6h du mat et regretter cette décision 2 heures plus tard. Mais tu vas finir. C'est ça qui compte. On est là pour que tu arrives au bout, avec le sourire ou la tronche, mais que tu arrives. Le reste, c'est de l'histoire qu'on racontera plus </p>
+    <p class="manifesto-quote">Ton bidon fuit ? C'est normal. Le premier coup de fil à faire à ton arrivée : le fabricant. Le deuxième : ton assureur.</p>
+<p class="manifesto-quote">On ne va pas te mentir : ton premier ravito sera probablement mangé à la mauvaise heure. C'est le droit d'apprentissage.</p>
+<p class="manifesto-quote">Tu vas avoir des ampoules. La question c'est pas si, c'est où. On va t'apprendre à les éviter, et à courir quand même.</p>
+  </div>
+</div>
+
+<div class="packs" id="packs">
+  <div class="packs-inner">
+    <div style="text-align:center">
+      <div class="manifesto-label">Les packs</div>
+      <h2 style="font-family:var(--f);font-size:26px">Ce qu'il te faut. Pas plus. Pas moins.</h2>
+    </div>
+    <div class="packs-grid">
+      
+            <div class="pack-card">
+                <div class="pack-name">Pack Premier Trail</div>
+                <div class="pack-for">Debutant qui s'inscrit a son premier trail 10-25km</div>
+                <div class="pack-items"><div class="pack-item"><span class="pack-icon">⭐</span><span>Ceinture porte-dossard (Race Belt)</span></div><div class="pack-item"><span class="pack-icon">🔗</span><span>Soft Flask 500ml</span></div><div class="pack-item"><span class="pack-icon">🔗</span><span>Lacets elastiques (Quick Laces)</span></div><div class="pack-item"><span class="pack-icon">🎁</span><span>Creme anti-frottement stick</span></div></div>
+                <div class="pack-pricing">
+                    <span class="pack-price">35.0€</span>
+                    <span class="pack-old">au lieu de 45.0€</span>
+                    <span class="pack-save">-22.2%</span>
+                </div>
+                <div class="pack-story">Le debutant qui court avec des lacets normaux, un bidon qui fuit dans le sac, et des cuisses en feu au km 8.</div>
+                <button class="pack-cta">Ajouter au panier</button>
+            </div>
+            <div class="pack-card">
+                <div class="pack-name">Pack Triathlon Transition</div>
+                <div class="pack-for">Triathlete qui prepare sa premiere transition</div>
+                <div class="pack-items"><div class="pack-item"><span class="pack-icon">⭐</span><span>Sac transition triathlon</span></div><div class="pack-item"><span class="pack-icon">🔗</span><span>Ceinture porte-dossard</span></div><div class="pack-item"><span class="pack-icon">🔗</span><span>Soft Flask 500ml x2</span></div></div>
+                <div class="pack-pricing">
+                    <span class="pack-price">75.0€</span>
+                    <span class="pack-old">au lieu de 88.0€</span>
+                    <span class="pack-save">-14.8%</span>
+                </div>
+                <div class="pack-story">Le triathlete qui fouille frénétiquement dans son sac pendant la transition pendant que les autres partent deja.</div>
+                <button class="pack-cta">Ajouter au panier</button>
+            </div>
+            <div class="pack-card">
+                <div class="pack-name">Pack Recuperation Trail</div>
+                <div class="pack-for">Trail runner qui veut recuperer vite apres l'effort</div>
+                <div class="pack-items"><div class="pack-item"><span class="pack-icon">⭐</span><span>Mini massage gun portable</span></div><div class="pack-item"><span class="pack-icon">🔗</span><span>Roller mousse travel</span></div><div class="pack-item"><span class="pack-icon">🔗</span><span>Balle massage lacrosse</span></div><div class="pack-item"><span class="pack-icon">🎁</span><span>Bande resistance</span></div></div>
+                <div class="pack-pricing">
+                    <span class="pack-price">65.0€</span>
+                    <span class="pack-old">au lieu de 82.0€</span>
+                    <span class="pack-save">-20.7%</span>
+                </div>
+                <div class="pack-story">Le coureur qui boite pendant 3 jours apres son trail parce qu'il n'a rien fait pour recuperer.</div>
+                <button class="pack-cta">Ajouter au panier</button>
+            </div>
+            <div class="pack-card">
+                <div class="pack-name">Pack Ultra Kit</div>
+                <div class="pack-for">Trail runner qui prepare un ultra 40-80km</div>
+                <div class="pack-items"><div class="pack-item"><span class="pack-icon">⭐</span><span>Soft Flask 500ml x2</span></div><div class="pack-item"><span class="pack-icon">🔗</span><span>Getres trail (Gaiters)</span></div><div class="pack-item"><span class="pack-icon">🔗</span><span>Manchons compression</span></div><div class="pack-item"><span class="pack-icon">🎁</span><span>Creme anti-frottement</span></div></div>
+                <div class="pack-pricing">
+                    <span class="pack-price">60.0€</span>
+                    <span class="pack-old">au lieu de 78.0€</span>
+                    <span class="pack-save">-23.1%</span>
+                </div>
+                <div class="pack-story">L'ultra-traileur qui s'arrete au km 30 a cause de cailloux dans les chaussures et de cramps.</div>
+                <button class="pack-cta">Ajouter au panier</button>
+            </div>
+    </div>
+  </div>
+</div>
+
+<div class="how">
+  <div class="manifesto-label">Comment ça marche</div>
+  <h2>3 étapes. 0 stress.</h2>
+  <p>
+    <strong>1.</strong> Choisis le pack qui correspond à ta course (premier trail, triathlon, ou ultra)<br><br>
+    <strong>2.</strong> Reçois ton pack en 5-8 jours, prêt pour l'entraînement<br><br>
+    <strong>3.</strong> Arrive au départ avec le sourire (ou la tronche, mais tu arrives)
+  </p>
+</div>
+
+<footer>
+  <strong>FiniTaCourse</strong> — Le matos de trail pour ceux qui découvrent<br>
+  <span style="margin-top:8px;display:inline-block">
+    Livraison gratuite · Retour 30 jours · Paiement sécurisé<br>
+    hello@finitacourse.com · Annecy, Haute-Savoie
+  </span>
+</footer>
+</body>
+</html>

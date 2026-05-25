@@ -1,0 +1,54 @@
+{
+  "brand": "FiniTaCourse",
+  "scripts": [
+    {
+      "id": "short-1-anti-pitch",
+      "title": "80% des débutants abandonnent",
+      "hook": "Savais-tu que 80% des gens qui s'inscrivent à leur premier trail ne le finissent pas ?",
+      "body": "Pas parce qu'ils sont pas capables. Parce que leur bidon fuit au km 8. Parce que leurs lacets se défont en montée. Parce qu'ils ont des ampoules partout. Parce que personne ne leur a dit quoi emporter.",
+      "reveal": "On a créé un pack avec exactement ce qu'il faut. Pas 47 accessoires. Juste l'essentiel.",
+      "cta": "Lien en bio — FiniTaCourse",
+      "duration": "20s",
+      "format": "Reel",
+      "anti_pitch": true,
+      "product_mentioned": false
+    },
+    {
+      "id": "short-2-build-public",
+      "title": "Pourquoi je lance FiniTaCourse",
+      "hook": "Je me suis inscrit au trail du Lac d'Annecy. Et j'ai galéré.",
+      "body": "Mon bidon fuyait. Mes lacets se sont défaits dans la première montée. J'ai eu des ampoules aux deux pieds au km 6. J'ai failli abandonner 3 fois. Mais j'ai fini. De justesse.",
+      "reveal": "Après, j'ai demandé aux autres débutants. Même galère pour tout le monde. Personne ne donne la liste de ce qu'il FAUT vraiment.",
+      "cta": "Du coup j'ai créé FiniTaCourse. Lien en bio.",
+      "duration": "25s",
+      "format": "Reel",
+      "anti_pitch": false,
+      "product_mentioned": true
+    },
+    {
+      "id": "short-3-educatif",
+      "title": "5 erreurs qui font abandonner au premier trail",
+      "hook": "Si tu fais une de ces 5 erreurs, ton premier trail sera un enfer.",
+      "body": "1. Des lacets normaux (ils se défont) 2. Pas de bidon ou un bidon qui fuit 3. Pas de crème anti-frottement 4. Un dossard épinglé sur le t-shirt 5. Zéro préparation nutritionnelle",
+      "reveal": "Les 4 premiers → résolus avec notre Pack Premier Trail. Lien en bio.",
+      "cta": "FiniTaCourse — le pack pour finir ta course",
+      "duration": "25s",
+      "format": "Reel",
+      "anti_pitch": true,
+      "product_mentioned": true
+    },
+    {
+      "id": "short-4-testimony",
+      "title": "Mon premier trail — la vérité",
+      "hook": "Voilà à quoi ressemble VRAIMENT un premier trail.",
+      "body": "[Footage: personne qui galère en montée, bidon qui fuit, lacet à renouer, ampoule] Personne ne te montre ça sur Instagram. Ils te montrent les sommets, pas les galères.",
+      "reveal": "Mais c'est NORMAL d'avoir des galères. Le truc, c'est d'être préparé.",
+      "cta": "Pack Premier Trail — lien en bio",
+      "duration": "20s",
+      "format": "Reel",
+      "anti_pitch": true,
+      "product_mentioned": false
+    }
+  ],
+  "generated_at": "2026-05-18T18:24:51.069385"
+}

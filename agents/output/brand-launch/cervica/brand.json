@@ -1,0 +1,113 @@
+{
+  "product": {
+    "id": "0b57b1290b33",
+    "name": "Heated Neck Wrap Rechargeable",
+    "source": "seed_database",
+    "source_url": "",
+    "category": "Health",
+    "problem_score": 66,
+    "wow_score": 100,
+    "margin_score": 90,
+    "shipping_score": 80,
+    "trend_score": 40,
+    "passes_problem": true,
+    "passes_wow": true,
+    "passes_margin": true,
+    "passes_shipping": true,
+    "passes_trend": true,
+    "passes_all": true,
+    "competition_score": 50,
+    "demand_score": 50,
+    "source_price": 5.0,
+    "suggested_price": 34.9,
+    "estimated_margin": 29.9,
+    "margin_multiplier": 7.0,
+    "estimated_weight_g": 250,
+    "is_fragile": false,
+    "shipping_easy": false,
+    "asin": "",
+    "aliexpress_id": "",
+    "image_url": "",
+    "keywords": [
+      "heated neck",
+      "rechargeable",
+      "pain relief",
+      "thermal",
+      "massage"
+    ],
+    "notes": "",
+    "problem_type": "douleur",
+    "wow_trigger": "sensoriel",
+    "llm_verdict": "",
+    "llm_analysis": "",
+    "hunter_score": 75.5,
+    "hunter_grade": "S",
+    "discovered_at": "2026-05-09T20:05:37.593015+00:00",
+    "updated_at": "2026-05-09T21:19:37.760988+00:00"
+  },
+  "brand": {
+    "name": "CERVICA",
+    "tagline": "Le cou mérite mieux",
+    "domain": "cervica.fr",
+    "archetype": "Le Guérisseur",
+    "tone": [
+      "Bienveillant",
+      "Scientifique mais accessible",
+      "Sans fausse promesse"
+    ],
+    "values": [
+      "Soulager vraiment",
+      "Transparence ingrédients",
+      "Retour à l'essentiel"
+    ],
+    "anti_pitch_angle": "On ne vend pas de la douleur. On documente le problème : 80% des actifs ont mal au cou et font avec. Le produit est l'évidence.",
+    "names_alternatives": [
+      {
+        "name": "NUQUEN",
+        "tagline": "Ta nuque, ton rituel",
+        "domain_available": "nuquen.com"
+      },
+      {
+        "name": "THERMIA",
+        "tagline": "La chaleur qui soulage vraiment",
+        "domain_available": "thermia.fr"
+      }
+    ]
+  },
+  "avatar": {
+    "name": "Les Bureau-Douloureux",
+    "description": "Actifs 28-45 ans, 8h/jour devant l'écran, mal au cou mais 'c'est normal', ont essayé le paracétamol, le kiné (trop cher), le coussin ergo (nul). Ils vivent avec.",
+    "pain_language": [
+      "J'ai la nuque bloquée",
+      "Mon cou craque quand je tourne",
+      "Le kiné c'est 60€ la séance, j'y vais plus",
+      "J'ai testé l'orthèse, c'est inconfortable",
+      "C'est la faute du télétravail"
+    ],
+    "where_they_are": [
+      "LinkedIn",
+      "Instagram reels bien-être",
+      "Reddit r/neckpain",
+      "Bureaux open-space"
+    ],
+    "what_they_buy": [
+      "Ergonomic stuff (Herman Miller rêvé)",
+      "Kiné (quand c'est trop)",
+      "Coussin voyage",
+      "Patch chauffant"
+    ],
+    "what_they_DONT_buy": [
+      "Un heating wrap à 35€ sur un site inconnu — SAUF si le storytelling est bon"
+    ]
+  },
+  "pricing": {
+    "source_price_usd": 5.0,
+    "generic_sell_price": 34.9,
+    "brand_sell_price": 50.9,
+    "bundle_2_price": 90.9,
+    "bundle_3_price": 130.9,
+    "brand_margin_usd": 40.9,
+    "brand_margin_pct": 80.4
+  },
+  "generated_at": "2026-05-18T16:08:27.644891+00:00"
+}

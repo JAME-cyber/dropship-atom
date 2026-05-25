@@ -1,0 +1,40 @@
+{
+  "product": "Neck Massager Electric",
+  "price": 0.0,
+  "content_type": "resultat",
+  "script": {
+    "content_type": "resultat",
+    "visual_hook": "Gros plan visage crispé, mains crispées sur les épaules.",
+    "text_overlay": "Tensions = Galère? 😩",
+    "voiceover": "Franchement, j'en pouvais plus de ces tensions dans la nuque. C'est un truc de fou comme ça te ruine la journée!",
+    "demo_sequence": [
+      "Application du Neck Massager Electric (montrer la facilité d'utilisation).",
+      "Zoom sur les points de massage en action (montrer la technologie).",
+      "Visage détendu après quelques minutes d'utilisation (avant/après bien visible)."
+    ],
+    "product_tag_moment": "Juste après le 'avant/après' visage détendu, vers 8-10 secondes.",
+    "caption": "Adieu les nœuds! 👋 Ce masseur de nuque électrique a changé ma vie. Sérieux, essayez! 😍 #massage #bienetre #detente #nuque #solution",
+    "shop_cta": "Le lien est juste là, sous la vidéo! Foncez, vous me remercierez 😉",
+    "hashtags": [
+      "massageelectrique",
+      "nuquedetendue",
+      "soinpersonnel",
+      "bienetrefrance",
+      "astucebienetre",
+      "tensionsmusculaires",
+      "solutionmiracle",
+      "igersfrance",
+      "swissmade"
+    ],
+    "music_vibe": "Musique Lo-fi relaxante ou pop légère entraînante.",
+    "duration_seconds": [
+      15,
+      30
+    ]
+  },
+  "product_tagging": {
+    "retailer_id": "shopify-neck-massager-electric",
+    "source": "meta_commerce_manager"
+  },
+  "generated_at": "2026-05-14T13:30:35.490307+00:00"
+}

@@ -5,9 +5,11 @@
   "status": "pending",
   "phase_hunter": "pending",
   "phase_scout": "pending",
+  "phase_spec": "done",
   "phase_creator": "pending",
   "phase_builder": "done",
   "phase_media": "done",
+  "phase_veille": "done",
   "phase_review": "pending",
   "products_selected": [
     {
@@ -32,7 +34,19 @@
       "best_supplier": "CJ Dropshipping",
       "buy_price_usd": 2.48,
       "net_margin": 20.11,
-      "shipping_days": 8
+      "shipping_days": 8,
+      "spec_score": 79.1,
+      "spec_path": "/home/tars/dropship-atom/agents/output/specs/dossier_technique_ee9085229599.md",
+      "components_count": 2,
+      "certs": [
+        "CE",
+        "RoHS",
+        "REACH",
+        "ISO 10993"
+      ],
+      "competitors_found": 5,
+      "price_range": "€9 - €35",
+      "top_competitor": ""
     },
     {
       "id": "58927454c502",
@@ -55,7 +69,19 @@
       "best_supplier": "CJ Dropshipping",
       "buy_price_usd": 2.07,
       "net_margin": 13.49,
-      "shipping_days": 8
+      "shipping_days": 8,
+      "spec_score": 79.1,
+      "spec_path": "/home/tars/dropship-atom/agents/output/specs/dossier_technique_29e6de6d1647.md",
+      "components_count": 2,
+      "certs": [
+        "CE",
+        "RoHS",
+        "REACH",
+        "ISO 10993"
+      ],
+      "competitors_found": 5,
+      "price_range": "€6 - €25",
+      "top_competitor": ""
     },
     {
       "id": "cd1fa9903473",
@@ -80,7 +106,17 @@
       "best_supplier": "CJ Dropshipping",
       "buy_price_usd": 3.11,
       "net_margin": 24.54,
-      "shipping_days": 8
+      "shipping_days": 8,
+      "spec_score": 74.7,
+      "spec_path": "/home/tars/dropship-atom/agents/output/specs/dossier_technique_5a2d7e34a449.md",
+      "components_count": 2,
+      "certs": [
+        "CE",
+        "RoHS"
+      ],
+      "competitors_found": 5,
+      "price_range": "€10 - €42",
+      "top_competitor": ""
     },
     {
       "id": "5203e29870fe",
@@ -103,7 +139,19 @@
       "best_supplier": "CJ Dropshipping",
       "buy_price_usd": 4.55,
       "net_margin": 28.21,
-      "shipping_days": 8
+      "shipping_days": 8,
+      "spec_score": 82.1,
+      "spec_path": "/home/tars/dropship-atom/agents/output/specs/dossier_technique_0a587f33fb3e.md",
+      "components_count": 2,
+      "certs": [
+        "CE",
+        "RoHS",
+        "REACH",
+        "ISO 10993"
+      ],
+      "competitors_found": 5,
+      "price_range": "€12 - €49",
+      "top_competitor": ""
     },
     {
       "id": "8bcd64f13133",
@@ -126,7 +174,19 @@
       "best_supplier": "CJ Dropshipping",
       "buy_price_usd": 15.53,
       "net_margin": 33.11,
-      "shipping_days": 8
+      "shipping_days": 8,
+      "spec_score": 92.6,
+      "spec_path": "/home/tars/dropship-atom/agents/output/specs/dossier_technique_63218e18b4e8.md",
+      "components_count": 5,
+      "certs": [
+        "CE",
+        "RoHS",
+        "REACH",
+        "ISO 10993"
+      ],
+      "competitors_found": 5,
+      "price_range": "€17 - €70",
+      "top_competitor": ""
     }
   ],
   "products_launched": [],
@@ -214,6 +274,71 @@
       "timestamp": "2026-05-07T14:07:12.942430+00:00",
       "agent": "ANALYST",
       "message": "  Fixed costs: €90/mois"
+    },
+    {
+      "timestamp": "2026-05-20T18:06:34.558158+00:00",
+      "agent": "SPEC",
+      "message": "Generating technical dossiers..."
+    },
+    {
+      "timestamp": "2026-05-20T18:06:50.651596+00:00",
+      "agent": "SPEC",
+      "message": "Generating technical dossiers..."
+    },
+    {
+      "timestamp": "2026-05-20T18:06:50.682214+00:00",
+      "agent": "SPEC",
+      "message": "  📋 Ice Roller Face Globes → 79.1/100 (2 composants)"
+    },
+    {
+      "timestamp": "2026-05-20T18:06:50.689386+00:00",
+      "agent": "SPEC",
+      "message": "  📋 Foot Peel Mask Exfoliant → 79.1/100 (2 composants)"
+    },
+    {
+      "timestamp": "2026-05-20T18:06:50.693365+00:00",
+      "agent": "SPEC",
+      "message": "  📋 Bamboo Sunglasses Polarized → 74.7/100 (2 composants)"
+    },
+    {
+      "timestamp": "2026-05-20T18:06:50.697448+00:00",
+      "agent": "SPEC",
+      "message": "  📋 Posture Corrector Pro → 82.1/100 (2 composants)"
+    },
+    {
+      "timestamp": "2026-05-20T18:06:50.702390+00:00",
+      "agent": "SPEC",
+      "message": "  📋 Neck Massager Electric → 92.6/100 (5 composants)"
+    },
+    {
+      "timestamp": "2026-05-20T18:06:58.085192+00:00",
+      "agent": "VEILLE",
+      "message": "Running competitive veille..."
+    },
+    {
+      "timestamp": "2026-05-20T18:06:58.210937+00:00",
+      "agent": "VEILLE",
+      "message": "  🔍 Ice Roller Face Globes → 5 concurrents, prix: €9 - €35"
+    },
+    {
+      "timestamp": "2026-05-20T18:06:58.210961+00:00",
+      "agent": "VEILLE",
+      "message": "  🔍 Foot Peel Mask Exfoliant → 5 concurrents, prix: €6 - €25"
+    },
+    {
+      "timestamp": "2026-05-20T18:06:58.210976+00:00",
+      "agent": "VEILLE",
+      "message": "  🔍 Bamboo Sunglasses Polarized → 5 concurrents, prix: €10 - €42"
+    },
+    {
+      "timestamp": "2026-05-20T18:06:58.210996+00:00",
+      "agent": "VEILLE",
+      "message": "  🔍 Posture Corrector Pro → 5 concurrents, prix: €12 - €49"
+    },
+    {
+      "timestamp": "2026-05-20T18:06:58.211010+00:00",
+      "agent": "VEILLE",
+      "message": "  🔍 Neck Massager Electric → 5 concurrents, prix: €17 - €70"
     }
   ]
 }

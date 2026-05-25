@@ -59,7 +59,8 @@ SMTP_CONFIG = {
 
 # ── Message Templates ───────────────────────────────────────────
 
-def generate_negotiation_message(supplier: dict, product_name: str = None, target_price: float = None, language: str = "en") -> dict:
+def generate_negotiation_message(supplier: dict, product_name: str = None, target_price: float = None, 
+                               language: str = "en", spec_path: str = "") -> dict:
     """Génère un message de négociation complet."""
     
     name = supplier["name"].split("/")[0].strip()
@@ -149,6 +150,14 @@ Looking for a long-term supplier partnership!
 Best,
 [Ton prénom] — France"""
     
+    # ── Attachments ──
+    attachments = []
+    if spec_path:
+        from pathlib import Path as _P
+        spec_file = _P(spec_path)
+        if spec_file.exists():
+            attachments.append(str(spec_file))
+    
     return {
         "supplier_id": supplier["id"],
         "supplier_name": name,
@@ -163,13 +172,19 @@ Best,
         "email_body_zh": zh_body.strip(),
         "whatsapp_message": wa_message.strip(),
         "whatsapp_link": f"https://wa.me/{supplier['phone'].replace(' ', '').replace('+', '').replace('-', '')}",
+        "attachments": attachments,
     }
 
 
-# ── Send Email ──────────────────────────────────────────────────
+# ── Send Email (avec attachments) ────────────────────────────────
 
-def send_email(to_email: str, subject: str, body: str, from_email: str = None, smtp_config: dict = None):
-    """Envoie un email via SMTP."""
+def send_email(to_email: str, subject: str, body: str, from_email: str = None,
+               smtp_config: dict = None, attachments: list = None):
+    """Envoie un email via SMTP avec option pour joindre des fichiers.
+    
+    Args:
+        attachments: list of file paths to attach (PDF, MD, images)
+    """
     if not smtp_config:
         smtp_config = SMTP_CONFIG["gmail"]
     
@@ -182,6 +197,29 @@ def send_email(to_email: str, subject: str, body: str, from_email: str = None, s
     msg["To"] = to_email
     msg["Subject"] = subject
     msg.attach(MIMEText(body, "plain", "utf-8"))
+    
+    # Attach files
+    if attachments:
+        from email.mime.base import MIMEBase
+        from email import encoders
+        
+        for filepath in attachments:
+            filepath = Path(filepath)
+            if not filepath.exists():
+                print(f"    ⚠️ Attachment not found: {filepath}")
+                continue
+            
+            with open(filepath, 'rb') as f:
+                part = MIMEBase('application', 'octet-stream')
+                part.set_payload(f.read())
+            
+            encoders.encode_base64(part)
+            part.add_header(
+                'Content-Disposition',
+                f'attachment; filename="{filepath.name}"'
+            )
+            msg.attach(part)
+            print(f"    📎 Attached: {filepath.name}")
     
     try:
         context = ssl.create_default_context()
@@ -218,6 +256,7 @@ def main():
     parser.add_argument("--product", help="Product name for targeted message")
     parser.add_argument("--price", type=float, help="Target selling price")
     parser.add_argument("--language", choices=["en", "zh", "both"], default="en", help="Message language")
+    parser.add_argument("--spec", type=str, help="Path to technical spec dossier to attach")
     parser.add_argument("--output", default=str(OUTPUT_DIR))
     args = parser.parse_args()
     
@@ -254,7 +293,8 @@ def main():
     
     messages = []
     for s in suppliers:
-        msg = generate_negotiation_message(s, args.product, args.price, args.language)
+        msg = generate_negotiation_message(s, args.product, args.price, args.language, 
+                                           spec_path=args.spec or "")
         messages.append(msg)
         
         dream = " ⭐" if msg["dream_match"] else ""
@@ -291,9 +331,12 @@ def main():
             print(f"        (Clique le lien → ça ouvre WhatsApp avec le message pré-rempli)")
             print()
         
-        # ── SEND EMAIL ──
+        # ── SEND EMAIL (with attachments) ──
         if args.email and msg["email"]:
-            sent = send_email(msg["email"], msg["email_subject_en"], msg["email_body_en"])
+            sent = send_email(
+                msg["email"], msg["email_subject_en"], msg["email_body_en"],
+                attachments=msg.get("attachments", [])
+            )
             if sent:
                 print(f"     ✅ Email envoyé à {msg['email']}")
             else:

@@ -1,0 +1,38 @@
+{
+  "product": "Neck Massager Electric",
+  "price": 0.0,
+  "content_type": "tuto",
+  "script": {
+    "content_type": "tuto",
+    "visual_hook": "Gros plan sur des épaules visiblement tendues, puis un soupir de soulagement.",
+    "text_overlay": "Adieu les tensions, bonjour la détente !",
+    "voiceover": "Hello la team ! Dos en compote après le télétravail ? J'ai trouvé MON sauveur, je vous montre comment l'utiliser.",
+    "demo_sequence": [
+      "1. Déballage du masseur, focus sur les différentes parties et leur fonction (chauffage, intensité).",
+      "2. Mise en place du masseur sur la nuque, explication du positionnement correct et des sensations.",
+      "3. Utilisation du masseur pendant quelques minutes, expression de bien-être et d'amélioration de la mobilité."
+    ],
+    "product_tag_moment": "Après 5 secondes, lors de la mise en place du masseur sur la nuque.",
+    "caption": "OMG ! Vous savez à quel point j'ai mal au cou... Ce masseur électrique a littéralement changé ma vie 😭. Hyper simple à utiliser et tellement relaxant ! 🧘‍♀️ #massage #detente #bienetre #neckmassager",
+    "shop_cta": "Envie de tester ? Le lien est juste là 👇",
+    "hashtags": [
+      "massagecervical",
+      "detente",
+      "bienetre",
+      "antistress",
+      "teletrabail",
+      "prendresoindesoi",
+      "tiktokmademebuyit",
+      "produitoffert"
+    ],
+    "music_vibe": "Musique Lo-Fi chill, sons de la nature, ambiance spa.",
+    "duration_seconds": [
+      25
+    ]
+  },
+  "product_tagging": {
+    "retailer_id": "shopify-neck-massager-electric",
+    "source": "meta_commerce_manager"
+  },
+  "generated_at": "2026-05-14T13:30:25.628243+00:00"
+}

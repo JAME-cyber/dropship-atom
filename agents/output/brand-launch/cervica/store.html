@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CERVICA — Le cou mérite mieux</title>
+<meta name="description" content="Le cou mérite mieux. Heated Neck Wrap Rechargeable premium. Livraison gratuite.">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#faf9f7;--bg2:#f0ede8;--text:#1a1a1a;--t2:#666;--t3:#999;--accent:#c45e3a;--accent2:#d4845e;--card:#fff;--bdr:#e8e4de;--f:'Inter',sans-serif;--d:'Playfair Display',serif}
+body{font-family:var(--f);background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased}
+
+/* Nav */
+.nav{position:sticky;top:0;background:rgba(250,249,247,0.95);backdrop-filter:blur(10px);border-bottom:1px solid var(--bdr);z-index:100;padding:16px 24px;display:flex;justify-content:space-between;align-items:center}
+.nav-brand{font-family:var(--d);font-size:22px;font-weight:700;color:var(--text)}
+.nav-brand span{color:var(--accent)}
+.nav-cta{background:var(--accent);color:#fff;border:none;padding:10px 24px;border-radius:8px;font-size:14px;font-weight:600;cursor:pointer;font-family:inherit}
+
+/* Hero */
+.hero{max-width:800px;margin:0 auto;padding:80px 24px 60px;text-align:center}
+.hero-pain{font-size:16px;color:var(--t3);font-style:italic;margin-bottom:24px;position:relative;display:inline-block}
+.hero-pain::before,.hero-pain::after{content:'"';color:var(--accent);font-size:24px}
+.hero h1{font-family:var(--d);font-size:clamp(36px,5vw,56px);line-height:1.15;margin-bottom:16px}
+.hero h1 em{font-style:normal;color:var(--accent)}
+.hero-sub{font-size:18px;color:var(--t2);line-height:1.7;max-width:560px;margin:0 auto 40px}
+.hero-price{display:flex;align-items:center;justify-content:center;gap:16px;margin-bottom:32px}
+.hero-price .price{font-family:var(--d);font-size:48px;font-weight:700;color:var(--text)}
+.hero-price .old{font-size:20px;color:var(--t3);text-decoration:line-through}
+.hero-price .badge{background:#10b981;color:#fff;font-size:11px;font-weight:700;padding:4px 10px;border-radius:4px}
+.cta-btn{background:var(--accent);color:#fff;border:none;padding:18px 48px;border-radius:12px;font-size:18px;font-weight:700;cursor:pointer;font-family:inherit;transition:transform .2s,box-shadow .2s;box-shadow:0 4px 12px rgba(196,94,58,0.2)}
+.cta-btn:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(196,94,58,0.3)}
+.cta-sub{font-size:13px;color:var(--t3);margin-top:12px}
+
+/* Manifesto */
+.manifesto{background:var(--bg2);padding:60px 24px}
+.manifesto-inner{max-width:700px;margin:0 auto}
+.manifesto-label{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:var(--accent);margin-bottom:20px}
+.manifesto h2{font-family:var(--d);font-size:32px;line-height:1.3;margin-bottom:20px}
+.manifesto p{font-size:16px;line-height:1.8;color:var(--t2);margin-bottom:16px}
+
+/* Product features */
+.features{max-width:900px;margin:0 auto;padding:60px 24px}
+.features-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px;margin-top:32px}
+.feat{background:var(--card);border:1px solid var(--bdr);border-radius:16px;padding:28px;text-align:center}
+.feat-icon{font-size:36px;margin-bottom:12px}
+.feat h3{font-size:16px;font-weight:700;margin-bottom:8px}
+.feat p{font-size:14px;color:var(--t2);line-height:1.6}
+
+/* Bundles */
+.bundles{background:var(--bg2);padding:60px 24px}
+.bundles-inner{max-width:800px;margin:0 auto}
+.bundles-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:32px}
+.bundle{background:var(--card);border:2px solid var(--bdr);border-radius:16px;padding:28px;text-align:center;transition:all .2s}
+.bundle:hover{border-color:var(--accent);transform:translateY(-3px)}
+.bundle.popular{border-color:var(--accent);position:relative}
+.bundle.popular::before{content:'POPULAIRE';position:absolute;top:-10px;left:50%;transform:translateX(-50%);background:var(--accent);color:#fff;font-size:10px;font-weight:700;padding:3px 12px;border-radius:4px;letter-spacing:1px}
+.bundle-qty{font-size:14px;color:var(--t3);font-weight:600;margin-bottom:8px}
+.bundle-price{font-family:var(--d);font-size:36px;font-weight:700;margin-bottom:4px}
+.bundle-save{font-size:13px;color:#10b981;font-weight:600}
+.bundle-cta{background:var(--accent);color:#fff;border:none;padding:12px 24px;border-radius:8px;font-size:14px;font-weight:600;cursor:pointer;font-family:inherit;margin-top:16px;width:100%}
+
+/* Social proof placeholder */
+.proof{max-width:700px;margin:0 auto;padding:60px 24px;text-align:center}
+.proof h2{font-family:var(--d);font-size:28px;margin-bottom:16px}
+.proof p{font-size:16px;color:var(--t2);line-height:1.7}
+
+/* Footer */
+footer{background:var(--text);color:rgba(255,255,255,0.6);padding:40px 24px;text-align:center;font-size:13px}
+footer strong{color:#fff}
+
+@media(max-width:640px){
+  .bundles-grid{grid-template-columns:1fr;max-width:300px;margin-left:auto;margin-right:auto}
+  .hero h1{font-size:32px}
+  .hero-price .price{font-size:36px}
+}
+</style>
+</head>
+<body>
+
+<!-- Nav -->
+<div class="nav">
+  <div class="nav-brand">CERVICA<span>.</span></div>
+  <button class="nav-cta" onclick="document.getElementById('buy').scrollIntoView({behavior:'smooth'})">Commander →</button>
+</div>
+
+<!-- Hero -->
+<div class="hero">
+  <div class="hero-pain">J'ai la nuque bloquée</div>
+  <h1>Le cou mérite <em>mieux</em><br>que le paracétamol</h1>
+  <p class="hero-sub">
+    Le cou mérite mieux. Un heated neck wrap rechargeable conçu pour ceux qui passent 8h devant un écran
+    et qui en ont marre d'avoir la nuque bloquée.
+  </p>
+  <div class="hero-price" id="buy">
+    <span class="old">70.9€</span>
+    <span class="price">50.9€</span>
+    <span class="badge">LIVRAISON GRATUITE</span>
+  </div>
+  <button class="cta-btn">Je veux soulager ma nuque →</button>
+  <p class="cta-sub">Commandé par X personnes ce mois-ci · Expédié sous 48h · Satisfait ou remboursé 30j</p>
+</div>
+
+<!-- Manifesto -->
+<div class="manifesto">
+  <div class="manifesto-inner">
+    <div class="manifesto-label">Notre manifeste</div>
+    <h2>Pas de fausses promesses.<br>Juste de la chaleur, là où il faut.</h2>
+    <p>
+      On ne va pas vous dire que ce patch va changer votre vie. Parce que c'est faux.
+      Ce qui est vrai, c'est que 80% des actifs ont mal au cou. Que le kiné coûte 60€ la séance.
+      Que le paracétamol, ça ne suffit pas.
+    </p>
+    <p>
+      CERVICA, c'est un geste simple : 15 minutes de chaleur ciblée, quand vous en avez besoin.
+      Pas un miracle. Un outil. Dans votre rituel.
+    </p>
+    <p>
+      <strong style="color:var(--text)">Si vous cherchez la pilule miracle, ce n'est pas ici.</strong><br>
+      Si vous cherchez un soulagement réel et simple — bienvenue.
+    </p>
+  </div>
+</div>
+
+<!-- Features -->
+<div class="features">
+  <div style="text-align:center">
+    <div class="manifesto-label">Pourquoi CERVICA</div>
+    <h2 style="font-family:var(--d);font-size:28px">Pas besoin de 47 fonctionnalités.</h2>
+  </div>
+  <div class="features-grid">
+    <div class="feat">
+      <div class="feat-icon">🔥</div>
+      <h3>3 niveaux de chaleur</h3>
+      <p>Doux, moyen, intense. Vous choisissez ce que votre cou réclame.</p>
+    </div>
+    <div class="feat">
+      <div class="feat-icon">🔋</div>
+      <h3>Rechargeable USB-C</h3>
+      <p>Pas de piles, pas de câble pendant l'usage. 2h d'autonomie.</p>
+    </div>
+    <div class="feat">
+      <div class="feat-icon">🧘</div>
+      <h3>15 minutes suffisent</h3>
+      <p>Un timer auto-éteint. Pas besoin de penser. Vous posez, ça soulage.</p>
+    </div>
+    <div class="feat">
+      <div class="feat-icon">✈️</div>
+      <h3>Passe partout</h3>
+      <p>Bureau, canapé, train, avion. 250g. Discret sous un pull.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Bundles -->
+<div class="bundles">
+  <div class="bundles-inner">
+    <div style="text-align:center">
+      <div class="manifesto-label">Packs</div>
+      <h2 style="font-family:var(--d);font-size:28px">Pour vous. Ou pour deux. Ou pour l'équipe.</h2>
+    </div>
+    <div class="bundles-grid">
+      <div class="bundle">
+        <div class="bundle-qty">1x CERVICA</div>
+        <div class="bundle-price">50.9€</div>
+        <div class="bundle-save">&nbsp;</div>
+        <button class="bundle-cta" style="background:var(--t3)">Ajouter</button>
+      </div>
+      <div class="bundle popular">
+        <div class="bundle-qty">2x CERVICA</div>
+        <div class="bundle-price">90.9€</div>
+        <div class="bundle-save">Économisez 10.9€</div>
+        <button class="bundle-cta">Le plus populaire</button>
+      </div>
+      <div class="bundle">
+        <div class="bundle-qty">3x CERVICA</div>
+        <div class="bundle-price">130.9€</div>
+        <div class="bundle-save">Économisez 21.8€</div>
+        <button class="bundle-cta" style="background:var(--t3)">Ajouter</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Social proof (placeholder — first sales fill this) -->
+<div class="proof">
+  <div class="manifesto-label">Ce n'est pas un miracle</div>
+  <h2>Ce que disent ceux qui ont essayé</h2>
+  <p style="margin-top:20px;color:var(--t3);font-style:italic">
+    "J'ai acheté pour ma femme qui a la nuque bloquée tous les soirs.
+    Elle l'utilise en regardant Netflix. C'est devenu son rituel."
+  </p>
+  <p style="margin-top:24px;color:var(--t3)">
+    ⭐ Les premiers retours arrivent — cette section se remplit avec de vrais clients.
+  </p>
+</div>
+
+<!-- Footer -->
+<footer>
+  <strong>CERVICA</strong> — Le cou mérite mieux<br>
+  <span style="font-size:11px;margin-top:8px;display:inline-block">
+    Expédié depuis la France · Retour gratuit 30 jours · Paiement sécurisé<br>
+    Contact: hello@cervica.fr · DropAtom BrandShipping
+  </span>
+</footer>
+
+</body>
+</html>

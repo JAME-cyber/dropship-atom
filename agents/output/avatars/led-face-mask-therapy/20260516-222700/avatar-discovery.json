@@ -1,0 +1,252 @@
+{
+  "product": "LED Face Mask Therapy",
+  "category": "Beauty",
+  "keywords": [
+    "led face mask acne skin anti-aging"
+  ],
+  "generated_at": "2026-05-16T20:28:28.376395+00:00",
+  "research_sources": 0,
+  "pain_points_found": 0,
+  "avatars": [
+    {
+      "id": "ae20f58074",
+      "name": "Marine, 29 ans, commerciale en échec avec son visage",
+      "description": "Travaille dans la vente B2B, passe son temps en visioconférences sous lumière crue qui révèle chaque imperfection. Se sent jugée par ses clients qui remarquent ses boutons.",
+      "life_context": "Travaille dans la vente B2B, passe son temps en visioconférences sous lumière crue qui révèle chaque imperfection. Se sent jugée par ses clients qui remarquent ses boutons.",
+      "demographics": "",
+      "pain_points": [],
+      "primary_pain": "\"J'ai l'impression que mon visage me速拖累 dans ma carrière - mes clients regardent mes boutons pendant les réunions au lieu de m'écouter\"",
+      "secondary_pains": [],
+      "desires": [],
+      "deep_desire": "Être prise au sérieux professionnellement sans que son apparence soit un obstacle\nÉCHECS: - Crèmes prescrites par dermato (trop agressives, peau irritée)\n- Protocole skincare YouTube (trop de produits, pas de résultats)\n- Traitement lumière bleue smartphone (pas assez puissant)",
+      "failed_solutions": [
+        "- Crèmes prescrites par dermato (trop agressives, peau irritée)",
+        "Protocole skincare YouTube (trop de produits, pas de résultats)",
+        "Traitement lumière bleue smartphone (pas assez puissant)"
+      ],
+      "language_patterns": [
+        "\"je fais attention à ce que je mange mais ça ne change rien\", \"c'est quoi le meilleur masque LED?\", \"je refuse de prendre la pilule pour l'acné\""
+      ],
+      "keywords": [
+        "marine,",
+        "ans,",
+        "commerciale",
+        "échec",
+        "avec",
+        "visage"
+      ],
+      "hook_templates": [
+        "Enfin une solution que tu peux utiliser pendant tes appels visio sans que personne ne le voie\n\n---"
+      ],
+      "angle": "",
+      "cta_style": "",
+      "market_size": 0.65,
+      "competition": 0.5,
+      "accessibility": 0.3,
+      "avatar_score": 100,
+      "avatar_grade": "S",
+      "validated": true,
+      "validation_sources": [],
+      "created_at": "2026-05-16T20:28:28.360160+00:00"
+    },
+    {
+      "id": "a9053a17c5",
+      "name": "Nathalie, 42 ans, maman qui a oublié son visage",
+      "description": "Mère de 3 enfants (8, 5 et 2 ans), n'a plus de temps pour elle depuis des années. Réalise en regardant une photo de groupe qu'elle parait 10 ans de plus que ses amies.",
+      "life_context": "Mère de 3 enfants (8, 5 et 2 ans), n'a plus de temps pour elle depuis des années. Réalise en regardant une photo de groupe qu'elle parait 10 ans de plus que ses amies.",
+      "demographics": "",
+      "pain_points": [],
+      "primary_pain": "",
+      "secondary_pains": [],
+      "desires": [],
+      "deep_desire": "Retrouver une partie d'elle-même, se sentir à nouveau séduisante pour son mari\nÉCHECS: - Crèmes anti-âge Sephora (effet placebo, rien de visible)\n- Serum vitamin C (trop de réactions)\n- Soin spa Groupon (une fois, pas de suivi)",
+      "failed_solutions": [
+        "- Crèmes anti-âge Sephora (effet placebo, rien de visible)",
+        "Serum vitamin C (trop de réactions)",
+        "Soin spa Groupon (une fois, pas de suivi)"
+      ],
+      "language_patterns": [
+        "\"je n'ai plus le temps pour une routine de 10 produits\", \"c'est quoi qui marche vraiment?\", \"je veux des résultats sans effort\""
+      ],
+      "keywords": [
+        "nathalie,",
+        "ans,",
+        "maman",
+        "oublié",
+        "visage"
+      ],
+      "hook_templates": [
+        "10 minutes par jour pendant que les enfants font la sieste - tu verras les résultats avant que ton mari ne te le fasse remarquer\n\n---"
+      ],
+      "angle": "",
+      "cta_style": "",
+      "market_size": 0.65,
+      "competition": 0.5,
+      "accessibility": 0.3,
+      "avatar_score": 100,
+      "avatar_grade": "S",
+      "validated": false,
+      "validation_sources": [],
+      "created_at": "2026-05-16T20:28:28.372880+00:00"
+    },
+    {
+      "id": "fdc5882b43",
+      "name": "Kevin, 31 ans, gamer pro skin",
+      "description": "Streameur Twitch à temps plein, passe 8h par jour devant des écrans LED qui aggravent sa peau. Son audience lui fait des remarques sur son visage dans le chat.",
+      "life_context": "Streameur Twitch à temps plein, passe 8h par jour devant des écrans LED qui aggravent sa peau. Son audience lui fait des remarques sur son visage dans le chat.",
+      "demographics": "",
+      "pain_points": [],
+      "primary_pain": "\"Les mecs du chat disent que j'ai une tête de 40 ans alors que j'en ai 31, c'est mortifiant devant 500 spectateurs\"",
+      "secondary_pains": [],
+      "desires": [],
+      "deep_desire": "Être respecté par sa communauté et ne pas être réduit à son apparence\nÉCHECS: - Filtres OBS (ne marchent qu'en stream, pas en IRL)\n- Routine skincare gamer Reddit (trop compliquée, abandonné)\n- Masque tissu jetable (pas assez \"pro\")",
+      "failed_solutions": [
+        "- Filtres OBS (ne marchent qu'en stream, pas en IRL)",
+        "Routine skincare gamer Reddit (trop compliquée, abandonné)",
+        "Masque tissu jetable (pas assez \"pro\")"
+      ],
+      "language_patterns": [
+        "\"je cherche un setup skincare qui tue\", \"quelqu'un a testé le masque LED?\", \"je veux un glow de fou sans y passer des heures\""
+      ],
+      "keywords": [
+        "kevin,",
+        "ans,",
+        "gamer",
+        "skin"
+      ],
+      "hook_templates": [
+        "Tu le branches sur ton PC, tu joues, ta peau se soigne - zero effort, max results\n\n---"
+      ],
+      "angle": "",
+      "cta_style": "",
+      "market_size": 0.65,
+      "competition": 0.5,
+      "accessibility": 0.3,
+      "avatar_score": 100,
+      "avatar_grade": "S",
+      "validated": true,
+      "validation_sources": [],
+      "created_at": "2026-05-16T20:28:28.373135+00:00"
+    },
+    {
+      "id": "725e820fb6",
+      "name": "Léa, 26 ans, infirmière en dermatologie",
+      "description": "Travaille dans un service de dermatologie, voit quotidiennement les traitements lourds (roaccutane, laser). Connaît les effets secondaires mais désespère de son propre visage.",
+      "life_context": "Travaille dans un service de dermatologie, voit quotidiennement les traitements lourds (roaccutane, laser). Connaît les effets secondaires mais désespère de son propre visage.",
+      "demographics": "",
+      "pain_points": [],
+      "primary_pain": "\"Je recommande des traitements à mes patients que je n'oserais pas utiliser moi-même - j'ai peur des effets secondaires mais je ne supporte plus ma peau\"",
+      "secondary_pains": [],
+      "desires": [],
+      "deep_desire": "Trouver une solution \"douce\" qui respecte sa conviction que les traitements agressifs ne sont pas la réponse\nÉCHECS: - Roaccutane (effets secondaires redoutés, non essayé)\n- Lumière bleue pharmacy (trop faible intensité)\n- Consultation dermato collègue (trop gênant)",
+      "failed_solutions": [
+        "- Roaccutane (effets secondaires redoutés, non essayé)",
+        "Lumière bleue pharmacy (trop faible intensité)",
+        "Consultation dermato collègue (trop gênant)"
+      ],
+      "language_patterns": [
+        "\"je sais ce qui marche mais je ne veux pas de ces effets secondaires\", \"il faut que ce soit naturel\", \"je cherche quelque chose de non-invasif\""
+      ],
+      "keywords": [
+        "léa,",
+        "ans,",
+        "infirmière",
+        "dermatologie"
+      ],
+      "hook_templates": [
+        "La technologie que tu recommandes à tes patients sans oser l'utiliser toi-même - enfin accessible à la maison\n\n---"
+      ],
+      "angle": "",
+      "cta_style": "",
+      "market_size": 0.65,
+      "competition": 0.5,
+      "accessibility": 0.3,
+      "avatar_score": 100,
+      "avatar_grade": "S",
+      "validated": true,
+      "validation_sources": [],
+      "created_at": "2026-05-16T20:28:28.373369+00:00"
+    },
+    {
+      "id": "6662674866",
+      "name": "Sabrina, 38 ans, divorcée qui reprend sa vie en main",
+      "description": "Divorce récent, veut \"renaître\" physiquement. A 3 mois avant un rendez-vous important avec quelqu'un rencontré sur une app de rencontre.",
+      "life_context": "Divorce récent, veut \"renaître\" physiquement. A 3 mois avant un rendez-vous important avec quelqu'un rencontré sur une app de rencontre.",
+      "demographics": "",
+      "pain_points": [],
+      "primary_pain": "\"Je vais rencontrer quelqu'un pour la première fois depuis 10 ans et j'ai l'impression d'avoir vieilli de 10 ans pendant mon mariage\"",
+      "secondary_pains": [],
+      "desires": [],
+      "deep_desire": "Se sentir désirable à nouveau, prouver qu'elle est encore \"dans le jeu\"\nÉCHECS: - Filtres Tinder (pire anxiety quand ils se voient en vrai)\n- Injections (trop peur, trop cher)\n- Soins esthétiques cabinet (trop visibles, elle veut du naturel)",
+      "failed_solutions": [
+        "- Filtres Tinder (pire anxiety quand ils se voient en vrai)",
+        "Injections (trop peur, trop cher)",
+        "Soins esthétiques cabinet (trop visibles, elle veut du naturel)"
+      ],
+      "language_patterns": [
+        "\"je veux des résultats mais que ce soit discret\", \"je ne veux pas que ce soit obvious\", \"c'est quoi le secret des stars?\""
+      ],
+      "keywords": [
+        "sabrina,",
+        "ans,",
+        "divorcée",
+        "reprend",
+        "main"
+      ],
+      "hook_templates": [
+        "En 3 mois, ta peau sera assez lumineuse pour qu'il ne remarque que tes yeux - le reste du travail, le masque l'a fait\n\n---"
+      ],
+      "angle": "",
+      "cta_style": "",
+      "market_size": 0.65,
+      "competition": 0.5,
+      "accessibility": 0.3,
+      "avatar_score": 100,
+      "avatar_grade": "S",
+      "validated": true,
+      "validation_sources": [],
+      "created_at": "2026-05-16T20:28:28.375727+00:00"
+    },
+    {
+      "id": "25340c8f33",
+      "name": "Thomas, 45 ans, chef d'entreprise négligé",
+      "description": "Dirige une PME, stress constant, sommeil insuffisant. Sa femme lui a offert un soin en institut qu'il a trouvé \"ridicule\" mais a été surpris par le résultat - cherche une alternative à la maison.",
+      "life_context": "Dirige une PME, stress constant, sommeil insuffisant. Sa femme lui a offert un soin en institut qu'il a trouvé \"ridicule\" mais a été surpris par le résultat - cherche une alternative à la maison.",
+      "demographics": "",
+      "pain_points": [],
+      "primary_pain": "\"Ma femme dit que j'ai l'air épuisé en permanence et ça commence à m'énerver - je ne veux pas passer pour quelqu'un qui ne gère pas son entreprise\"",
+      "secondary_pains": [],
+      "desires": [],
+      "deep_desire": "Maintenir une image de leader compétitif sans avoir à \"faire sa femme\"\nÉCHECS: - Soin institut femme (trop féminin, pas envie d'y retourner)\n- Crème homme Gillette (pas de résultats)\n- Rien (laisser aller, mais la remarque de sa femme l'a vexé)",
+      "failed_solutions": [
+        "- Soin institut femme (trop féminin, pas envie d'y retourner)",
+        "Crème homme Gillette (pas de résultats)",
+        "Rien (laisser aller, mais la remarque de sa femme l'a vexé)"
+      ],
+      "language_patterns": [
+        "\"je n'ai pas le temps pour ces histoires\", \"je veux quelque chose de rapide\", \"c'est quoi le minimum efficace?\""
+      ],
+      "keywords": [
+        "thomas,",
+        "ans,",
+        "chef",
+        "d'entreprise",
+        "négligé"
+      ],
+      "hook_templates": [
+        "5 minutes le matin pendant ton café - personne ne le sait, mais tout le monde voit le résultat"
+      ],
+      "angle": "",
+      "cta_style": "",
+      "market_size": 0.65,
+      "competition": 0.5,
+      "accessibility": 0.3,
+      "avatar_score": 100,
+      "avatar_grade": "S",
+      "validated": true,
+      "validation_sources": [],
+      "created_at": "2026-05-16T20:28:28.376002+00:00"
+    }
+  ],
+  "copy_angles": []
+}

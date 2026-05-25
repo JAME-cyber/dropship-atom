@@ -14,9 +14,11 @@
 ║  │  ORCHESTRATOR (pipeline manager)                        │    ║
 ║  │    ├── hunter.py    ✅ Product Research (90% auto)      │    ║
 ║  │    ├── scout.py     ✅ Supplier Finder  (85% auto)      │    ║
+║  │    ├── spec_agent.py✅ Dossier Technique (95% auto)      │    ║
 ║  │    ├── creator.py   ✅ Creative Gen     (75% auto)      │    ║
 ║  │    ├── builder.py   🔧 Store Builder    (70% auto)      │    ║
 ║  │    ├── media.py     🔧 Ads Manager      (60% auto)      │    ║
+║  │    ├── veille.py    ✅ Veille Concurrentielle (90% auto) │    ║
 ║  │    ├── closer.py    🔧 Fulfillment+SAV  (80% auto)      │    ║
 ║  │    ├── analyst.py   🔧 P&L Dashboard    (90% auto)      │    ║
 ║  │    ├── feedback.py  ✅ Learning Loop     (90% auto)      │    ║
@@ -26,6 +28,7 @@
 """
 
 import argparse
+import hashlib
 import json
 import os
 import sys
@@ -68,9 +71,11 @@ class PipelineRun:
     # Phase tracking
     phase_hunter: str = "pending"      # pending, running, done, skipped
     phase_scout: str = "pending"
+    phase_spec: str = "pending"        # 🆕 Dossier technique
     phase_creator: str = "pending"
     phase_builder: str = "pending"
     phase_media: str = "pending"
+    phase_veille: str = "pending"      # 🆕 Veille concurrentielle
     phase_review: str = "pending"      # Human checkpoint
     
     # Products selected for this run
@@ -191,6 +196,67 @@ def phase_scout(run: PipelineRun):
 
 
 # ─── Phase 3: CREATOR ───────────────────────────────────────────────
+
+def phase_spec(run: PipelineRun):
+    """Phase SPEC: Generate technical dossier for each product."""
+    log(run, "SPEC", "Generating technical dossiers...")
+    run.phase_spec = "running"
+    save_pipeline(run)
+    
+    from spec_agent import generate_spec_deterministic, score_spec, generate_spec_markdown, save_spec, guess_segment
+    
+    spec_dir = OUTPUT_DIR / "specs"
+    spec_dir.mkdir(parents=True, exist_ok=True)
+    
+    for p in run.products_selected:
+        product_data = {
+            'id': hashlib.md5(p['name'].encode()).hexdigest()[:12],
+            'name': p['name'],
+            'category': p.get('category', 'General'),
+            'suggested_price': p.get('sell_price', 0),
+            'source_price': p.get('buy_price_usd', p.get('source_price', 0)),
+            'estimated_weight_g': p.get('weight', 300),
+            'keywords': p.get('keywords', []),
+        }
+        
+        spec = generate_spec_deterministic(product_data, guess_segment(p.get('sell_price', 0)))
+        spec = score_spec(spec)
+        md = generate_spec_markdown(spec)
+        save_spec(spec, md)
+        
+        p['spec_score'] = spec.overall_spec_score
+        p['spec_path'] = spec.md_path
+        p['components_count'] = len(spec.components)
+        p['certs'] = [c.name for c in spec.certifications]
+        
+        log(run, "SPEC", f"  📋 {p['name'][:35]} → {spec.overall_spec_score}/100 ({len(spec.components)} composants)")
+    
+    run.phase_spec = "done"
+    save_pipeline(run)
+
+
+def phase_veille(run: PipelineRun):
+    """Phase VEILLE: Competitive intelligence for active products."""
+    log(run, "VEILLE", "Running competitive veille...")
+    run.phase_veille = "running"
+    save_pipeline(run)
+    
+    from veille import run_veille
+    veille_results = run_veille(products=run.products_selected)
+    
+    if veille_results:
+        for p in run.products_selected:
+            name = p.get('name', '')
+            if name in veille_results:
+                vr = veille_results[name]
+                p['competitors_found'] = vr.get('competitors_found', 0)
+                p['price_range'] = vr.get('price_range', '')
+                p['top_competitor'] = vr.get('top_competitor', '')
+                log(run, "VEILLE", f"  🔍 {name[:35]} → {vr.get('competitors_found', 0)} concurrents, prix: {vr.get('price_range', '')}")
+    
+    run.phase_veille = "done"
+    save_pipeline(run)
+
 
 def phase_creator(run: PipelineRun):
     """Run CREATOR agent to generate all marketing assets."""
@@ -818,31 +884,43 @@ def run_full_pipeline(budget: float = 500, sources: list = None, enrich_top: int
     
     # ─── Phase 2: SCOUT ─────────────────────────────────────────
     print(f"\n{'━' * 65}")
-    print("  PHASE 2/6: 🔍 SCOUT — Supplier Finder")
+    print("  PHASE 2/8: 🔍 SCOUT — Supplier Finder")
     print("━" * 65)
     phase_scout(run)
     
-    # ─── Phase 3: CREATOR ───────────────────────────────────────
+    # ─── Phase 3: SPEC (🆕 Dossier Technique) ──────────────────
     print(f"\n{'━' * 65}")
-    print("  PHASE 3/6: 🎨 CREATOR — Marketing Assets")
+    print("  PHASE 3/8: 📋 SPEC — Dossier Technique")
+    print("━" * 65)
+    phase_spec(run)
+    
+    # ─── Phase 4: CREATOR ───────────────────────────────────────
+    print(f"\n{'━' * 65}")
+    print("  PHASE 4/8: 🎨 CREATOR — Marketing Assets")
     print("━" * 65)
     phase_creator(run)
     
-    # ─── Phase 4: BUILDER ───────────────────────────────────────
+    # ─── Phase 5: BUILDER ───────────────────────────────────────
     print(f"\n{'━' * 65}")
-    print("  PHASE 4/6: 🏪 BUILDER — Store Setup Blueprint")
+    print("  PHASE 5/8: 🏪 BUILDER — Store Setup Blueprint")
     print("━" * 65)
     phase_builder(run)
     
-    # ─── Phase 5: MEDIA ─────────────────────────────────────────
+    # ─── Phase 6: MEDIA ─────────────────────────────────────────
     print(f"\n{'━' * 65}")
-    print("  PHASE 5/6: 📊 MEDIA — Campaign Blueprints")
+    print("  PHASE 6/8: 📊 MEDIA — Campaign Blueprints")
     print("━" * 65)
     phase_media(run)
     
-    # ─── Phase 6: ANALYST ───────────────────────────────────────
+    # ─── Phase 7: VEILLE (🆕 Competitive Intel) ────────────────
     print(f"\n{'━' * 65}")
-    print("  PHASE 6/6: 📈 ANALYST — P&L Dashboard")
+    print("  PHASE 7/8: 🔎 VEILLE — Competitive Intelligence")
+    print("━" * 65)
+    phase_veille(run)
+    
+    # ─── Phase 8: ANALYST ───────────────────────────────────────
+    print(f"\n{'━' * 65}")
+    print("  PHASE 8/8: 📈 ANALYST — P&L Dashboard")
     print("━" * 65)
     phase_analyst(run)
     
@@ -892,9 +970,11 @@ def show_status():
     phases = [
         ("🏹 HUNTER", run.phase_hunter),
         ("🔍 SCOUT", run.phase_scout),
+        ("📋 SPEC", run.phase_spec),
         ("🎨 CREATOR", run.phase_creator),
         ("🏪 BUILDER", run.phase_builder),
         ("📊 MEDIA", run.phase_media),
+        ("🔎 VEILLE", run.phase_veille),
         ("📈 REVIEW", run.phase_review),
     ]
     
@@ -922,7 +1002,7 @@ def show_status():
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='DropAtom Orchestrator')
-    parser.add_argument('command', choices=['launch', 'status', 'hunter', 'scout', 'creator', 'builder', 'media', 'analyst'],
+    parser.add_argument('command', choices=['launch', 'status', 'hunter', 'scout', 'spec', 'creator', 'builder', 'media', 'veille', 'analyst'],
                        help='Command to run')
     parser.add_argument('--budget', type=float, default=500, help='Total budget in EUR (default: 500)')
     parser.add_argument('--source', choices=['trends', 'amazon', 'aliexpress', 'instagram', 'seed'],
@@ -938,17 +1018,21 @@ if __name__ == '__main__':
     elif args.command == 'status':
         show_status()
     
-    elif args.command in ('hunter', 'scout', 'creator', 'builder', 'media', 'analyst'):
+    elif args.command in ('hunter', 'scout', 'spec', 'creator', 'builder', 'media', 'veille', 'analyst'):
         run = load_pipeline() or PipelineRun()
         if args.command == 'hunter':
             phase_hunter(run, enrich_top=args.enrich)
         elif args.command == 'scout':
             phase_scout(run)
+        elif args.command == 'spec':
+            phase_spec(run)
         elif args.command == 'creator':
             phase_creator(run)
         elif args.command == 'builder':
             phase_builder(run)
         elif args.command == 'media':
             phase_media(run)
+        elif args.command == 'veille':
+            phase_veille(run)
         elif args.command == 'analyst':
             phase_analyst(run)

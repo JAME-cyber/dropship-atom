@@ -1,0 +1,13 @@
+{
+  "timestamp": "2026-05-16T19:58:47.668474+00:00",
+  "agent": "AVATAR_DISCOVERY",
+  "action": "avatar_discovery",
+  "product": "Neck Massager EMS",
+  "category": "Health",
+  "avatars_found": 4,
+  "top_avatar": "\"La surveillante de nuit\"",
+  "top_score": 100,
+  "output_path": "/home/tars/dropship-atom/agents/output/avatars/neck-massager-ems/20260516-215002",
+  "prev_hash": "62534dd9c46d38d402350eaee2c45cc44d18dbd989245dd7bbf27ce8bce0a651",
+  "hash": "44fe72089487b1fe02e4ea2ddc9409968717f2131df802bfafa1e7c71f39e680"
+}

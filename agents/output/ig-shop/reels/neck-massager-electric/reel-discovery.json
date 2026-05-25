@@ -1,0 +1,40 @@
+{
+  "product": "Neck Massager Electric",
+  "price": 0.0,
+  "content_type": "discovery",
+  "script": {
+    "content_type": "discovery",
+    "visual_hook": "Gros plan sur une personne qui grimace de douleur en se tenant le cou.",
+    "text_overlay": "Mal de cou ? La solution !",
+    "voiceover": "Ah, le mal de cou... Qui n'a jamais connu ça ? J'avais l'impression d'avoir 100 ans, jusqu'à ce que je découvre ça...",
+    "demo_sequence": [
+      "Montrer le masseur cervical électrique déballé avec enthousiasme.",
+      "L'utiliser sur le cou, avec un air de soulagement évident.",
+      "Zoom sur les différentes fonctions et niveaux d'intensité."
+    ],
+    "product_tag_moment": "Après la première utilisation du masseur, au moment du soulagement évident (vers 8-10 secondes).",
+    "caption": "OMG! 😱 J'ai découvert the solution pour mes douleurs cervicales! Plus besoin de séances de kiné hors de prix! 💆‍♀️ Lien direct dans la vidéo! #neckmassage #bienetre #sante # douleurscervicales",
+    "shop_cta": "Clique sur le lien juste en dessous pour dire adieu aux tensions!",
+    "hashtags": [
+      "neckmassage",
+      "bienetre",
+      "sante",
+      "douleurscervicales",
+      "detente",
+      "solutionmiracle",
+      "astucebienetre",
+      "produittestés",
+      "ugc",
+      "tiktokmademebuyit"
+    ],
+    "music_vibe": "Musique lo-fi relaxante ou un son viral tendance sur le thème du 'soulagement'.",
+    "duration_seconds": [
+      15
+    ]
+  },
+  "product_tagging": {
+    "retailer_id": "shopify-neck-massager-electric",
+    "source": "meta_commerce_manager"
+  },
+  "generated_at": "2026-05-14T13:30:21.337268+00:00"
+}

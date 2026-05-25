@@ -1,0 +1,44 @@
+{
+  "global_score": 41.7,
+  "dimensions": {
+    "Product Compliance (CE/REACH/RoHS)": {
+      "score": 5,
+      "max": 10,
+      "status": "🔴 Aucun produit certifie",
+      "action": "Commander tests SGS pour les 3 produits prioritaires"
+    },
+    "Legal Pages (CGV/Mentions/Privacy)": {
+      "score": 8,
+      "max": 10,
+      "status": "✅ Pages generees",
+      "action": "Publier sur Shopify"
+    },
+    "AI Content Compliance (AI Act)": {
+      "score": 3,
+      "max": 10,
+      "status": "🔴 Pas de disclosure IA sur les UGC",
+      "action": "Ajouter mentions 'Genere par IA' sur tout contenu IA"
+    },
+    "Consumer Protection (Garantie/Retour)": {
+      "score": 4,
+      "max": 10,
+      "status": "🟡 Mentionne dans CGV mais pas encore en ligne",
+      "action": "Publier CGV + formulaire retractation sur Shopify"
+    },
+    "Data Protection (RGPD)": {
+      "score": 5,
+      "max": 10,
+      "status": "🟡 Privacy policy generee mais pas en ligne",
+      "action": "Publier privacy policy + configurer bandeau cookies"
+    },
+    "Insurance (RC Produit)": {
+      "score": 0,
+      "max": 10,
+      "status": "🔴 Pas d'assurance RC produit",
+      "action": "Souscrire assurance RC produit (200-500 EUR/an)"
+    }
+  },
+  "ebd_current": 2.0,
+  "ebd_target": 7.0,
+  "generated_at": "2026-05-25T11:25:01.735593+00:00"
+}
