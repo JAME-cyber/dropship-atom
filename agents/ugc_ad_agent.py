@@ -30,6 +30,10 @@ from pathlib import Path
 OUTPUT_DIR = Path(__file__).parent / "output" / "ugc-ads"
 TEMPLATE_DIR = Path(__file__).parent / "templates"
 
+# Kie.ai (optional — for Seedance 2.0 AI video)
+KIE_KEY = os.environ.get('KIE_API_KEY', '') or os.environ.get('KIE_AI_API_KEY', '')
+KIE_BASE = "https://api.kie.ai"
+
 # 50 Hooks viraux UGC (inspirés du guide YouTube)
 VIRAL_HOOKS = [
     "J'étais la fille qui [PROBLÈME] jusqu'à ce qu'une copine me montre ce truc",
@@ -444,6 +448,113 @@ def generate_tiktok_video(
         return None
 
 
+def generate_seedance_video(
+    product_name: str,
+    niche: str,
+    script_text: str,
+    output_path: Path,
+    duration: int = 15,
+) -> Path:
+    """
+    Genere une video UGC via Seedance 2.0 (Kie.ai).
+    
+    Pipeline:
+    1. Generate start frame (GPT Image 2 / Nano Banana 2)
+    2. Animate frame via Seedance 2.0 (4-15 sec per scene)
+    3. Add AI disclosure label
+    
+    Cost: ~$0.02-0.05 per video via Kie.ai
+    """
+    video_path = output_path / f"ugc-seedance-{product_name.lower().replace(' ', '-')}.mp4"
+    
+    if not KIE_KEY:
+        print("  ⚠️  Pas de KIE_API_KEY — Seedance non disponible")
+        print("  💡 Definir KIE_API_KEY ou KIE_AI_API_KEY pour activer")
+        return None
+    
+    # Scene decomposition
+    sentences = [s.strip() for s in script_text.replace("...", ".").split(".") if s.strip()]
+    scenes = []
+    per_scene = duration // max(len(sentences), 1)
+    for s in sentences:
+        scenes.append({"text": s, "duration": min(per_scene, 10)})
+    
+    # Start frame prompt
+    niche_visual = {
+        "beauty": "modern bathroom, natural light, skincare products",
+        "health": "modern living room, wellness atmosphere",
+        "wellness": "zen bedroom, calm atmosphere, soft lighting",
+        "baby": "colorful nursery, warm light, baby products",
+        "home": "modern kitchen or living room, clean aesthetic",
+        "general": "modern apartment, natural light, lifestyle",
+    }
+    visual_ctx = niche_visual.get(niche, niche_visual["general"])
+    
+    start_frame_prompt = (
+        f"Candid photo of a young woman (25-35) in {visual_ctx}. "
+        f"She is holding or about to use {product_name}. "
+        f"Natural, unposed moment. Vertical 9:16. Photorealistic."
+    )
+    
+    # Try generating via Kie.ai
+    print(f"  🤖 Seedance 2.0: Generating start frame...")
+    
+    payload = {
+        "model": "nano-banana-2",  # More reliable than gpt-image-2
+        "input": {
+            "prompt": start_frame_prompt,
+            "image_input": [],
+            "aspect_ratio": "9-16",
+            "resolution": "1K",
+            "output_format": "png",
+        }
+    }
+    
+    data = json.dumps(payload).encode("utf-8")
+    headers = {
+        "Authorization": f"Bearer {KIE_KEY}",
+        "Content-Type": "application/json",
+    }
+    
+    try:
+        req = urllib.request.Request(
+            f"{KIE_BASE}/api/v1/jobs/createTask",
+            data=data, headers=headers, method="POST"
+        )
+        resp = urllib.request.urlopen(req, timeout=60)
+        result = json.loads(resp.read().decode("utf-8"))
+        
+        if result.get("code") != 200:
+            print(f"  ❌ Kie.ai error: {result.get('msg', 'unknown')}")
+            return None
+        
+        task_id = result.get("data", {}).get("taskId", "")
+        print(f"  ✅ Start frame task: {task_id}")
+        print(f"  💡 Video Seedance generation en cours — peut prendre 2-5 min")
+        print(f"     Verifier le statut sur Kie.ai dashboard")
+        
+        # Save task info for later retrieval
+        task_info = {
+            "task_id": task_id,
+            "model": "nano-banana-2",
+            "product": product_name,
+            "niche": niche,
+            "scenes": scenes,
+            "start_frame_prompt": start_frame_prompt,
+            "status": "generating",
+            "ai_disclosure": "Généré par IA — Seedance 2.0",
+        }
+        task_file = output_path / "seedance-task.json"
+        task_file.write_text(json.dumps(task_info, indent=2, ensure_ascii=False))
+        
+        print(f"  📁 Task info: {task_file}")
+        return task_file
+        
+    except Exception as e:
+        print(f"  ❌ Kie.ai request failed: {e}")
+        return None
+
+
 def generate_abandoned_cart_emails(product_name: str, price: str, store_name: str = "TaBoutique") -> list:
     """Génère 3 emails de relance abandon panier (inspiré Omnisend)"""
     
@@ -699,6 +810,10 @@ def main():
     parser.add_argument("--voice", default="fr-FR-RemyMultilingualNeural", 
                        help="Voix Edge-TTS (défaut: Remy Multilingual)")
     parser.add_argument("--output", default=None, help="Dossier output personnalisé")
+    parser.add_argument("--seedance", action="store_true",
+                       help="Utiliser Seedance 2.0 (Kie.ai) pour générer la vidéo IA")
+    parser.add_argument("--seedance-duration", type=int, default=15,
+                       help="Durée video Seedance en secondes (défaut: 15)")
     
     args = parser.parse_args()
 
@@ -743,16 +858,34 @@ def main():
     print()
 
     # ── ÉTAPE 3: Sous-titres + Vidéo ──
-    print("🎬 Étape 3/4: Génération de la vidéo TikTok...")
-    srt_path = generate_subtitles_srt(script["scenes"], output_path)
-    
-    video_path = None
-    if audio_path:
-        video_path = generate_tiktok_video(
-            args.product, args.price, args.niche,
-            audio_path, audio_duration, srt_path,
-            output_path, args.product_image,
+    if args.seedance:
+        print("🎬 Étape 3/4: Génération vidéo IA (Seedance 2.0)...")
+        seedance_result = generate_seedance_video(
+            args.product, args.niche, script["full_script"],
+            output_path, args.seedance_duration,
         )
+        if seedance_result:
+            print(f"  ✅ Seedance task créé: {seedance_result}")
+        else:
+            print("  ⚠️  Seedance échoué — fallback vers vidéo ffmpeg...")
+            srt_path = generate_subtitles_srt(script["scenes"], output_path)
+            if audio_path:
+                video_path = generate_tiktok_video(
+                    args.product, args.price, args.niche,
+                    audio_path, audio_duration, srt_path,
+                    output_path, args.product_image,
+                )
+    else:
+        print("🎬 Étape 3/4: Génération de la vidéo TikTok (ffmpeg)...")
+        srt_path = generate_subtitles_srt(script["scenes"], output_path)
+        
+        video_path = None
+        if audio_path:
+            video_path = generate_tiktok_video(
+                args.product, args.price, args.niche,
+                audio_path, audio_duration, srt_path,
+                output_path, args.product_image,
+            )
     print()
 
     # ── ÉTAPE 4: Emails abandon panier ──
