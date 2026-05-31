@@ -50,6 +50,13 @@ from typing import Optional
 from feedback import get_hunter_adjustments
 from suppliers import find_supplier as _find_supplier, print_supplier_card
 
+# Saturation Killer (contre-analyse DeepSeek R1)
+try:
+    from saturation_killer import check_saturation, apply_saturation_filter, batch_saturation_report
+    SATURATION_KILLER_ENABLED = True
+except ImportError:
+    SATURATION_KILLER_ENABLED = False
+
 try:
     from bs4 import BeautifulSoup
 except ImportError:
@@ -162,6 +169,13 @@ class Product:
     # Scoring
     hunter_score: float = 0.0      # Composite 0-100
     hunter_grade: str = ""         # S, A, B, C, D
+    
+    # Saturation Killer (DeepSeek R1 contre-analyse)
+    saturation_score: float = 0.0   # 0 = vierge, 100 = mort
+    saturation_grade: str = ""      # GREEN / YELLOW / RED / DEAD
+    saturation_verdict: str = ""    # PASS / WARNING / REJECT / KILL
+    saturation_kill_reasons: list = field(default_factory=list)
+    saturation_warnings: list = field(default_factory=list)
     
     # Timestamps
     discovered_at: str = ""
@@ -1191,6 +1205,29 @@ def score_product(p: Product, use_feedback: bool = True) -> Product:
     else:
         client_first_bonus = 0
     
+    # B6. SATURATION KILLER — filtre anti-saturation automatique
+    # Vérifie Amazon FR sellers, Amazon Basics, prix concurrentiel
+    if SATURATION_KILLER_ENABLED:
+        try:
+            sat_report = check_saturation(
+                product_name=p.name,
+                keywords=p.keywords,
+                our_price=p.suggested_price,
+            )
+            if sat_report.verdict == "KILL":
+                p.llm_verdict = "SKIP"
+                composite *= 0.2  # Kill = -80% score
+                p.notes = (p.notes + " | 💀 SATURATION KILL: " + "; ".join(sat_report.kill_reasons)).strip(" | ")
+            elif sat_report.verdict == "REJECT":
+                composite *= 0.6  # Reject = -40%
+                p.notes = (p.notes + " | 🔴 HIGH SATURATION: " + str(sat_report.amazon_fr_sellers) + " sellers Amazon").strip(" | ")
+            elif sat_report.verdict == "WARNING":
+                composite *= 0.85  # Warning = -15%
+            # Store saturation data
+            p.competition_score = max(0, 100 - sat_report.saturation_score)
+        except Exception:
+            pass  # Non-blocking — if saturation check fails, continue
+    
     # B5. B2B POTENTIAL — peut-il être revendu en salon/boutique?
     B2B_FRIENDLY = [
         "cheveux", "hair", "brosse", "brush", "peigne", "comb",
@@ -2058,6 +2095,8 @@ if __name__ == '__main__':
                        help='Generate report from existing data only')
     parser.add_argument('--no-enrich', action='store_true',
                        help='Skip LLM enrichment')
+    parser.add_argument('--saturation', action='store_true',
+                       help='Run saturation check on all products')
     
     args = parser.parse_args()
     
@@ -2088,6 +2127,16 @@ if __name__ == '__main__':
     elif args.dream:
         enrich = 0 if args.no_enrich else (args.enrich or 10)
         run_dream_search(enrich_top=enrich)
+    
+    elif args.saturation:
+        products = load_products()
+        if products and SATURATION_KILLER_ENABLED:
+            report = batch_saturation_report(products)
+            print(report)
+        elif not SATURATION_KILLER_ENABLED:
+            print("  ❌ Saturation Killer not available (import error)")
+        else:
+            print("No products found. Run the hunter first.")
     
     else:
         sources = [args.source] if args.source else None
