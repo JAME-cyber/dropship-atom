@@ -16,6 +16,8 @@
 ║  │    ├── scout.py     ✅ Supplier Finder  (85% auto)      │    ║
 ║  │    ├── spec_agent.py✅ Dossier Technique (95% auto)      │    ║
 ║  │    ├── creator.py   ✅ Creative Gen     (75% auto)      │    ║
+║  │    ├── pubstatic.py ✅ Static Ads Gen   (85% auto)      │    ║
+║  │    ├── email_mktg.py✅ Email Sequences  (80% auto)      │    ║
 ║  │    ├── builder.py   🔧 Store Builder    (70% auto)      │    ║
 ║  │    ├── media.py     🔧 Ads Manager      (60% auto)      │    ║
 ║  │    ├── veille.py    ✅ Veille Concurrentielle (90% auto) │    ║
@@ -77,6 +79,8 @@ class PipelineRun:
     phase_media: str = "pending"
     phase_veille: str = "pending"      # 🆕 Veille concurrentielle
     phase_review: str = "pending"      # Human checkpoint
+    phase_pubstatic: str = "pending"   # 🆕 Static ad visuals
+    phase_email: str = "pending"        # 🆕 Email sequences
     
     # Products selected for this run
     products_selected: list = field(default_factory=list)
@@ -816,7 +820,70 @@ def phase_media(run: PipelineRun):
     }, source_agent="media")
 
 
-# ─── Phase 6: ANALYST (P&L Dashboard) ──────────────────────────────
+# ─── Phase 7: PUBSTATIC (Static Ad Visuals) ──────────────────────
+
+def phase_pubstatic(run: PipelineRun):
+    """Generate static ad visuals (10 concepts × N variations)."""
+    log(run, "PUBSTATIC", "Generating static ad visuals...")
+    run.phase_pubstatic = "running"
+    save_pipeline(run)
+    
+    from pubstatic import run_pubstatic as _run_pubstatic
+    
+    for product in run.products_selected:
+        name = product["name"]
+        try:
+            result = _run_pubstatic(
+                product_name=name,
+                variations=3,
+                use_kie=True,
+                generate_html=True,
+                enrich_product=True,
+            )
+            product["pubstatic_ads"] = result.total_ads
+            product["pubstatic_dir"] = result.output_dir
+            log(run, "PUBSTATIC", f"  🖼️ {name[:35]} → {result.total_ads} visuels générés")
+        except Exception as e:
+            log(run, "PUBSTATIC", f"  ⚠️ {name[:35]} → erreur: {str(e)[:60]}")
+    
+    run.phase_pubstatic = "done"
+    save_pipeline(run)
+    bus_publish("pubstatic.ads_ready", {
+        "products_with_visuals": len([p for p in run.products_selected if p.get("pubstatic_ads", 0) > 0]),
+    }, source_agent="pubstatic")
+
+
+# ─── Phase 8: EMAIL MARKETING (Email Sequences) ─────────────────────
+
+def phase_email(run: PipelineRun):
+    """Generate email marketing sequences (abandoned cart, checkout, etc.)."""
+    log(run, "EMAIL", "Generating email sequences...")
+    run.phase_email = "running"
+    save_pipeline(run)
+    
+    from email_marketing import run_email_agent as _run_email
+    
+    for product in run.products_selected:
+        name = product["name"]
+        try:
+            sequences = _run_email(
+                product_name=name,
+                sequences=["checkout_abandon", "cart_abandon"],
+            )
+            product["email_sequences"] = len(sequences)
+            total_emails = sum(len(s.steps) for s in sequences)
+            log(run, "EMAIL", f"  ✉️ {name[:35]} → {len(sequences)} séquences ({total_emails} emails)")
+        except Exception as e:
+            log(run, "EMAIL", f"  ⚠️ {name[:35]} → erreur: {str(e)[:60]}")
+    
+    run.phase_email = "done"
+    save_pipeline(run)
+    bus_publish("email.sequences_ready", {
+        "products_with_emails": len([p for p in run.products_selected if p.get("email_sequences", 0) > 0]),
+    }, source_agent="email")
+
+
+# ─── Phase 10: ANALYST (P&L Dashboard) ──────────────────────────────
 
 def phase_analyst(run: PipelineRun):
     """Generate P&L dashboard and projections."""
@@ -961,25 +1028,37 @@ def run_full_pipeline(budget: float = 500, sources: list = None, enrich_top: int
     
     # ─── Phase 5: BUILDER ───────────────────────────────────────
     print(f"\n{'━' * 65}")
-    print("  PHASE 5/8: 🏪 BUILDER — Store Setup Blueprint")
+    print("  PHASE 5/10: 🏪 BUILDER — Store Setup Blueprint")
     print("━" * 65)
     phase_builder(run)
     
     # ─── Phase 6: MEDIA ─────────────────────────────────────────
     print(f"\n{'━' * 65}")
-    print("  PHASE 6/8: 📊 MEDIA — Campaign Blueprints")
+    print("  PHASE 6/10: 📊 MEDIA — Campaign Blueprints")
     print("━" * 65)
     phase_media(run)
     
-    # ─── Phase 7: VEILLE (🆕 Competitive Intel) ────────────────
+    # ─── Phase 7: PUBSTATIC (🆕 Static Ad Visuals) ────────────────
     print(f"\n{'━' * 65}")
-    print("  PHASE 7/8: 🔎 VEILLE — Competitive Intelligence")
+    print("  PHASE 7/10: 🖼️ PUBSTATIC — Static Ad Visuals")
+    print("━" * 65)
+    phase_pubstatic(run)
+    
+    # ─── Phase 8: VEILLE (🆕 Competitive Intel) ──────────────────
+    print(f"\n{'━' * 65}")
+    print("  PHASE 8/10: 🔎 VEILLE — Competitive Intelligence")
     print("━" * 65)
     phase_veille(run)
     
-    # ─── Phase 8: ANALYST ───────────────────────────────────────
+    # ─── Phase 9: EMAIL MARKETING (🆕 Email Sequences) ────────────
     print(f"\n{'━' * 65}")
-    print("  PHASE 8/8: 📈 ANALYST — P&L Dashboard")
+    print("  PHASE 9/10: ✉️ EMAIL — Email Marketing Sequences")
+    print("━" * 65)
+    phase_email(run)
+    
+    # ─── Phase 10: ANALYST ───────────────────────────────────────
+    print(f"\n{'━' * 65}")
+    print("  PHASE 10/10: 📈 ANALYST — P&L Dashboard")
     print("━" * 65)
     phase_analyst(run)
     
@@ -1041,7 +1120,9 @@ def show_status():
         ("🎨 CREATOR", run.phase_creator),
         ("🏪 BUILDER", run.phase_builder),
         ("📊 MEDIA", run.phase_media),
+        ("🖼️ PUBSTATIC", run.phase_pubstatic),
         ("🔎 VEILLE", run.phase_veille),
+        ("✉️ EMAIL", run.phase_email),
         ("📈 REVIEW", run.phase_review),
     ]
     
@@ -1069,7 +1150,7 @@ def show_status():
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='DropAtom Orchestrator')
-    parser.add_argument('command', choices=['launch', 'status', 'hunter', 'scout', 'spec', 'creator', 'builder', 'media', 'veille', 'analyst'],
+    parser.add_argument('command', choices=['launch', 'status', 'hunter', 'scout', 'spec', 'creator', 'pubstatic', 'email', 'builder', 'media', 'veille', 'analyst'],
                        help='Command to run')
     parser.add_argument('--budget', type=float, default=500, help='Total budget in EUR (default: 500)')
     parser.add_argument('--source', choices=['trends', 'amazon', 'aliexpress', 'instagram', 'seed'],
@@ -1085,7 +1166,7 @@ if __name__ == '__main__':
     elif args.command == 'status':
         show_status()
     
-    elif args.command in ('hunter', 'scout', 'spec', 'creator', 'builder', 'media', 'veille', 'analyst'):
+    elif args.command in ('hunter', 'scout', 'spec', 'creator', 'pubstatic', 'email', 'builder', 'media', 'veille', 'analyst'):
         run = load_pipeline() or PipelineRun()
         if args.command == 'hunter':
             phase_hunter(run, enrich_top=args.enrich)
@@ -1095,6 +1176,10 @@ if __name__ == '__main__':
             phase_spec(run)
         elif args.command == 'creator':
             phase_creator(run)
+        elif args.command == 'pubstatic':
+            phase_pubstatic(run)
+        elif args.command == 'email':
+            phase_email(run)
         elif args.command == 'builder':
             phase_builder(run)
         elif args.command == 'media':
