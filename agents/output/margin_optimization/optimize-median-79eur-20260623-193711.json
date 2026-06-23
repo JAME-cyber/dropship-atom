@@ -1,0 +1,131 @@
+{
+  "generated_at": "2026-06-23T17:37:11.299393+00:00",
+  "scenario": "median",
+  "price_eur": 79.0,
+  "allocation": {
+    "allocations": [
+      {
+        "phase": "hunter",
+        "tier": "CHEAP",
+        "reason": "Recherche et scoring multi-sources structurés, forte volumétrie mais jugement suffisamment fiable en mini."
+      },
+      {
+        "phase": "scout",
+        "tier": "CHEAP",
+        "reason": "Recherche fournisseurs, comparaison de devis et synthèse semi-structurée sans besoin de créativité premium."
+      },
+      {
+        "phase": "spec",
+        "tier": "CHEAP",
+        "reason": "Dossier technique CE/RoHS/REACH principalement basé sur extraction, structuration et checklists normatives."
+      },
+      {
+        "phase": "veille",
+        "tier": "FREE",
+        "reason": "Bulk concurrentiel non critique, acceptable en modèle gratuit si les signaux clés sont ensuite synthétisés."
+      },
+      {
+        "phase": "creator",
+        "tier": "PREMIUM",
+        "reason": "Copy TikTok, storytelling et angle de marque sont directement perçus par le client comme différenciants."
+      },
+      {
+        "phase": "builder",
+        "tier": "CHEAP",
+        "reason": "Blueprint Shopify et descriptions suivent des patterns e-commerce standards avec besoin de bonne exécution, pas d’expertise premium."
+      },
+      {
+        "phase": "media",
+        "tier": "CHEAP",
+        "reason": "Blueprint campagnes Meta/TikTok repose sur cadres marketing structurés, ciblages et templates optimisables en mini."
+      },
+      {
+        "phase": "pubstatic",
+        "tier": "CHEAP",
+        "reason": "Concepts ads statiques visibles mais générables en variantes cadrées à partir du positionnement premium du creator."
+      },
+      {
+        "phase": "email",
+        "tier": "CHEAP",
+        "reason": "Séquences email marketing très template-driven avec personnalisation suffisante en mini."
+      },
+      {
+        "phase": "fulfillment",
+        "tier": "NANO",
+        "reason": "Calculs FBA, shipping et routage sont mécaniques, structurés et peu créatifs."
+      },
+      {
+        "phase": "compliance",
+        "tier": "PREMIUM",
+        "reason": "Audit anti-faux-certificats exige jugement expert, prudence et forte valeur de réassurance client."
+      },
+      {
+        "phase": "analyst",
+        "tier": "PREMIUM",
+        "reason": "Dashboard P&L et verdict final de lancement déterminent la décision client et nécessitent un raisonnement fiable."
+      }
+    ],
+    "premium_pct_estimate": 25,
+    "cheap_pct_estimate": 58,
+    "nano_pct_estimate": 8,
+    "free_pct_estimate": 9,
+    "strategy_summary": "Le PREMIUM est réservé aux livrables à forte valeur perçue : créativité de marque, jugement compliance et verdict final. Les phases volumineuses ou structurées passent en CHEAP/NANO/FREE pour réduire fortement le coût sans dégrader l’expérience client."
+  },
+  "evaluations": [
+    {
+      "mix": "premium_seul",
+      "cost_factor": 1.0,
+      "llm_savings_pct": 0.0,
+      "dossier_cost_eur": 4.467,
+      "resilient_up_to_x": 1,
+      "business_breakeven_at_x1": "113 ab.",
+      "verdict": "fragile"
+    },
+    {
+      "mix": "conservateur",
+      "cost_factor": 0.4283,
+      "llm_savings_pct": 57.2,
+      "dossier_cost_eur": 2.406,
+      "resilient_up_to_x": 2,
+      "business_breakeven_at_x1": "66 ab.",
+      "verdict": "fragile"
+    },
+    {
+      "mix": "équilibré",
+      "cost_factor": 0.2354,
+      "llm_savings_pct": 76.6,
+      "dossier_cost_eur": 1.7107,
+      "resilient_up_to_x": 5,
+      "business_breakeven_at_x1": "58 ab.",
+      "verdict": "fragile"
+    },
+    {
+      "mix": "agressif",
+      "cost_factor": 0.1309,
+      "llm_savings_pct": 87.0,
+      "dossier_cost_eur": 1.335,
+      "resilient_up_to_x": 10,
+      "business_breakeven_at_x1": "54 ab.",
+      "verdict": "fragile"
+    },
+    {
+      "mix": "radical",
+      "cost_factor": 0.0725,
+      "llm_savings_pct": 92.8,
+      "dossier_cost_eur": 1.1258,
+      "resilient_up_to_x": 10,
+      "business_breakeven_at_x1": "52 ab.",
+      "verdict": "fragile"
+    }
+  ],
+  "best_mix": {
+    "mix": "agressif",
+    "cost_factor": 0.1309,
+    "llm_savings_pct": 87.0,
+    "dossier_cost_eur": 1.335,
+    "resilient_up_to_x": 10,
+    "business_breakeven_at_x1": "54 ab.",
+    "verdict": "fragile"
+  },
+  "verdict": "1. Le mix optimal ne règle pas totalement le kill factor #3, mais il le réduit fortement. Le coût dossier passe de 4,467€ en premium seul à 1,335€ avec le mix agressif. Cela transforme la fragilité LLM en risque beaucoup plus contrôlable, sans l’annuler.\n\n2. Le gain clé est massif : 87% d’économie LLM, avec un coût équivalent à 13,09% du premium seul. La résilience passe de x1 à x10, soit un multiplicateur de résilience gagné de 10x. Le seuil de break-even descend aussi de 113 à 54 abonnés.\n\n3. Ce qui reste risqué : la qualité perçue si 75% des traitements hors premium dégradent les livrables, notamment en créativité, nuance juridique ou cohérence finale. La dépendance à 9% de free peut aussi créer un risque de disponibilité, quotas, latence ou confidentialité.\n\n4. Verdict : en usage médian, le modèle devient vendable à ≤79€ si le routage qualité est strict. Mais ce n’est pas encore “béton” : le scénario reste marqué fragile, donc il faut monitorer coût, qualité et taux de recours premium."
+}

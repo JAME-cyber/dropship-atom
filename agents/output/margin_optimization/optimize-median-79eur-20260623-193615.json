@@ -1,0 +1,131 @@
+{
+  "generated_at": "2026-06-23T17:36:15.767865+00:00",
+  "scenario": "median",
+  "price_eur": 79.0,
+  "allocation": {
+    "allocations": [
+      {
+        "phase": "hunter",
+        "tier": "CHEAP",
+        "reason": "scoring produit = parsing structuré, cheap suffit"
+      },
+      {
+        "phase": "scout",
+        "tier": "CHEAP",
+        "reason": "extraction devis = tâche mécanique"
+      },
+      {
+        "phase": "spec",
+        "tier": "PREMIUM",
+        "reason": "dossier technique CE = précision critique, premium"
+      },
+      {
+        "phase": "veille",
+        "tier": "NANO",
+        "reason": "agrégation concurrentielle = bulk"
+      },
+      {
+        "phase": "creator",
+        "tier": "PREMIUM",
+        "reason": "copy créatif = différenciant perçu, premium"
+      },
+      {
+        "phase": "builder",
+        "tier": "CHEAP",
+        "reason": "descriptions template = cheap"
+      },
+      {
+        "phase": "media",
+        "tier": "CHEAP",
+        "reason": "blueprint campagne = structuré, cheap"
+      },
+      {
+        "phase": "pubstatic",
+        "tier": "NANO",
+        "reason": "concepts statiques = nano"
+      },
+      {
+        "phase": "email",
+        "tier": "CHEAP",
+        "reason": "séquences = template, cheap"
+      },
+      {
+        "phase": "fulfillment",
+        "tier": "NANO",
+        "reason": "calcul FBA = arithmétique, nano"
+      },
+      {
+        "phase": "compliance",
+        "tier": "PREMIUM",
+        "reason": "audit faux-certificats = jugement, premium"
+      },
+      {
+        "phase": "analyst",
+        "tier": "PREMIUM",
+        "reason": "verdict final = raisonnement expert, premium"
+      }
+    ],
+    "premium_pct_estimate": 33,
+    "cheap_pct_estimate": 42,
+    "nano_pct_estimate": 25,
+    "free_pct_estimate": 0,
+    "strategy_summary": "Heuristique: premium sur copy/spec/compliance/analyst (perçu client)."
+  },
+  "evaluations": [
+    {
+      "mix": "premium_seul",
+      "cost_factor": 1.0,
+      "llm_savings_pct": 0.0,
+      "dossier_cost_eur": 4.467,
+      "resilient_up_to_x": 1,
+      "business_breakeven_at_x1": "113 ab.",
+      "verdict": "fragile"
+    },
+    {
+      "mix": "conservateur",
+      "cost_factor": 0.4283,
+      "llm_savings_pct": 57.2,
+      "dossier_cost_eur": 2.406,
+      "resilient_up_to_x": 2,
+      "business_breakeven_at_x1": "66 ab.",
+      "verdict": "fragile"
+    },
+    {
+      "mix": "équilibré",
+      "cost_factor": 0.2354,
+      "llm_savings_pct": 76.6,
+      "dossier_cost_eur": 1.7107,
+      "resilient_up_to_x": 5,
+      "business_breakeven_at_x1": "58 ab.",
+      "verdict": "fragile"
+    },
+    {
+      "mix": "agressif",
+      "cost_factor": 0.1309,
+      "llm_savings_pct": 87.0,
+      "dossier_cost_eur": 1.335,
+      "resilient_up_to_x": 10,
+      "business_breakeven_at_x1": "54 ab.",
+      "verdict": "fragile"
+    },
+    {
+      "mix": "radical",
+      "cost_factor": 0.0725,
+      "llm_savings_pct": 92.8,
+      "dossier_cost_eur": 1.1258,
+      "resilient_up_to_x": 10,
+      "business_breakeven_at_x1": "52 ab.",
+      "verdict": "fragile"
+    }
+  ],
+  "best_mix": {
+    "mix": "agressif",
+    "cost_factor": 0.1309,
+    "llm_savings_pct": 87.0,
+    "dossier_cost_eur": 1.335,
+    "resilient_up_to_x": 10,
+    "business_breakeven_at_x1": "54 ab.",
+    "verdict": "fragile"
+  },
+  "verdict": "1. Le mix 'agressif' règle le kill factor #3: résilience 1× → 10× (gain +9× multiplicateur).\n\n2. Gain: -87.0% de coût LLM, dossier 4.47€ → 1.33€.\n\n3. Reste risqué: qualité des phases routées en nano/free (validation requise), et latence variable du tier free.\n\n4. Verdict: FRAGILE à ce prix — vendable. (Déterministe — passe OPENROUTER_API_KEY pour GPT-5.5.)"
+}

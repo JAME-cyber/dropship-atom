@@ -50,7 +50,8 @@ agents:
   - feedback:     "Skill #11 — Boucle de retour: les agents apprennent des résultats réels"
   - pioche_prospector: "[NOUVEAU] Acquisition froide pour le SaaS Pioche LUI-MÊME (pas pour les marques). Détecte vendeurs e-commerce au listing faible via SearXNG + Scrapling, score weak 0-100, génère outreach anti-pitch GPT-5.5 (OpenRouter) avec scan gratuit en hameçon. Équivalent de la 'fiche Google Maps moche' (cas Michael/Kai)."
   - upsell_engine: "[NOUVEAU] Rétention & montée en gamme du SaaS Pioche (pendant du prospector). Suit le cycle de vie client (Free→Starter→Pro→Atelier→White-label), détecte les déclencheurs observables (logique déterministe), génère un message d'upsell anti-pitch GPT-5.5. 'Argent gratuit, pas de re-CAC' (cas Michael/Kai)."
-  - stress_test: "[NOUVEAU] Stress-test résilience marge (pioche/lib/). Fait varier le coût LLM ×1→×40 (simul. retrait subsiding free) et révèle à quel choc le break-even casse. Math déterministe au-dessus de unit_economics.py + verdict exécutif GPT-5.5. Réponse au kill factor #3 (dépendance LLM free)."
+  - stress_test: "[NOUVEAU] Stress-test résilience marge (pioche/lib/). Fait varier le coût LLM ×1→×40 (simul. retrait subsiding free) et révèle à quel choc le break-even casse. Math déterministe au-dessus de unit_economics.py + verdict exécutif GPT-5.5. Réponse au kill factor #3 (dépendance LLM free). DIAGNOSTIQUE."
+  - margin_optimizer: "[NOUVEAU] Guérit le kill factor #3 (pioche/lib/, pendant du stress_test). Route les appels LLM du dossier selon leur valeur: GPT-5.5 pour copy/verdict/compliance (haute valeur perçue), gpt-5-mini/nano/free pour le bulk (20-100× moins cher). Allocation par phase GPT-5.5 + grille d'optimisation déterministe. -87% LLM, résilience ×1→×10."
   
   # === INFRASTRUCTURE (inchangée) ===
   - orchestrator: "Pipeline manager — connecte tous les agents"

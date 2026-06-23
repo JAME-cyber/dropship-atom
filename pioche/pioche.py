@@ -247,11 +247,32 @@ def stress(args):
     runpy.run_path(str(LIB_DIR / 'stress_test.py'), run_name='__main__')
 
 
+def optimize(args):
+    """Wrapper autour de pioche/lib/margin_optimizer.py.
+    Guérit le kill factor #3 (diagnostiqué par stress) via mix-modèles : route
+    les appels LLM du dossier selon leur valeur (premium pour copy/verdict,
+    cheap/nano/free pour le bulk). Allocation par phase GPT-5.5 + grille
+    d'optimisation déterministe + verdict GPT-5.5."""
+    LIB_DIR = PIOCHE_DIR / "lib"
+    if not args or args[0] in ('-h', '--help', 'help'):
+        print("\n  🎯  PIOCHE OPTIMIZE — mix-modèles & résilience marge\n")
+        print("  Flags:")
+        print("    --scenario median|optimiste|pessimiste   scénario d'usage (def: median)")
+        print("    --price 79                     prix d'abo cible € (def: 79)")
+        print("    --allocate                     GPT-5.5 propose juste l'allocation par phase")
+        print("    --no-llm                       tout déterministe (heuristique fallback)")
+        return
+    sys.path.insert(0, str(LIB_DIR))
+    sys.argv = ['margin_optimizer'] + args
+    import runpy
+    runpy.run_path(str(LIB_DIR / 'margin_optimizer.py'), run_name='__main__')
+
+
 # ─── Main ────────────────────────────────────────────────────────────
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='⛏️ Pioche — Usine à Dossiers de Lancement')
-    parser.add_argument('command', choices=['api', 'bot', 'web', 'scan', 'test', 'prospector', 'upsell', 'stress'],
+    parser.add_argument('command', choices=['api', 'bot', 'web', 'scan', 'test', 'prospector', 'upsell', 'stress', 'optimize'],
                        help='Command to run')
     parser.add_argument('args', nargs='*', help='Additional args')
     # parse_known_args: laisse transiter les flags des sous-agents (--no-llm,
@@ -285,6 +306,9 @@ if __name__ == "__main__":
     
     elif args.command == 'stress':
         stress(args.args)
+    
+    elif args.command == 'optimize':
+        optimize(args.args)
     
     elif args.command == 'test':
         test_with_existing_data()
