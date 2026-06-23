@@ -1,0 +1,10 @@
+{
+  "ts": "2026-06-23T17:17:50.445972+00:00",
+  "agent": "upsell_engine",
+  "customer_id": "CUST077",
+  "from_tier": "pro",
+  "to_tier": "atelier",
+  "rule_id": "repeat_alacarte",
+  "model": "fallback",
+  "hash": "a151332224ca8646e8b4980d0e0d6c56ab8f903d857c1382e996cecbb167940f"
+}

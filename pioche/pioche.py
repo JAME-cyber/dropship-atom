@@ -181,73 +181,56 @@ def test_with_existing_data():
 
 # ─── Prospector (acquisition froide pour Pioche lui-même) ────────────
 
+def _run_agent(agent_file: str, args: list):
+    """Helper générique : ajoute AGENT_DIR au path puis délègue au CLI natif
+    de l'agent via runpy (préserve les flags argparse de l'agent)."""
+    sys.path.insert(0, str(AGENT_DIR))
+    sys.argv = [agent_file] + args
+    import runpy
+    runpy.run_path(str(AGENT_DIR / agent_file), run_name='__main__')
+
+
 def prospector(args):
     """Wrapper autour de agents/pioche_prospector.py.
-    C'est le moteur d'acquisition du SaaS : détecte les vendeurs e-commerce
-    dont le listing est faible ("fiche Google Maps moche") et génère un
-    outreach anti-pitch avec scan gratuit en hameçon — via GPT-5.5 (OpenRouter).
-
-    Usage:
-      python3 pioche.py prospector demo
-      python3 pioche.py prospector report
-      python3 pioche.py prospector niche "posture corrector" --outreach
-      python3 pioche.py prospector url "https://amazon.fr/dp/XXXX"
-    """
-    sys.path.insert(0, str(AGENT_DIR))
-    try:
-        import pioche_prospector
-    except ImportError as e:
-        print(f"  ❌ Agent introuvable: {e}")
-        return
-
-    # Dispatche vers les modes de l'agent
+    Acquisition froide pour le SaaS Pioche LUI-MÊME : détecte les vendeurs
+    e-commerce au listing faible et génère un outreach anti-pitch via GPT-5.5."""
     if not args or args[0] in ('-h', '--help', 'help'):
         print("\n  ⛏️  PIOCHE PROSPECTOR — acquisition froide\n")
         print("  Modes:")
-        print("    demo                       3 prospects fictifs (test outreach GPT-5.5)")
-        print("    report                     prospects sauvegardés")
+        print("    demo                                3 prospects fictifs (GPT-5.5)")
+        print("    report                              prospects sauvegardés")
         print("    niche «produit» [--outreach] [--max N]   détection + scoring")
-        print("    url <listing>              analyse 1 listing précis")
+        print("    url <listing>                       analyse 1 listing précis")
+        print("\n  (ou flags natifs: --demo --niche ... --url ...)")
         return
+    _run_agent('pioche_prospector.py', args)
 
-    mode = args[0]
-    rest = args[1:]
-    if mode == 'demo':
-        pioche_prospector.run_demo()
-    elif mode == 'report':
-        pioche_prospector.print_report()
-    elif mode == 'url':
-        if not rest:
-            print("  Usage: python3 pioche.py prospector url <https://...>")
-        else:
-            pioche_prospector.run_single_url(rest[0], do_outreach=True)
-    elif mode == 'niche':
-        if not rest:
-            print("  Usage: python3 pioche.py prospector niche "<produit>" [--outreach] [--max N]")
-            return
-        niche = rest[0]
-        do_outreach = '--outreach' in rest
-        max_r = 15
-        if '--max' in rest:
-            try:
-                max_r = int(rest[rest.index('--max') + 1])
-            except (ValueError, IndexError):
-                pass
-        pioche_prospector.run(niche, region='france', max_results=max_r, do_outreach=do_outreach)
-    else:
-        # Flags directs (--niche, --demo, --report, --url) : on délègue
-        # à l'argparse natif de l'agent.
-        sys.argv = ['pioche_prospector'] + args
-        # Re-exécute le bloc __main__ de l'agent via runpy
-        import runpy
-        runpy.run_path(str(AGENT_DIR / 'pioche_prospector.py'), run_name='__main__')
+
+def upsell(args):
+    """Wrapper autour de agents/upsell_engine.py.
+    Cycle de vie client & montée en gamme du SaaS Pioche (Free → Starter → Pro →
+    Atelier → White-label). Détection de déclencheurs déterministe + message
+    d'upsell anti-pitch via GPT-5.5 (OpenRouter). C'est le pendant RÉTENTION
+    du prospector (acquisition)."""
+    if not args or args[0] in ('-h', '--help', 'help'):
+        print("\n  📈  PIOCHE UPSELL — cycle de vie & montée en gamme\n")
+        print("  Modes:")
+        print("    demo                            scénario complet (GPT-5.5)")
+        print("    customers                       liste les clients")
+        print("    report                          synthèse pipeline upsell")
+        print("    event <id> <event>              enregistre un événement client")
+        print("    eval <id> [--no-gen]            déclencheurs + messages d'upsell")
+        print("\n  événements: scan, buy_dossier, attend_atelier, buy_starter,")
+        print("              buy_pro, signal_trainer")
+        return
+    _run_agent('upsell_engine.py', args)
 
 
 # ─── Main ────────────────────────────────────────────────────────────
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='⛏️ Pioche — Usine à Dossiers de Lancement')
-    parser.add_argument('command', choices=['api', 'bot', 'web', 'scan', 'test', 'prospector'],
+    parser.add_argument('command', choices=['api', 'bot', 'web', 'scan', 'test', 'prospector', 'upsell'],
                        help='Command to run')
     parser.add_argument('args', nargs='*', help='Additional args')
     args = parser.parse_args()
@@ -271,6 +254,9 @@ if __name__ == "__main__":
     
     elif args.command == 'prospector':
         prospector(args.args)
+    
+    elif args.command == 'upsell':
+        upsell(args.args)
     
     elif args.command == 'test':
         test_with_existing_data()

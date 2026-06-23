@@ -1,0 +1,10 @@
+{
+  "ts": "2026-06-23T17:18:21.910908+00:00",
+  "agent": "upsell_engine",
+  "customer_id": "CUST077",
+  "from_tier": "pro",
+  "to_tier": "atelier",
+  "rule_id": "mature_pro",
+  "model": "openai/gpt-5.5",
+  "hash": "bd441754dd42a30dd9b6591c3fd5a4a6e74253c651f37f2c4dc1a697d2bd5d98"
+}

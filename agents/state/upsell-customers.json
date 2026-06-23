@@ -1,0 +1,39 @@
+[
+  {
+    "id": "CUST077",
+    "name": "Sofiane",
+    "email": "",
+    "tier": "pro",
+    "scans_this_month": 0,
+    "scans_total": 47,
+    "dossiers_alacarte_bought": 2,
+    "ateliers_realised": 0,
+    "months_in_current_tier": 4,
+    "is_fba_trainer": false,
+    "month_anchor": "2026-06",
+    "history": [],
+    "last_upsell_at": "2026-06-23T17:20:00.059516+00:00",
+    "created_at": "2026-06-23T17:19:14.514143+00:00"
+  },
+  {
+    "id": "NEWCUST",
+    "name": "",
+    "email": "",
+    "tier": "free",
+    "scans_this_month": 1,
+    "scans_total": 1,
+    "dossiers_alacarte_bought": 0,
+    "ateliers_realised": 0,
+    "months_in_current_tier": 0,
+    "is_fba_trainer": false,
+    "month_anchor": "2026-06",
+    "history": [
+      {
+        "event": "scan",
+        "ts": "2026-06-23T17:22:16.650159+00:00"
+      }
+    ],
+    "last_upsell_at": "2026-06-23T17:22:30.858949+00:00",
+    "created_at": "2026-06-23T17:22:16.650121+00:00"
+  }
+]

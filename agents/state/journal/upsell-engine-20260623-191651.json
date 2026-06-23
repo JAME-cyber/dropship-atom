@@ -1,0 +1,10 @@
+{
+  "ts": "2026-06-23T17:16:51.772106+00:00",
+  "agent": "upsell_engine",
+  "customer_id": "DEMO001",
+  "from_tier": "free",
+  "to_tier": "starter",
+  "rule_id": "free_cap_hit",
+  "model": "openai/gpt-5.5",
+  "hash": "8decf102f301882798daaacc0e56b0b4628be76ed25853e3bc4cbe157bd6cde5"
+}
