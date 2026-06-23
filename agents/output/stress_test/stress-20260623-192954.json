@@ -1,0 +1,196 @@
+{
+  "generated_at": "2026-06-23T17:29:54.441903+00:00",
+  "baseline_llm": "GPT-5.5 (5$/M in, 30$/M out)",
+  "multipliers": [
+    1,
+    2,
+    5,
+    10,
+    20,
+    40
+  ],
+  "prices_eur": [
+    79.0,
+    99.0
+  ],
+  "scenarios": [
+    "optimiste"
+  ],
+  "cells": [
+    {
+      "multiplier": 1,
+      "scenario": "optimiste",
+      "price_eur": 79.0,
+      "dossier_cost_eur": 1.209,
+      "llm_share_pct": 74.44168734491315,
+      "cash_margin_eur": 74.164,
+      "business_margin_eur": 56.064,
+      "technical": "1",
+      "cash_breakeven": "2",
+      "business_breakeven": "46 ab.",
+      "sustainable": true
+    },
+    {
+      "multiplier": 1,
+      "scenario": "optimiste",
+      "price_eur": 99.0,
+      "dossier_cost_eur": 1.209,
+      "llm_share_pct": 74.44168734491315,
+      "cash_margin_eur": 94.164,
+      "business_margin_eur": 76.064,
+      "technical": "1",
+      "cash_breakeven": "1",
+      "business_breakeven": "34 ab.",
+      "sustainable": true
+    },
+    {
+      "multiplier": 2,
+      "scenario": "optimiste",
+      "price_eur": 79.0,
+      "dossier_cost_eur": 2.109,
+      "llm_share_pct": 85.34850640113798,
+      "cash_margin_eur": 70.564,
+      "business_margin_eur": 52.464,
+      "technical": "1",
+      "cash_breakeven": "2",
+      "business_breakeven": "50 ab.",
+      "sustainable": true
+    },
+    {
+      "multiplier": 2,
+      "scenario": "optimiste",
+      "price_eur": 99.0,
+      "dossier_cost_eur": 2.109,
+      "llm_share_pct": 85.34850640113798,
+      "cash_margin_eur": 90.564,
+      "business_margin_eur": 72.464,
+      "technical": "1",
+      "cash_breakeven": "1",
+      "business_breakeven": "36 ab.",
+      "sustainable": true
+    },
+    {
+      "multiplier": 5,
+      "scenario": "optimiste",
+      "price_eur": 79.0,
+      "dossier_cost_eur": 4.809,
+      "llm_share_pct": 93.57454772301934,
+      "cash_margin_eur": 59.764,
+      "business_margin_eur": 41.664,
+      "technical": "1",
+      "cash_breakeven": "2",
+      "business_breakeven": "62 ab.",
+      "sustainable": true
+    },
+    {
+      "multiplier": 5,
+      "scenario": "optimiste",
+      "price_eur": 99.0,
+      "dossier_cost_eur": 4.809,
+      "llm_share_pct": 93.57454772301934,
+      "cash_margin_eur": 79.764,
+      "business_margin_eur": 61.664,
+      "technical": "1",
+      "cash_breakeven": "1",
+      "business_breakeven": "42 ab.",
+      "sustainable": true
+    },
+    {
+      "multiplier": 10,
+      "scenario": "optimiste",
+      "price_eur": 79.0,
+      "dossier_cost_eur": 9.309,
+      "llm_share_pct": 96.68063164679343,
+      "cash_margin_eur": 41.764,
+      "business_margin_eur": 23.664,
+      "technical": "1",
+      "cash_breakeven": "2",
+      "business_breakeven": "109 ab.",
+      "sustainable": true
+    },
+    {
+      "multiplier": 10,
+      "scenario": "optimiste",
+      "price_eur": 99.0,
+      "dossier_cost_eur": 9.309,
+      "llm_share_pct": 96.68063164679343,
+      "cash_margin_eur": 61.764,
+      "business_margin_eur": 43.664,
+      "technical": "1",
+      "cash_breakeven": "2",
+      "business_breakeven": "59 ab.",
+      "sustainable": true
+    },
+    {
+      "multiplier": 20,
+      "scenario": "optimiste",
+      "price_eur": 79.0,
+      "dossier_cost_eur": 18.309,
+      "llm_share_pct": 98.31230542356218,
+      "cash_margin_eur": 5.764,
+      "business_margin_eur": -12.336,
+      "technical": "1",
+      "cash_breakeven": "14",
+      "business_breakeven": "impossible",
+      "sustainable": false
+    },
+    {
+      "multiplier": 20,
+      "scenario": "optimiste",
+      "price_eur": 99.0,
+      "dossier_cost_eur": 18.309,
+      "llm_share_pct": 98.31230542356218,
+      "cash_margin_eur": 25.764,
+      "business_margin_eur": 7.664,
+      "technical": "1",
+      "cash_breakeven": "3",
+      "business_breakeven": "336 ab.",
+      "sustainable": false
+    },
+    {
+      "multiplier": 40,
+      "scenario": "optimiste",
+      "price_eur": 79.0,
+      "dossier_cost_eur": 36.309,
+      "llm_share_pct": 99.14897132942245,
+      "cash_margin_eur": -66.236,
+      "business_margin_eur": -84.336,
+      "technical": "impossible",
+      "cash_breakeven": "impossible",
+      "business_breakeven": "impossible",
+      "sustainable": false
+    },
+    {
+      "multiplier": 40,
+      "scenario": "optimiste",
+      "price_eur": 99.0,
+      "dossier_cost_eur": 36.309,
+      "llm_share_pct": 99.14897132942245,
+      "cash_margin_eur": -46.236,
+      "business_margin_eur": -64.336,
+      "technical": "impossible",
+      "cash_breakeven": "impossible",
+      "business_breakeven": "impossible",
+      "sustainable": false
+    }
+  ],
+  "breaking_points": [
+    {
+      "scenario": "optimiste",
+      "price_eur": 79.0,
+      "margin_negative_at": 40,
+      "unsustainable_at": 20,
+      "resilient_up_to": 10,
+      "verdict": "fragile"
+    },
+    {
+      "scenario": "optimiste",
+      "price_eur": 99.0,
+      "margin_negative_at": 40,
+      "unsustainable_at": 20,
+      "resilient_up_to": 10,
+      "verdict": "fragile"
+    }
+  ],
+  "verdict": "1. VERDICT GLOBAL: FRAGILE (0 robuste(s), 2 fragile(s), 0 critique(s) sur 2 couples).\n\n2. ZONES ROUGES: optimiste@79€ casse la marge à ×40; optimiste@99€ casse la marge à ×40.\n\n3. RÉSISTANCE: optimiste@79€ résiste jusqu'à ×10; optimiste@99€ résiste jusqu'à ×10.\n\n4. (verdict déterministe — passe OPENROUTER_API_KEY pour l'analyse GPT-5.5.)"
+}

@@ -226,14 +226,39 @@ def upsell(args):
     _run_agent('upsell_engine.py', args)
 
 
+def stress(args):
+    """Wrapper autour de pioche/lib/stress_test.py.
+    Stress-test de résilience marge : fait varier le coût LLM (×1→×40) et
+    révèle à quel choc le break-even casse. Math déterministe (rigueur
+    analyse-critique) + verdict exécutif GPT-5.5. Réponse au kill factor #3
+    (dépendance au subsiding free des modèles LLM)."""
+    LIB_DIR = PIOCHE_DIR / "lib"
+    if not args or args[0] in ('-h', '--help', 'help'):
+        print("\n  💸  PIOCHE STRESS TEST — résilience marge (choc coûts LLM)\n")
+        print("  Flags:")
+        print("    --no-llm                        verdict déterministe (pas de GPT-5.5)")
+        print("    --scenario median|optimiste|pessimiste   limiter à 1 scénario")
+        print("    --multipliers 1 2 5 10 20       chocs LLM à tester")
+        print("    --prices 29 49 79 99            prix d'abo à tester (€)")
+        return
+    sys.path.insert(0, str(LIB_DIR))
+    sys.argv = ['stress_test'] + args
+    import runpy
+    runpy.run_path(str(LIB_DIR / 'stress_test.py'), run_name='__main__')
+
+
 # ─── Main ────────────────────────────────────────────────────────────
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='⛏️ Pioche — Usine à Dossiers de Lancement')
-    parser.add_argument('command', choices=['api', 'bot', 'web', 'scan', 'test', 'prospector', 'upsell'],
+    parser.add_argument('command', choices=['api', 'bot', 'web', 'scan', 'test', 'prospector', 'upsell', 'stress'],
                        help='Command to run')
     parser.add_argument('args', nargs='*', help='Additional args')
-    args = parser.parse_args()
+    # parse_known_args: laisse transiter les flags des sous-agents (--no-llm,
+    # --scenario, --multipliers…) vers prospector/upsell/stress qui ont leur
+    # propre argparse. Les 'unknowns' sont réinjectés dans args.args.
+    args, unknown = parser.parse_known_args()
+    args.args = list(args.args) + unknown
     
     if args.command == 'api':
         print("⛏️ Starting Pioche API on http://localhost:8000")
@@ -257,6 +282,9 @@ if __name__ == "__main__":
     
     elif args.command == 'upsell':
         upsell(args.args)
+    
+    elif args.command == 'stress':
+        stress(args.args)
     
     elif args.command == 'test':
         test_with_existing_data()
