@@ -1,0 +1,112 @@
+[
+  {
+    "id": "dff586975c90",
+    "niche": "demo",
+    "region": "france",
+    "signals": {
+      "url": "https://amazon.fr/dp/DEMO001",
+      "platform": "amazon_fr",
+      "title": "Correcteur de posture magnétique dos",
+      "price_eur": 39.9,
+      "currency": "EUR",
+      "review_count": 7,
+      "rating": 3.6,
+      "seller_name": "",
+      "seller_url": "",
+      "has_ce_mention": false,
+      "has_a_plus": null,
+      "title_len": 38,
+      "bullet_count": 3,
+      "sku_count_estimate": null,
+      "snippet": "",
+      "fetched_at": ""
+    },
+    "weak_score": 73,
+    "weak_reasons": [
+      "seulement 7 avis (preuve sociale quasi nulle)",
+      "note moyenne (3.6/5)",
+      "aucune mention CE/RoHS/REACH détectable (risque douane/retrait)",
+      "titre court/optimisable (38 car.)"
+    ],
+    "qualified": true,
+    "contact_email": "",
+    "contact_form_url": "",
+    "outreach_email": "**Sujet :** Question sur votre correcteur de posture magnétique\n\nBonjour,\n\nJe suis tombé sur votre Correcteur de posture magnétique dos sur Amazon FR : le produit est clair, mais le listing laisse quelques angles morts visibles.\n\nÀ 39,90 €, il n’a que 7 avis, donc la preuve sociale est encore très légère pour un achat lié au confort/santé du dos. La note à 3,6/5 peut aussi freiner, surtout si les objections clients ne sont pas traitées directement dans les visuels ou la description.\n\nAutre point : je ne vois pas de mention CE/RoHS/REACH détectable. Pour un accessoire porté sur le corps, c’est le genre de détail qui peut créer un risque côté conformité, douane ou retrait marketplace. Le titre est aussi assez court (38 caractères), donc probablement sous-exploité côté recherche.\n\nSi utile, je peux vous faire un scan gratuit du produit : listing, conformité, sourcing, coûts FBA et pistes créatives. On en fait 1 par mois, sans CB.\n\nM. — Pioche",
+    "outreach_dm": "Bonjour, j’ai regardé votre correcteur de posture magnétique sur Amazon FR. À 39,90 €, le listing n’a que 7 avis, une note à 3,6/5, pas de mention CE/RoHS/REACH visible et un titre très court. Si utile, je peux faire un scan gratuit du produit : listing, conformité, FBA, créas. 1/mois, sans CB. M. — Pioche",
+    "status": "new",
+    "created_at": "2026-06-23T17:01:44.508168+00:00"
+  },
+  {
+    "id": "d3e4c8a3bea0",
+    "niche": "demo",
+    "region": "france",
+    "signals": {
+      "url": "https://demo.myshopify.com/products/yoga-socks",
+      "platform": "shopify",
+      "title": "Yoga Socks",
+      "price_eur": 19.0,
+      "currency": "EUR",
+      "review_count": 23,
+      "rating": 4.1,
+      "seller_name": "",
+      "seller_url": "",
+      "has_ce_mention": null,
+      "has_a_plus": null,
+      "title_len": 10,
+      "bullet_count": 4,
+      "sku_count_estimate": null,
+      "snippet": "",
+      "fetched_at": ""
+    },
+    "weak_score": 33,
+    "weak_reasons": [
+      "peu d'avis (23)",
+      "titre court/optimisable (10 car.)",
+      "description pauvre en bullets"
+    ],
+    "qualified": false,
+    "contact_email": "",
+    "contact_form_url": "",
+    "outreach_email": "**Sujet :** Quelques signaux faibles sur votre fiche Yoga Socks\n\nBonjour,\n\nJe suis tombé sur votre fiche Yoga Socks à 19 € sur Shopify : le produit est clair, mais la page semble laisser une partie du travail de conviction au visiteur.\n\nDeux points visibles : il n’y a que 23 avis avec une note de 4,1, donc la réassurance reste assez légère pour un achat textile/accessoire. Le titre “Yoga Socks” est très court, alors qu’il pourrait porter des mots-clés d’usage : antidérapant, pilates, grip, studio, etc. Enfin, la description manque de bullets concrets : matière, maintien, usage, tailles, entretien, différenciation.\n\nJe ne vous propose pas de “refaire le site”. Chez Pioche, on peut plutôt faire un scan gratuit de cette fiche produit : angle de positionnement, signaux de confiance, conformité, coûts/logique offre et idées de créatifs. On en ouvre 1 par mois, sans CB.\n\nSi utile, je peux vous envoyer le format du scan appliqué à Yoga Socks.\n\nM. — Pioche",
+    "outreach_dm": "Bonjour, j’ai regardé votre fiche Yoga Socks : produit simple à comprendre, mais la page semble sous-exploiter la réassurance. 23 avis / 4,1, titre très court, et peu de bullets sur matière, grip, tailles ou usages. On peut vous faire un scan gratuit de cette fiche (1/mois, sans CB). M. — Pioche",
+    "status": "new",
+    "created_at": "2026-06-23T17:02:10.704427+00:00"
+  },
+  {
+    "id": "f8012cb47ee4",
+    "niche": "demo",
+    "region": "france",
+    "signals": {
+      "url": "https://amazon.fr/dp/DEMO003",
+      "platform": "amazon_fr",
+      "title": "Lampe UV vernis semi-permanent pro kit",
+      "price_eur": 59.0,
+      "currency": "EUR",
+      "review_count": 3,
+      "rating": 2.9,
+      "seller_name": "",
+      "seller_url": "",
+      "has_ce_mention": false,
+      "has_a_plus": null,
+      "title_len": 42,
+      "bullet_count": 2,
+      "sku_count_estimate": null,
+      "snippet": "",
+      "fetched_at": ""
+    },
+    "weak_score": 83,
+    "weak_reasons": [
+      "seulement 3 avis (preuve sociale quasi nulle)",
+      "note faible (2.9/5)",
+      "aucune mention CE/RoHS/REACH détectable (risque douane/retrait)",
+      "titre court/optimisable (42 car.)"
+    ],
+    "qualified": true,
+    "contact_email": "",
+    "contact_form_url": "",
+    "outreach_email": "**Sujet :** Petite anomalie sur votre kit lampe UV\n\nBonjour,\n\nJe suis tombé sur votre “Lampe UV vernis semi-permanent pro kit” à 59 € sur Amazon FR : le produit est clair, mais le listing semble exposé à quelques frictions assez visibles.\n\nÀ ce stade, il n’a que 3 avis, donc la preuve sociale est presque inexistante pour un achat beauté/électrique. La note à 2,9/5 risque aussi de bloquer avant même la lecture des détails. J’ai également noté qu’aucune mention CE/RoHS/REACH n’apparaît de façon détectable, ce qui peut devenir un sujet côté conformité, douane ou retrait marketplace. Enfin, le titre fait 42 caractères : il décrit le produit, mais laisse peu de place aux mots-clés et aux éléments de différenciation.\n\nOn propose chez Pioche un scan gratuit personnalisé d’un produit par mois, sans CB : listing, conformité, fournisseurs, coûts FBA, angles créatifs et plan média. Si utile, je peux vous faire celui de cette lampe.\n\nM. — Pioche",
+    "outreach_dm": "Bonjour, j’ai regardé votre kit lampe UV vernis semi-permanent sur Amazon FR. Quelques signaux ressortent : 3 avis seulement, note 2,9/5, pas de mention CE/RoHS/REACH détectable, et un titre assez court. Chez Pioche, on peut faire un scan gratuit du produit (1/mois, sans CB) pour cadrer les points à corriger. M. — Pioche",
+    "status": "new",
+    "created_at": "2026-06-23T17:02:30.988470+00:00"
+  }
+]

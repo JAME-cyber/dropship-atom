@@ -1,0 +1,13 @@
+{
+  "ts": "2026-06-23T17:02:51.346981+00:00",
+  "agent": "pioche_prospector",
+  "niche": "demo",
+  "candidates_total": 3,
+  "qualified_total": 2,
+  "model": "openai/gpt-5.5",
+  "ids": [
+    "dff586975c90",
+    "f8012cb47ee4"
+  ],
+  "hash": "14cbbbf8609c03ece7d29693096cc501b82f9118fefc28c76ba5ad9917d7138c"
+}
