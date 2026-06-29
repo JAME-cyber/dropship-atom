@@ -1,0 +1,42 @@
+{
+  "dossiers": [
+    {
+      "id": "001",
+      "ref": "PIOCHE-001",
+      "slug": "posture-corrector-pro",
+      "titre": "Posture Corrector Pro",
+      "sous_titre": "Le guide invisible qui redresse ton dos",
+      "score": 90.5,
+      "achat_eur": 4.21,
+      "vente_eur": 34.90,
+      "marge_nette_eur": 23.73,
+      "marge_pct": 68,
+      "safe_cpa_eur": 16.93,
+      "category": "Health",
+      "keywords": ["posture", "back pain", "office", "ergonomic", "health"],
+      "exemplaires_total": 5,
+      "exemplaires_vendus": 0,
+      "prix_eur": 89,
+      "statut": "disponible",
+      "path_md": "agents/output/dossiers/DOSSIER-001-posture-corrector-pro.md",
+      "contenu_sections": [
+        "Produit scoré 90,5/100",
+        "3 fournisseurs vérifiés (CJ / Eprolo / 1688)",
+        "Dossier technique CE / RoHS / REACH / ISO 10993",
+        "Coûts FBA + routes shipping",
+        "Créatifs (TikTok / Meta / Google / Shopify / vidéo)",
+        "6 visuels pub statiques",
+        "Plan média safe CPA 16,93€",
+        "3 emails abandon panier",
+        "Veille concurrentielle (5 concurrents, 12-49€)",
+        "CSV Shopify importable"
+      ]
+    }
+  ],
+  "paiement": {
+    "methode": "DM manuel",
+    "instruction": "Pour réserver : réponds ACHETER. Je t'envoie le lien de paiement (Lemon Squeezy / Stripe). À réception, je livre le dossier complet + le compteur passe à N/5.",
+    "cta_text": "ACHETER (89€)",
+    "url": ""
+  }
+}
