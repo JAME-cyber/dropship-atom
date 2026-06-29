@@ -1,0 +1,20 @@
+{
+  "concept_id": "offer",
+  "concept_name": "Offre Promotionnelle",
+  "variation": 1,
+  "headline": "..., PROMO_CODE: ..., CTA: ...",
+  "body_text": "..., HEADLINE: ..., PROMO_CODE: ..., CTA: ...",
+  "cta": "\"Ajoutez au panier maintenant\" or \"Profitez de l'offre\". Use French.",
+  "note_text": "",
+  "question": "",
+  "answer": "",
+  "review_text": "",
+  "customer_name": "",
+  "rating": "",
+  "urgency_text": "..., HEADLINE: ..., PROMO_CODE: ..., CTA: ...",
+  "discount_pct": "..., URGENCY_TEXT: ..., HEADLINE: ..., PROMO_CODE: ..., CTA: ...",
+  "promo_code": "..., CTA: ...",
+  "scenario": "",
+  "image_prompt_en": "Promotional offer ad creative for Posture Corrector Pro. Large discount badge: '..., URGENCY_TEXT: ..., HEADLINE: ..., PROMO_CODE: ..., CTA: ...% OFF'. Original price crossed out: €54. New price: €30 in big bold. Product image centered. Urgency element: '..., HEADLINE: ..., PROMO_CODE: ..., CTA: ...'. Eye-catching sale design, red/orange accents. E-commerce flash sale style. Category: Health.",
+  "raw_llm_output": "We need to calculate discount percentage from original price 53.82 to sale price 29.90. Discount = (original - sale)/original *100 = (53.82-29.90)=23.92; 23.92/53.82=0.4445 approx 44.45%. Probably round to nearest whole or one decimal? Usually discount percent integer. Let's compute: 23.92/53.82=0.4445 => 44.45% ~ 44% or 45%. We'll choose 44%? Might be better to show 44% (rounded down). Could also show 44.5%. Let's output as maybe \"44%\" for simplicity.\n\nUrgency text: e.g., \"Plus que 12h!\" or \"Offre limitée 24h!\" We'll choose \"Plus que 24h!\".\n\nHeadline: something like \"Redressez votre posture dès aujourd'hui – -44% !\" or \"Posture Corrector Pro – Enfin droit sans douleur !\"\n\nPromo code: invented like \"POSTURE44\".\n\nCTA: \"Ajoutez au panier maintenant\" or \"Profitez de l'offre\". Use French.\n\nWe must output exactly lines: DISCOUNT_PCT: ..., URGENCY_TEXT: ..., HEADLINE: ..., PROMO_CODE: ..., CTA: ...\n\nNo extra commentary.\n\nLet's craft.\n\nCompute discount precisely: (53.82-29.90)/53.82*100 = 44.45%. We could show \"44%\" or \"44,5%\". Use maybe \"44%\" for simplicity.\n\nI'll output:\n\nDISCOUNT_P"
+}

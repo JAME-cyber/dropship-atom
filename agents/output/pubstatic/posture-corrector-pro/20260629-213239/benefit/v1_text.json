@@ -1,0 +1,20 @@
+{
+  "concept_id": "benefit",
+  "concept_name": "Bénéfice Principal",
+  "variation": 1,
+  "headline": "Redresse-toi, sans douleur",
+  "body_text": "Un soutien ergonomique qui aligne ta colonne vertébrale dès le premier porté.",
+  "cta": "Commande maintenant -20% !",
+  "note_text": "",
+  "question": "",
+  "answer": "",
+  "review_text": "",
+  "customer_name": "",
+  "rating": "",
+  "urgency_text": "",
+  "discount_pct": "",
+  "promo_code": "",
+  "scenario": "",
+  "image_prompt_en": "Benefit-focused ad creative for Posture Corrector Pro. Hero image showing the main benefit: posture. Product prominently displayed. Clean layout with benefit headline: 'Redresse-toi, sans douleur'. Before/after visual subtle. Professional e-commerce style. Category: Health. Price: €30. Soft, aspirational mood.",
+  "raw_llm_output": "MAIN_BENEFIT: Redresse ton dos et élimine les douleurs en quelques secondes.  \nHEADLINE: Redresse-toi, sans douleur  \nSUBTEXT: Un soutien ergonomique qui aligne ta colonne vertébrale dès le premier porté.  \nEMOJI: 🙆‍♂️  \nCTA: Commande maintenant -20% !"
+}

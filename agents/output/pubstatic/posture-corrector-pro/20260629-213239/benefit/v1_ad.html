@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Caveat:wght@400;700&display=swap');
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+    width:1080px; height:1080px; overflow:hidden;
+    background:#f0f9ff;
+    font-family:'Inter',sans-serif;
+    color:#0c4a6e;
+    display:flex; flex-direction:column;
+    justify-content:center; align-items:center;
+    padding:60px; position:relative;
+}
+
+.brand-tag{
+    position:absolute; top:30px; left:40px;
+    font-size:14px; font-weight:700; letter-spacing:2px;
+    text-transform:uppercase; color:#0ea5e9; opacity:0.7;
+}
+
+.price-tag{
+    position:absolute; bottom:40px; right:40px;
+    font-size:28px; font-weight:900; color:#0ea5e9;
+    background:rgba(0,0,0,0.05); padding:12px 24px; border-radius:12px;
+}
+
+.cta-tag{
+    position:absolute; bottom:40px; left:40px;
+    font-size:16px; font-weight:600; color:#06b6d4;
+}
+
+.product-name{
+    position:absolute; top:30px; right:40px;
+    font-size:18px; font-weight:800; color:#0c4a6e; opacity:0.4;
+}
+
+/* Comparison specific */
+.comparison-grid{display:flex;width:100%;height:70vh;gap:0}
+.comp-side{flex:1;display:flex;flex-direction:column;justify-content:center;padding:40px}
+.comp-divider{width:3px;background:#0ea5e9;opacity:0.3}
+.bad-side{background:rgba(239,68,68,0.05)}
+.good-side{background:rgba(34,197,94,0.05)}
+.comp-label{font-size:22px;font-weight:800;margin-bottom:24px;text-transform:uppercase;letter-spacing:1px}
+.point{font-size:20px;margin:8px 0;font-weight:600}
+.bad{color:#ef4444}.good{color:#22c55e}
+
+/* iPhone Note specific */
+.iphone-frame{
+    width:700px;background:#fff;border-radius:40px;padding:40px;
+    box-shadow:0 20px 60px rgba(0,0,0,0.1);border:8px solid #1f2937;
+}
+.iphone-status{display:flex;justify-content:space-between;font-size:14px;font-weight:600;margin-bottom:20px;color:#6b7280}
+.note-title{font-size:28px;font-weight:700;color:#1f2937;margin-bottom:20px}
+.note-content{font-size:22px;line-height:1.6;color:#374151;font-family:'Caveat',cursive;font-size:28px}
+.note-date{font-size:14px;color:#9ca3af;margin-top:20px}
+
+/* Question specific */
+.question-mark{font-size:180px;font-weight:900;color:#0ea5e9;opacity:0.3;position:absolute;top:60px;right:80px}
+.question-text{font-size:44px;font-weight:900;text-align:center;line-height:1.2;margin-bottom:30px;max-width:850px}
+.answer-text{font-size:24px;font-weight:600;color:#0ea5e9;text-align:center}
+
+/* Testimonial specific */
+.stars{font-size:48px;color:#0ea5e9;margin-bottom:20px;letter-spacing:4px}
+.review-mark{font-size:120px;color:#0ea5e9;opacity:0.2;font-weight:900;line-height:0.8}
+.review-text{font-size:26px;line-height:1.5;text-align:center;max-width:800px;margin:20px 0;font-style:italic}
+.review-author{font-size:20px;font-weight:700;color:#06b6d4;margin-top:10px}
+.review-rating{font-size:16px;color:#9ca3af;margin-top:8px}
+
+/* Post-it specific */
+.postit-note{
+    width:600px;height:600px;background:#fef08a;
+    padding:60px;transform:rotate(-2deg);
+    box-shadow:10px 10px 30px rgba(0,0,0,0.15);
+    display:flex;align-items:center;justify-content:center;
+    position:relative;
+}
+.postit-text{
+    font-family:'Caveat',cursive;font-size:36px;line-height:1.4;
+    color:#1f2937;text-align:center;font-weight:700;
+}
+.postit-tape{
+    position:absolute;top:-15px;left:50%;transform:translateX(-50%);
+    width:100px;height:30px;background:rgba(255,255,255,0.4);
+    border-radius:2px;
+}
+
+/* Offer specific */
+.offer-badge{font-size:80px;font-weight:900;color:#0ea5e9;margin-bottom:10px}
+.offer-title{font-size:36px;font-weight:800;margin-bottom:20px}
+.offer-prices{display:flex;gap:20px;align-items:center;margin:20px 0}
+.old-price{font-size:32px;text-decoration:line-through;opacity:0.5}
+.new-price{font-size:56px;font-weight:900}
+.offer-code{font-size:20px;font-weight:700;background:rgba(255,255,255,0.2);padding:10px 24px;border-radius:8px;margin:10px 0}
+.offer-urgency{font-size:22px;font-weight:700;margin-top:16px}
+
+/* Benefit specific */
+.benefit-icon{font-size:80px;margin-bottom:20px}
+.benefit-headline{font-size:48px;font-weight:900;text-align:center;line-height:1.15;max-width:800px;margin-bottom:20px}
+.benefit-text{font-size:24px;text-align:center;color:#0ea5e9;max-width:700px}
+
+/* Social Proof specific */
+.proof-badge{font-size:20px;font-weight:800;background:#0ea5e9;color:#fff;padding:8px 24px;border-radius:20px;margin-bottom:20px}
+.proof-rating{font-size:64px;font-weight:900}
+.proof-stars{font-size:40px;color:#0ea5e9;margin:10px 0}
+.proof-count{font-size:20px;color:#9ca3af;margin:10px 0}
+.proof-quote{font-size:22px;font-style:italic;text-align:center;max-width:700px;margin-top:20px}
+
+/* Scenario specific */
+.scenario-emoji{font-size:60px;margin-bottom:20px}
+.scenario-text{font-size:28px;text-align:center;line-height:1.4;max-width:800px;margin-bottom:20px}
+.scenario-benefit{font-size:22px;font-weight:700;color:#0ea5e9}
+
+/* Urgency specific */
+.urgency-badge{font-size:48px;font-weight:900;animation:pulse 1s infinite}
+.urgency-headline{font-size:36px;font-weight:800;margin:20px 0}
+.urgency-stock{font-size:28px;font-weight:700;color:#0ea5e9}
+.urgency-price{font-size:24px;margin-top:20px}
+
+.generic-headline{font-size:48px;font-weight:900;text-align:center}
+
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:0.5}}
+</style>
+</head>
+<body>
+<div class="brand-tag">AlignWell</div>
+<div class="product-name">Posture Corrector Pro</div>
+
+        <div class="benefit-icon">✨</div>
+        <div class="benefit-headline">Redresse-toi, sans douleur</div>
+        <div class="benefit-text">Un soutien ergonomique qui aligne ta colonne vertébrale dès le premier porté.</div>
+<div class="price-tag">€29.90</div>
+<div class="cta-tag">Commande maintenant -20% !</div>
+</body>
+</html>

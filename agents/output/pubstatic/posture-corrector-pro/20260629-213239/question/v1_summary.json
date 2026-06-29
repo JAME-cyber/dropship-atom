@@ -1,0 +1,12 @@
+{
+  "concept": "question",
+  "concept_name": "Question Hook",
+  "variation": 1,
+  "headline": "",
+  "body": "Vous avez mal au dos à cause d",
+  "cta": "",
+  "image_prompt": "Facebook ad creative: large bold question text 'Vous avez mal au dos à cause d' on a gradient background (bold gradient (purple→blue or orange→red)). Below: Posture Corrector Pro product image on clean surface. Small text: 'Try this'. Price: €30. Clean, modern design. Eye-catching. E-commerce ad style.",
+  "html_file": "/home/tars/dropship-atom/agents/output/pubstatic/posture-corrector-pro/20260629-213239/question/v1_ad.html",
+  "image_file": "",
+  "status": "text_only"
+}

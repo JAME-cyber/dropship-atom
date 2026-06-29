@@ -1,0 +1,20 @@
+{
+  "concept_id": "comparison",
+  "concept_name": "Comparaison Avant/Après",
+  "variation": 1,
+  "headline": "Redressez votre dos en un geste",
+  "body_text": "",
+  "cta": "",
+  "note_text": "",
+  "question": "",
+  "answer": "",
+  "review_text": "",
+  "customer_name": "",
+  "rating": "",
+  "urgency_text": "",
+  "discount_pct": "",
+  "promo_code": "",
+  "scenario": "",
+  "image_prompt_en": "Product comparison ad creative for Posture Corrector Pro. Split screen: LEFT side shows generic/cheap competitor product (dull colors, worn out, sad face emoji), RIGHT side shows Posture Corrector Pro (vibrant, premium quality, smile emoji). Clean white background, e-commerce style. Text overlay: 'Redressez votre dos en un geste'. Price tag: €30. Category: Health. Professional mockup, studio lighting.",
+  "raw_llm_output": "HEADLINE: Redressez votre dos en un geste\nLEFT_LABEL: Sans Posture Corrector Pro\nRIGHT_LABEL: Avec Posture Corrector Pro\nLEFT_POINTS: Douleurs lombaires persistantes, Mauvaise"
+}

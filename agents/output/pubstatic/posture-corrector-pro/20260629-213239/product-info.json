@@ -1,0 +1,32 @@
+{
+  "name": "Posture Corrector Pro",
+  "slug": "posture-corrector-pro",
+  "price": 29.9,
+  "original_price": 53.82,
+  "discount_pct": 44,
+  "category": "Health",
+  "brand": "AlignWell",
+  "benefits": [
+    "posture",
+    "corrector",
+    "back pain",
+    "ergonomic",
+    "support"
+  ],
+  "keywords": [
+    "posture",
+    "corrector",
+    "back pain",
+    "ergonomic",
+    "support"
+  ],
+  "features": [],
+  "colors": [
+    "#6366f1",
+    "#ffffff"
+  ],
+  "target_audience": "",
+  "pain_points": [],
+  "image_url": "",
+  "site_url": ""
+}

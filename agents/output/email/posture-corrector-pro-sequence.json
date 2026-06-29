@@ -1,0 +1,121 @@
+{
+  "sequence_type": "checkout_abandon",
+  "sequence_name": "Abandon Checkout",
+  "description": "Personne qui a mis ses coordonnées bancaires mais n'a pas finalisé",
+  "product_name": "Posture Corrector Pro",
+  "brand": "PosturaPro",
+  "trigger": "Checkout started but not completed",
+  "total_emails": 3,
+  "steps": [
+    {
+      "step": 1,
+      "name": "Rappel doux",
+      "delay_after_previous": "1h",
+      "subject_line": "Oubli ou hésitation ? 🧐",
+      "preheader": "Votre Posture Corrector Pro vous attend encore dans votre panier.",
+      "body_html": "<!DOCTYPE html>\n<html lang=\"fr\">\n<head><meta charset=\"UTF-8\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"></head>\n<body style=\"margin:0;padding:0;background:#f5f5f5;font-family:'Helvetica Neue',Arial,sans-serif;\">\n<table width=\"100%\" cellpadding=\"0\" cellspacing=\"0\" style=\"max-width:600px;margin:0 auto;background:#fff;\">\n    \n    <!-- Header -->\n    <tr><td style=\"padding:20px 30px;background:#6366f1;text-align:center;\">\n        <h1 style=\"margin:0;color:#fff;font-size:20px;font-weight:700;letter-spacing:1px;\">POSTURAPRO</h1>\n    </td></tr>\n    \n    <!-- Spacer -->\n    <tr><td style=\"height:20px;\"></td></tr>\n    \n    <!-- Headline -->\n    <tr><td style=\"padding:10px 30px;\">\n        <h2 style=\"margin:0;font-size:24px;font-weight:800;color:#1f2937;\">Oubli ou hésitation ? 🧐</h2>\n    </td></tr>\n    \n    <!-- Preheader -->\n    <tr><td style=\"padding:5px 30px;\">\n        <p style=\"margin:0;font-size:14px;color:#6b7280;\">Votre Posture Corrector Pro vous attend encore dans votre panier.</p>\n    </td></tr>\n    \n    <!-- Divider -->\n    <tr><td style=\"padding:10px 30px;\">\n        <hr style=\"border:none;border-top:2px solid #f0f0f0;\">\n    </td></tr>\n    \n    <!-- Body -->\n    <tr><td style=\"padding:15px 30px;\">\n        <p style=\"margin:0;font-size:16px;line-height:1.6;color:#374151;\">Bonjour, j'ai remarqué que vous avez laissé votre Posture Corrector Pro dans votre panier il y a quelques instants. C'est souvent le signe qu'une petite question subsiste ou qu'un imprévu vous a interrompu. Sachez qu'il est conçu pour être totalement discret sous vos vêtements, idéal pour redresser votre posture en douceur même au bureau. On s'occupe de tout pour que vous retrouviez un dos soulagé en seulement 2 semaines.</p><p>P.S. Profitez-en, votre remise de 44% est toujours active sur votre panier.</p>\n    </td></tr>\n    \n    <!-- Product reminder -->\n    <tr><td style=\"padding:15px 30px;\">\n        <table width=\"100%\" cellpadding=\"0\" cellspacing=\"0\" style=\"background:#fafafa;border-radius:12px;overflow:hidden;\">\n            <tr>\n                <td style=\"padding:20px;text-align:center;\">\n                    <p style=\"margin:0 0 8px;font-size:18px;font-weight:700;color:#1f2937;\">Posture Corrector Pro</p>\n                    <p style=\"margin:0;font-size:14px;color:#6b7280;text-decoration:line-through;\">€62.82</p>\n                    <p style=\"margin:4px 0 0;font-size:24px;font-weight:900;color:#6366f1;\">€34.90</p>\n                </td>\n            </tr>\n        </table>\n    </td></tr>\n    \n    <!-- Promo code (if any) -->\n    \n    \n    <!-- CTA Button -->\n    <tr><td style=\"padding:20px 30px;text-align:center;\">\n        <a href=\"#\" style=\"display:inline-block;background:#6366f1;color:#fff;text-decoration:none;\n            padding:16px 40px;border-radius:8px;font-size:16px;font-weight:700;\">Finaliser ma commande</a>\n    </td></tr>\n    \n    <!-- Urgency footer -->\n    <tr><td style=\"padding:10px 30px;text-align:center;\">\n        <p style=\"margin:0;font-size:13px;color:#ef4444;font-weight:600;\">\n            ⚡ Offre limitée — Livraison gratuite dès €35\n        </p>\n    </td></tr>\n    \n    <!-- Footer -->\n    <tr><td style=\"padding:20px 30px;background:#fafafa;text-align:center;\">\n        <p style=\"margin:0;font-size:12px;color:#9ca3af;\">\n            PosturaPro — Paris, France<br>\n            <a href=\"#\" style=\"color:#9ca3af;\">Se désinscrire</a> · \n            <a href=\"#\" style=\"color:#9ca3af;\">Préférences email</a>\n        </p>\n    </td></tr>\n    \n</table>\n</body>\n</html>",
+      "body_text": "Bonjour, j'ai remarqué que vous avez laissé votre Posture Corrector Pro dans votre panier il y a quelques instants. C'est souvent le signe qu'une petite question subsiste ou qu'un imprévu vous a interrompu. Sachez qu'il est conçu pour être totalement discret sous vos vêtements, idéal pour redresser votre posture en douceur même au bureau. On s'occupe de tout pour que vous retrouviez un dos soulagé en seulement 2 semaines.\n\nP.S. Profitez-en, votre remise de 44% est toujours active sur votre panier.",
+      "cta_text": "Finaliser ma commande",
+      "cta_url": "",
+      "promo_code": "",
+      "promo_discount": ""
+    },
+    {
+      "step": 2,
+      "name": "Bénéfice + Urgence",
+      "delay_after_previous": "11h",
+      "subject_line": "Votre dos mérite un petit coup de pouce 🌿",
+      "preheader": "Ne laissez pas vos tensions revenir. Votre Posture Corrector Pro vous attend.",
+      "body_html": "<!DOCTYPE html>\n<html lang=\"fr\">\n<head><meta charset=\"UTF-8\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"></head>\n<body style=\"margin:0;padding:0;background:#f5f5f5;font-family:'Helvetica Neue',Arial,sans-serif;\">\n<table width=\"100%\" cellpadding=\"0\" cellspacing=\"0\" style=\"max-width:600px;margin:0 auto;background:#fff;\">\n    \n    <!-- Header -->\n    <tr><td style=\"padding:20px 30px;background:#6366f1;text-align:center;\">\n        <h1 style=\"margin:0;color:#fff;font-size:20px;font-weight:700;letter-spacing:1px;\">POSTURAPRO</h1>\n    </td></tr>\n    \n    <!-- Spacer -->\n    <tr><td style=\"height:20px;\"></td></tr>\n    \n    <!-- Headline -->\n    <tr><td style=\"padding:10px 30px;\">\n        <h2 style=\"margin:0;font-size:24px;font-weight:800;color:#1f2937;\">Votre dos mérite un petit coup de pouce 🌿</h2>\n    </td></tr>\n    \n    <!-- Preheader -->\n    <tr><td style=\"padding:5px 30px;\">\n        <p style=\"margin:0;font-size:14px;color:#6b7280;\">Ne laissez pas vos tensions revenir. Votre Posture Corrector Pro vous attend.</p>\n    </td></tr>\n    \n    <!-- Divider -->\n    <tr><td style=\"padding:10px 30px;\">\n        <hr style=\"border:none;border-top:2px solid #f0f0f0;\">\n    </td></tr>\n    \n    <!-- Body -->\n    <tr><td style=\"padding:15px 30px;\">\n        <p style=\"margin:0;font-size:16px;line-height:1.6;color:#374151;\">Je me suis rendu compte que vous n'aviez pas finalisé votre commande. C'est dommage, car imaginez déjà cette sensation de légèreté et ce dos bien droit au bureau d'ici deux semaines. On a un stock très limité sur cette promotion à -44%, et je ne voudrais pas que vous passiez à côté. Tout est prêt pour l'expédition, il ne manque plus que votre feu vert.</p><p>P.S. Rappel : il est totalement discret sous vos vêtements, personne ne remarquera rien.</p>\n    </td></tr>\n    \n    <!-- Product reminder -->\n    <tr><td style=\"padding:15px 30px;\">\n        <table width=\"100%\" cellpadding=\"0\" cellspacing=\"0\" style=\"background:#fafafa;border-radius:12px;overflow:hidden;\">\n            <tr>\n                <td style=\"padding:20px;text-align:center;\">\n                    <p style=\"margin:0 0 8px;font-size:18px;font-weight:700;color:#1f2937;\">Posture Corrector Pro</p>\n                    <p style=\"margin:0;font-size:14px;color:#6b7280;text-decoration:line-through;\">€62.82</p>\n                    <p style=\"margin:4px 0 0;font-size:24px;font-weight:900;color:#6366f1;\">€34.90</p>\n                </td>\n            </tr>\n        </table>\n    </td></tr>\n    \n    <!-- Promo code (if any) -->\n    \n    \n    <!-- CTA Button -->\n    <tr><td style=\"padding:20px 30px;text-align:center;\">\n        <a href=\"#\" style=\"display:inline-block;background:#6366f1;color:#fff;text-decoration:none;\n            padding:16px 40px;border-radius:8px;font-size:16px;font-weight:700;\">Je récupère mon Posture Corrector Pro</a>\n    </td></tr>\n    \n    <!-- Urgency footer -->\n    <tr><td style=\"padding:10px 30px;text-align:center;\">\n        <p style=\"margin:0;font-size:13px;color:#ef4444;font-weight:600;\">\n            ⚡ Offre limitée — Livraison gratuite dès €35\n        </p>\n    </td></tr>\n    \n    <!-- Footer -->\n    <tr><td style=\"padding:20px 30px;background:#fafafa;text-align:center;\">\n        <p style=\"margin:0;font-size:12px;color:#9ca3af;\">\n            PosturaPro — Paris, France<br>\n            <a href=\"#\" style=\"color:#9ca3af;\">Se désinscrire</a> · \n            <a href=\"#\" style=\"color:#9ca3af;\">Préférences email</a>\n        </p>\n    </td></tr>\n    \n</table>\n</body>\n</html>",
+      "body_text": "Je me suis rendu compte que vous n'aviez pas finalisé votre commande. C'est dommage, car imaginez déjà cette sensation de légèreté et ce dos bien droit au bureau d'ici deux semaines. On a un stock très limité sur cette promotion à -44%, et je ne voudrais pas que vous passiez à côté. Tout est prêt pour l'expédition, il ne manque plus que votre feu vert.\n\nP.S. Rappel : il est totalement discret sous vos vêtements, personne ne remarquera rien.",
+      "cta_text": "Je récupère mon Posture Corrector Pro",
+      "cta_url": "",
+      "promo_code": "",
+      "promo_discount": ""
+    },
+    {
+      "step": 3,
+      "name": "Dernière chance + Promo",
+      "delay_after_previous": "23h",
+      "subject_line": "Un petit coup de pouce pour votre dos ? 🎁",
+      "preheader": "On vous a réservé une surprise pour finaliser votre commande PosturaPro.",
+      "body_html": "<!DOCTYPE html>\n<html lang=\"fr\">\n<head><meta charset=\"UTF-8\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"></head>\n<body style=\"margin:0;padding:0;background:#f5f5f5;font-family:'Helvetica Neue',Arial,sans-serif;\">\n<table width=\"100%\" cellpadding=\"0\" cellspacing=\"0\" style=\"max-width:600px;margin:0 auto;background:#fff;\">\n    \n    <!-- Header -->\n    <tr><td style=\"padding:20px 30px;background:#6366f1;text-align:center;\">\n        <h1 style=\"margin:0;color:#fff;font-size:20px;font-weight:700;letter-spacing:1px;\">POSTURAPRO</h1>\n    </td></tr>\n    \n    <!-- Spacer -->\n    <tr><td style=\"height:20px;\"></td></tr>\n    \n    <!-- Headline -->\n    <tr><td style=\"padding:10px 30px;\">\n        <h2 style=\"margin:0;font-size:24px;font-weight:800;color:#1f2937;\">Un petit coup de pouce pour votre dos ? 🎁</h2>\n    </td></tr>\n    \n    <!-- Preheader -->\n    <tr><td style=\"padding:5px 30px;\">\n        <p style=\"margin:0;font-size:14px;color:#6b7280;\">On vous a réservé une surprise pour finaliser votre commande PosturaPro.</p>\n    </td></tr>\n    \n    <!-- Divider -->\n    <tr><td style=\"padding:10px 30px;\">\n        <hr style=\"border:none;border-top:2px solid #f0f0f0;\">\n    </td></tr>\n    \n    <!-- Body -->\n    <tr><td style=\"padding:15px 30px;\">\n        <p style=\"margin:0;font-size:16px;line-height:1.6;color:#374151;\">On sait que prendre soin de sa santé est parfois reporté au lendemain, mais votre dos, lui, n'attend pas. Pour vous aider à redresser votre posture et dire adieu aux tensions dès aujourd'hui, on a décidé de vous offrir un petit cadeau. C'est le moment idéal pour profiter du Posture Corrector Pro et ressentir la différence en seulement 2 semaines.</p><p>P.S. Attention, ce code expire très bientôt, ne laissez pas passer votre chance !</p>\n    </td></tr>\n    \n    <!-- Product reminder -->\n    <tr><td style=\"padding:15px 30px;\">\n        <table width=\"100%\" cellpadding=\"0\" cellspacing=\"0\" style=\"background:#fafafa;border-radius:12px;overflow:hidden;\">\n            <tr>\n                <td style=\"padding:20px;text-align:center;\">\n                    <p style=\"margin:0 0 8px;font-size:18px;font-weight:700;color:#1f2937;\">Posture Corrector Pro</p>\n                    <p style=\"margin:0;font-size:14px;color:#6b7280;text-decoration:line-through;\">€62.82</p>\n                    <p style=\"margin:4px 0 0;font-size:24px;font-weight:900;color:#6366f1;\">€34.90</p>\n                </td>\n            </tr>\n        </table>\n    </td></tr>\n    \n    <!-- Promo code (if any) -->\n    \n        <tr><td style=\"padding:20px;text-align:center;background:#f0f0ff;border-radius:12px;\">\n            <p style=\"font-size:14px;color:#6366f1;margin:0;\">🎁 Code exclusif:</p>\n            <p style=\"font-size:28px;font-weight:900;color:#6366f1;margin:8px 0;letter-spacing:3px;\">POSTUR39</p>\n            <p style=\"font-size:16px;color:#666;margin:0;\">-10% sur votre commande</p>\n        </td></tr>\n    \n    <!-- CTA Button -->\n    <tr><td style=\"padding:20px 30px;text-align:center;\">\n        <a href=\"#\" style=\"display:inline-block;background:#6366f1;color:#fff;text-decoration:none;\n            padding:16px 40px;border-radius:8px;font-size:16px;font-weight:700;\">Je profite de mes -10% maintenant</a>\n    </td></tr>\n    \n    <!-- Urgency footer -->\n    <tr><td style=\"padding:10px 30px;text-align:center;\">\n        <p style=\"margin:0;font-size:13px;color:#ef4444;font-weight:600;\">\n            ⚡ Offre limitée — Livraison gratuite dès €35\n        </p>\n    </td></tr>\n    \n    <!-- Footer -->\n    <tr><td style=\"padding:20px 30px;background:#fafafa;text-align:center;\">\n        <p style=\"margin:0;font-size:12px;color:#9ca3af;\">\n            PosturaPro — Paris, France<br>\n            <a href=\"#\" style=\"color:#9ca3af;\">Se désinscrire</a> · \n            <a href=\"#\" style=\"color:#9ca3af;\">Préférences email</a>\n        </p>\n    </td></tr>\n    \n</table>\n</body>\n</html>",
+      "body_text": "On sait que prendre soin de sa santé est parfois reporté au lendemain, mais votre dos, lui, n'attend pas. Pour vous aider à redresser votre posture et dire adieu aux tensions dès aujourd'hui, on a décidé de vous offrir un petit cadeau. C'est le moment idéal pour profiter du Posture Corrector Pro et ressentir la différence en seulement 2 semaines.\n\nP.S. Attention, ce code expire très bientôt, ne laissez pas passer votre chance !",
+      "cta_text": "Je profite de mes -10% maintenant",
+      "cta_url": "",
+      "promo_code": "POSTUR39",
+      "promo_discount": "10%"
+    }
+  ],
+  "platform_config": {
+    "platform": "omnisend",
+    "sequence_name": "Abandon Checkout",
+    "trigger": "Checkout started but not completed",
+    "emails": [
+      {
+        "order": 1,
+        "delay_hours": 1,
+        "subject": "Oubli ou hésitation ? 🧐",
+        "preheader": "Votre Posture Corrector Pro vous attend encore dans votre panier.",
+        "from_name": "PosturaPro",
+        "from_email": "hello@posturapro.com",
+        "cta_text": "Finaliser ma commande",
+        "promo_code": "",
+        "promo_discount": "",
+        "omnisend_setup": {
+          "step_1": "Create new automation → Abandon Checkout",
+          "step_2": "Set trigger: 'Checkout started but not completed'",
+          "step_3": "Add email #1: delay 1h",
+          "step_4": "Copy subject: 'Oubli ou hésitation ? 🧐'",
+          "step_5": "Copy preheader: 'Votre Posture Corrector Pro vous attend encore dans votre panier.'",
+          "step_6": "Edit content → paste HTML from v1_email.html",
+          "step_7": "Add CTA button → link to product page",
+          "step_8": "No promo code needed"
+        }
+      },
+      {
+        "order": 2,
+        "delay_hours": 11,
+        "subject": "Votre dos mérite un petit coup de pouce 🌿",
+        "preheader": "Ne laissez pas vos tensions revenir. Votre Posture Corrector Pro vous attend.",
+        "from_name": "PosturaPro",
+        "from_email": "hello@posturapro.com",
+        "cta_text": "Je récupère mon Posture Corrector Pro",
+        "promo_code": "",
+        "promo_discount": "",
+        "omnisend_setup": {
+          "step_1": "Create new automation → Abandon Checkout",
+          "step_2": "Set trigger: 'Checkout started but not completed'",
+          "step_3": "Add email #2: delay 11h",
+          "step_4": "Copy subject: 'Votre dos mérite un petit coup de pouce 🌿'",
+          "step_5": "Copy preheader: 'Ne laissez pas vos tensions revenir. Votre Posture Corrector Pro vous attend.'",
+          "step_6": "Edit content → paste HTML from v2_email.html",
+          "step_7": "Add CTA button → link to product page",
+          "step_8": "No promo code needed"
+        }
+      },
+      {
+        "order": 3,
+        "delay_hours": 23,
+        "subject": "Un petit coup de pouce pour votre dos ? 🎁",
+        "preheader": "On vous a réservé une surprise pour finaliser votre commande PosturaPro.",
+        "from_name": "PosturaPro",
+        "from_email": "hello@posturapro.com",
+        "cta_text": "Je profite de mes -10% maintenant",
+        "promo_code": "POSTUR39",
+        "promo_discount": "10%",
+        "omnisend_setup": {
+          "step_1": "Create new automation → Abandon Checkout",
+          "step_2": "Set trigger: 'Checkout started but not completed'",
+          "step_3": "Add email #3: delay 23h",
+          "step_4": "Copy subject: 'Un petit coup de pouce pour votre dos ? 🎁'",
+          "step_5": "Copy preheader: 'On vous a réservé une surprise pour finaliser votre commande PosturaPro.'",
+          "step_6": "Edit content → paste HTML from v3_email.html",
+          "step_7": "Add CTA button → link to product page",
+          "step_8": "Add promo code block: POSTUR39"
+        }
+      }
+    ]
+  },
+  "created_at": "2026-06-29T19:31:01.404254+00:00"
+}

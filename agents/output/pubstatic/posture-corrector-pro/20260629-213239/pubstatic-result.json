@@ -1,0 +1,46 @@
+{
+  "product_name": "Posture Corrector Pro",
+  "product_slug": "posture-corrector-pro",
+  "total_ads": 4,
+  "concepts_generated": [
+    {
+      "concept_id": "comparison",
+      "concept_name": "Comparaison Avant/Après",
+      "variations": 1,
+      "status": "done"
+    },
+    {
+      "concept_id": "question",
+      "concept_name": "Question Hook",
+      "variations": 1,
+      "status": "done"
+    },
+    {
+      "concept_id": "testimonial",
+      "concept_name": "Témoignage Client",
+      "variations": 1,
+      "status": "done"
+    },
+    {
+      "concept_id": "offer",
+      "concept_name": "Offre Promotionnelle",
+      "variations": 1,
+      "status": "done"
+    },
+    {
+      "concept_id": "benefit",
+      "concept_name": "Bénéfice Principal",
+      "variations": 1,
+      "status": "done"
+    },
+    {
+      "concept_id": "social_proof",
+      "concept_name": "Preuve Sociale",
+      "variations": 1,
+      "status": "done"
+    }
+  ],
+  "output_dir": "/home/tars/dropship-atom/agents/output/pubstatic/posture-corrector-pro/20260629-213239",
+  "cost_estimated_eur": 0,
+  "created_at": "2026-06-29T19:32:39.119640+00:00"
+}

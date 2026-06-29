@@ -1,0 +1,12 @@
+{
+  "concept": "offer",
+  "concept_name": "Offre Promotionnelle",
+  "variation": 1,
+  "headline": "..., PROMO_CODE: ..., CTA: ...",
+  "body": "..., HEADLINE: ..., PROMO_CODE: ..., CTA: ...",
+  "cta": "\"Ajoutez au panier maintenant\" or \"Profitez de l'offre\". Use French.",
+  "image_prompt": "Promotional offer ad creative for Posture Corrector Pro. Large discount badge: '..., URGENCY_TEXT: ..., HEADLINE: ..., PROMO_CODE: ..., CTA: ...% OFF'. Original price crossed out: €54. New price: €30 in big bold. Product image centered. Urgency element: '..., HEADLINE: ..., PROMO_CODE: ..., CTA: ...'. Eye-catching sale design, red/orange accents. E-commerce flash sale style. Category: Health.",
+  "html_file": "/home/tars/dropship-atom/agents/output/pubstatic/posture-corrector-pro/20260629-213239/offer/v1_ad.html",
+  "image_file": "",
+  "status": "text_only"
+}

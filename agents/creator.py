@@ -117,9 +117,6 @@ def kie_generate_image(prompt: str, model: str = "nano-banana-2",
     Tested models: nano-banana-2 ✅ (creation works)
     Docs: https://docs.kie.ai
     """
-    
-    Docs: https://docs.kie.ai
-    """
     if not KIE_API_KEY:
         print("    ⚠️  KIE_API_KEY not set — skipping image generation")
         return []

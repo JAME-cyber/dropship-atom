@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=JetBrains+Mono:wght@400;700&display=swap');
+*{margin:0;padding:0;box-sizing:border-box}
+body{width:1080px;height:1920px;overflow:hidden;background:#0a1710;font-family:'Inter',sans-serif;color:#f0f5f2}
+
+.progress{position:absolute;top:0;left:0;right:0;height:4px;z-index:100}
+.progress-fill{height:100%;width:0%;background:linear-gradient(90deg,#22c55e,#4ade80)}
+
+.scene{position:absolute;top:0;left:0;width:100%;height:100%;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:60px}
+#s1{z-index:1}
+#s2{z-index:2;opacity:0}
+#s3{z-index:3;opacity:0}
+#s4{z-index:4;opacity:0}
+
+/* Scene 1: Hook */
+.emoji-hero{font-size:120px;filter:drop-shadow(0 20px 40px rgba(0,0,0,.5))}
+.hook-text{font-size:56px;font-weight:900;text-align:center;margin-top:40px;line-height:1.15;letter-spacing:-1.5px}
+.hook-text .accent{color:#22c55e}
+.hook-badge{font-size:14px;font-weight:800;text-transform:uppercase;letter-spacing:4px;color:#22c55e;background:rgba(99,102,241,.12);padding:12px 28px;border-radius:10px;border:1px solid rgba(99,102,241,.2);margin-bottom:24px}
+
+/* Scene 2: Problem/Solution */
+.problem-card{background:rgba(17,24,39,.85);border:1px solid rgba(255,255,255,.08);border-radius:24px;padding:48px;backdrop-filter:blur(10px);width:900px}
+.problem-title{font-size:28px;font-weight:800;color:#22c55e;margin-bottom:20px}
+.problem-text{font-size:22px;line-height:1.6;color:rgba(240,242,245,.8)}
+.problem-emoji{font-size:48px;margin-bottom:16px}
+
+/* Scene 3: Price reveal */
+.price-card{background:rgba(17,24,39,.9);border:2px solid #22c55e;border-radius:32px;padding:60px;text-align:center;width:850px}
+.price-label{font-size:16px;text-transform:uppercase;letter-spacing:3px;color:#22c55e;font-weight:700;margin-bottom:20px}
+.price-original{font-size:36px;color:rgba(240,242,245,.3);text-decoration:line-through;font-weight:600}
+.price-current{font-size:96px;font-weight:900;color:#22c55e;margin:10px 0}
+.price-current .currency{font-size:48px;vertical-align:top;margin-right:8px}
+.price-save{font-size:20px;font-weight:700;color:#22c55e;background:rgba(34,197,94,.12);padding:8px 20px;border-radius:8px;display:inline-block;margin-top:12px}
+.features-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:32px;text-align:left}
+.feature-item{font-size:16px;font-weight:600;display:flex;align-items:center;gap:10px}
+.feature-check{color:#22c55e;font-size:18px}
+
+/* Scene 4: CTA */
+.cta-btn{display:inline-block;font-size:24px;font-weight:800;color:#0a1710;background:#22c55e;padding:24px 64px;border-radius:16px;box-shadow:0 8px 32px rgba(99,102,241,.4);margin-top:32px}
+.cta-urgency{font-size:16px;color:#ef4444;font-weight:700;margin-top:20px}
+.cta-guarantee{font-size:14px;color:rgba(240,242,245,.4);margin-top:16px}
+.cta-emoji{font-size:80px}
+</style>
+</head>
+<body>
+<div class="progress"><div class="progress-fill" id="pFill"></div></div>
+
+<!-- Scene 1: Hook -->
+<div class="scene" id="s1">
+  <div class="hook-badge">PRODUIT TRENDING 2026</div>
+  <div class="emoji-hero" id="emoji1">🧘</div>
+  <div class="hook-text" id="hookText">Si tu essaies de redresser ton dos, voici comment y arriver sans forcer chaque s</div>
+</div>
+
+<!-- Scene 2: Problem → Solution -->
+<div class="scene" id="s2">
+  <div class="problem-card" id="probCard">
+    <div class="problem-emoji" id="probEmoji">🧘</div>
+    <div class="problem-title" id="probTitle">✨ Posture Corrector Pro</div>
+    <div class="problem-text" id="probText">J'utilise le Posture Corrector Pro. Pensez y moins comme un corset rigide, plus comme un guide invisible qui rappelle à ton corps sa position naturell</div>
+  </div>
+</div>
+
+<!-- Scene 3: Price Reveal -->
+<div class="scene" id="s3">
+  <div class="price-card" id="priceCard">
+    <div class="price-label">OFFRE LIMITÉE</div>
+    <div class="price-original" id="origPrice">€62.82</div>
+    <div class="price-current" id="currPrice"><span class="currency">€</span>35<span style="font-size:36px">.9</span></div>
+    <div class="price-save" id="saveBadge">🔥 Économisez 44%</div>
+    <div class="features-grid" id="featGrid">
+      <div class="feature-item"><span class="feature-check">✓</span> Livraison rapide</div>
+      <div class="feature-item"><span class="feature-check">✓</span> Garantie 30 jours</div>
+      <div class="feature-item"><span class="feature-check">✓</span> Qualité premium</div>
+      <div class="feature-item"><span class="feature-check">✓</span> Retour gratuit</div>
+    </div>
+  </div>
+</div>
+
+<!-- Scene 4: CTA -->
+<div class="scene" id="s4">
+  <div class="cta-emoji" id="ctaEmoji">🧘</div>
+  <div style="font-size:36px;font-weight:900;margin-top:20px" id="ctaTitle">Vous pouvez tester ça pour 34 euros 90 si vous voulez vous soulager.</div>
+  <div class="cta-btn" id="ctaBtn">COMMANDER MAINTENANT →</div>
+  <div class="cta-urgency" id="ctaUrgency">⚡ Plus que quelques pièces en stock</div>
+  <div class="cta-guarantee">Garantie satisfait ou remboursé 30 jours</div>
+</div>
+
+<script>
+const DURATION = 12;
+const SCENE_TIME = DURATION / 4;
+
+gsap.timeline({repeat: -1})
+  // Progress bar
+  .to('#pFill', {width:'100%', duration: DURATION, ease:'none'})
+  
+  // Scene 1: Hook (0-3s)
+  .from('#emoji1', {scale:0, rotation:-20, duration:0.8, ease:'back.out(1.7)'})
+  .from('.hook-badge', {y:-50, opacity:0, duration:0.5}, '-=0.4')
+  .from('#hookText', {y:40, opacity:0, duration:0.6}, '-=0.3')
+  
+  // Scene 2: Problem (3-6s)
+  .to('#s1', {opacity:0, duration:0.5}, '+=' + (SCENE_TIME - 2))
+  .to('#s2', {opacity:1, duration:0.5}, '-=0.3')
+  .from('#probCard', {scale:0.8, y:60, opacity:0, duration:0.7, ease:'power3.out'})
+  
+  // Scene 3: Price (6-9s)
+  .to('#s2', {opacity:0, duration:0.5}, '+=' + (SCENE_TIME - 1.5))
+  .to('#s3', {opacity:1, duration:0.5}, '-=0.3')
+  .from('#priceCard', {scale:0.5, opacity:0, duration:0.6, ease:'back.out(1.4)'})
+  .from('#origPrice', {x:-100, opacity:0, duration:0.4}, '-=0.2')
+  .from('#currPrice', {scale:0, duration:0.5, ease:'back.out(2)'})
+  .from('#saveBadge', {scale:0, duration:0.3, ease:'back.out(1.7)'})
+  .from('.feature-item', {x:-30, opacity:0, duration:0.3, stagger:0.1})
+  
+  // Scene 4: CTA (9-12s)
+  .to('#s3', {opacity:0, duration:0.5}, '+=' + (SCENE_TIME - 2))
+  .to('#s4', {opacity:1, duration:0.5}, '-=0.3')
+  .from('#ctaEmoji', {scale:0, rotation:360, duration:0.6, ease:'back.out(1.7)'})
+  .from('#ctaTitle', {y:30, opacity:0, duration:0.5}, '-=0.3')
+  .from('#ctaBtn', {scale:0, duration:0.4, ease:'back.out(2)'})
+  .from('#ctaUrgency', {opacity:0, duration:0.3})
+  
+  // Reset
+  .to('#s4', {opacity:0, duration:0.5}, '+=2')
+  .set('#pFill', {width:'0%'});
+</script>
+</body>
+</html>
