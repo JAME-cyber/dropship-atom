@@ -144,6 +144,78 @@ MIX_CANDIDATES: list[ModelMix] = [
 
 
 # ═══════════════════════════════════════════════════════════════════
+#  CATALOGUE VIDÉO — kill factor révélé par stress_test_video.py
+#  (Hassan Bazzi/Higgsfield $3/clip vs Kie.ai Kling $0.15/clip)
+# ═══════════════════════════════════════════════════════════════════
+
+import stress_test_video as stv  # noqa: E402  (réutilise VIDEO_TIERS_USD)
+
+@dataclass(frozen=True)
+class VideoSpec:
+    """Provider de génération vidéo facturé à la clip."""
+    key: str
+    provider: str
+    usd_per_clip: float
+    tier: str               # "baseline" | "standard" | "premium" | "higgsfield"
+    note: str
+
+VIDEO_CATALOG: dict[int, VideoSpec] = {
+    1:  VideoSpec("kling",       "Kie.ai Kling",      float(stv.VIDEO_TIERS_USD[1]),
+                 "baseline",  "Default. Marge préservée — l'argument Pioche vs Hassan"),
+    5:  VideoSpec("kling3",      "Kling 3.0 / Hailuo", float(stv.VIDEO_TIERS_USD[5]),
+                 "standard",  "Qualité supérieure. Tolérable si quota strict."),
+    10: VideoSpec("runway",      "Runway / Veo 3",     float(stv.VIDEO_TIERS_USD[10]),
+                 "premium",   "Premium. Réservé opt-in payant."),
+    20: VideoSpec("higgsfield",  "Higgsfield",         float(stv.VIDEO_TIERS_USD[20]),
+                 "higgsfield", "$3/clip — prix Hassan Bazzi. KILL FACTOR en usage libre."),
+}
+
+# Hard cap par défaut : un dossier ne peut PAS consommer au-delà de ce $/clip
+# sans opt-in explicite payant. Protège contre le scénario Higgsfield sauvage.
+# Le manifeste Pioche = anti-Hassan → on bloque Higgsfield par défaut.
+VIDEO_USD_HARD_CAP_DEFAULT = 0.75   # Kling 3.0 max ; Higgsfield interdit sauf surcharge
+
+@dataclass
+class VideoPolicy:
+    """Politique de génération vidéo pour un tier d'abonnement.
+    borne le coût variable côté vidéo — pendant de ModelMix pour le LLM."""
+    name: str
+    default_provider_key: int        # clé VIDEO_CATALOG du provider par défaut
+    quota_clips_per_subscriber_month: int   # inclus dans l'abo
+    overage_allowed: bool            # au-delà du quota : facturé (True) ou bloqué (False)
+    hard_cap_usd_per_clip: float     # plafond absolu, aucun provider au-delà
+
+    def effective_usd_per_clip(self) -> float:
+        """Prix réel par clip = min(default, hard_cap). Le hard cap protège."""
+        return min(VIDEO_CATALOG[self.default_provider_key].usd_per_clip,
+                   self.hard_cap_usd_per_clip)
+
+    def cost_per_subscriber_month_eur(self, clips_needed: int,
+                                       usd_to_eur: Decimal) -> Decimal:
+        """Coût vidéo réel / abonné / mois après quota + hard cap.
+        Au-delà du quota : facturé (surcharge) si overage_allowed, sinon bloqué.
+        → ici on ne facture QUE les clips inclus (le reste est plafonné à 0 par blocage).
+        C'est la politique la plus défensive pour la marge Pioche."""
+        billable = min(clips_needed, self.quota_clips_per_subscriber_month) if not self.overage_allowed \
+                   else clips_needed
+        usd = Decimal(str(billable)) * Decimal(str(self.effective_usd_per_clip()))
+        return usd * usd_to_eur
+
+
+# Politiques vidéo candidates — du plus strict (défensif marge) au plus permissif
+VIDEO_POLICIES: list[VideoPolicy] = [
+    VideoPolicy("strict_kling",   1,  quota_clips_per_subscriber_month=4,
+                overage_allowed=False, hard_cap_usd_per_clip=0.15),
+    VideoPolicy("kling_avec_cap", 5,  quota_clips_per_subscriber_month=8,
+                overage_allowed=False, hard_cap_usd_per_clip=0.75),
+    VideoPolicy("libre_avec_cap", 10, quota_clips_per_subscriber_month=12,
+                overage_allowed=True,  hard_cap_usd_per_clip=1.50),
+    VideoPolicy("hassan_style",   20, quota_clips_per_subscriber_month=20,
+                overage_allowed=True,  hard_cap_usd_per_clip=3.00),  # = le tueur
+]
+
+
+# ═══════════════════════════════════════════════════════════════════
 #  COÛT DOSSIER MIXÉ — re-calcul avec allocation
 # ═══════════════════════════════════════════════════════════════════
 
@@ -203,6 +275,59 @@ def compute_dossier_cost_mixed(
         ) if full_premium_cost.llm_cost_eur > 0 else 0,
         "total_variable_cost_eur": round(new_total_eur, 4),
         "per_model": breakdown,
+    }
+
+
+# ═══════════════════════════════════════════════════════════════════
+#  COÛT VIDÉO OPTIMISÉ — applique une VideoPolicy à un dossier
+# ═══════════════════════════════════════════════════════════════════
+
+def compute_dossier_cost_video_optimized(
+    profile: ue.DossierProfile,
+    usage: ue.UsageAssumptions,
+    policy: VideoPolicy,
+    base_config: ue.CostConfig | None = None,
+) -> dict:
+    """Recalcule le coût variable dossier en appliquant la VideoPolicy.
+
+    Le coût vidéo passe de (videos_dossier × $/clip vendor) à
+    (clips_consommés_réellement × effective_usd_per_clip), plafonné par le quota.
+    → un abonné ne peut PAS dériver en Higgsfield sauvage : le hard cap le bloque.
+    """
+    base = base_config or ue.CostConfig.default()
+    usd_eur = base.variable_costs.usd_to_eur_rate
+
+    # Clips consommés réellement par abonné/mois (avant policy)
+    clips_needed_month = (profile.videos
+                          * int(usage.dossiers_per_subscriber_per_month))
+    # Coût vidéo APRÈS policy (quota + hard cap)
+    video_cost_eur_after = policy.cost_per_subscriber_month_eur(
+        clips_needed_month, usd_eur)
+
+    # Coût vidéo AVANT policy (vendor baseline, pour comparaison)
+    baseline = ue.compute_dossier_cost(profile, base)
+    video_cost_eur_before = baseline.video_cost_eur * usage.dossiers_per_subscriber_per_month
+
+    # Recalcule le total variable dossier avec le NOUVEAU coût vidéo
+    non_video_variable = (baseline.total_variable_cost_eur - baseline.video_cost_eur)
+    new_dossier_total = float(non_video_variable) + float(
+        video_cost_eur_after / max(usage.dossiers_per_subscriber_per_month, Decimal("1")))
+
+    savings_pct = (
+        (1 - float(video_cost_eur_after) / float(video_cost_eur_before)) * 100
+        if video_cost_eur_before > 0 else 0
+    )
+    return {
+        "policy": policy.name,
+        "provider": VIDEO_CATALOG[policy.default_provider_key].provider,
+        "effective_usd_per_clip": round(policy.effective_usd_per_clip(), 3),
+        "hard_cap_usd": policy.hard_cap_usd_per_clip,
+        "quota_clips": policy.quota_clips_per_subscriber_month,
+        "clips_demandés": clips_needed_month,
+        "video_cost_avant_eur_par_mois": round(float(video_cost_eur_before), 2),
+        "video_cost_apres_eur_par_mois": round(float(video_cost_eur_after), 2),
+        "video_savings_pct": round(savings_pct, 1),
+        "dossier_total_variable_eur": round(new_dossier_total, 4),
     }
 
 
@@ -285,6 +410,151 @@ def optimize_mix(
             verdict=verdict,
         ))
     return evaluations
+
+
+# ═══════════════════════════════════════════════════════════════════
+#  OPTIMISATION COMPLÈTE — combine mix LLM × policy vidéo
+# ═══════════════════════════════════════════════════════════════════
+
+@dataclass
+class FullOptimization:
+    """Résultat d'optimisation combinant mix LLM + policy vidéo.
+    C'est ce qui rend le break-even Pioche défendable sous double choc."""
+    mix_name: str
+    video_policy_name: str
+    dossier_cost_eur: float
+    llm_savings_pct: float
+    video_savings_pct: float
+    business_breakeven_x1: str
+    resilient_up_to_video_x: float | None     # résilience au choc vidéo
+    resilient_up_to_llm_x: float | None       # résilience au choc LLM
+    verdict: str
+
+
+def optimize_full(
+    scenario_key: str,
+    price_eur: float,
+    llm_multipliers: list[float],
+    video_multipliers: list[int],
+    base_config: ue.CostConfig | None = None,
+) -> list[FullOptimization]:
+    """Teste le produit cartésien {mix LLM} × {policy vidéo} et garde le + résilient.
+
+    Pour chaque combinaison :
+    - calcule le coût dossier après mix LLM + policy vidéo,
+    - mesure la résilience au choc vidéo (Kling → Higgsfield),
+    - mesure la résilience au choc LLM (×1 → ×40).
+    Le vainqueur = coût le + bas qui résiste aux 2 chocs simultanément.
+    """
+    base = base_config or ue.CostConfig.default()
+    usage = base.scenarios[scenario_key]
+    profile = usage.dossier_profile
+    pricing = ue.PricingConfig(plan_name="Pro", price_eur_monthly=Decimal(str(price_eur)))
+    results: list[FullOptimization] = []
+
+    for mix in MIX_CANDIDATES:
+        for policy in VIDEO_POLICIES:
+            # 1. Config LLM scaling-down par le mix
+            llm_factor = mix.cost_factor_vs_premium()
+            cfg_llm = st.scale_llm_costs(base, llm_factor) if llm_factor > 0 \
+                      else st.scale_llm_costs(base, 0)
+            # 2. Config vidéo : remplace le $/clip par la policy effective
+            cfg_full = dc_replace(
+                cfg_llm,
+                variable_costs=dc_replace(
+                    cfg_llm.variable_costs,
+                    video_generation=ue.UnitProviderCost(
+                        provider=VIDEO_CATALOG[policy.default_provider_key].provider,
+                        unit_name="vidéo",
+                        usd_per_unit=Decimal(str(policy.effective_usd_per_clip())),
+                    ),
+                ),
+            )
+            # 3. Profile remappé : on plafonne les vidéos au quota (blocage overage)
+            capped_videos = min(profile.videos, policy.quota_clips_per_subscriber_month)
+            capped_profile = dc_replace(profile, videos=capped_videos)
+            capped_usage = dc_replace(usage, dossier_profile=capped_profile)
+
+            # 4. Coût dossier + break-even à ×1
+            result = ue.compute_breakeven(cfg_full, pricing, capped_usage)
+            biz = result.real_business_breakeven
+            biz_str = f"{biz.subscribers} ab." if biz.subscribers is not None else "impossible"
+
+            # 5. Résilience vidéo : stress-test sur les paliers Kling→Higgsfield
+            res_video = None
+            for vm in sorted(video_multipliers):
+                vm_cost = Decimal(str(stv.VIDEO_TIERS_USD[vm]))
+                # Le hard cap bloque tout dépassement → on prend min(palier, cap)
+                effective = min(vm_cost, Decimal(str(policy.hard_cap_usd_per_clip)))
+                cfg_v = dc_replace(
+                    cfg_llm,
+                    variable_costs=dc_replace(
+                        cfg_llm.variable_costs,
+                        video_generation=ue.UnitProviderCost(
+                            provider="stress", unit_name="vidéo",
+                            usd_per_unit=effective,
+                        ),
+                    ),
+                )
+                r_v = ue.compute_breakeven(cfg_v, pricing, capped_usage)
+                biz_v = r_v.real_business_breakeven
+                ok = (r_v.business_contribution_margin_per_subscriber_month_eur > 0
+                      and biz_v.subscribers is not None
+                      and biz_v.subscribers <= st.SUSTAINABLE_BUSINESS_BREAKEVEN)
+                if ok:
+                    res_video = float(vm)
+                else:
+                    break
+
+            # 6. Résilience LLM : stress-test ×1 → ×40 sur la config complète
+            res_llm = None
+            for lm in sorted(llm_multipliers):
+                cfg_l = st.scale_llm_costs(cfg_full, lm)
+                r_l = ue.compute_breakeven(cfg_l, pricing, capped_usage)
+                biz_l = r_l.real_business_breakeven
+                ok = (r_l.business_contribution_margin_per_subscriber_month_eur > 0
+                      and biz_l.subscribers is not None
+                      and biz_l.subscribers <= st.SUSTAINABLE_BUSINESS_BREAKEVEN)
+                if ok:
+                    res_llm = float(lm)
+                else:
+                    break
+
+            # 7. Verdict : on exige résistance aux 2 chocs
+            if biz_str == "impossible":
+                verdict = "critique"
+            elif res_video is not None and res_video >= 20 and res_llm is not None and res_llm >= 10:
+                verdict = "robuste"   # tient Higgsfield ET choc LLM ×10
+            elif res_video is not None and res_video >= 5 and res_llm is not None and res_llm >= 2:
+                verdict = "fragile"
+            else:
+                verdict = "critique"
+
+            mixed_llm = compute_dossier_cost_mixed(profile, mix, base)
+            mixed_video = compute_dossier_cost_video_optimized(profile, usage, policy, base)
+            results.append(FullOptimization(
+                mix_name=mix.name,
+                video_policy_name=policy.name,
+                dossier_cost_eur=mixed_video["dossier_total_variable_eur"],
+                llm_savings_pct=mixed_llm["llm_savings_pct"],
+                video_savings_pct=mixed_video["video_savings_pct"],
+                business_breakeven_x1=biz_str,
+                resilient_up_to_video_x=res_video,
+                resilient_up_to_llm_x=res_llm,
+                verdict=verdict,
+            ))
+    return results
+
+
+def pick_best_full(results: list[FullOptimization]) -> FullOptimization:
+    """Sélectionne la combinaison la + résiliente ( vidéo d'abord, LLM ensuite)."""
+    viable = [r for r in results if r.verdict in ("robuste", "fragile")]
+    if not viable:
+        return min(results, key=lambda r: (-(r.resilient_up_to_video_x or 0),
+                                            -(r.resilient_up_to_llm_x or 0)))
+    return max(viable, key=lambda r: (
+        (r.resilient_up_to_video_x or 0) * 100 + (r.resilient_up_to_llm_x or 0)
+    ))
 
 
 # ═══════════════════════════════════════════════════════════════════
@@ -534,12 +804,46 @@ def format_allocation(allocation: dict) -> str:
     return "\n".join(lines)
 
 
+def format_full_optimizations(scenario_key: str, price_eur: float,
+                              results: list[FullOptimization]) -> str:
+    """Rendu du produit cartésien {mix LLM} × {policy vidéo}, trié par résilience."""
+    viable = [r for r in results if r.verdict in ("robuste", "fragile")]
+    # On montre d'abord les viables (triés), puis un résumé compact du reste
+    sorted_results = sorted(results, key=lambda r: (
+        0 if r.verdict in ("robuste", "fragile") else 1,
+        -((r.resilient_up_to_video_x or 0) * 100 + (r.resilient_up_to_llm_x or 0))
+    ))
+    lines = [
+        "=" * 78,
+        f"  🎯 OPTIMISATION COMPLÈTE — scénario « {scenario_key} » @ {price_eur:.0f}€/mois",
+        "  (produit cartésien : mix LLM × policy vidéo → garde le + résilient aux 2 chocs)",
+        "=" * 78,
+        "",
+        f"  {'mix LLM':<14} {'policy vidéo':<18} {'dossier€':>9} "
+        f"{'−LLM%':>6} {'−vid%':>6} {'BE ×1':>9} {'vid≤':>6} {'llm≤':>6} {'verdict':>9}",
+        "  " + "─" * 90,
+    ]
+    for r in sorted_results[:12]:   # top 12 pour lisibilité
+        icon = {"robuste": "🟢", "fragile": "🟡", "critique": "🔴"}.get(r.verdict, "❓")
+        vid = f"×{int(r.resilient_up_to_video_x)}" if r.resilient_up_to_video_x else "—"
+        llm = f"×{int(r.resilient_up_to_llm_x)}" if r.resilient_up_to_llm_x else "—"
+        lines.append(f"  {r.mix_name:<14} {r.video_policy_name:<18} {r.dossier_cost_eur:>8.2f}€ "
+                     f"{r.llm_savings_pct:>5.0f}% {r.video_savings_pct:>5.0f}% "
+                     f"{r.business_breakeven_x1:>9} {vid:>6} {llm:>6} {icon} {r.verdict:>8}")
+    lines.append("")
+    lines.append(f"  {len(viable)}/{len(results)} combinaisons viables sous double choc.")
+    lines.append("  légende: vid≤ = résiste au choc vidéo (Kling→Higgsfield) | "
+                 "llm≤ = résiste au choc LLM (×1→×40)")
+    return "\n".join(lines)
+
+
 # ═══════════════════════════════════════════════════════════════════
 #  PIPELINE + CLI
 # ═══════════════════════════════════════════════════════════════════
 
 def run(scenario_key: str, price_eur: float,
-        multipliers: list[float], use_llm: bool = True) -> dict:
+        multipliers: list[float], use_llm: bool = True,
+        llm_only: bool = False) -> dict:
     base = ue.CostConfig.default()
 
     # 1. Allocation par phase (GPT-5.5 ou heuristic)
@@ -549,29 +853,53 @@ def run(scenario_key: str, price_eur: float,
     allocation = recommend_allocation(use_llm=use_llm)
     print(format_allocation(allocation))
 
-    # 2. Grille d'optimisation des mixes
-    evaluations = optimize_mix(scenario_key, price_eur, multipliers, base)
-    print("\n" + format_evaluations(scenario_key, price_eur, evaluations))
+    if llm_only:
+        # Ancien comportement : mix LLM seul (sans vidéo policy)
+        evaluations = optimize_mix(scenario_key, price_eur, multipliers, base)
+        print("\n" + format_evaluations(scenario_key, price_eur, evaluations))
+        print("\n" + "=" * 78)
+        print("  🧠 VERDICT EXÉCUTIF (LLM seul)" + (" — GPT-5.5" if use_llm and OPENROUTER_KEY else " — déterministe"))
+        print("=" * 78)
+        verdict = executive_verdict(scenario_key, price_eur, evaluations, allocation, use_llm)
+        print(); print(verdict); print()
+        best = max(evaluations, key=lambda e: (e.resilient_up_to_x or 0))
+        out = {
+            "generated_at": datetime.now(timezone.utc).isoformat(),
+            "scenario": scenario_key, "price_eur": price_eur, "mode": "llm_only",
+            "allocation": allocation,
+            "evaluations": [dataclasses.asdict(e) for e in evaluations],
+            "best_mix": dataclasses.asdict(best), "verdict": verdict,
+        }
+    else:
+        # Nouveau comportement par défaut : optimisation combinée LLM × Vidéo
+        full = optimize_full(scenario_key, price_eur, multipliers,
+                             list(stv.VIDEO_TIERS_USD.keys()), base)
+        print("\n" + format_full_optimizations(scenario_key, price_eur, full))
+        best = pick_best_full(full)
+        print()
+        print("  " + "─" * 74)
+        print(f"  🏆 Combinaison recommandée : {best.mix_name} × {best.video_policy_name}")
+        print(f"     Dossier {best.dossier_cost_eur:.2f}€ | "
+              f"−LLM {best.llm_savings_pct:.0f}% | −vidéo {best.video_savings_pct:.0f}% | "
+              f"BE {best.business_breakeven_x1}")
+        print(f"     Résiste vidéo ≤×{int(best.resilient_up_to_video_x or 0)} "
+              f"(Higgsfield={20}) | LLM ≤×{int(best.resilient_up_to_llm_x or 0)}")
+        print("  " + "─" * 74)
 
-    # 3. Verdict exécutif
-    print("\n" + "=" * 78)
-    print("  🧠 VERDICT EXÉCUTIF" + (" — GPT-5.5" if use_llm and OPENROUTER_KEY else " — déterministe"))
-    print("=" * 78)
-    verdict = executive_verdict(scenario_key, price_eur, evaluations, allocation, use_llm)
-    print()
-    print(verdict)
-    print()
+        print("\n" + "=" * 78)
+        print("  🧠 VERDICT EXÉCUTIF" + (" — GPT-5.5" if use_llm and OPENROUTER_KEY else " — déterministe"))
+        print("=" * 78)
+        verdict = executive_full_verdict(scenario_key, price_eur, best, full, use_llm)
+        print(); print(verdict); print()
 
-    # 4. Sauvegarde
-    best = max(evaluations, key=lambda e: (e.resilient_up_to_x or 0))
-    out = {
-        "generated_at": datetime.now(timezone.utc).isoformat(),
-        "scenario": scenario_key, "price_eur": price_eur,
-        "allocation": allocation,
-        "evaluations": [dataclasses.asdict(e) for e in evaluations],
-        "best_mix": dataclasses.asdict(best),
-        "verdict": verdict,
-    }
+        out = {
+            "generated_at": datetime.now(timezone.utc).isoformat(),
+            "scenario": scenario_key, "price_eur": price_eur, "mode": "full_llm_video",
+            "allocation": allocation,
+            "full_optimizations": [dataclasses.asdict(r) for r in full],
+            "best_combination": dataclasses.asdict(best), "verdict": verdict,
+        }
+
     out_dir = LIB_DIR.parent.parent / "agents" / "output" / "margin_optimization"
     out_dir.mkdir(parents=True, exist_ok=True)
     stamp = datetime.now().strftime("%Y%m%d-%H%M%S")
@@ -581,9 +909,73 @@ def run(scenario_key: str, price_eur: float,
     return out
 
 
+# ═══════════════════════════════════════════════════════════════════
+#  VERDICT DOUBLE-CHOC — interprète l'optimisation combinée
+# ═══════════════════════════════════════════════════════════════════
+
+FULL_VERDICT_SYSTEM = """Tu es l'analyste financier de Pioche. On te donne la MEILLEURE combinaison
+(mix LLM × policy vidéo) qui rend le break-even défendable sous double choc.
+Le kill factor vidéo (Higgsfield $3/clip) est maintenant piloté par une policy
+avec quota + hard cap, comme le LLM l'était déjà par le mix-modèles.
+
+Ton rôle :
+1. Dire si la double optimisation règle À LA FOIS le choc LLM ET le choc vidéo.
+2. Citer les 2 gains chiffrés clés (−LLM%, −vidéo%, résilience ×).
+3. Ce qui RESTE risqué (ex: quota vidéo trop bas = churn, hard cap bloquant).
+4. Verdict: break-even à 1 abonné Pro défendable oui/non, avec la config recommandée.
+
+Format : 4 paragraphes numérotés, français, factuel, 120-180 mots."""
+
+
+def executive_full_verdict(scenario_key: str, price_eur: float,
+                            best: FullOptimization, all_results: list[FullOptimization],
+                            use_llm: bool = True) -> str:
+    if not (use_llm and OPENROUTER_KEY):
+        return _fallback_full_verdict(best, all_results)
+    viable = [r for r in all_results if r.verdict in ("robuste", "fragile")]
+    digest = {
+        "scenario": scenario_key, "prix_cible_eur": price_eur,
+        "meilleure_combinaison": {
+            "mix_llm": best.mix_name, "policy_video": best.video_policy_name,
+            "dossier_cost_eur": best.dossier_cost_eur,
+            "economie_llm_pct": best.llm_savings_pct,
+            "economie_video_pct": best.video_savings_pct,
+            "business_breakeven_x1": best.business_breakeven_x1,
+            "resilient_video_x": best.resilient_up_to_video_x,
+            "resilient_llm_x": best.resilient_up_to_llm_x,
+            "verdict": best.verdict,
+        },
+        "nb_viables": f"{len(viable)}/{len(all_results)} combinaisons résistent au double choc",
+        "hard_cap_video": f"${VIDEO_USD_HARD_CAP_DEFAULT}/clip (Higgsfield $3 interdit par défaut)",
+    }
+    prompt = (f"Optimisation combinée LLM × Vidéo pour Pioche:\n\n"
+              f"{json.dumps(digest, ensure_ascii=False, indent=2)}\n\n"
+              f"Rédige le verdict (4 paragraphes numérotés).")
+    raw = _llm_generate(prompt, system=FULL_VERDICT_SYSTEM, max_tokens=900, temperature=0.5)
+    return raw or _fallback_full_verdict(best, all_results)
+
+
+def _fallback_full_verdict(best: FullOptimization,
+                            all_results: list[FullOptimization]) -> str:
+    viable = [r for r in all_results if r.verdict in ("robuste", "fragile")]
+    return (
+        f"1. Double optimisation {'règle' if best.verdict != 'critique' else 'ne règle pas'} "
+        f"les 2 chocs : mix '{best.mix_name}' + policy '{best.video_policy_name}'.\n\n"
+        f"2. Gains : −{best.llm_savings_pct:.0f}% LLM, −{best.video_savings_pct:.0f}% vidéo ; "
+        f"dossier {best.dossier_cost_eur:.2f}€ ; résiste vidéo ≤×{int(best.resilient_up_to_video_x or 0)} "
+        f"et LLM ≤×{int(best.resilient_up_to_llm_x or 0)}.\n\n"
+        f"3. Risque : quota vidéo bas peut frustrer les power-users (churn) ; "
+        f"hard cap ${VIDEO_USD_HARD_CAP_DEFAULT}/clip bloque Higgsfield → argument anti-Hassan mais limite créa.\n\n"
+        f"4. Verdict : {best.verdict.upper()} — "
+        f"{len(viable)}/{len(all_results)} combinaisons viables. "
+        f"{'Break-even défendable.' if best.verdict != 'critique' else 'Monter le prix ou revoir le profil usage.'} "
+        f"(Déterministe — passe OPENROUTER_API_KEY pour GPT-5.5.)"
+    )
+
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(
-        description="🎯 Margin Optimizer — guérit le kill factor #3 (mix-modèles)")
+        description="🎯 Margin Optimizer — guérit les kill factors LLM (#3) ET vidéo (Higgsfield)")
     parser.add_argument("--scenario", default="median",
                         choices=["pessimiste", "median", "optimiste"],
                         help="Scénario d'usage (def: median — le plus représentatif)")
@@ -594,6 +986,9 @@ if __name__ == "__main__":
                         help="Chocs LLM pour mesurer la résilience (def: 1 2 5 10 20 40)")
     parser.add_argument("--allocate", action="store_true",
                         help="GPT-5.5 propose juste l'allocation par phase, sans optimiser")
+    parser.add_argument("--llm-only", action="store_true",
+                        help="Mode rétro-compatible : optimise seulement le mix LLM "
+                             "(ignore le choc vidéo/Higgsfield). Def: False (full LLM×Vidéo)")
     parser.add_argument("--no-llm", action="store_true",
                         help="Tout déterministe (heuristique fallback, pas de GPT-5.5)")
     args = parser.parse_args()
@@ -606,4 +1001,5 @@ if __name__ == "__main__":
         allocation = recommend_allocation(use_llm=not args.no_llm)
         print(format_allocation(allocation))
     else:
-        run(args.scenario, args.price, args.multipliers, use_llm=not args.no_llm)
+        run(args.scenario, args.price, args.multipliers,
+            use_llm=not args.no_llm, llm_only=args.llm_only)

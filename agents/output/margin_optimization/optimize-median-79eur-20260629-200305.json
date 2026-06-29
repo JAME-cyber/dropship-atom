@@ -1,0 +1,309 @@
+{
+  "generated_at": "2026-06-29T18:03:05.216222+00:00",
+  "scenario": "median",
+  "price_eur": 79.0,
+  "mode": "full_llm_video",
+  "allocation": {
+    "allocations": [
+      {
+        "phase": "hunter",
+        "tier": "CHEAP",
+        "reason": "scoring produit = parsing structuré, cheap suffit"
+      },
+      {
+        "phase": "scout",
+        "tier": "CHEAP",
+        "reason": "extraction devis = tâche mécanique"
+      },
+      {
+        "phase": "spec",
+        "tier": "PREMIUM",
+        "reason": "dossier technique CE = précision critique, premium"
+      },
+      {
+        "phase": "veille",
+        "tier": "NANO",
+        "reason": "agrégation concurrentielle = bulk"
+      },
+      {
+        "phase": "creator",
+        "tier": "PREMIUM",
+        "reason": "copy créatif = différenciant perçu, premium"
+      },
+      {
+        "phase": "builder",
+        "tier": "CHEAP",
+        "reason": "descriptions template = cheap"
+      },
+      {
+        "phase": "media",
+        "tier": "CHEAP",
+        "reason": "blueprint campagne = structuré, cheap"
+      },
+      {
+        "phase": "pubstatic",
+        "tier": "NANO",
+        "reason": "concepts statiques = nano"
+      },
+      {
+        "phase": "email",
+        "tier": "CHEAP",
+        "reason": "séquences = template, cheap"
+      },
+      {
+        "phase": "fulfillment",
+        "tier": "NANO",
+        "reason": "calcul FBA = arithmétique, nano"
+      },
+      {
+        "phase": "compliance",
+        "tier": "PREMIUM",
+        "reason": "audit faux-certificats = jugement, premium"
+      },
+      {
+        "phase": "analyst",
+        "tier": "PREMIUM",
+        "reason": "verdict final = raisonnement expert, premium"
+      }
+    ],
+    "premium_pct_estimate": 33,
+    "cheap_pct_estimate": 42,
+    "nano_pct_estimate": 25,
+    "free_pct_estimate": 0,
+    "strategy_summary": "Heuristique: premium sur copy/spec/compliance/analyst (perçu client)."
+  },
+  "full_optimizations": [
+    {
+      "mix_name": "premium_seul",
+      "video_policy_name": "strict_kling",
+      "dossier_cost_eur": 4.092,
+      "llm_savings_pct": 0.0,
+      "video_savings_pct": 83.3,
+      "business_breakeven_x1": "113 ab.",
+      "resilient_up_to_video_x": 20.0,
+      "resilient_up_to_llm_x": 1.0,
+      "verdict": "critique"
+    },
+    {
+      "mix_name": "premium_seul",
+      "video_policy_name": "kling_avec_cap",
+      "dossier_cost_eur": 4.767,
+      "llm_savings_pct": 0.0,
+      "video_savings_pct": -66.7,
+      "business_breakeven_x1": "301 ab.",
+      "resilient_up_to_video_x": 1.0,
+      "resilient_up_to_llm_x": null,
+      "verdict": "critique"
+    },
+    {
+      "mix_name": "premium_seul",
+      "video_policy_name": "libre_avec_cap",
+      "dossier_cost_eur": 8.517,
+      "llm_savings_pct": 0.0,
+      "video_savings_pct": -900.0,
+      "business_breakeven_x1": "impossible",
+      "resilient_up_to_video_x": 1.0,
+      "resilient_up_to_llm_x": null,
+      "verdict": "critique"
+    },
+    {
+      "mix_name": "premium_seul",
+      "video_policy_name": "hassan_style",
+      "dossier_cost_eur": 13.017,
+      "llm_savings_pct": 0.0,
+      "video_savings_pct": -1900.0,
+      "business_breakeven_x1": "impossible",
+      "resilient_up_to_video_x": 1.0,
+      "resilient_up_to_llm_x": null,
+      "verdict": "critique"
+    },
+    {
+      "mix_name": "conservateur",
+      "video_policy_name": "strict_kling",
+      "dossier_cost_eur": 4.092,
+      "llm_savings_pct": 57.2,
+      "video_savings_pct": 83.3,
+      "business_breakeven_x1": "66 ab.",
+      "resilient_up_to_video_x": 20.0,
+      "resilient_up_to_llm_x": 2.0,
+      "verdict": "fragile"
+    },
+    {
+      "mix_name": "conservateur",
+      "video_policy_name": "kling_avec_cap",
+      "dossier_cost_eur": 4.767,
+      "llm_savings_pct": 57.2,
+      "video_savings_pct": -66.7,
+      "business_breakeven_x1": "103 ab.",
+      "resilient_up_to_video_x": 20.0,
+      "resilient_up_to_llm_x": 1.0,
+      "verdict": "critique"
+    },
+    {
+      "mix_name": "conservateur",
+      "video_policy_name": "libre_avec_cap",
+      "dossier_cost_eur": 8.517,
+      "llm_savings_pct": 57.2,
+      "video_savings_pct": -900.0,
+      "business_breakeven_x1": "367 ab.",
+      "resilient_up_to_video_x": 5.0,
+      "resilient_up_to_llm_x": null,
+      "verdict": "critique"
+    },
+    {
+      "mix_name": "conservateur",
+      "video_policy_name": "hassan_style",
+      "dossier_cost_eur": 13.017,
+      "llm_savings_pct": 57.2,
+      "video_savings_pct": -1900.0,
+      "business_breakeven_x1": "impossible",
+      "resilient_up_to_video_x": 5.0,
+      "resilient_up_to_llm_x": null,
+      "verdict": "critique"
+    },
+    {
+      "mix_name": "équilibré",
+      "video_policy_name": "strict_kling",
+      "dossier_cost_eur": 4.092,
+      "llm_savings_pct": 76.6,
+      "video_savings_pct": 83.3,
+      "business_breakeven_x1": "58 ab.",
+      "resilient_up_to_video_x": 20.0,
+      "resilient_up_to_llm_x": 5.0,
+      "verdict": "fragile"
+    },
+    {
+      "mix_name": "équilibré",
+      "video_policy_name": "kling_avec_cap",
+      "dossier_cost_eur": 4.767,
+      "llm_savings_pct": 76.6,
+      "video_savings_pct": -66.7,
+      "business_breakeven_x1": "85 ab.",
+      "resilient_up_to_video_x": 20.0,
+      "resilient_up_to_llm_x": 2.0,
+      "verdict": "fragile"
+    },
+    {
+      "mix_name": "équilibré",
+      "video_policy_name": "libre_avec_cap",
+      "dossier_cost_eur": 8.517,
+      "llm_savings_pct": 76.6,
+      "video_savings_pct": -900.0,
+      "business_breakeven_x1": "205 ab.",
+      "resilient_up_to_video_x": 5.0,
+      "resilient_up_to_llm_x": null,
+      "verdict": "critique"
+    },
+    {
+      "mix_name": "équilibré",
+      "video_policy_name": "hassan_style",
+      "dossier_cost_eur": 13.017,
+      "llm_savings_pct": 76.6,
+      "video_savings_pct": -1900.0,
+      "business_breakeven_x1": "impossible",
+      "resilient_up_to_video_x": 5.0,
+      "resilient_up_to_llm_x": null,
+      "verdict": "critique"
+    },
+    {
+      "mix_name": "agressif",
+      "video_policy_name": "strict_kling",
+      "dossier_cost_eur": 4.092,
+      "llm_savings_pct": 87.0,
+      "video_savings_pct": 83.3,
+      "business_breakeven_x1": "54 ab.",
+      "resilient_up_to_video_x": 20.0,
+      "resilient_up_to_llm_x": 10.0,
+      "verdict": "robuste"
+    },
+    {
+      "mix_name": "agressif",
+      "video_policy_name": "kling_avec_cap",
+      "dossier_cost_eur": 4.767,
+      "llm_savings_pct": 87.0,
+      "video_savings_pct": -66.7,
+      "business_breakeven_x1": "77 ab.",
+      "resilient_up_to_video_x": 20.0,
+      "resilient_up_to_llm_x": 5.0,
+      "verdict": "fragile"
+    },
+    {
+      "mix_name": "agressif",
+      "video_policy_name": "libre_avec_cap",
+      "dossier_cost_eur": 8.517,
+      "llm_savings_pct": 87.0,
+      "video_savings_pct": -900.0,
+      "business_breakeven_x1": "166 ab.",
+      "resilient_up_to_video_x": 20.0,
+      "resilient_up_to_llm_x": 1.0,
+      "verdict": "critique"
+    },
+    {
+      "mix_name": "agressif",
+      "video_policy_name": "hassan_style",
+      "dossier_cost_eur": 13.017,
+      "llm_savings_pct": 87.0,
+      "video_savings_pct": -1900.0,
+      "business_breakeven_x1": "impossible",
+      "resilient_up_to_video_x": 10.0,
+      "resilient_up_to_llm_x": null,
+      "verdict": "critique"
+    },
+    {
+      "mix_name": "radical",
+      "video_policy_name": "strict_kling",
+      "dossier_cost_eur": 4.092,
+      "llm_savings_pct": 92.8,
+      "video_savings_pct": 83.3,
+      "business_breakeven_x1": "52 ab.",
+      "resilient_up_to_video_x": 20.0,
+      "resilient_up_to_llm_x": 10.0,
+      "verdict": "robuste"
+    },
+    {
+      "mix_name": "radical",
+      "video_policy_name": "kling_avec_cap",
+      "dossier_cost_eur": 4.767,
+      "llm_savings_pct": 92.8,
+      "video_savings_pct": -66.7,
+      "business_breakeven_x1": "73 ab.",
+      "resilient_up_to_video_x": 20.0,
+      "resilient_up_to_llm_x": 10.0,
+      "verdict": "robuste"
+    },
+    {
+      "mix_name": "radical",
+      "video_policy_name": "libre_avec_cap",
+      "dossier_cost_eur": 8.517,
+      "llm_savings_pct": 92.8,
+      "video_savings_pct": -900.0,
+      "business_breakeven_x1": "150 ab.",
+      "resilient_up_to_video_x": 20.0,
+      "resilient_up_to_llm_x": 2.0,
+      "verdict": "fragile"
+    },
+    {
+      "mix_name": "radical",
+      "video_policy_name": "hassan_style",
+      "dossier_cost_eur": 13.017,
+      "llm_savings_pct": 92.8,
+      "video_savings_pct": -1900.0,
+      "business_breakeven_x1": "impossible",
+      "resilient_up_to_video_x": 10.0,
+      "resilient_up_to_llm_x": null,
+      "verdict": "critique"
+    }
+  ],
+  "best_combination": {
+    "mix_name": "agressif",
+    "video_policy_name": "strict_kling",
+    "dossier_cost_eur": 4.092,
+    "llm_savings_pct": 87.0,
+    "video_savings_pct": 83.3,
+    "business_breakeven_x1": "54 ab.",
+    "resilient_up_to_video_x": 20.0,
+    "resilient_up_to_llm_x": 10.0,
+    "verdict": "robuste"
+  },
+  "verdict": "1. Double optimisation règle les 2 chocs : mix 'agressif' + policy 'strict_kling'.\n\n2. Gains : −87% LLM, −83% vidéo ; dossier 4.09€ ; résiste vidéo ≤×20 et LLM ≤×10.\n\n3. Risque : quota vidéo bas peut frustrer les power-users (churn) ; hard cap $0.75/clip bloque Higgsfield → argument anti-Hassan mais limite créa.\n\n4. Verdict : ROBUSTE — 8/20 combinaisons viables. Break-even défendable. (Déterministe — passe OPENROUTER_API_KEY pour GPT-5.5.)"
+}
